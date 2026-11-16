@@ -1,0 +1,805 @@
+import express from 'express';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import JSZip from 'jszip';
+import type {
+  ClinicalAbbreviation,
+  DictionaryTerm,
+  LinkedSentence,
+  MediaAssetRecord,
+  MedicalBlock,
+  MedicalSubject,
+  MorphologicalAffix,
+  TopicArticle,
+  UnifiedQuizQuestion,
+  WorkspaceDataState
+} from './src/types/umedtData.ts';
+import {
+  computeWorkspaceCounts,
+  deleteMediaBinaryIfUnused,
+  loadWorkspaceState,
+  readMediaBinary,
+  saveMediaBinary,
+  saveWorkspaceState
+} from './server/workspaceStore.ts';
+import {
+  buildSignedReleasePackage,
+  computeDiffAgainstRemote,
+  generateEcdsaSigningKeyPair,
+  normalizeTermKey,
+  validateWorkspaceData
+} from './server/cryptoRelease.ts';
+import {
+  createIntegrationPrOnUmedt,
+  fetchRemoteMasterData,
+  fetchRepoOverview,
+  importSeedFromUmedtRepo,
+  publishAtomicCommitToUmedtData
+} from './server/githubSync.ts';
+import {
+  generateUmedtDataReadme,
+  generateUmedtDataWorkflowYml,
+  getUmedtIntegrationPatchFiles
+} from './server/umedtTemplates.ts';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function extractToken(req: express.Request): string | undefined {
+  const headerToken = req.header('x-github-token');
+  if (headerToken && headerToken.trim()) return headerToken.trim();
+  const auth = req.header('authorization');
+  if (auth && auth.toLowerCase().startsWith('bearer ')) {
+    return auth.slice(7).trim();
+  }
+  return undefined;
+}
+
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json({ limit: '50mb' }));
+
+  // 1. Live GitHub Repository Overview (UMEDT + UMEDT_DATA)
+  app.get('/api/github/status', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const sourceRepo =
+        typeof req.query.sourceRepo === 'string' && req.query.sourceRepo.trim()
+          ? req.query.sourceRepo.trim()
+          : state.meta.sourceRepo;
+      const dataRepo =
+        typeof req.query.dataRepo === 'string' && req.query.dataRepo.trim()
+          ? req.query.dataRepo.trim()
+          : state.meta.dataRepo;
+      const token = extractToken(req);
+
+      const [sourceOverview, dataOverview] = await Promise.all([
+        fetchRepoOverview(sourceRepo, token),
+        fetchRepoOverview(dataRepo, token)
+      ]);
+
+      res.json({
+        checkedAt: new Date().toISOString(),
+        sourceRepo: sourceOverview,
+        dataRepo: dataOverview
+      });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر فحص حالة مستودعات GitHub'
+      });
+    }
+  });
+
+  // 2. Workspace State & CRUD
+  app.get('/api/workspace', (_req, res) => {
+    const state = loadWorkspaceState();
+    const validation = validateWorkspaceData(state);
+    res.json({ state, validation });
+  });
+
+  app.put('/api/workspace/meta', (req, res) => {
+    const state = loadWorkspaceState();
+    const body = (req.body || {}) as Partial<WorkspaceDataState['meta']>;
+    state.meta = {
+      ...state.meta,
+      sourceRepo: body.sourceRepo?.trim() || state.meta.sourceRepo,
+      dataRepo: body.dataRepo?.trim() || state.meta.dataRepo,
+      branch: body.branch?.trim() || state.meta.branch,
+      dataVersion: body.dataVersion?.trim() || state.meta.dataVersion
+    };
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Import canonical blocks, subjects, topics, terms, sentences, affixes, abbreviations & attachments from UMEDT
+  app.post('/api/workspace/import-from-umedt', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as { sourceRepo?: string; dataRepo?: string };
+      const sourceRepo = body.sourceRepo?.trim() || state.meta.sourceRepo;
+      const dataRepo = body.dataRepo?.trim() || state.meta.dataRepo;
+      const token = extractToken(req);
+
+      const imported = await importSeedFromUmedtRepo(sourceRepo, dataRepo, state, token);
+      saveWorkspaceState(imported);
+      res.json({
+        state: imported,
+        validation: validateWorkspaceData(imported)
+      });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر استيراد البيانات من مستودع UMEDT'
+      });
+    }
+  });
+
+  // Pull live master data currently published in UMEDT_DATA
+  app.post('/api/workspace/load-from-umedt-data', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as { dataRepo?: string; branch?: string };
+      const dataRepo = body.dataRepo?.trim() || state.meta.dataRepo;
+      const branch = body.branch?.trim() || state.meta.branch || 'main';
+      const token = extractToken(req);
+
+      const remote = await fetchRemoteMasterData(dataRepo, branch, token);
+      const nextState: WorkspaceDataState = {
+        meta: {
+          ...state.meta,
+          dataRepo,
+          branch,
+          lastLoadedFromDataRepoAt: new Date().toISOString()
+        },
+        blocks: remote.blocks || [],
+        subjects: remote.subjects || [],
+        topics: remote.topics || [],
+        terms: remote.terms || [],
+        sentences: remote.sentences || [],
+        customAffixes: remote.customAffixes || [],
+        customAbbreviations: remote.customAbbreviations || [],
+        questions: remote.questions || [],
+        mediaAssets: remote.mediaAssets || []
+      };
+      saveWorkspaceState(nextState);
+      res.json({
+        state: nextState,
+        validation: validateWorkspaceData(nextState)
+      });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر جلب البيانات من مستودع UMEDT_DATA'
+      });
+    }
+  });
+
+  // Blocks CRUD
+  app.post('/api/workspace/blocks', (req, res) => {
+    const state = loadWorkspaceState();
+    const block = req.body as MedicalBlock;
+    if (!block?.id || (!block.titleEn && !block.titleAr)) {
+      res.status(400).json({ error: 'معرف البلوك والعنوان مطلوبان.' });
+      return;
+    }
+    const now = new Date().toISOString().slice(0, 10);
+    const idx = state.blocks.findIndex((b) => b.id === block.id);
+    const normalized: MedicalBlock = {
+      ...block,
+      createdAt: block.createdAt || now,
+      updatedAt: now
+    };
+    if (idx >= 0) {
+      state.blocks[idx] = normalized;
+    } else {
+      state.blocks.push(normalized);
+    }
+    state.blocks.sort((a, b) => a.order - b.order);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/blocks/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    const id = req.params.id;
+    state.blocks = state.blocks.filter((b) => b.id !== id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Subjects CRUD
+  app.post('/api/workspace/subjects', (req, res) => {
+    const state = loadWorkspaceState();
+    const subj = req.body as MedicalSubject;
+    if (!subj?.id || (!subj.titleEn && !subj.titleAr)) {
+      res.status(400).json({ error: 'معرف المادة الدراسية والعنوان مطلوبان.' });
+      return;
+    }
+    const now = new Date().toISOString().slice(0, 10);
+    const idx = state.subjects.findIndex((s) => s.id === subj.id);
+    const normalized: MedicalSubject = {
+      ...subj,
+      createdAt: subj.createdAt || now,
+      updatedAt: now
+    };
+    if (idx >= 0) {
+      state.subjects[idx] = normalized;
+    } else {
+      state.subjects.push(normalized);
+    }
+    state.subjects.sort((a, b) => a.order - b.order);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/subjects/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.subjects = state.subjects.filter((s) => s.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Topics CRUD
+  app.post('/api/workspace/topics', (req, res) => {
+    const state = loadWorkspaceState();
+    const topic = req.body as TopicArticle;
+    if (!topic?.id || (!topic.title && !topic.titleAr && !topic.titleEn)) {
+      res.status(400).json({ error: 'معرف الموضوع وعنوانه مطلوبان.' });
+      return;
+    }
+    const normalized: TopicArticle = {
+      ...topic,
+      title: topic.title || topic.titleAr || topic.titleEn || topic.id,
+      sections: Array.isArray(topic.sections) ? topic.sections : [],
+      images: Array.isArray(topic.images) ? topic.images : [],
+      links: Array.isArray(topic.links) ? topic.links : [],
+      attachments: Array.isArray(topic.attachments) ? topic.attachments : []
+    };
+    const idx = state.topics.findIndex((t) => t.id === normalized.id);
+    if (idx >= 0) {
+      state.topics[idx] = normalized;
+    } else {
+      state.topics.unshift(normalized);
+    }
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/topics/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.topics = state.topics.filter((t) => t.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Terms CRUD
+  app.post('/api/workspace/terms', (req, res) => {
+    const state = loadWorkspaceState();
+    const term = req.body as DictionaryTerm;
+    if (!term?.id || !term.term?.trim()) {
+      res.status(400).json({ error: 'معرف المصطلح واللفظ الإنجليزي مطلوبان.' });
+      return;
+    }
+    const normalized: DictionaryTerm = {
+      ...term,
+      termNormalized: normalizeTermKey(term.term),
+      ingestedAt: term.ingestedAt || new Date().toISOString().slice(0, 10),
+      collections: Array.isArray(term.collections) ? term.collections : [],
+      examples: Array.isArray(term.examples) ? term.examples : [],
+      relations: term.relations || { synonyms: [], broader: [], related: [] }
+    };
+    const idx = state.terms.findIndex((t) => t.id === normalized.id);
+    if (idx >= 0) {
+      state.terms[idx] = normalized;
+    } else {
+      state.terms.unshift(normalized);
+    }
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/terms/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.terms = state.terms.filter((t) => t.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Sentences, Affixes, Abbreviations, Questions CRUD
+  app.post('/api/workspace/sentences', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as LinkedSentence;
+    if (!item?.id || !item.en?.trim()) {
+      res.status(400).json({ error: 'معرف الجملة والنص الإنجليزي مطلوبان.' });
+      return;
+    }
+    const idx = state.sentences.findIndex((s) => s.id === item.id);
+    if (idx >= 0) state.sentences[idx] = item;
+    else state.sentences.unshift(item);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/sentences/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.sentences = state.sentences.filter((s) => s.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.post('/api/workspace/affixes', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as MorphologicalAffix;
+    if (!item?.id || !item.affix?.trim()) {
+      res.status(400).json({ error: 'معرف اللاحقة/السابقة مطلوب.' });
+      return;
+    }
+    const idx = state.customAffixes.findIndex((a) => a.id === item.id);
+    if (idx >= 0) state.customAffixes[idx] = item;
+    else state.customAffixes.unshift(item);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/affixes/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.customAffixes = state.customAffixes.filter((a) => a.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.post('/api/workspace/abbreviations', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as ClinicalAbbreviation;
+    if (!item?.id || !item.abbr?.trim()) {
+      res.status(400).json({ error: 'معرف الاختصار والرمز مطلوبان.' });
+      return;
+    }
+    const idx = state.customAbbreviations.findIndex((a) => a.id === item.id);
+    if (idx >= 0) state.customAbbreviations[idx] = item;
+    else state.customAbbreviations.unshift(item);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/abbreviations/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.customAbbreviations = state.customAbbreviations.filter((a) => a.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.post('/api/workspace/questions', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as UnifiedQuizQuestion;
+    if (!item?.id || !item.questionEn?.trim()) {
+      res.status(400).json({ error: 'معرف السؤال ونص السؤال مطلوبان.' });
+      return;
+    }
+    const idx = state.questions.findIndex((q) => q.id === item.id);
+    if (idx >= 0) state.questions[idx] = item;
+    else state.questions.unshift(item);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/questions/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.questions = state.questions.filter((q) => q.id !== req.params.id);
+    saveWorkspaceState(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // 3. Media & Attachments Vault (SHA-256 deduplicated binary storage)
+  app.post('/api/workspace/media', (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as {
+        fileName: string;
+        mimeType: string;
+        dataBase64: string;
+        mediaType?: MediaAssetRecord['mediaType'];
+        linkedEntityType?: MediaAssetRecord['linkedEntityType'];
+        linkedEntityId?: string;
+        captionAr?: string;
+        captionEn?: string;
+      };
+      if (!body.fileName || !body.dataBase64) {
+        res.status(400).json({ error: 'اسم الملف ومحتواه مطلوبان.' });
+        return;
+      }
+      const cleanB64 = body.dataBase64.includes(',')
+        ? body.dataBase64.split(',')[1]
+        : body.dataBase64;
+      const buffer = Buffer.from(cleanB64, 'base64');
+      const mimeType = body.mimeType || 'application/octet-stream';
+      const saved = saveMediaBinary(body.fileName, mimeType, buffer);
+
+      const inferredType: MediaAssetRecord['mediaType'] =
+        body.mediaType ||
+        (mimeType.startsWith('image/')
+          ? 'image'
+          : mimeType.startsWith('audio/')
+          ? 'audio'
+          : mimeType.includes('pdf')
+          ? 'pdf'
+          : 'attachment');
+
+      const now = new Date().toISOString();
+      const existing = state.mediaAssets.find((m) => m.sha256 === saved.sha256);
+      const record: MediaAssetRecord = existing
+        ? {
+            ...existing,
+            linkedEntityType: body.linkedEntityType || existing.linkedEntityType,
+            linkedEntityId: body.linkedEntityId ?? existing.linkedEntityId,
+            captionAr: body.captionAr ?? existing.captionAr,
+            captionEn: body.captionEn ?? existing.captionEn,
+            updatedAt: now
+          }
+        : {
+            id: `media-${saved.sha256.slice(0, 12)}`,
+            fileName: body.fileName,
+            relativePath: saved.relativePath,
+            mediaType: inferredType,
+            mimeType,
+            sizeBytes: saved.sizeBytes,
+            sha256: saved.sha256,
+            linkedEntityType: body.linkedEntityType || 'global',
+            linkedEntityId: body.linkedEntityId,
+            captionAr: body.captionAr,
+            captionEn: body.captionEn,
+            rawUrl: `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/${saved.relativePath}`,
+            createdAt: now,
+            updatedAt: now
+          };
+
+      if (!existing) {
+        state.mediaAssets.unshift(record);
+      } else {
+        state.mediaAssets = state.mediaAssets.map((m) => (m.id === existing.id ? record : m));
+      }
+
+      saveWorkspaceState(state);
+      res.json({
+        asset: record,
+        deduplicated: Boolean(existing),
+        state,
+        validation: validateWorkspaceData(state)
+      });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر حفظ المرفق في الخزنة'
+      });
+    }
+  });
+
+  app.get('/api/workspace/media/:id/file', (req, res) => {
+    const state = loadWorkspaceState();
+    const asset = state.mediaAssets.find((m) => m.id === req.params.id);
+    if (!asset) {
+      res.status(404).json({ error: 'المرفق غير موجود' });
+      return;
+    }
+    const bin = readMediaBinary(asset);
+    if (!bin) {
+      if (asset.rawUrl && asset.rawUrl.startsWith('http')) {
+        res.redirect(asset.rawUrl);
+        return;
+      }
+      res.status(404).json({ error: 'ملف المرفق غير متوفر محلياً' });
+      return;
+    }
+    res.setHeader('Content-Type', asset.mimeType || 'application/octet-stream');
+    res.setHeader('Content-Disposition', `inline; filename="${asset.fileName}"`);
+    res.send(bin);
+  });
+
+  app.delete('/api/workspace/media/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    const target = state.mediaAssets.find((m) => m.id === req.params.id);
+    if (target) {
+      state.mediaAssets = state.mediaAssets.filter((m) => m.id !== req.params.id);
+      deleteMediaBinaryIfUnused(target, state.mediaAssets);
+      saveWorkspaceState(state);
+    }
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // 4. Diff & Validation against live UMEDT_DATA
+  app.get('/api/workspace/diff', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const token = extractToken(req);
+      const remote = await fetchRemoteMasterData(
+        state.meta.dataRepo,
+        state.meta.branch || 'main',
+        token
+      );
+      const diff = computeDiffAgainstRemote(state, remote);
+      const validation = validateWorkspaceData(state);
+      res.json({ diff, validation });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر حساب الفروقات مع المستودع البعيد'
+      });
+    }
+  });
+
+  // 5. Cryptographic Keypair Generation & Signed Release Building
+  app.post('/api/release/generate-keys', async (_req, res) => {
+    try {
+      const keyPair = await generateEcdsaSigningKeyPair();
+      res.json({ keyPair });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر توليد زوج مفاتيح ECDSA-P256'
+      });
+    }
+  });
+
+  app.post('/api/release/build-zip', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const validation = validateWorkspaceData(state);
+      if (!validation.valid) {
+        res.status(400).json({
+          error: validation.errors[0]?.messageAr || 'البيانات غير صالحة للبناء'
+        });
+        return;
+      }
+      const body = (req.body || {}) as {
+        version?: string;
+        channel?: 'stable' | 'beta';
+        summary?: string;
+        privateKeyPem?: string;
+        publicKeyPem?: string;
+      };
+      const built = await buildSignedReleasePackage({
+        state,
+        version: body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd',
+        channel: body.channel === 'beta' ? 'beta' : 'stable',
+        summary: body.summary?.trim() || 'تحديث البلوكات والمصطلحات والملحقات الطبية',
+        privateKeyPem: body.privateKeyPem,
+        publicKeyPem: body.publicKeyPem
+      });
+
+      res.setHeader('Content-Type', 'application/zip');
+      res.setHeader('Content-Disposition', `attachment; filename="${built.packageFileName}"`);
+      res.setHeader('X-Release-Sha256', built.manifest.sha256);
+      res.setHeader('X-Release-Signed', String(built.signed));
+      res.send(built.zipBuffer);
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر بناء حزمة التحديث'
+      });
+    }
+  });
+
+  // 6. Export Complete Ready-to-Push UMEDT_DATA Repository Bundle (ZIP)
+  app.post('/api/export/umedt-data-repo', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as {
+        includeRelease?: boolean;
+        version?: string;
+        channel?: 'stable' | 'beta';
+        summary?: string;
+        privateKeyPem?: string;
+        publicKeyPem?: string;
+      };
+
+      const zip = new JSZip();
+      zip.file('README.md', generateUmedtDataReadme(state.meta.dataRepo));
+      zip.file(
+        '.github/workflows/publish-data-release.yml',
+        generateUmedtDataWorkflowYml(state.meta.sourceRepo, state.meta.dataRepo)
+      );
+      zip.file('data/master/blocks.json', JSON.stringify(state.blocks, null, 2));
+      zip.file('data/master/subjects.json', JSON.stringify(state.subjects, null, 2));
+      zip.file('data/master/topics.json', JSON.stringify(state.topics, null, 2));
+      zip.file('data/master/terms.json', JSON.stringify(state.terms, null, 2));
+      zip.file('data/master/sentences.json', JSON.stringify(state.sentences, null, 2));
+      zip.file('data/master/custom-affixes.json', JSON.stringify(state.customAffixes, null, 2));
+      zip.file(
+        'data/master/custom-abbreviations.json',
+        JSON.stringify(state.customAbbreviations, null, 2)
+      );
+      zip.file('data/master/questions.json', JSON.stringify(state.questions, null, 2));
+      zip.file('data/master/media-index.json', JSON.stringify(state.mediaAssets, null, 2));
+
+      for (const asset of state.mediaAssets) {
+        if (!asset.relativePath.startsWith('data/media/')) continue;
+        const bin = readMediaBinary(asset);
+        if (bin) {
+          zip.file(asset.relativePath, bin);
+        }
+      }
+
+      if (body.includeRelease) {
+        const ch = body.channel === 'beta' ? 'beta' : 'stable';
+        const built = await buildSignedReleasePackage({
+          state,
+          version: body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd',
+          channel: ch,
+          summary: body.summary?.trim() || 'نشر بيانات UMEDT_DATA',
+          privateKeyPem: body.privateKeyPem,
+          publicKeyPem: body.publicKeyPem
+        });
+        zip.file(`data/releases/${ch}/manifest.json`, built.manifestJsonText);
+        zip.file(`data/releases/${ch}/CHANGELOG.md`, built.changelogMarkdown);
+        zip.file(`data/releases/${ch}/${built.packageFileName}`, built.zipBuffer);
+      }
+
+      const out = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
+      res.setHeader('Content-Type', 'application/zip');
+      res.setHeader('Content-Disposition', 'attachment; filename="UMEDT_DATA-repo-bundle.zip"');
+      res.send(out);
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر تصدير حزمة المستودع'
+      });
+    }
+  });
+
+  // 7. Direct Atomic GitHub Push to Alssaedy50/UMEDT_DATA
+  app.post('/api/github/publish-data', async (req, res) => {
+    try {
+      const token = extractToken(req);
+      if (!token) {
+        res.status(401).json({
+          error: 'مطلوب رمز GitHub Personal Access Token (PAT) بصلاحية repo للنشر المباشر.'
+        });
+        return;
+      }
+
+      const state = loadWorkspaceState();
+      const validation = validateWorkspaceData(state);
+      if (!validation.valid) {
+        res.status(400).json({
+          error: validation.errors[0]?.messageAr || 'فشل التحقق من صحة البيانات قبل النشر'
+        });
+        return;
+      }
+
+      const body = (req.body || {}) as {
+        commitMessage?: string;
+        includeWorkflowUpgrade?: boolean;
+        buildRelease?: boolean;
+        version?: string;
+        channel?: 'stable' | 'beta';
+        summary?: string;
+        privateKeyPem?: string;
+        publicKeyPem?: string;
+      };
+
+      const version = body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd';
+      const channel: 'stable' | 'beta' = body.channel === 'beta' ? 'beta' : 'stable';
+
+      let releaseArtifacts:
+        | {
+            channel: 'stable' | 'beta';
+            packageFileName: string;
+            zipBuffer: Buffer;
+            manifestJsonText: string;
+            changelogMarkdown: string;
+          }
+        | undefined;
+
+      if (body.buildRelease) {
+        const built = await buildSignedReleasePackage({
+          state,
+          version,
+          channel,
+          summary: body.summary?.trim() || `تحديث بيانات UMEDT v${version}`,
+          privateKeyPem: body.privateKeyPem,
+          publicKeyPem: body.publicKeyPem
+        });
+        releaseArtifacts = {
+          channel,
+          packageFileName: built.packageFileName,
+          zipBuffer: built.zipBuffer,
+          manifestJsonText: built.manifestJsonText,
+          changelogMarkdown: built.changelogMarkdown
+        };
+      }
+
+      const counts = computeWorkspaceCounts(state);
+      const commitMessage =
+        body.commitMessage?.trim() ||
+        `feat(data): publish ${counts.blocks} blocks, ${counts.terms} terms, ${counts.mediaAssets} media (${version})`;
+
+      const published = await publishAtomicCommitToUmedtData({
+        state,
+        token,
+        commitMessage,
+        includeWorkflowUpgrade: body.includeWorkflowUpgrade !== false,
+        releaseArtifacts
+      });
+
+      state.meta.dataVersion = version;
+      state.meta.lastPublishedAt = new Date().toISOString();
+      state.meta.lastCommitSha = published.commitSha;
+      saveWorkspaceState(state);
+
+      res.json({
+        success: true,
+        ...published,
+        state
+      });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'فشل النشر إلى مستودع UMEDT_DATA'
+      });
+    }
+  });
+
+  // 8. Safe Non-Destructive UMEDT Integration Patch (Preview, Download ZIP, or Open PR)
+  app.get('/api/integration/patch-files', (_req, res) => {
+    const state = loadWorkspaceState();
+    const files = getUmedtIntegrationPatchFiles(state.meta.sourceRepo, state.meta.dataRepo);
+    res.json({ files });
+  });
+
+  app.get('/api/integration/download-patch', async (_req, res) => {
+    const state = loadWorkspaceState();
+    const files = getUmedtIntegrationPatchFiles(state.meta.sourceRepo, state.meta.dataRepo);
+    const zip = new JSZip();
+    for (const f of files) {
+      zip.file(f.path, f.content);
+    }
+    const out = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
+    res.setHeader('Content-Type', 'application/zip');
+    res.setHeader('Content-Disposition', 'attachment; filename="UMEDT-non-destructive-sync-patch.zip"');
+    res.send(out);
+  });
+
+  app.post('/api/integration/create-pr', async (req, res) => {
+    try {
+      const token = extractToken(req);
+      if (!token) {
+        res.status(401).json({
+          error: 'مطلوب رمز GitHub Personal Access Token لفتح Pull Request آمن على UMEDT.'
+        });
+        return;
+      }
+      const state = loadWorkspaceState();
+      const pr = await createIntegrationPrOnUmedt({
+        sourceRepo: state.meta.sourceRepo,
+        dataRepo: state.meta.dataRepo,
+        token
+      });
+      res.json({ success: true, ...pr });
+    } catch (err) {
+      res.status(500).json({
+        error: err instanceof Error ? err.message : 'تعذر فتح Pull Request على مستودع UMEDT'
+      });
+    }
+  });
+
+  // Vite middleware in dev / static dist in production
+  if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
+    const vite = await createViteServer({
+      server: {
+        middlewareMode: true,
+        allowedHosts: true,
+        hmr: false,
+        watch: null
+      },
+      appType: 'spa'
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(__dirname, 'dist');
+    app.use(express.static(distPath));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`UMEDT Data Hub running on http://0.0.0.0:${PORT}`);
+  });
+}
+
+startServer();
