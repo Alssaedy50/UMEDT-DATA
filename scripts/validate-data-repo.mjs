@@ -185,7 +185,7 @@ for (const asset of data.mediaAssets || []) {
       const svg = bytes.toString('utf8');
       if (asset.mimeType !== 'image/svg+xml') fail('SVG MIME type must be image/svg+xml: ' + asset.id);
       if (bytes.length > 2 * 1024 * 1024) fail('SVG exceeds 2 MB: ' + asset.id);
-      if (!/<svg\\b[\\s\\S]*<\\/svg\\s*>/i.test(svg) || /<script\\b|<foreignObject\\b|\\son[a-z0-9_-]+\\s*=|javascript:|@import/i.test(svg)) {
+      if (!/<svg\b[\s\S]*<\/svg\s*>/i.test(svg) || /<script\b|<foreignObject\b|\son[a-z0-9_-]+\s*=|javascript:|@import/i.test(svg)) {
         fail('SVG contains invalid or active content: ' + asset.relativePath);
       }
     }
