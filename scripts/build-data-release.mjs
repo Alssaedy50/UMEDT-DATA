@@ -91,16 +91,27 @@ function verifyZip(bytes) {
 }
 
 const oldManifest = fs.existsSync(manifestPath) ? readJson('data/releases/'+channel+'/manifest.json') : {};
-const currentVersion = String(oldManifest.dataVersion || '2026.11.0-umd');
+const floorPath = path.join(outputDir, 'version-floor.json');
+const versionFloor = fs.existsSync(floorPath) ? String(readJson('data/releases/'+channel+'/version-floor.json').dataVersion || '') : '';
+const parseVersion = (value) => {
+  const match = String(value || '').match(/^(\d+)\.(\d+)\.(\d+)(?:-[a-z0-9.-]+)?$/i);
+  return match ? match.slice(1,4).map(Number) : null;
+};
+const compareVersion = (left, right) => {
+  const a = parseVersion(left), b = parseVersion(right);
+  if (!a || !b) throw new Error('Invalid data version: '+(!a ? left : right));
+  for (let i=0;i<3;i++) if (a[i] !== b[i]) return a[i] - b[i];
+  return 0;
+};
+const highestVersion = versionFloor && compareVersion(versionFloor, currentVersion) > 0 ? versionFloor : currentVersion;
 const targetVersion = readArg('--version') || (() => {
-  const match = currentVersion.match(/^(\d+)\.(\d+)\.(\d+)(?:-[a-z0-9.-]+)?$/i);
-  if (!match) throw new Error('Cannot auto-increment current data version: '+currentVersion);
+  const match = highestVersion.match(/^(\d+)\.(\d+)\.(\d+)(?:-[a-z0-9.-]+)?$/i);
+  if (!match) throw new Error('Cannot auto-increment current data version: '+highestVersion);
   const suffix = channel === 'beta' ? '-beta' : '-umd';
   return match[1]+'.'+match[2]+'.'+(Number(match[3])+1)+suffix;
 })();
-if (targetVersion === currentVersion) throw new Error('Refusing to reuse the currently published dataVersion: '+targetVersion);
-if (oldManifest.dataVersion && targetVersion.localeCompare(currentVersion, undefined, { numeric: true, sensitivity: 'base' }) <= 0) {
-  throw new Error('Target dataVersion must be newer than current release '+currentVersion);
+if (compareVersion(targetVersion, highestVersion) <= 0) {
+  throw new Error('Target dataVersion must be newer than current manifest/version floor '+highestVersion);
 }
 
 const privatePem = process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM || '';
