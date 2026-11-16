@@ -90,6 +90,7 @@ function verifyZip(bytes) {
 }
 
 const oldManifest = fs.existsSync(manifestPath) ? readJson('data/releases/'+channel+'/manifest.json') : {};
+const currentVersion = String(oldManifest.dataVersion || '2026.11.0-umd');
 const floorPath = path.join(outputDir, 'version-floor.json');
 const floorVersion = fs.existsSync(floorPath) ? String(readJson('data/releases/'+channel+'/version-floor.json').dataVersion || '') : '';
 const parseVersion = (value) => {
