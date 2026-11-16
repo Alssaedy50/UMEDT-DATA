@@ -163,34 +163,59 @@ async function startServer() {
       const branch = body.branch?.trim() || state.meta.branch || 'main';
       const token = extractToken(req);
 
+      // fetchRemoteMasterData is all-or-nothing: every catalog collection and every repository-owned
+      // binary asset must download and pass its declared SHA-256 before this handler can mutate state.
       const remote = await fetchRemoteMasterData(dataRepo, branch, token);
+      const requiredCollections: Array<keyof WorkspaceDataState> = [
+        'blocks', 'subjects', 'topics', 'terms', 'sentences',
+        'customAffixes', 'customAbbreviations', 'books', 'questions', 'exams', 'mediaAssets'
+      ];
+      const missingCollection = requiredCollections.find(
+        (key) => !Array.isArray(remote[key])
+      );
+      if (missingCollection) {
+        res.status(502).json({
+          error: `لم يتم تحميل النطاق ${String(missingCollection)} بصورة مكتملة. لم يتم تغيير بيانات مساحة العمل.`
+        });
+        return;
+      }
+
       const nextState: WorkspaceDataState = {
+        ...state,
         meta: {
           ...state.meta,
           dataRepo,
           branch,
           lastLoadedFromDataRepoAt: new Date().toISOString()
         },
-        blocks: remote.blocks || [],
-        subjects: remote.subjects || [],
-        topics: remote.topics || [],
-        terms: remote.terms || [],
-        sentences: remote.sentences || [],
-        customAffixes: remote.customAffixes || [],
-        customAbbreviations: remote.customAbbreviations || [],
-        books: remote.books && remote.books.length > 0 ? remote.books : state.books || [],
-        questions: remote.questions || [],
-        exams: remote.exams && remote.exams.length > 0 ? remote.exams : state.exams || [],
-        mediaAssets: remote.mediaAssets || []
+        blocks: remote.blocks!,
+        subjects: remote.subjects!,
+        topics: remote.topics!,
+        terms: remote.terms!,
+        sentences: remote.sentences!,
+        customAffixes: remote.customAffixes!,
+        customAbbreviations: remote.customAbbreviations!,
+        books: remote.books!,
+        questions: remote.questions!,
+        exams: remote.exams!,
+        mediaAssets: remote.mediaAssets!
       };
+      const validation = validateWorkspaceData(nextState);
+      if (!validation.valid) {
+        res.status(422).json({
+          error: 'تم تنزيل البيانات، لكن فشل التحقق البنيوي. لم يتم استبدال مساحة العمل الحالية.',
+          validation
+        });
+        return;
+      }
+
       saveWorkspaceState(nextState);
-      res.json({
-        state: nextState,
-        validation: validateWorkspaceData(nextState)
-      });
+      res.json({ state: nextState, validation });
     } catch (err) {
-      res.status(500).json({
-        error: err instanceof Error ? err.message : 'تعذر جلب البيانات من مستودع UMEDT-DATA'
+      res.status(502).json({
+        error: err instanceof Error
+          ? err.message
+          : 'تعذر جلب البيانات من مستودع UMEDT-DATA. لم يتم تغيير بيانات مساحة العمل.'
       });
     }
   });
