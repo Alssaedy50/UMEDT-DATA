@@ -67,3 +67,20 @@
 
 - **البيانات المحمية محلياً:** `favorite`, `srsData`, `studyStats`, `collections`, `bookmarks`, `notes`, `readingProgress`, `examAttempts`.
 - **التحقق التشفيري:** حزمة التحديث `umed2-data-<version>.zip` محمية ببصمة `SHA-256` وتوقيع `ECDSA-P256-SHA256` عند التوقيع، مع منع الكتابة فوق رقم إصدار منشور ودعم الاستعادة (`Rollback`) عبر `history.json`.
+
+
+## 6. Complete release archive layout and media behavior
+
+The signed release ZIP produced by this repository contains:
+
+- `manifest.json` at the archive root for package metadata.
+- Legacy root aliases `terms.json`, `sentences.json`, `topics.json`, `affixes.json`, and `abbreviations.json` for compatibility with the existing UMEDT importer.
+- All eleven canonical collections under `data/master/`, plus `data/catalog.json`.
+- The three JSON schemas and this API contract under `docs/`.
+- Every repository-owned binary asset referenced by `media-index.json` under its `data/media/` path.
+
+The outer release manifest signs the exact ZIP bytes with ECDSA P-256 / SHA-256. The `filesSha256` map covers all eleven canonical JSON collections; `assetsSha256` covers bundled local media. External image references remain URLs and are not guaranteed to work offline; content intended for offline use must be stored as a repository-owned file under `data/media/` and indexed with its exact byte size and SHA-256.
+
+`/api/v1/*` routes are served by the running Node Data Hub server. GitHub Pages/raw.githubusercontent.com are static file hosts and do not execute these routes. A client that reads directly from GitHub should use the absolute `rawUrl` values in the catalog and the stable manifest URL.
+
+**Reader compatibility note:** the current legacy UMEDT ZIP safety policy blocks SVG files. The UMEDT application reader must explicitly support sanitized SVG before using bundled `.svg` assets from the complete archive. Do not disable archive path checks or allow active script content inside SVG; sanitize SVG markup and render it in a restricted context.
