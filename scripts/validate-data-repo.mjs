@@ -181,6 +181,14 @@ for (const asset of data.mediaAssets || []) {
     const bytes = fs.readFileSync(absolute);
     if (asset.sizeBytes !== bytes.length) fail('Media size mismatch: ' + asset.relativePath);
     if (asset.sha256 !== sha256(bytes)) fail('Media SHA-256 mismatch: ' + asset.relativePath);
+    if (path.extname(asset.fileName || absolute).toLowerCase() === '.svg') {
+      const svg = bytes.toString('utf8');
+      if (asset.mimeType !== 'image/svg+xml') fail('SVG MIME type must be image/svg+xml: ' + asset.id);
+      if (bytes.length > 2 * 1024 * 1024) fail('SVG exceeds 2 MB: ' + asset.id);
+      if (!/<svg\\b[\\s\\S]*<\\/svg\\s*>/i.test(svg) || /<script\\b|<foreignObject\\b|\\son[a-z0-9_-]+\\s*=|javascript:|@import/i.test(svg)) {
+        fail('SVG contains invalid or active content: ' + asset.relativePath);
+      }
+    }
   } else if (/^https?:\/\//i.test(asset.rawUrl || asset.relativePath || '')) {
     externalMediaCount++;
     if (!asset.rawUrl) warn('External media has no rawUrl: ' + asset.id);
