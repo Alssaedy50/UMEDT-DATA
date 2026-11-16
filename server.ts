@@ -70,7 +70,13 @@ function extractToken(req: express.Request): string | undefined {
   if (auth && auth.toLowerCase().startsWith('bearer ')) {
     return auth.slice(7).trim();
   }
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) {
+  // A server-side PAT is never implicitly exposed to unauthenticated API requests.
+  // Enable this only for a private, single-user deployment where the backend is not public.
+  if (
+    process.env.UMEDT_ALLOW_SERVER_GITHUB_TOKEN === 'true' &&
+    process.env.GITHUB_TOKEN &&
+    process.env.GITHUB_TOKEN.trim()
+  ) {
     return process.env.GITHUB_TOKEN.trim();
   }
   return undefined;
