@@ -75,7 +75,9 @@ jobs:
           const optionalFiles = [
             'data/master/blocks.json',
             'data/master/subjects.json',
+            'data/master/books.json',
             'data/master/questions.json',
+            'data/master/exams.json',
             'data/master/media-index.json'
           ];
           let total = 0;
@@ -93,6 +95,11 @@ jobs:
               total += parsed.length;
               console.log(`${file}: ${parsed.length} records`);
             }
+          }
+          if (fs.existsSync('data/catalog.json')) {
+            const cat = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
+            if (!Array.isArray(cat.collections)) throw new Error('data/catalog.json missing collections array');
+            console.log(`data/catalog.json: ${cat.collections.length} collections`);
           }
           if (total === 0) throw new Error('Refusing to publish: all master data files are empty.');
           NODE

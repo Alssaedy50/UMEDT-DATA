@@ -1,0 +1,175 @@
+[
+  {
+    "id": "book-hematology-handbook-2026",
+    "titleEn": "Clinical & Laboratory Hematology — UMEDT Study Handbook",
+    "titleAr": "المرجع الدراسي الشامل في علم أمراض الدم السريري والمخبري",
+    "subtitleAr": "مجمع من موضوعات البلوك الثلاثة عشر: CBC، فقر الدم، الثلاسيميا، اللوكيميا، والتخثر",
+    "authors": [
+      "UMEDT Academic Editorial Board"
+    ],
+    "publisher": "UMEDT-DATA Central Repository",
+    "edition": "2026.12",
+    "publicationYear": 2026,
+    "language": "bilingual",
+    "resourceKind": "study_notes",
+    "format": "pdf",
+    "pageCount": 6,
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "topicIds": [
+      "topic-heme-01",
+      "topic-heme-02",
+      "topic-heme-03",
+      "topic-heme-04",
+      "topic-heme-05",
+      "topic-heme-06",
+      "topic-heme-07",
+      "topic-heme-08",
+      "topic-heme-09",
+      "topic-heme-10",
+      "topic-heme-11",
+      "topic-heme-12",
+      "topic-heme-13"
+    ],
+    "mediaAssetId": "pdf-book-hematology-handbook-2026",
+    "relativePath": "data/media/e91da026a4f7-UMEDT-Hematology-Study-Handbook.pdf",
+    "downloadUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/e91da026a4f7-UMEDT-Hematology-Study-Handbook.pdf",
+    "sha256": "e91da026a4f79bb3097ec7fc38b08fd6579a05e369f78bcb044a1abcb950e364",
+    "sizeBytes": 20486,
+    "mimeType": "application/pdf",
+    "tags": [
+      "hematology",
+      "cbc",
+      "anemia",
+      "leukemia",
+      "hemostasis"
+    ],
+    "descriptionEn": "Structured downloadable PDF handbook generated from 13 verified UMEDT curriculum topics in block-hematology.",
+    "descriptionAr": "مجمع من موضوعات البلوك الثلاثة عشر: CBC، فقر الدم، الثلاسيميا، اللوكيميا، والتخثر — متاح للتحميل المباشر مع التحقق ببصمة SHA-256.",
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "book-parasitology-atlas-2026",
+    "titleEn": "Diagnostic Medical Parasitology — Spotter & Helminthology Manual",
+    "titleAr": "الدليل التطبيقي والتشخيصي في علم الطفيليات الطبية",
+    "subtitleAr": "تصنيف الديدان الأسطوانية والشريطية والمثقوبات ومفاتيح فحص العملي",
+    "authors": [
+      "UMEDT Academic Editorial Board"
+    ],
+    "publisher": "UMEDT-DATA Central Repository",
+    "edition": "2026.12",
+    "publicationYear": 2026,
+    "language": "bilingual",
+    "resourceKind": "atlas",
+    "format": "pdf",
+    "pageCount": 4,
+    "blockId": "block-infectious",
+    "subjectId": "subj-parasitology",
+    "topicIds": [
+      "pt-parasito-01-foundations",
+      "pt-parasito-02-nematodes-intestinal",
+      "pt-parasito-03-nematodes-filaria",
+      "pt-parasito-04-cestodes",
+      "pt-parasito-05-trematodes",
+      "pt-parasito-06-practical-spotter",
+      "pt-parasito-07-one-day-plan",
+      "pt-parasito-08-mcq-viva"
+    ],
+    "mediaAssetId": "pdf-book-parasitology-atlas-2026",
+    "relativePath": "data/media/be8078000fd4-UMEDT-Parasitology-Diagnostic-Handbook.pdf",
+    "downloadUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/be8078000fd4-UMEDT-Parasitology-Diagnostic-Handbook.pdf",
+    "sha256": "be8078000fd47fb97b0f3dfea25b1db8cc755de678809aeb7774cc64dbd22f90",
+    "sizeBytes": 10392,
+    "mimeType": "application/pdf",
+    "tags": [
+      "parasitology",
+      "nematodes",
+      "cestodes",
+      "trematodes",
+      "spotter"
+    ],
+    "descriptionEn": "Structured downloadable PDF handbook generated from 8 verified UMEDT curriculum topics in block-infectious.",
+    "descriptionAr": "تصنيف الديدان الأسطوانية والشريطية والمثقوبات ومفاتيح فحص العملي — متاح للتحميل المباشر مع التحقق ببصمة SHA-256.",
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "book-cardiology-acs-protocol-2026",
+    "titleEn": "Acute Coronary Syndrome & Reperfusion Protocol Handbook",
+    "titleAr": "دليل البروتوكولات الإسعافية للمتلازمة الإكليلية الحادة (ACS)",
+    "subtitleAr": "الفيزيولوجيا المرضية، الواسمات القلبية التروبونين، والتدخل التاجي الأولي",
+    "authors": [
+      "UMEDT Academic Editorial Board"
+    ],
+    "publisher": "UMEDT-DATA Central Repository",
+    "edition": "2026.12",
+    "publicationYear": 2026,
+    "language": "bilingual",
+    "resourceKind": "clinical_guideline",
+    "format": "pdf",
+    "pageCount": 2,
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicIds": [
+      "topic-med-acs-1"
+    ],
+    "mediaAssetId": "pdf-book-cardiology-acs-protocol-2026",
+    "relativePath": "data/media/8eb0bfdd05ca-UMEDT-ACS-Emergency-Protocol-Manual.pdf",
+    "downloadUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/8eb0bfdd05ca-UMEDT-ACS-Emergency-Protocol-Manual.pdf",
+    "sha256": "8eb0bfdd05ca9386e6ef92839dd6d7ddd654e5b80bd5957d9bea7e913189dedd",
+    "sizeBytes": 3101,
+    "mimeType": "application/pdf",
+    "tags": [
+      "cardiology",
+      "acs",
+      "stemi",
+      "troponin",
+      "emergency"
+    ],
+    "descriptionEn": "Structured downloadable PDF handbook generated from 1 verified UMEDT curriculum topics in block-clinical-medicine.",
+    "descriptionAr": "الفيزيولوجيا المرضية، الواسمات القلبية التروبونين، والتدخل التاجي الأولي — متاح للتحميل المباشر مع التحقق ببصمة SHA-256.",
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "book-medical-informatics-gcnmt-2026",
+    "titleEn": "Medical AI, GC-NMT & Arabic Lexicography Technical Reference",
+    "titleAr": "المرجع التقني في المعلوماتية الطبية والترجمة العصبية والمعاجم العربية",
+    "subtitleAr": "معمارية GC-NMT، فهرسة SQLite FTS5، وتأصيل المصطلح الطبي الموحد",
+    "authors": [
+      "UMEDT Academic Editorial Board"
+    ],
+    "publisher": "UMEDT-DATA Central Repository",
+    "edition": "2026.12",
+    "publicationYear": 2026,
+    "language": "bilingual",
+    "resourceKind": "textbook",
+    "format": "pdf",
+    "pageCount": 2,
+    "blockId": "block-informatics",
+    "subjectId": "subj-medical-ai",
+    "topicIds": [
+      "topic-ai-gcnmt-2",
+      "topic-tech-sqlite-3",
+      "topic-hist-lexicon-4"
+    ],
+    "mediaAssetId": "pdf-book-medical-informatics-gcnmt-2026",
+    "relativePath": "data/media/bb63f24b1400-UMEDT-Medical-Informatics-GCNMT-Reference.pdf",
+    "downloadUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/bb63f24b1400-UMEDT-Medical-Informatics-GCNMT-Reference.pdf",
+    "sha256": "bb63f24b1400be481029b88b5513ccb42114e0d8baf01a0837a4c31661c6c5bf",
+    "sizeBytes": 4709,
+    "mimeType": "application/pdf",
+    "tags": [
+      "informatics",
+      "gc-nmt",
+      "sqlite",
+      "lexicography",
+      "who-umd"
+    ],
+    "descriptionEn": "Structured downloadable PDF handbook generated from 3 verified UMEDT curriculum topics in block-informatics.",
+    "descriptionAr": "معمارية GC-NMT، فهرسة SQLite FTS5، وتأصيل المصطلح الطبي الموحد — متاح للتحميل المباشر مع التحقق ببصمة SHA-256.",
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  }
+]

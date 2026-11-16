@@ -8,14 +8,22 @@ import type {
   WorkspaceDataState
 } from '../src/types/umedtData.ts';
 
+import {
+  buildDataCatalogDocument,
+  generateApiContractMarkdown,
+  generateJsonSchemaFiles
+} from './catalogGenerator.ts';
+
 const REPO_ROOT = process.cwd();
 const CACHE_ROOT = path.resolve(REPO_ROOT, '.umedt-hub-cache');
 const WORKSPACE_FILE = path.join(CACHE_ROOT, 'workspace.json');
 const CACHE_MEDIA_DIR = path.join(CACHE_ROOT, 'media');
 
+const DATA_DIR = path.resolve(REPO_ROOT, 'data');
 const DATA_MASTER_DIR = path.resolve(REPO_ROOT, 'data', 'master');
 const DATA_MEDIA_DIR = path.resolve(REPO_ROOT, 'data', 'media');
 const DATA_RELEASES_DIR = path.resolve(REPO_ROOT, 'data', 'releases');
+const DOCS_SCHEMAS_DIR = path.resolve(REPO_ROOT, 'docs', 'schemas');
 
 export const OFFICIAL_DATA_REPO = 'Alssaedy50/UMEDT-DATA';
 export const OFFICIAL_SOURCE_REPO = 'Alssaedy50/UMEDT';
@@ -24,8 +32,10 @@ export function ensureCacheDirs(): void {
   for (const dir of [
     CACHE_ROOT,
     CACHE_MEDIA_DIR,
+    DATA_DIR,
     DATA_MASTER_DIR,
     DATA_MEDIA_DIR,
+    DOCS_SCHEMAS_DIR,
     path.join(DATA_RELEASES_DIR, 'stable'),
     path.join(DATA_RELEASES_DIR, 'beta')
   ]) {
@@ -54,7 +64,9 @@ export function createDefaultWorkspaceState(): WorkspaceDataState {
     sentences: [],
     customAffixes: [],
     customAbbreviations: [],
+    books: [],
     questions: [],
+    exams: [],
     mediaAssets: []
   };
 }
@@ -79,7 +91,9 @@ export function loadFromRepoMasterFiles(): Partial<WorkspaceDataState> {
     sentences: readJsonArrayFromMaster('sentences.json'),
     customAffixes: readJsonArrayFromMaster('custom-affixes.json'),
     customAbbreviations: readJsonArrayFromMaster('custom-abbreviations.json'),
+    books: readJsonArrayFromMaster('books.json'),
     questions: readJsonArrayFromMaster('questions.json'),
+    exams: readJsonArrayFromMaster('exams.json'),
     mediaAssets: readJsonArrayFromMaster('media-index.json')
   };
 }
@@ -106,7 +120,9 @@ export function loadWorkspaceState(): WorkspaceDataState {
       sentences: repoMaster.sentences || [],
       customAffixes: repoMaster.customAffixes || [],
       customAbbreviations: repoMaster.customAbbreviations || [],
+      books: repoMaster.books || [],
       questions: repoMaster.questions || [],
+      exams: repoMaster.exams || [],
       mediaAssets: repoMaster.mediaAssets || []
     };
     saveWorkspaceState(initial);
@@ -124,6 +140,7 @@ export function loadWorkspaceState(): WorkspaceDataState {
           : m.rawUrl
     }));
 
+    const repoFallback = loadFromRepoMasterFiles();
     const state: WorkspaceDataState = {
       meta: {
         ...def.meta,
@@ -140,7 +157,9 @@ export function loadWorkspaceState(): WorkspaceDataState {
       customAbbreviations: Array.isArray(parsed.customAbbreviations)
         ? parsed.customAbbreviations
         : [],
+      books: Array.isArray(parsed.books) ? parsed.books : repoFallback.books || [],
       questions: Array.isArray(parsed.questions) ? parsed.questions : [],
+      exams: Array.isArray(parsed.exams) ? parsed.exams : repoFallback.exams || [],
       mediaAssets
     };
 
@@ -152,16 +171,17 @@ export function loadWorkspaceState(): WorkspaceDataState {
       state.sentences.length;
 
     if (totalInCache === 0) {
-      const repoMaster = loadFromRepoMasterFiles();
-      state.blocks = repoMaster.blocks || [];
-      state.subjects = repoMaster.subjects || [];
-      state.topics = repoMaster.topics || [];
-      state.terms = repoMaster.terms || [];
-      state.sentences = repoMaster.sentences || [];
-      state.customAffixes = repoMaster.customAffixes || [];
-      state.customAbbreviations = repoMaster.customAbbreviations || [];
-      state.questions = repoMaster.questions || [];
-      state.mediaAssets = repoMaster.mediaAssets || [];
+      state.blocks = repoFallback.blocks || [];
+      state.subjects = repoFallback.subjects || [];
+      state.topics = repoFallback.topics || [];
+      state.terms = repoFallback.terms || [];
+      state.sentences = repoFallback.sentences || [];
+      state.customAffixes = repoFallback.customAffixes || [];
+      state.customAbbreviations = repoFallback.customAbbreviations || [];
+      state.books = repoFallback.books || [];
+      state.questions = repoFallback.questions || [];
+      state.exams = repoFallback.exams || [];
+      state.mediaAssets = repoFallback.mediaAssets || [];
     }
 
     if (parsed.meta?.dataRepo !== migratedDataRepo) {
@@ -190,7 +210,9 @@ export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<st
     'sentences.json': state.sentences,
     'custom-affixes.json': state.customAffixes,
     'custom-abbreviations.json': state.customAbbreviations,
+    'books.json': state.books || [],
     'questions.json': state.questions,
+    'exams.json': state.exams || [],
     'media-index.json': state.mediaAssets
   };
 
@@ -201,6 +223,25 @@ export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<st
     hashes[name] = crypto.createHash('sha256').update(jsonText).digest('hex');
   }
   return hashes;
+}
+
+export function writeCatalogAndDocsToRepoDisk(state: WorkspaceDataState): void {
+  ensureCacheDirs();
+  const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
+  fs.writeFileSync(
+    path.join(DATA_DIR, 'catalog.json'),
+    JSON.stringify(catalog, null, 2),
+    'utf8'
+  );
+  const schemas = generateJsonSchemaFiles();
+  for (const [relPath, content] of Object.entries(schemas)) {
+    fs.writeFileSync(path.resolve(REPO_ROOT, relPath), content, 'utf8');
+  }
+  fs.writeFileSync(
+    path.resolve(REPO_ROOT, 'docs', 'UMEDT-DATA-API-CONTRACT.md'),
+    generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main'),
+    'utf8'
+  );
 }
 
 export function loadReleaseHistory(channel: 'stable' | 'beta'): ReleaseHistoryRecord[] {
@@ -266,7 +307,9 @@ export function computeWorkspaceCounts(state: Pick<
   | 'sentences'
   | 'customAffixes'
   | 'customAbbreviations'
+  | 'books'
   | 'questions'
+  | 'exams'
   | 'mediaAssets'
 >): MasterDataCounts {
   return {
@@ -277,7 +320,9 @@ export function computeWorkspaceCounts(state: Pick<
     sentences: state.sentences.length,
     customAffixes: state.customAffixes.length,
     customAbbreviations: state.customAbbreviations.length,
+    books: (state.books || []).length,
     questions: state.questions.length,
+    exams: (state.exams || []).length,
     mediaAssets: state.mediaAssets.length
   };
 }

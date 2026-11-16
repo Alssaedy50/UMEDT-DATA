@@ -1,18 +1,21 @@
 [
   {
     "id": "img-acs-1",
-    "fileName": "img-acs-1.url",
-    "relativePath": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%2310b981%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%2310b981%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%2310b981%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%2310b981%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%2310b981%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3EAcute%20Coronary%20Reperfusion%20Pathway%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%2310b981%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EIschemia%20%E2%86%92%20Troponin%20Elevation%20%E2%86%92%20Primary%20Angioplasty%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
-    "mediaType": "image",
-    "mimeType": "image/jpeg",
-    "sizeBytes": 0,
-    "sha256": "2c3dbdaddc10a385782f40953b4c4b9d87618233c30a1cdeb98094c449495972",
+    "fileName": "img-acs-1.svg",
+    "relativePath": "data/media/554b8bc839fb-img-acs-1.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 1553,
+    "sha256": "554b8bc839fbf8924d86c6d14ed3702976edf9cfd08891daf335046491ba8519",
     "linkedEntityType": "topic",
     "linkedEntityId": "topic-med-acs-1",
     "captionAr": "مخطط توضيحي لمسار التشخيص السريع وإعادة التروية القسطرية في حالات احتشاء عضلة القلب الحاد.",
-    "rawUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%2310b981%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%2310b981%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%2310b981%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%2310b981%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%2310b981%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3EAcute%20Coronary%20Reperfusion%20Pathway%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%2310b981%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EIschemia%20%E2%86%92%20Troponin%20Elevation%20%E2%86%92%20Primary%20Angioplasty%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/554b8bc839fb-img-acs-1.svg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T19:53:11.130Z",
+    "downloadable": true,
+    "width": 960,
+    "height": 420
   },
   {
     "id": "att-acs-1",
@@ -27,22 +30,26 @@
     "captionAr": "مرفق: ACS_Emergency_Protocol_Checklist.txt",
     "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/66dbcb513e98-ACS_Emergency_Protocol_Checklist.txt",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "img-ai-1",
-    "fileName": "img-ai-1.url",
-    "relativePath": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%2314b8a6%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%2314b8a6%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%2314b8a6%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%2314b8a6%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%2314b8a6%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3E4-Layer%20Hybrid%20GC-NMT%20Architecture%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%2314b8a6%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EAho-Corasick%20Masking%20%E2%86%92%20OOV%20Morphology%20%E2%86%92%20Neural%20NMT%20%E2%86%92%20UMD%20Injection%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
-    "mediaType": "image",
-    "mimeType": "image/jpeg",
-    "sizeBytes": 0,
-    "sha256": "dd859387750dc6ebff36914e06b4a4b62b36d315090cceb85a0d1589a58417c9",
+    "fileName": "img-ai-1.svg",
+    "relativePath": "data/media/4a4267968a18-img-ai-1.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 1570,
+    "sha256": "4a4267968a18246b362083c74e50278f6fe09eca2ddc83bd0777eed4e41c035e",
     "linkedEntityType": "topic",
     "linkedEntityId": "topic-ai-gcnmt-2",
     "captionAr": "مخطط الطبقات الأربع لمحرك الترجمة العصبية المقيدة بالمعجم الطبي الموحد.",
-    "rawUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%2314b8a6%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%2314b8a6%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%2314b8a6%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%2314b8a6%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%2314b8a6%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3E4-Layer%20Hybrid%20GC-NMT%20Architecture%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%2314b8a6%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EAho-Corasick%20Masking%20%E2%86%92%20OOV%20Morphology%20%E2%86%92%20Neural%20NMT%20%E2%86%92%20UMD%20Injection%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/4a4267968a18-img-ai-1.svg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T19:53:11.130Z",
+    "downloadable": true,
+    "width": 960,
+    "height": 420
   },
   {
     "id": "att-ai-1",
@@ -57,52 +64,62 @@
     "captionAr": "مرفق: GCNMT_Pipeline_Specification.json",
     "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/87f4e0b260ee-GCNMT_Pipeline_Specification.json",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "img-hist-1",
-    "fileName": "img-hist-1.url",
-    "relativePath": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23f59e0b%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%23f59e0b%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%23f59e0b%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23f59e0b%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%23f59e0b%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3EArabic%20Scientific%20Lexicography%20Timeline%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f59e0b%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EHunayn%20ibn%20Ishaq%20%E2%86%92%20Ibn%20Sina%20(Avicenna)%20%E2%86%92%20WHO%20Unified%20Medical%20Dictionary%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
-    "mediaType": "image",
-    "mimeType": "image/jpeg",
-    "sizeBytes": 0,
-    "sha256": "6be91ee41841b8782680b1382341351d0cb87e6a248e1dcfe42170011c56801c",
+    "fileName": "img-hist-1.svg",
+    "relativePath": "data/media/72d57063ed24-img-hist-1.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 1578,
+    "sha256": "72d57063ed243ffcc5d26383798d1a438131dc0e7605b1704540f435ea5793cc",
     "linkedEntityType": "topic",
     "linkedEntityId": "topic-hist-lexicon-4",
     "captionAr": "مسيرة تطور المصطلح الطبي العربي من حركة الترجمة الكلاسيكية إلى الفهرسة الرقمية الحديثة.",
-    "rawUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20960%20420%22%20width%3D%22960%22%20height%3D%22420%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%230f172a%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23020617%22%20%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22960%22%20height%3D%22420%22%20rx%3D%2224%22%20fill%3D%22url(%23bg)%22%20%2F%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23f59e0b%22%20stroke-opacity%3D%220.16%22%20stroke-width%3D%221%22%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%2284%22%20x2%3D%22960%22%20y2%3D%2284%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22168%22%20x2%3D%22960%22%20y2%3D%22168%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22252%22%20x2%3D%22960%22%20y2%3D%22252%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%220%22%20y1%3D%22336%22%20x2%3D%22960%22%20y2%3D%22336%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22192%22%20y1%3D%220%22%20x2%3D%22192%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22384%22%20y1%3D%220%22%20x2%3D%22384%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22576%22%20y1%3D%220%22%20x2%3D%22576%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%22768%22%20y1%3D%220%22%20x2%3D%22768%22%20y2%3D%22420%22%20%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Crect%20x%3D%2248%22%20y%3D%2248%22%20width%3D%22864%22%20height%3D%22324%22%20rx%3D%2218%22%20fill%3D%22%230f172a%22%20fill-opacity%3D%220.7%22%20stroke%3D%22%23f59e0b%22%20stroke-opacity%3D%220.45%22%20stroke-width%3D%221.5%22%20%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%22110%22%20r%3D%2224%22%20fill%3D%22%23f59e0b%22%20fill-opacity%3D%220.2%22%20stroke%3D%22%23f59e0b%22%20stroke-width%3D%222%22%20%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M98%20110%20L106%20118%20L122%20102%22%20fill%3D%22none%22%20stroke%3D%22%23f59e0b%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22195%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f8fafc%22%20font-family%3D%22sans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22700%22%3EArabic%20Scientific%20Lexicography%20Timeline%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22480%22%20y%3D%22245%22%20text-anchor%3D%22middle%22%20fill%3D%22%23f59e0b%22%20font-family%3D%22monospace%22%20font-size%3D%2217%22%20font-weight%3D%22600%22%3EHunayn%20ibn%20Ishaq%20%E2%86%92%20Ibn%20Sina%20(Avicenna)%20%E2%86%92%20WHO%20Unified%20Medical%20Dictionary%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/72d57063ed24-img-hist-1.svg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T19:53:11.130Z",
+    "downloadable": true,
+    "width": 960,
+    "height": 420
   },
   {
     "id": "p1-img-taxonomy",
-    "fileName": "p1-img-taxonomy.url",
-    "relativePath": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22680%22%20viewBox%3D%220%200%201200%20680%22%3E%3Crect%20width%3D%221200%22%20height%3D%22680%22%20rx%3D%2228%22%20fill%3D%22%23f8fafc%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%2264%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EHELMINTHS%20CLASSIFICATION%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22105%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23475569%22%3EPractical%20taxonomy%20map%3C%2Ftext%3E%3Crect%20x%3D%22390%22%20y%3D%22140%22%20width%3D%22420%22%20height%3D%2290%22%20rx%3D%2218%22%20fill%3D%22%23dbeafe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%22178%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EHELMINTHS%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22215%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EParasitic%20worms%3C%2Ftext%3E%3Cpath%20d%3D%22M600%20230%20V275%20M300%20275%20H900%20M300%20275%20V320%20M900%20275%20V320%22%20fill%3D%22none%22%20stroke%3D%22%23334155%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%2290%22%20y%3D%22320%22%20width%3D%22420%22%20height%3D%22110%22%20rx%3D%2218%22%20fill%3D%22%23dcfce7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22358%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ENEMATODA%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22395%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ERoundworms%20%E2%80%A2%20cylindrical%3C%2Ftext%3E%3Crect%20x%3D%22690%22%20y%3D%22320%22%20width%3D%22420%22%20height%3D%22110%22%20rx%3D%2218%22%20fill%3D%22%23fef3c7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22900%22%20y%3D%22358%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPLATYHELMINTHES%3C%2Ftext%3E%3Ctext%20x%3D%22900%22%20y%3D%22395%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFlatworms%20%E2%80%A2%20flattened%3C%2Ftext%3E%3Cpath%20d%3D%22M900%20430%20V475%20M800%20475%20H1000%20M800%20475%20V510%20M1000%20475%20V510%22%20fill%3D%22none%22%20stroke%3D%22%23334155%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%22600%22%20y%3D%22510%22%20width%3D%22380%22%20height%3D%22100%22%20rx%3D%2218%22%20fill%3D%22%23fce7f3%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22790%22%20y%3D%22548%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ECESTODA%3C%2Ftext%3E%3Ctext%20x%3D%22790%22%20y%3D%22585%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ETapeworms%3C%2Ftext%3E%3Crect%20x%3D%221010%22%20y%3D%22510%22%20width%3D%22170%22%20height%3D%22100%22%20rx%3D%2218%22%20fill%3D%22%23ede9fe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%221095%22%20y%3D%22548%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ETREMATODA%3C%2Ftext%3E%3Ctext%20x%3D%221095%22%20y%3D%22585%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFlukes%3C%2Ftext%3E%3C%2Fsvg%3E",
-    "mediaType": "image",
-    "mimeType": "image/jpeg",
-    "sizeBytes": 0,
-    "sha256": "6f08a257c5ca6417b0bcca1e9f305001c32d331a87191b35d894b76ca0843d28",
+    "fileName": "p1-img-taxonomy.svg",
+    "relativePath": "data/media/91703df5a1b1-p1-img-taxonomy.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 2517,
+    "sha256": "91703df5a1b1e4292ae6e4140dea05e2856b6dbaa2f30cdfd46f29176fce1961",
     "linkedEntityType": "topic",
     "linkedEntityId": "pt-parasito-01-foundations",
     "captionAr": "Offline taxonomy diagram: Nematoda versus Platyhelminthes, with Cestoda and Trematoda.",
-    "rawUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22680%22%20viewBox%3D%220%200%201200%20680%22%3E%3Crect%20width%3D%221200%22%20height%3D%22680%22%20rx%3D%2228%22%20fill%3D%22%23f8fafc%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%2264%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EHELMINTHS%20CLASSIFICATION%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22105%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23475569%22%3EPractical%20taxonomy%20map%3C%2Ftext%3E%3Crect%20x%3D%22390%22%20y%3D%22140%22%20width%3D%22420%22%20height%3D%2290%22%20rx%3D%2218%22%20fill%3D%22%23dbeafe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%22178%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EHELMINTHS%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22215%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EParasitic%20worms%3C%2Ftext%3E%3Cpath%20d%3D%22M600%20230%20V275%20M300%20275%20H900%20M300%20275%20V320%20M900%20275%20V320%22%20fill%3D%22none%22%20stroke%3D%22%23334155%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%2290%22%20y%3D%22320%22%20width%3D%22420%22%20height%3D%22110%22%20rx%3D%2218%22%20fill%3D%22%23dcfce7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22358%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ENEMATODA%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22395%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ERoundworms%20%E2%80%A2%20cylindrical%3C%2Ftext%3E%3Crect%20x%3D%22690%22%20y%3D%22320%22%20width%3D%22420%22%20height%3D%22110%22%20rx%3D%2218%22%20fill%3D%22%23fef3c7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22900%22%20y%3D%22358%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPLATYHELMINTHES%3C%2Ftext%3E%3Ctext%20x%3D%22900%22%20y%3D%22395%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFlatworms%20%E2%80%A2%20flattened%3C%2Ftext%3E%3Cpath%20d%3D%22M900%20430%20V475%20M800%20475%20H1000%20M800%20475%20V510%20M1000%20475%20V510%22%20fill%3D%22none%22%20stroke%3D%22%23334155%22%20stroke-width%3D%224%22%2F%3E%3Crect%20x%3D%22600%22%20y%3D%22510%22%20width%3D%22380%22%20height%3D%22100%22%20rx%3D%2218%22%20fill%3D%22%23fce7f3%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22790%22%20y%3D%22548%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ECESTODA%3C%2Ftext%3E%3Ctext%20x%3D%22790%22%20y%3D%22585%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ETapeworms%3C%2Ftext%3E%3Crect%20x%3D%221010%22%20y%3D%22510%22%20width%3D%22170%22%20height%3D%22100%22%20rx%3D%2218%22%20fill%3D%22%23ede9fe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%221095%22%20y%3D%22548%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3ETREMATODA%3C%2Ftext%3E%3Ctext%20x%3D%221095%22%20y%3D%22585%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFlukes%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/91703df5a1b1-p1-img-taxonomy.svg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T19:53:11.130Z",
+    "downloadable": true,
+    "width": 1200,
+    "height": 680
   },
   {
     "id": "p1-img-transmission",
-    "fileName": "p1-img-transmission.url",
-    "relativePath": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22680%22%20viewBox%3D%220%200%201200%20680%22%3E%3Crect%20width%3D%221200%22%20height%3D%22680%22%20rx%3D%2228%22%20fill%3D%22%23f8fafc%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%2264%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPARASITE%20TRANSMISSION%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22105%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23475569%22%3EMatch%20the%20route%20to%20the%20infective%20stage%3C%2Ftext%3E%3Crect%20x%3D%2255%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23dbeafe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EDIRECT%3C%2Ftext%3E%3Ctext%20x%3D%22180%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EPerson-to-person%20%2F%20contact%3C%2Ftext%3E%3Crect%20x%3D%22345%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23dcfce7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22470%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EVERTICAL%3C%2Ftext%3E%3Ctext%20x%3D%22470%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EMother%20%E2%86%92%20child%3C%2Ftext%3E%3Crect%20x%3D%22635%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23fef3c7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22760%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EINDIRECT%3C%2Ftext%3E%3Ctext%20x%3D%22760%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFood%20%E2%80%A2%20water%20%E2%80%A2%20soil%20%E2%80%A2%20vector%3C%2Ftext%3E%3Crect%20x%3D%22925%22%20y%3D%22170%22%20width%3D%22220%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23fce7f3%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%221035%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPERCUTANEOUS%3C%2Ftext%3E%3Ctext%20x%3D%221035%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ESkin%20penetration%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22430%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EExamples%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22480%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EEnterobius%20%E2%80%A2%20contaminated%20food%2Fwater%20%E2%80%A2%20Chrysops%20%E2%80%A2%20Schistosoma%20cercariae%3C%2Ftext%3E%3C%2Fsvg%3E",
-    "mediaType": "image",
-    "mimeType": "image/jpeg",
-    "sizeBytes": 0,
-    "sha256": "e45262462cef6d0c0f389c5461620c316633769dba9f845640e946716b537b46",
+    "fileName": "p1-img-transmission.svg",
+    "relativePath": "data/media/f428060eec2d-p1-img-transmission.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 2263,
+    "sha256": "f428060eec2d28dd4be2d548b3082ebe8f06f6791d121a1778ab5c561d38293b",
     "linkedEntityType": "topic",
     "linkedEntityId": "pt-parasito-01-foundations",
     "captionAr": "Offline route-of-transmission map with the four categories used in the course.",
-    "rawUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22680%22%20viewBox%3D%220%200%201200%20680%22%3E%3Crect%20width%3D%221200%22%20height%3D%22680%22%20rx%3D%2228%22%20fill%3D%22%23f8fafc%22%2F%3E%3Ctext%20x%3D%22600%22%20y%3D%2264%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPARASITE%20TRANSMISSION%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22105%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23475569%22%3EMatch%20the%20route%20to%20the%20infective%20stage%3C%2Ftext%3E%3Crect%20x%3D%2255%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23dbeafe%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22180%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EDIRECT%3C%2Ftext%3E%3Ctext%20x%3D%22180%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EPerson-to-person%20%2F%20contact%3C%2Ftext%3E%3Crect%20x%3D%22345%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23dcfce7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22470%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EVERTICAL%3C%2Ftext%3E%3Ctext%20x%3D%22470%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EMother%20%E2%86%92%20child%3C%2Ftext%3E%3Crect%20x%3D%22635%22%20y%3D%22170%22%20width%3D%22250%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23fef3c7%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22760%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EINDIRECT%3C%2Ftext%3E%3Ctext%20x%3D%22760%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EFood%20%E2%80%A2%20water%20%E2%80%A2%20soil%20%E2%80%A2%20vector%3C%2Ftext%3E%3Crect%20x%3D%22925%22%20y%3D%22170%22%20width%3D%22220%22%20height%3D%22150%22%20rx%3D%2218%22%20fill%3D%22%23fce7f3%22%20stroke%3D%22%23334155%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%221035%22%20y%3D%22208%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20font-weight%3D%22700%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EPERCUTANEOUS%3C%2Ftext%3E%3Ctext%20x%3D%221035%22%20y%3D%22245%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2217%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3ESkin%20penetration%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22430%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%20fill%3D%22%230f172a%22%3EExamples%3C%2Ftext%3E%3Ctext%20x%3D%22600%22%20y%3D%22480%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%23334155%22%3EEnterobius%20%E2%80%A2%20contaminated%20food%2Fwater%20%E2%80%A2%20Chrysops%20%E2%80%A2%20Schistosoma%20cercariae%3C%2Ftext%3E%3C%2Fsvg%3E",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/f428060eec2d-p1-img-transmission.svg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T19:53:11.130Z",
+    "downloadable": true,
+    "width": 1200,
+    "height": 680
   },
   {
     "id": "p2-img-ascaris-fert",
@@ -117,7 +134,8 @@
     "captionAr": "Ascaris lumbricoides fertilized egg — CDC DPDx; compare the rounded thick-shelled egg with the elongated unfertilized form.",
     "rawUrl": "https://www.cdc.gov/dpdx/ascariasis/images/2/Ascaris_egg_fert_embryo.jpg?_=01116",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p2-img-ascaris-unfert",
@@ -132,7 +150,8 @@
     "captionAr": "Ascaris unfertilized egg — elongated with irregular mammillations and granular contents, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/ascariasis/images/1/Ascaris_egg_unfert.jpg?_=01127",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p2-img-trichuris",
@@ -147,7 +166,8 @@
     "captionAr": "Trichuris trichiura egg — barrel-shaped with bipolar plugs, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/trichuriasis/images/1/Trichuris_trichiura_egg1.jpg?_=01207",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p2-img-enterobius",
@@ -162,7 +182,8 @@
     "captionAr": "Enterobius vermicularis eggs — planoconvex / D-shaped appearance, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/enterobiasis/images/1/Evermicularis_egg_HBa.jpg?_=04214",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p2-img-strongy-rhab",
@@ -177,7 +198,8 @@
     "captionAr": "Strongyloides stercoralis rhabditiform larva — diagnostic larval form in stool, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/strongyloidiasis/images/1/S_stercoralis_rhabditoid_BAM8.jpg?_=04606",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p2-img-strongy-filar",
@@ -192,7 +214,8 @@
     "captionAr": "Strongyloides stercoralis filariform L3 — infective skin-penetrating larva, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/strongyloidiasis/images/2/S_stercoralis_filariform_BAM1.jpg?_=04594",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p3-img1",
@@ -207,7 +230,8 @@
     "captionAr": "Loa loa microfilaria in a Giemsa-stained blood smear — CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/loiasis/images/1/L_loa_whole_HBc.jpg?_=02222",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p3-img2",
@@ -222,7 +246,8 @@
     "captionAr": "Loa loa microfilaria in a thin Giemsa-stained blood smear — CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/loiasis/images/1/L_loa_whole_HBb.jpg",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p4-img1",
@@ -237,7 +262,8 @@
     "captionAr": "Taenia solium scolex: four suckers and armed rostellum — CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/taeniasis/images/2/Taenia_solium_scolex1.jpg?_=96647",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p4-img-hnana-egg",
@@ -252,7 +278,8 @@
     "captionAr": "Hymenolepis nana egg — polar filaments and hexacanth embryo, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/hymenolepiasis/images/2/H_nana_egg_wtmt5.jpg?_=01696",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p4-img-hnana-scolex",
@@ -267,7 +294,8 @@
     "captionAr": "Hymenolepis nana scolex — suckers and rostellar hooks, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/hymenolepiasis/images/5/H_nana_scolex_DB2.jpg?_=01714",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p5-img1",
@@ -282,7 +310,8 @@
     "captionAr": "Adult Fasciola hepatica — leaf-shaped liver fluke, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/fascioliasis/images/2/Fasciola_adult_unstained1.jpg?_=05673",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p5-img2",
@@ -297,7 +326,8 @@
     "captionAr": "Schistosoma mansoni egg — lateral spine, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/schistosomiasis/images/1/S_mansoni_egg_WI1.jpg?_=96146",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p5-img3",
@@ -312,7 +342,8 @@
     "captionAr": "Schistosoma haematobium egg — terminal spine, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/schistosomiasis/images/2/S_haematobium_egg_HB1.jpg?_=96128",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
   },
   {
     "id": "p5-img4",
@@ -327,6 +358,107 @@
     "captionAr": "Schistosoma mansoni adults — slender female within the gynecophoral canal of the thicker male, CDC DPDx.",
     "rawUrl": "https://www.cdc.gov/dpdx/schistosomiasis/images/7/S_mansoni_adult_Lammie1.jpg?_=96163",
     "createdAt": "2026-11-16T18:18:47.198Z",
-    "updatedAt": "2026-11-16T18:18:47.198Z"
+    "updatedAt": "2026-11-16T18:18:47.198Z",
+    "downloadable": true
+  },
+  {
+    "id": "pdf-book-hematology-handbook-2026",
+    "fileName": "UMEDT-Hematology-Study-Handbook.pdf",
+    "relativePath": "data/media/e91da026a4f7-UMEDT-Hematology-Study-Handbook.pdf",
+    "mediaType": "pdf",
+    "mimeType": "application/pdf",
+    "sizeBytes": 20486,
+    "sha256": "e91da026a4f79bb3097ec7fc38b08fd6579a05e369f78bcb044a1abcb950e364",
+    "linkedEntityType": "book",
+    "linkedEntityId": "book-hematology-handbook-2026",
+    "captionAr": "المرجع الدراسي الشامل في علم أمراض الدم السريري والمخبري",
+    "captionEn": "Clinical & Laboratory Hematology — UMEDT Study Handbook",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/e91da026a4f7-UMEDT-Hematology-Study-Handbook.pdf",
+    "downloadable": true,
+    "tags": [
+      "hematology",
+      "cbc",
+      "anemia",
+      "leukemia",
+      "hemostasis"
+    ],
+    "pageCount": 6,
+    "createdAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "pdf-book-parasitology-atlas-2026",
+    "fileName": "UMEDT-Parasitology-Diagnostic-Handbook.pdf",
+    "relativePath": "data/media/be8078000fd4-UMEDT-Parasitology-Diagnostic-Handbook.pdf",
+    "mediaType": "pdf",
+    "mimeType": "application/pdf",
+    "sizeBytes": 10392,
+    "sha256": "be8078000fd47fb97b0f3dfea25b1db8cc755de678809aeb7774cc64dbd22f90",
+    "linkedEntityType": "book",
+    "linkedEntityId": "book-parasitology-atlas-2026",
+    "captionAr": "الدليل التطبيقي والتشخيصي في علم الطفيليات الطبية",
+    "captionEn": "Diagnostic Medical Parasitology — Spotter & Helminthology Manual",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/be8078000fd4-UMEDT-Parasitology-Diagnostic-Handbook.pdf",
+    "downloadable": true,
+    "tags": [
+      "parasitology",
+      "nematodes",
+      "cestodes",
+      "trematodes",
+      "spotter"
+    ],
+    "pageCount": 4,
+    "createdAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "pdf-book-cardiology-acs-protocol-2026",
+    "fileName": "UMEDT-ACS-Emergency-Protocol-Manual.pdf",
+    "relativePath": "data/media/8eb0bfdd05ca-UMEDT-ACS-Emergency-Protocol-Manual.pdf",
+    "mediaType": "pdf",
+    "mimeType": "application/pdf",
+    "sizeBytes": 3101,
+    "sha256": "8eb0bfdd05ca9386e6ef92839dd6d7ddd654e5b80bd5957d9bea7e913189dedd",
+    "linkedEntityType": "book",
+    "linkedEntityId": "book-cardiology-acs-protocol-2026",
+    "captionAr": "دليل البروتوكولات الإسعافية للمتلازمة الإكليلية الحادة (ACS)",
+    "captionEn": "Acute Coronary Syndrome & Reperfusion Protocol Handbook",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/8eb0bfdd05ca-UMEDT-ACS-Emergency-Protocol-Manual.pdf",
+    "downloadable": true,
+    "tags": [
+      "cardiology",
+      "acs",
+      "stemi",
+      "troponin",
+      "emergency"
+    ],
+    "pageCount": 2,
+    "createdAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "pdf-book-medical-informatics-gcnmt-2026",
+    "fileName": "UMEDT-Medical-Informatics-GCNMT-Reference.pdf",
+    "relativePath": "data/media/bb63f24b1400-UMEDT-Medical-Informatics-GCNMT-Reference.pdf",
+    "mediaType": "pdf",
+    "mimeType": "application/pdf",
+    "sizeBytes": 4709,
+    "sha256": "bb63f24b1400be481029b88b5513ccb42114e0d8baf01a0837a4c31661c6c5bf",
+    "linkedEntityType": "book",
+    "linkedEntityId": "book-medical-informatics-gcnmt-2026",
+    "captionAr": "المرجع التقني في المعلوماتية الطبية والترجمة العصبية والمعاجم العربية",
+    "captionEn": "Medical AI, GC-NMT & Arabic Lexicography Technical Reference",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/bb63f24b1400-UMEDT-Medical-Informatics-GCNMT-Reference.pdf",
+    "downloadable": true,
+    "tags": [
+      "informatics",
+      "gc-nmt",
+      "sqlite",
+      "lexicography",
+      "who-umd"
+    ],
+    "pageCount": 2,
+    "createdAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
   }
 ]

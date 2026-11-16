@@ -36,8 +36,10 @@ const DOMAIN_ROWS: Array<{ key: keyof MasterDataCounts; label: string; file: str
   { key: 'sentences', label: 'الجمل السريرية', file: 'data/master/sentences.json' },
   { key: 'customAffixes', label: 'السوابق واللواحق', file: 'data/master/custom-affixes.json' },
   { key: 'customAbbreviations', label: 'الاختصارات الطبية', file: 'data/master/custom-abbreviations.json' },
+  { key: 'books', label: 'الكتب وملفات PDF', file: 'data/master/books.json' },
   { key: 'questions', label: 'بنك الأسئلة', file: 'data/master/questions.json' },
-  { key: 'mediaAssets', label: 'الملحقات والوسائط', file: 'data/master/media-index.json' }
+  { key: 'exams', label: 'الاختبارات والامتحانات', file: 'data/master/exams.json' },
+  { key: 'mediaAssets', label: 'الصور والرسومات والوسائط', file: 'data/master/media-index.json' }
 ];
 
 export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
@@ -66,7 +68,9 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
     draftCounts.sentences +
     draftCounts.customAffixes +
     draftCounts.customAbbreviations +
+    (draftCounts.books || 0) +
     draftCounts.questions +
+    (draftCounts.exams || 0) +
     draftCounts.mediaAssets;
 
   const dataRepoIsEmpty =
@@ -371,7 +375,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
                 const draftVal = draftCounts[row.key];
                 const remoteVal = dataCounts ? dataCounts[row.key] : null;
                 const targetTab =
-                  row.key === 'blocks' || row.key === 'subjects' || row.key === 'topics'
+                  row.key === 'blocks' || row.key === 'subjects' || row.key === 'topics' || row.key === 'books'
                     ? 'blocks'
                     : row.key === 'mediaAssets'
                     ? 'media'
@@ -402,6 +406,42 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
               })}
             </tbody>
           </table>
+        </div>
+
+        {/* Unified Self-Describing Catalog & Read Contract Strip */}
+        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <div className="text-xs text-slate-600">
+            <span className="font-semibold text-slate-900">واجهة القراءة الموحدة والاكتشاف التلقائي:</span>{' '}
+            يجمع ملف <span dir="ltr" className="font-mono text-slate-800">data/catalog.json</span> جميع النطاقات الـ11 مع البصمات و<span dir="ltr" className="font-mono text-slate-800">rendererType</span> لربط UMEDT مستقبلاً دون تحديث التطبيق.
+          </div>
+          <div className="flex flex-wrap items-center gap-3 text-xs shrink-0" dir="ltr">
+            <a
+              href="/api/v1/catalog"
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-teal-700 hover:underline whitespace-nowrap"
+            >
+              /api/v1/catalog
+            </a>
+            <span className="text-slate-300">|</span>
+            <a
+              href="/raw/data/catalog.json"
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-teal-700 hover:underline whitespace-nowrap"
+            >
+              data/catalog.json
+            </a>
+            <span className="text-slate-300">|</span>
+            <a
+              href="/raw/docs/UMEDT-DATA-API-CONTRACT.md"
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-teal-700 hover:underline whitespace-nowrap"
+            >
+              API Contract
+            </a>
+          </div>
         </div>
       </section>
     </div>

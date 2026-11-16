@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/manifest.schema.json",
+  "title": "UMEDT-DATA Release Manifest Schema v2",
+  "type": "object",
+  "required": [
+    "packageId",
+    "dataVersion",
+    "minAppVersion",
+    "schemaVersion",
+    "releasedAt",
+    "channel",
+    "downloadUrl",
+    "checksum",
+    "sha256",
+    "counts"
+  ],
+  "properties": {
+    "packageId": {
+      "type": "string"
+    },
+    "dataVersion": {
+      "type": "string"
+    },
+    "minAppVersion": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "releasedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "channel": {
+      "enum": [
+        "stable",
+        "beta"
+      ]
+    },
+    "downloadUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "signatureAlgorithm": {
+      "enum": [
+        "ECDSA-P256-SHA256"
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "required": [
+        "terms",
+        "sentences",
+        "topics",
+        "affixes",
+        "abbreviations"
+      ]
+    },
+    "extendedCounts": {
+      "type": "object"
+    },
+    "filesSha256": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "incremental": {
+      "type": "object",
+      "properties": {
+        "previousVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "changedDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

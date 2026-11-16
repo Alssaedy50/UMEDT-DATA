@@ -19,9 +19,11 @@ import {
   loadReleaseHistory,
   OFFICIAL_DATA_REPO,
   saveReleaseHistory,
+  writeCatalogAndDocsToRepoDisk,
   writeMasterFilesToRepoDisk,
   writeReleaseArtifactsToRepoDisk
 } from './workspaceStore.ts';
+import { buildDataCatalogDocument } from './catalogGenerator.ts';
 
 const DANGEROUS_EXTENSIONS = new Set([
   '.exe',
@@ -102,8 +104,10 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
   checkUniqueIds(state.sentences, 'sentences', 'الجمل السريرية');
   checkUniqueIds(state.customAffixes, 'customAffixes', 'اللواحق والسوابق');
   checkUniqueIds(state.customAbbreviations, 'customAbbreviations', 'الاختصارات الطبية');
-  checkUniqueIds(state.questions, 'questions', 'الأسئلة التقييمية');
-  checkUniqueIds(state.mediaAssets, 'mediaAssets', 'المرفقات والوسائط');
+  checkUniqueIds(state.books || [], 'books', 'الكتب وملفات PDF');
+  const questionIds = checkUniqueIds(state.questions, 'questions', 'الأسئلة التقييمية');
+  checkUniqueIds(state.exams || [], 'exams', 'الاختبارات والامتحانات');
+  const mediaIds = checkUniqueIds(state.mediaAssets, 'mediaAssets', 'المرفقات والوسائط');
 
   const totalRecords =
     counts.blocks +
@@ -113,7 +117,9 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
     counts.sentences +
     counts.customAffixes +
     counts.customAbbreviations +
-    counts.questions;
+    counts.books +
+    counts.questions +
+    counts.exams;
 
   if (totalRecords === 0) {
     errors.push({
@@ -241,6 +247,73 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
     }
   }
 
+  // Academic Books & PDFs checks
+  for (const bk of state.books || []) {
+    if (!bk.titleEn?.trim() && !bk.titleAr?.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'books',
+        recordId: bk.id,
+        messageAr: `الكتاب (${bk.id}) لا يحتوي على عنوان عربي أو إنجليزي.`
+      });
+    }
+    if (!bk.downloadUrl?.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'books',
+        recordId: bk.id,
+        messageAr: `الكتاب "${bk.titleAr || bk.titleEn}" يفتقد رابط التحميل (downloadUrl).`
+      });
+    }
+    if (bk.blockId && !blockIds.has(bk.blockId)) {
+      warnings.push({
+        severity: 'warning',
+        domain: 'books',
+        recordId: bk.id,
+        messageAr: `الكتاب "${bk.titleAr || bk.titleEn}" يشير إلى بلوك غير موجود (${bk.blockId}).`
+      });
+    }
+    if (bk.mediaAssetId && !mediaIds.has(bk.mediaAssetId)) {
+      warnings.push({
+        severity: 'warning',
+        domain: 'books',
+        recordId: bk.id,
+        messageAr: `الكتاب "${bk.titleAr || bk.titleEn}" يشير إلى ملف وسائط غير موجود (${bk.mediaAssetId}).`
+      });
+    }
+  }
+
+  // Exams checks
+  for (const ex of state.exams || []) {
+    if (!ex.titleEn?.trim() && !ex.titleAr?.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'exams',
+        recordId: ex.id,
+        messageAr: `الاختبار (${ex.id}) لا يحتوي على عنوان.`
+      });
+    }
+    if (!Array.isArray(ex.questionIds) || ex.questionIds.length === 0) {
+      warnings.push({
+        severity: 'warning',
+        domain: 'exams',
+        recordId: ex.id,
+        messageAr: `الاختبار "${ex.titleAr || ex.titleEn}" لا يحتوي على أسئلة مرتبطة بعد.`
+      });
+    } else {
+      for (const qId of ex.questionIds) {
+        if (!questionIds.has(qId)) {
+          warnings.push({
+            severity: 'warning',
+            domain: 'exams',
+            recordId: ex.id,
+            messageAr: `الاختبار "${ex.titleAr || ex.titleEn}" يشير إلى سؤال غير موجود (${qId}).`
+          });
+        }
+      }
+    }
+  }
+
   // Media security checks
   for (const asset of state.mediaAssets) {
     const rel = (asset.relativePath || '').replace(/\\/g, '/');
@@ -359,7 +432,9 @@ export function computeDiffAgainstRemote(
       draft.customAbbreviations,
       remote.customAbbreviations || []
     ),
+    computeCollectionDiff('books', 'الكتب وملفات PDF', draft.books || [], remote.books || []),
     computeCollectionDiff('questions', 'بنك الأسئلة', draft.questions, remote.questions || []),
+    computeCollectionDiff('exams', 'الاختبارات والامتحانات', draft.exams || [], remote.exams || []),
     computeCollectionDiff('mediaAssets', 'الملحقات والوسائط', draft.mediaAssets, remote.mediaAssets || [])
   ];
 
@@ -472,7 +547,9 @@ export function computeDomainFilesSha256(state: WorkspaceDataState): Record<stri
     'sentences.json': sha256Hex(JSON.stringify(state.sentences, null, 2)),
     'custom-affixes.json': sha256Hex(JSON.stringify(state.customAffixes, null, 2)),
     'custom-abbreviations.json': sha256Hex(JSON.stringify(state.customAbbreviations, null, 2)),
+    'books.json': sha256Hex(JSON.stringify(state.books || [], null, 2)),
     'questions.json': sha256Hex(JSON.stringify(state.questions, null, 2)),
+    'exams.json': sha256Hex(JSON.stringify(state.exams || [], null, 2)),
     'media-index.json': sha256Hex(JSON.stringify(state.mediaAssets, null, 2))
   };
 }
@@ -506,7 +583,7 @@ export function formatReleaseChangelogMarkdown(entries: ReleaseHistoryRecord[]):
       `- **SHA-256:** \`${item.sha256}\``,
       `- **التوقيع الرقمي:** ${item.signed ? 'موقّع (ECDSA-P256-SHA256)' : 'حزمة متوافقة غير موقّعة'}`,
       `- **النطاقات المتغيرة:** ${item.changedDomains.length > 0 ? item.changedDomains.join(', ') : 'إصدار أولي / كامل'}`,
-      `- **السجلات:** ${item.extendedCounts.blocks} بلوك · ${item.extendedCounts.subjects} مادة · ${item.counts.topics} موضوع · ${item.counts.terms} مصطلح · ${item.counts.sentences} جملة · ${item.counts.affixes} لاحقة · ${item.counts.abbreviations} اختصار · ${item.extendedCounts.mediaAssets} مرفق`
+      `- **السجلات:** ${item.extendedCounts.blocks} بلوك · ${item.extendedCounts.subjects} مادة · ${item.counts.topics} موضوع · ${item.counts.terms} مصطلح · ${item.counts.sentences} جملة · ${item.counts.affixes} لاحقة · ${item.counts.abbreviations} اختصار · ${item.extendedCounts.books || 0} كتاب · ${item.extendedCounts.questions || 0} سؤال · ${item.extendedCounts.exams || 0} اختبار · ${item.extendedCounts.mediaAssets} مرفق`
     );
   }
   return lines.join('\n') + '\n';
@@ -592,6 +669,7 @@ export async function buildSignedReleasePackage(options: {
   };
 
   zip.file('manifest.json', JSON.stringify(innerManifestBase, null, 2));
+  zip.file('catalog.json', JSON.stringify(buildDataCatalogDocument(state, dataRepo), null, 2));
   zip.file('terms.json', JSON.stringify(state.terms, null, 2));
   zip.file('sentences.json', JSON.stringify(state.sentences, null, 2));
   zip.file('topics.json', JSON.stringify(state.topics, null, 2));
@@ -599,7 +677,9 @@ export async function buildSignedReleasePackage(options: {
   zip.file('abbreviations.json', JSON.stringify(state.customAbbreviations, null, 2));
   zip.file('blocks.json', JSON.stringify(state.blocks, null, 2));
   zip.file('subjects.json', JSON.stringify(state.subjects, null, 2));
+  zip.file('books.json', JSON.stringify(state.books || [], null, 2));
   zip.file('questions.json', JSON.stringify(state.questions, null, 2));
+  zip.file('exams.json', JSON.stringify(state.exams || [], null, 2));
   zip.file('media-index.json', JSON.stringify(state.mediaAssets, null, 2));
 
   const zipUint8 = await zip.generateAsync({
@@ -694,6 +774,7 @@ export async function publishLocalReleaseToDisk(options: {
 
   const built = await buildSignedReleasePackage(options);
   writeMasterFilesToRepoDisk(options.state);
+  writeCatalogAndDocsToRepoDisk(options.state);
   writeReleaseArtifactsToRepoDisk({
     channel: options.channel,
     packageFileName: built.packageFileName,

@@ -1,5 +1,8 @@
 import type {
+  AcademicBookResource,
+  AcademicExamPackage,
   ClinicalAbbreviation,
+  DataCatalogDocument,
   DataPackageManifest,
   DictionaryTerm,
   DiffReport,
@@ -248,6 +251,51 @@ export async function deleteQuestion(
   const res = await fetch(`/api/workspace/questions/${encodeURIComponent(id)}`, {
     method: 'DELETE'
   });
+  return handleJson(res);
+}
+
+export async function saveBook(
+  book: AcademicBookResource
+): Promise<{ state: WorkspaceDataState; validation: ValidationReport }> {
+  const res = await fetch('/api/workspace/books', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(book)
+  });
+  return handleJson(res);
+}
+
+export async function deleteBook(
+  id: string
+): Promise<{ state: WorkspaceDataState; validation: ValidationReport }> {
+  const res = await fetch(`/api/workspace/books/${encodeURIComponent(id)}`, {
+    method: 'DELETE'
+  });
+  return handleJson(res);
+}
+
+export async function saveExam(
+  exam: AcademicExamPackage
+): Promise<{ state: WorkspaceDataState; validation: ValidationReport }> {
+  const res = await fetch('/api/workspace/exams', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(exam)
+  });
+  return handleJson(res);
+}
+
+export async function deleteExam(
+  id: string
+): Promise<{ state: WorkspaceDataState; validation: ValidationReport }> {
+  const res = await fetch(`/api/workspace/exams/${encodeURIComponent(id)}`, {
+    method: 'DELETE'
+  });
+  return handleJson(res);
+}
+
+export async function fetchUnifiedCatalog(): Promise<DataCatalogDocument> {
+  const res = await fetch('/api/v1/catalog', { cache: 'no-store' });
   return handleJson(res);
 }
 

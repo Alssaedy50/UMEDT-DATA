@@ -1,5 +1,7 @@
 import vm from 'node:vm';
 import type {
+  AcademicBookResource,
+  AcademicExamPackage,
   ClinicalAbbreviation,
   DictionaryTerm,
   GitHubFileEntry,
@@ -16,6 +18,11 @@ import type {
 } from '../src/types/umedtData.ts';
 import { sha256Hex } from './cryptoRelease.ts';
 import { readMediaBinary, saveMediaBinary } from './workspaceStore.ts';
+import {
+  buildDataCatalogDocument,
+  generateApiContractMarkdown,
+  generateJsonSchemaFiles
+} from './catalogGenerator.ts';
 import {
   generateUmedtDataReadme,
   generateUmedtDataWorkflowYml,
@@ -66,7 +73,9 @@ function emptyCounts(): MasterDataCounts {
     sentences: 0,
     customAffixes: 0,
     customAbbreviations: 0,
+    books: 0,
     questions: 0,
+    exams: 0,
     mediaAssets: 0
   };
 }
@@ -157,7 +166,9 @@ export async function fetchRepoOverview(
     ['sentences.json', 'sentences'],
     ['custom-affixes.json', 'customAffixes'],
     ['custom-abbreviations.json', 'customAbbreviations'],
+    ['books.json', 'books'],
     ['questions.json', 'questions'],
+    ['exams.json', 'exams'],
     ['media-index.json', 'mediaAssets']
   ];
 
@@ -481,7 +492,9 @@ export async function importSeedFromUmedtRepo(
     sentences: Array.isArray(sentencesRaw) ? sentencesRaw : [],
     customAffixes: Array.isArray(affixesRaw) ? affixesRaw : [],
     customAbbreviations: Array.isArray(abbrsRaw) ? abbrsRaw : [],
-    questions: extractedQuestions,
+    books: currentState.books || [],
+    questions: extractedQuestions.length > 0 ? extractedQuestions : currentState.questions || [],
+    exams: currentState.exams || [],
     mediaAssets: Array.from(mediaAssetsMap.values())
   };
 }
@@ -502,7 +515,9 @@ export async function fetchRemoteMasterData(
     sentences,
     customAffixes,
     customAbbreviations,
+    books,
     questions,
+    exams,
     mediaAssets
   ] = await Promise.all([
     fetchJsonSafe<MedicalBlock[]>(`${baseRaw}/blocks.json`, token),
@@ -512,7 +527,9 @@ export async function fetchRemoteMasterData(
     fetchJsonSafe<LinkedSentence[]>(`${baseRaw}/sentences.json`, token),
     fetchJsonSafe<MorphologicalAffix[]>(`${baseRaw}/custom-affixes.json`, token),
     fetchJsonSafe<ClinicalAbbreviation[]>(`${baseRaw}/custom-abbreviations.json`, token),
+    fetchJsonSafe<AcademicBookResource[]>(`${baseRaw}/books.json`, token),
     fetchJsonSafe<UnifiedQuizQuestion[]>(`${baseRaw}/questions.json`, token),
+    fetchJsonSafe<AcademicExamPackage[]>(`${baseRaw}/exams.json`, token),
     fetchJsonSafe<MediaAssetRecord[]>(`${baseRaw}/media-index.json`, token)
   ]);
 
@@ -524,7 +541,9 @@ export async function fetchRemoteMasterData(
     sentences: Array.isArray(sentences) ? sentences : [],
     customAffixes: Array.isArray(customAffixes) ? customAffixes : [],
     customAbbreviations: Array.isArray(customAbbreviations) ? customAbbreviations : [],
+    books: Array.isArray(books) ? books : [],
     questions: Array.isArray(questions) ? questions : [],
+    exams: Array.isArray(exams) ? exams : [],
     mediaAssets: Array.isArray(mediaAssets) ? mediaAssets : []
   };
 }
@@ -616,6 +635,7 @@ export async function publishAtomicCommitToUmedtData(options: {
     }
   }
 
+  const schemas = generateJsonSchemaFiles();
   const files: GitBlobPayload[] = [
     { path: 'data/master/blocks.json', content: JSON.stringify(state.blocks, null, 2), encoding: 'utf-8' },
     { path: 'data/master/subjects.json', content: JSON.stringify(state.subjects, null, 2), encoding: 'utf-8' },
@@ -628,8 +648,25 @@ export async function publishAtomicCommitToUmedtData(options: {
       content: JSON.stringify(state.customAbbreviations, null, 2),
       encoding: 'utf-8'
     },
+    { path: 'data/master/books.json', content: JSON.stringify(state.books || [], null, 2), encoding: 'utf-8' },
     { path: 'data/master/questions.json', content: JSON.stringify(state.questions, null, 2), encoding: 'utf-8' },
-    { path: 'data/master/media-index.json', content: JSON.stringify(state.mediaAssets, null, 2), encoding: 'utf-8' }
+    { path: 'data/master/exams.json', content: JSON.stringify(state.exams || [], null, 2), encoding: 'utf-8' },
+    { path: 'data/master/media-index.json', content: JSON.stringify(state.mediaAssets, null, 2), encoding: 'utf-8' },
+    {
+      path: 'data/catalog.json',
+      content: JSON.stringify(buildDataCatalogDocument(state, repo), null, 2),
+      encoding: 'utf-8'
+    },
+    ...Object.entries(schemas).map(([schemaPath, content]) => ({
+      path: schemaPath,
+      content,
+      encoding: 'utf-8' as const
+    })),
+    {
+      path: 'docs/UMEDT-DATA-API-CONTRACT.md',
+      content: generateApiContractMarkdown(repo, branch),
+      encoding: 'utf-8'
+    }
   ];
 
   if (includeWorkflowUpgrade) {

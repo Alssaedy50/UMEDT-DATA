@@ -1,10 +1,13 @@
 export function generateUmedtDataReadme(dataRepo = 'Alssaedy50/UMEDT-DATA'): string {
-  return `# مستودع بيانات UMEDT الطبي (${dataRepo})
+  return `# مستودع بيانات UMEDT الطبي والأكاديمي (${dataRepo})
 
-هذا المستودع هو المصدر الرسمي المستقل لبيانات برنامج **UMEDT** لنشر وتحديث:
+هذا المستودع هو المصدر الرسمي المستقل لبيانات برنامج **UMEDT** لنشر وتحديث جميع أنواع المحتوى الأكاديمي:
 - **البلوكات والمواد والمواضيع** (\`blocks.json\`, \`subjects.json\`, \`topics.json\`)
 - **المصطلحات والجمل والسوابق والاختصارات** (\`terms.json\`, \`sentences.json\`, \`custom-affixes.json\`, \`custom-abbreviations.json\`)
-- **بنك الأسئلة والمرفقات والوسائط** (\`questions.json\`, \`media-index.json\`, \`data/media/\`)
+- **الكتب وملفات PDF والملازم** (\`books.json\`)
+- **بنك الأسئلة والاختبارات التقييمية** (\`questions.json\`, \`exams.json\`)
+- **الصور والرسومات التوضيحية والملحقات** (\`media-index.json\`, \`data/media/\`)
+- **الفهرس الذاتي التعريف ومخططات القراءة الموحدة** (\`data/catalog.json\`, \`docs/schemas/\`, \`docs/UMEDT-DATA-API-CONTRACT.md\`)
 - **حزم التحديث الموقعة** (\`data/releases/stable/\`, \`data/releases/beta/\`)
 
 لا يحتوي هذا المستودع على كود تطبيق **UMEDT** أو بيانات المستخدم الشخصية (المفضلة، سجل المراجعة SRS، الملاحظات الخاصة).
@@ -12,6 +15,7 @@ export function generateUmedtDataReadme(dataRepo = 'Alssaedy50/UMEDT-DATA'): str
 ## البنية المعتمدة
 \`\`\`text
 data/
+  catalog.json
   master/
     blocks.json
     subjects.json
@@ -20,7 +24,9 @@ data/
     sentences.json
     custom-affixes.json
     custom-abbreviations.json
+    books.json
     questions.json
+    exams.json
     media-index.json
   media/
     <sha256_prefix>-<filename>
@@ -29,19 +35,27 @@ data/
       manifest.json
       umed2-data-<version>.zip
       CHANGELOG.md
+      history.json
     beta/
       manifest.json
       umed2-data-<version>.zip
       CHANGELOG.md
+      history.json
+docs/
+  UMEDT-DATA-API-CONTRACT.md
+  schemas/
+    catalog.schema.json
+    manifest.schema.json
+    content-entities.schema.json
 \`\`\`
 
-## روابط القراءة المباشرة لتطبيق UMEDT
+## روابط القراءة المباشرة والموحدة
+- **نقطة الاكتشاف الموحدة (Catalog v2):**
+  \`https://raw.githubusercontent.com/${dataRepo}/main/data/catalog.json\`
 - **Manifest التحديث السحابي (OTA):**
   \`https://raw.githubusercontent.com/${dataRepo}/main/data/releases/stable/manifest.json\`
-- **بيانات البلوكات والمصطلحات المباشرة:**
-  \`https://raw.githubusercontent.com/${dataRepo}/main/data/master/blocks.json\`
-  \`https://raw.githubusercontent.com/${dataRepo}/main/data/master/terms.json\`
-  \`https://raw.githubusercontent.com/${dataRepo}/main/data/master/media-index.json\`
+- **عقد القراءة الموحّد ومخططات JSON Schema:**
+  \`https://raw.githubusercontent.com/${dataRepo}/main/docs/UMEDT-DATA-API-CONTRACT.md\`
 
 ## مبدأ الأمان وعدم الإضرار بالمشروع الأصلي
 1. جميع التحديثات تُقرأ وتُدمج عبر المعرفات الفريدة (\`id\`) بدون استبدال كود التطبيق أو تفضيلات المستخدم المحلية (\`favorite\`, \`srsData\`, \`studyStats\`).
@@ -130,7 +144,9 @@ jobs:
           const optionalFiles = [
             'data/master/blocks.json',
             'data/master/subjects.json',
+            'data/master/books.json',
             'data/master/questions.json',
+            'data/master/exams.json',
             'data/master/media-index.json'
           ];
           let total = 0;
@@ -148,6 +164,11 @@ jobs:
               total += parsed.length;
               console.log(\`\${file}: \${parsed.length} records\`);
             }
+          }
+          if (fs.existsSync('data/catalog.json')) {
+            const cat = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
+            if (!Array.isArray(cat.collections)) throw new Error('data/catalog.json missing collections array');
+            console.log(\`data/catalog.json: \${cat.collections.length} collections\`);
           }
           if (total === 0) throw new Error('Refusing to publish: all master data files are empty.');
           NODE
@@ -214,11 +235,11 @@ export interface UmedtMediaIndexEntry {
   id: string;
   fileName: string;
   relativePath: string;
-  mediaType: 'image' | 'diagram' | 'pdf' | 'audio' | 'attachment';
+  mediaType: 'image' | 'diagram' | 'pdf' | 'book' | 'audio' | 'video' | 'attachment';
   mimeType: string;
   sizeBytes: number;
   sha256: string;
-  linkedEntityType: 'block' | 'subject' | 'topic' | 'term' | 'global';
+  linkedEntityType: 'block' | 'subject' | 'topic' | 'term' | 'book' | 'question' | 'exam' | 'global';
   linkedEntityId?: string;
   captionAr?: string;
   captionEn?: string;
@@ -226,6 +247,7 @@ export interface UmedtMediaIndexEntry {
 }
 
 export interface UmedtRemoteMasterSnapshot {
+  catalog?: Record<string, unknown> | null;
   blocks: MedicalBlock[];
   subjects: MedicalSubject[];
   topics: TopicArticle[];
@@ -233,7 +255,9 @@ export interface UmedtRemoteMasterSnapshot {
   sentences: LinkedSentence[];
   customAffixes: MorphologicalAffix[];
   customAbbreviations: ClinicalAbbreviation[];
+  books: Record<string, unknown>[];
   questions: UnifiedQuizQuestion[];
+  exams: Record<string, unknown>[];
   mediaIndex: UmedtMediaIndexEntry[];
   fetchedAt: string;
   sourceRepo: string;
@@ -264,8 +288,10 @@ export async function fetchUmedtDataMasterSnapshot(
   dataRepo = DEFAULT_DATA_REPO,
   branch = 'main'
 ): Promise<UmedtRemoteMasterSnapshot> {
-  const base = \`https://raw.githubusercontent.com/\${dataRepo}/\${branch}/data/master\`;
+  const rawRoot = \`https://raw.githubusercontent.com/\${dataRepo}/\${branch}\`;
+  const base = \`\${rawRoot}/data/master\`;
   const [
+    catalog,
     blocks,
     subjects,
     topics,
@@ -273,9 +299,12 @@ export async function fetchUmedtDataMasterSnapshot(
     sentences,
     customAffixes,
     customAbbreviations,
+    books,
     questions,
+    exams,
     mediaIndex
   ] = await Promise.all([
+    fetch(\`\${rawRoot}/data/catalog.json\`, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetchJsonArray<MedicalBlock>(\`\${base}/blocks.json\`),
     fetchJsonArray<MedicalSubject>(\`\${base}/subjects.json\`),
     fetchJsonArray<TopicArticle>(\`\${base}/topics.json\`),
@@ -283,7 +312,9 @@ export async function fetchUmedtDataMasterSnapshot(
     fetchJsonArray<LinkedSentence>(\`\${base}/sentences.json\`),
     fetchJsonArray<MorphologicalAffix>(\`\${base}/custom-affixes.json\`),
     fetchJsonArray<ClinicalAbbreviation>(\`\${base}/custom-abbreviations.json\`),
+    fetchJsonArray<Record<string, unknown>>(\`\${base}/books.json\`),
     fetchJsonArray<UnifiedQuizQuestion>(\`\${base}/questions.json\`),
+    fetchJsonArray<Record<string, unknown>>(\`\${base}/exams.json\`),
     fetchJsonArray<UmedtMediaIndexEntry>(\`\${base}/media-index.json\`)
   ]);
 
@@ -293,6 +324,7 @@ export async function fetchUmedtDataMasterSnapshot(
   }));
 
   return {
+    catalog,
     blocks,
     subjects,
     topics,
@@ -300,7 +332,9 @@ export async function fetchUmedtDataMasterSnapshot(
     sentences,
     customAffixes,
     customAbbreviations,
+    books,
     questions,
+    exams,
     mediaIndex: hydratedMedia,
     fetchedAt: new Date().toISOString(),
     sourceRepo: dataRepo
@@ -350,23 +384,18 @@ export function generateUmedtIntegrationGuideMd(
   sourceRepo = 'Alssaedy50/UMEDT',
   dataRepo = 'Alssaedy50/UMEDT-DATA'
 ): string {
-  return `# دليل ربط ${sourceRepo} مع مستودع البيانات ${dataRepo}
+  return `# دليل ربط ${sourceRepo} مستقبلاً مع مستودع البيانات ${dataRepo}
 
 ## الهدف
-فصل البيانات الطبية القابلة للتحديث (البلوكات، المواد، المواضيع، المصطلحات، الجمل، السوابق، الاختصارات، الأسئلة، والملحقات) داخل مستودع **${dataRepo}** بحيث يمكن نشر التحديثات باستمرار دون تعديل كود **${sourceRepo}** أو المساس ببيانات المستخدم المحلية.
+فصل جميع أنواع المحتوى الأكاديمي القابلة للتحديث (البلوكات، المواد، المواضيع، المصطلحات، الجمل، السوابق، الاختصارات، الكتب وملفات PDF، الأسئلة، الاختبارات، الصور والرسومات والوسائط) داخل مستودع **${dataRepo}** عبر نقطة اكتشاف موحّدة (\`data/catalog.json\`) وعقد قراءة موثق (\`docs/UMEDT-DATA-API-CONTRACT.md\`)، بحيث يُنفّذ القارئ لاحقاً داخل **${sourceRepo}** دون تعديل كود التطبيق عند إضافة محتوى جديد.
 
-## الملفات المضافة/المحدثة غير الهدّامة في ${sourceRepo}
-1. \`src/services/umedtDataRepoClient.ts\`
-   - يقرأ ملفات \`data/master/*.json\` و \`data/media/*\` من \`https://raw.githubusercontent.com/${dataRepo}/main/...\`.
-   - يدمج المصطلحات مع الحفاظ الكامل على \`favorite\` و \`srsData\` و \`studyCount\` الخاصة بالمستخدم.
-2. \`docs/UMEDT-DATA_SEPARATION.md\`
-   - هذا الدليل التوثيقي لفصل المهام بين المستودعين.
-
-## خطوات التفعيل في UMEDT
-- انشر البيانات عبر **UMEDT Data Hub** إلى \`${dataRepo}\`.
-- أضف \`src/services/umedtDataRepoClient.ts\` إلى \`${sourceRepo}\` (أو افتح Pull Request مباشرة من داخل Hub).
-- تأكد من أن \`VITE_UMED_MANIFEST_URL\` يشير إلى:
-  \`https://raw.githubusercontent.com/${dataRepo}/main/data/releases/stable/manifest.json\`
+## نقطة الدخول الموصى بها عند تنفيذ القارئ في ${sourceRepo}
+1. قراءة الفهرس الموحد:
+   \`https://raw.githubusercontent.com/${dataRepo}/main/data/catalog.json\`
+2. فحص البصمات \`sha256\` لكل نطاق في \`collections[]\` ومقارنتها مع النسخة المحلية لتنزيل التحديثات التدريجية فقط.
+3. استخدام حقل \`rendererType\` لعرض كل نوع محتوى بشكل ديناميكي، والالتزام بحماية الحقول المحلية في \`userProtectedFields\` (\`favorite\`, \`srsData\`, \`studyStats\`, \`bookmarks\`, \`readingProgress\`, \`examAttempts\`).
+4. تأكد من أن \`VITE_UMED_MANIFEST_URL\` يشير إلى:
+   \`https://raw.githubusercontent.com/${dataRepo}/main/data/releases/stable/manifest.json\`
 `;
 }
 

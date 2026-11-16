@@ -4,7 +4,10 @@ import type { MediaAssetRecord, WorkspaceDataState } from '../types/umedtData';
 
 interface MediaVaultViewProps {
   state: WorkspaceDataState;
-  initialEntityFilter?: { type: 'block' | 'subject' | 'topic' | 'term'; id: string } | null;
+  initialEntityFilter?: {
+    type: 'block' | 'subject' | 'topic' | 'term' | 'book' | 'question' | 'exam';
+    id: string;
+  } | null;
   onUploadMedia: (payload: {
     fileName: string;
     mimeType: string;
@@ -34,6 +37,7 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
     initialEntityFilter?.type || 'topic'
   );
   const [linkedId, setLinkedId] = useState<string>(initialEntityFilter?.id || '');
+  const [selectedMediaType, setSelectedMediaType] = useState<string>('auto');
   const [captionAr, setCaptionAr] = useState('');
   const [uploading, setUploading] = useState(false);
   const [filterType, setFilterType] = useState<string>('all');
@@ -47,6 +51,15 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
     }
     if (linkedType === 'topic') {
       return state.topics.map((t) => ({ id: t.id, label: t.titleAr || t.title }));
+    }
+    if (linkedType === 'book') {
+      return (state.books || []).map((b) => ({ id: b.id, label: b.titleAr || b.titleEn }));
+    }
+    if (linkedType === 'question') {
+      return state.questions.map((q) => ({ id: q.id, label: q.questionAr || q.questionEn }));
+    }
+    if (linkedType === 'exam') {
+      return (state.exams || []).map((ex) => ({ id: ex.id, label: ex.titleAr || ex.titleEn }));
     }
     if (linkedType === 'term') {
       return state.terms.slice(0, 150).map((t) => ({ id: t.id, label: `${t.term} — ${t.translation}` }));
@@ -75,6 +88,10 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
           fileName: file.name,
           mimeType: file.type || 'application/octet-stream',
           dataBase64,
+          mediaType:
+            selectedMediaType === 'auto'
+              ? undefined
+              : (selectedMediaType as MediaAssetRecord['mediaType']),
           linkedEntityType: linkedType,
           linkedEntityId: linkedType === 'global' ? undefined : linkedId || undefined,
           captionAr: captionAr.trim() || file.name
@@ -98,7 +115,25 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-2">
+          <div>
+            <label className="block text-xs font-medium text-slate-600 mb-1">تصنيف الملف</label>
+            <select
+              value={selectedMediaType}
+              onChange={(e) => setSelectedMediaType(e.target.value)}
+              className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white"
+            >
+              <option value="auto">اكتشاف تلقائي</option>
+              <option value="image">صورة طبية</option>
+              <option value="diagram">رسم وتخطيط توضيحي (SVG/Diagram)</option>
+              <option value="pdf">ملف PDF / ملزمة</option>
+              <option value="book">كتاب دراسي</option>
+              <option value="audio">مقطع صوتي</option>
+              <option value="video">فيديو تعليمي</option>
+              <option value="attachment">مرفق عام</option>
+            </select>
+          </div>
+
           <div>
             <label className="block text-xs font-medium text-slate-600 mb-1">نوع الارتباط</label>
             <select
@@ -112,6 +147,9 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
               <option value="topic">موضوع / محاضرة</option>
               <option value="block">بلوك طبي</option>
               <option value="subject">مادة دراسية</option>
+              <option value="book">كتاب / مرجع PDF</option>
+              <option value="question">سؤال تقييمي</option>
+              <option value="exam">اختبار</option>
               <option value="term">مصطلح طبي</option>
               <option value="global">مرفق عام</option>
             </select>
@@ -170,11 +208,13 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
           <h2 className="text-base font-semibold text-slate-900">
             الملحقات المسجلة ({filteredAssets.length})
           </h2>
-          <div className="flex items-center gap-1 p-1 bg-slate-100 rounded-lg w-fit">
+          <div className="flex flex-wrap items-center gap-1 p-1 bg-slate-100 rounded-lg w-fit">
             {[
               ['all', 'الكل'],
+              ['diagram', 'الرسومات والمخططات'],
               ['image', 'الصور'],
               ['pdf', 'PDF'],
+              ['book', 'الكتب'],
               ['audio', 'الصوتيات'],
               ['attachment', 'مرفقات أخرى']
             ].map(([k, label]) => (
@@ -182,7 +222,7 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
                 key={k}
                 type="button"
                 onClick={() => setFilterType(k)}
-                className={`px-3 py-1 text-xs font-medium rounded-md cursor-pointer ${
+                className={`px-3 py-1 text-xs font-medium rounded-md cursor-pointer whitespace-nowrap ${
                   filterType === k ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600'
                 }`}
               >
@@ -204,7 +244,7 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
                   ? ImageIcon
                   : asset.mediaType === 'audio'
                   ? Music
-                  : asset.mediaType === 'pdf'
+                  : asset.mediaType === 'pdf' || asset.mediaType === 'book'
                   ? FileText
                   : Paperclip;
               const previewSrc = asset.relativePath.startsWith('data/media/')

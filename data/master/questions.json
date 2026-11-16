@@ -1,1 +1,409 @@
-[]
+[
+  {
+    "id": "q-acs-stemi-01",
+    "type": "single_choice",
+    "questionEn": "In suspected acute ST-elevation myocardial infarction (STEMI), what is the primary goal regarding coronary reperfusion?",
+    "questionAr": "في حالات الاشتباه باحتشاء عضلة القلب مع ارتفاع القطعة ST (STEMI)، ما هو الهدف الرئيسي لإعادة التروية الإكليلية؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Wait 48 hours for serial cardiac troponin trends before intervention",
+        "textAr": "الانتظار 48 ساعة لمراقبة منحنى التروبونين قبل التدخل"
+      },
+      {
+        "key": "B",
+        "textEn": "Rapid primary angioplasty (PCI) or thrombolysis within the door-to-balloon target window",
+        "textAr": "إجراء القسطرة التاجية الأولية (PCI) أو إذابة الخثرة بأسرع وقت ممكن"
+      },
+      {
+        "key": "C",
+        "textEn": "Immediate high-dose oral vitamin C supplementation",
+        "textAr": "إعطاء فيتامين C فموي بجرعة عالية فقط"
+      },
+      {
+        "key": "D",
+        "textEn": "Routine elective bone marrow biopsy",
+        "textAr": "أخذ خزعة روتينية من نخاع العظم"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "Early mechanical reperfusion via primary PCI restores myocardial blood flow and limits infarct size in STEMI.",
+    "explanationAr": "القسطرة التاجية الأولية السريعة تعيد التروية القلبية وتحد من اتساع منطقة الاحتشاء القلبي.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-med-acs-1",
+    "linkedTermIds": [
+      "m1"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-heme-ida-02",
+    "type": "single_choice",
+    "questionEn": "Which laboratory profile is classic for uncomplicated Iron Deficiency Anemia (IDA)?",
+    "questionAr": "أيٌّ من الأنماط المخبرية التالية يميز فقر الدم بعوز الحديد غير المختلط (IDA)؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Low Hb, low MCV, low ferritin, increased TIBC",
+        "textAr": "انخفاض Hb و MCV والفيريتين مع ارتفاع TIBC"
+      },
+      {
+        "key": "B",
+        "textEn": "High MCV, elevated ferritin, low TIBC",
+        "textAr": "ارتفاع MCV والفيريتين مع انخفاض TIBC"
+      },
+      {
+        "key": "C",
+        "textEn": "Normal MCV, decreased unconjugated bilirubin, low TIBC",
+        "textAr": "MCV طبيعي مع انخفاض البيليروبين غير المقترن و TIBC"
+      },
+      {
+        "key": "D",
+        "textEn": "Elevated reticulocytes with hypersegmented neutrophils",
+        "textAr": "ارتفاع الشبكيات مع فرط تفصص العدلات"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Iron deficiency produces microcytic hypochromic anemia with depleted ferritin stores and a compensatory rise in TIBC.",
+    "explanationAr": "عوز الحديد يسبب فقر دم صغير الكريات ناقص الصباغ مع استنزاف مخزون الفيريتين وارتفاع السعة الرابطة الكلية للحديد (TIBC).",
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "topicId": "topic-heme-04",
+    "linkedTermIds": [
+      "m7",
+      "m9"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-heme-b12-03",
+    "type": "single_choice",
+    "questionEn": "Which clinical finding helps distinguish Vitamin B12 deficiency from isolated folate deficiency in megaloblastic anemia?",
+    "questionAr": "ما العلامة السريرية التي تساعد في التفريق بين عوز فيتامين B12 وعوز الفولات المعزول في فقر الدم ضخم الأرومات؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Presence of peripheral neuropathy and neurologic abnormalities",
+        "textAr": "وجود اعتلال الأعصاب المحيطية والاضطرابات العصبية"
+      },
+      {
+        "key": "B",
+        "textEn": "Microcytic RBC morphology on peripheral smear",
+        "textAr": "ظهور كريات حمراء صغيرة الحجم في اللطاخة المحيطية"
+      },
+      {
+        "key": "C",
+        "textEn": "Marked increase in total iron-binding capacity (TIBC)",
+        "textAr": "ارتفاع شديد في السعة الرابطة الكلية للحديد (TIBC)"
+      },
+      {
+        "key": "D",
+        "textEn": "Complete absence of megaloblastic marrow changes",
+        "textAr": "غياب التبدلات ضخمة الأرومات في نخاع العظم"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Both B12 and folate deficiencies cause megaloblastic hematopoiesis, but B12 deficiency uniquely causes neurologic involvement.",
+    "explanationAr": "يسبب كل من عوز B12 والفولات فقر دم ضخم الأرومات، لكن عوز B12 ينفرد بظهور الأعراض العصبية واعتلال الأعصاب.",
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "topicId": "topic-heme-07",
+    "linkedTermIds": [
+      "m9"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-heme-hemostasis-04",
+    "type": "single_choice",
+    "questionEn": "A patient presents with mucocutaneous petechiae, purpura, and epistaxis. Which hemostatic defect is most consistent with this bleeding pattern?",
+    "questionAr": "مريض يراجع بنمشات وفرفريات جلدية مخاطية ورعاف. أي اضطراب في الإرقاء يتوافق غالباً مع هذا النمط النزفي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Primary hemostasis disorder (thrombocytopenia, platelet dysfunction, or vWF defect)",
+        "textAr": "اضطراب الإرقاء الأولي (نقص الصفائح أو خلل وظيفتها أو عوز vWF)"
+      },
+      {
+        "key": "B",
+        "textEn": "Isolated alpha-thalassemia silent carrier state",
+        "textAr": "حامل صامت لثلاسيميا ألفا المعزولة"
+      },
+      {
+        "key": "C",
+        "textEn": "Excess erythropoietin secretion",
+        "textAr": "فرط إفراز الإريثروبويتين"
+      },
+      {
+        "key": "D",
+        "textEn": "Pure vitamin B12 malabsorption without thrombocytopenia",
+        "textAr": "سوء امتصاص فيتامين B12 المعزول دون نقص صفائح"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Platelet and vWF disorders manifest early with mucocutaneous bleeding (petechiae, purpura, mucosal oozing), whereas coagulation factor defects typically present with deep tissue or joint bleeding.",
+    "explanationAr": "اضطرابات الصفائح وعامل فون ويلبراند تتظاهر بنزف جلدي مخاطي سطحي (نمشات وفرفريات)، بينما اضطرابات عوامل التخثر تميل للنزف العميق والمفصلي.",
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "topicId": "topic-heme-12",
+    "linkedTermIds": [
+      "add106"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-heme-leukemia-05",
+    "type": "single_choice",
+    "questionEn": "Which hematologic feature distinguishes acute leukemia from chronic leukemia at presentation?",
+    "questionAr": "ما السمة الدموية الأساسية التي تفرق اللوكيميا الحادة عن اللوكيميا المزمنة عند التشخيص؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Rapid proliferation of immature blast cells with bone marrow failure",
+        "textAr": "التكاثر السريع للأرومات غير الناضجة مع مظاهر فشل نخاع العظم"
+      },
+      {
+        "key": "B",
+        "textEn": "Presence of exclusively mature neutrophils with normal hemoglobin",
+        "textAr": "وجود عدلات ناضجة فقط مع هيموغلوبين طبيعي تماماً"
+      },
+      {
+        "key": "C",
+        "textEn": "Complete absence of marrow blasts",
+        "textAr": "غياب الأرومات تماماً في نخاع العظم"
+      },
+      {
+        "key": "D",
+        "textEn": "Isolated elevation of serum ferritin",
+        "textAr": "ارتفاع معزول في فيريتين المصل"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Acute leukemias are characterized by accumulation of immature blasts leading to anemia, neutropenia, and thrombocytopenia.",
+    "explanationAr": "تتميز اللوكيميا الحادة بتراكم الأرومات غير الناضجة مما يؤدي لفشل النخاع وفقر الدم ونقص الصفائح والعدلات.",
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "topicId": "topic-heme-11",
+    "linkedTermIds": [
+      "add081"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-para-ascaris-06",
+    "type": "single_choice",
+    "questionEn": "What is the infective stage of Ascaris lumbricoides for humans?",
+    "questionAr": "ما هو الطور المعدي لدودة الإسكارس (Ascaris lumbricoides) بالنسبة للإنسان؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Unfertilized egg",
+        "textAr": "البيضة غير المخصبة"
+      },
+      {
+        "key": "B",
+        "textEn": "Embryonated egg containing L2 larva",
+        "textAr": "البيضة المجننة (Embryonated egg)"
+      },
+      {
+        "key": "C",
+        "textEn": "Rhabditiform larva in stool",
+        "textAr": "اليرقة الرابديتية في البراز"
+      },
+      {
+        "key": "D",
+        "textEn": "Free-living filariform larva penetrating skin",
+        "textAr": "اليرقة الخيطية المخترقة للجلد"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "Humans acquire Ascaris lumbricoides by ingesting embryonated eggs in contaminated food or water.",
+    "explanationAr": "تحدث العدوى بالإسكارس عن طريق ابتلاع البيوض المجننة (المحتوية على الجنين) في الطعام أو الماء الملوث.",
+    "blockId": "block-infectious",
+    "subjectId": "subj-parasitology",
+    "topicId": "pt-parasito-02-nematodes-intestinal",
+    "linkedTermIds": [
+      "para-2026-019"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-para-trichuris-07",
+    "type": "single_choice",
+    "questionEn": "A stool microscopy spotter shows a barrel-shaped egg with two prominent bipolar mucus plugs. What is the organism?",
+    "questionAr": "تُظهر صورة الفحص المجهري للبراز بيضة برميلية الشكل تحتوي على سدادتين قطبيتين. ما هو الطفيلي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Trichuris trichiura (Whipworm)",
+        "textAr": "المسلكة الشعرية الذيل (Trichuris trichiura)"
+      },
+      {
+        "key": "B",
+        "textEn": "Enterobius vermicularis (Pinworm)",
+        "textAr": "السرمية الدودية (Enterobius vermicularis)"
+      },
+      {
+        "key": "C",
+        "textEn": "Taenia solium",
+        "textAr": "الشريطية الوحيدة (Taenia solium)"
+      },
+      {
+        "key": "D",
+        "textEn": "Schistosoma haematobium",
+        "textAr": "البلهارسيا الدموية (Schistosoma haematobium)"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Trichuris trichiura eggs are classically barrel-shaped with characteristic bipolar translucent plugs at both ends.",
+    "explanationAr": "بيضة Trichuris trichiura مميزة جداً بشكلها البرميلي ووجود السدادتين القطبيتين الشفافتين في طرفيها.",
+    "blockId": "block-infectious",
+    "subjectId": "subj-parasitology",
+    "topicId": "pt-parasito-02-nematodes-intestinal",
+    "linkedTermIds": [],
+    "difficulty": "easy",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-para-cestode-08",
+    "type": "single_choice",
+    "questionEn": "How is the scolex of Taenia solium distinguished from Taenia saginata on practical microscopy?",
+    "questionAr": "كيف يُميَّز رأس (Scolex) دودة Taenia solium عن Taenia saginata في امتحان العملي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Armed scolex with rostellum and two rows of hooks (T. solium) vs. unarmed scolex with 4 suckers only (T. saginata)",
+        "textAr": "رأس مسلح بخطافين (rostellum مع صفين من الخطافات) في T. solium مقابل رأس أعزل بـ 4 محاجم فقط في T. saginata"
+      },
+      {
+        "key": "B",
+        "textEn": "Two elongated sucking grooves (bothria) in T. solium",
+        "textAr": "وجود أخدودين ماصين طوليين (bothria) في T. solium"
+      },
+      {
+        "key": "C",
+        "textEn": "Bipolar filaments arising from the scolex",
+        "textAr": "وجود خيوط قطبية نابعة من الرأس"
+      },
+      {
+        "key": "D",
+        "textEn": "Lateral spine on the scolex",
+        "textAr": "شوكة جانبية على الرأس"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Taenia solium has an armed rostellum bearing a double row of hooks in addition to four suckers, while T. saginata has four suckers and no hooks.",
+    "explanationAr": "تمتلك Taenia solium خطماً مسلحاً بصفين من الخطافات مع أربعة محاجم، بينما T. saginata غير مسلحة.",
+    "blockId": "block-infectious",
+    "subjectId": "subj-parasitology",
+    "topicId": "pt-parasito-04-cestodes",
+    "linkedTermIds": [
+      "para-2026-078"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-para-schisto-09",
+    "type": "single_choice",
+    "questionEn": "Which diagnostic egg morphology differentiates Schistosoma mansoni from Schistosoma haematobium?",
+    "questionAr": "ما الشكل التشخيصي للبيضة الذي يفرق Schistosoma mansoni عن Schistosoma haematobium؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "S. mansoni has a prominent lateral spine in stool; S. haematobium has a terminal spine in urine",
+        "textAr": "تمتلك S. mansoni شوكة جانبية وتظهر في البراز، بينما S. haematobium شوكة طرفية في البول"
+      },
+      {
+        "key": "B",
+        "textEn": "S. mansoni has a terminal spine in urine; S. haematobium has bipolar plugs in stool",
+        "textAr": "تمتلك S. mansoni شوكة طرفية في البول"
+      },
+      {
+        "key": "C",
+        "textEn": "Both species possess thick mammillated shells without spines",
+        "textAr": "كلتاهما ذات غلاف مثفّن سميك بلا أشواك"
+      },
+      {
+        "key": "D",
+        "textEn": "S. mansoni lays operculated eggs identical to Fasciola hepatica",
+        "textAr": "تضع S. mansoni بيوضاً ذات غطاء مماثلة للـ Fasciola"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "S. mansoni eggs have a distinct lateral spine (usually recovered in stool), whereas S. haematobium eggs possess a terminal spine (usually in urine).",
+    "explanationAr": "بيضة البلهارسيا المنسونية ذات شوكة جانبية وتُكشف في البراز، بينما البلهارسيا الدموية ذات شوكة طرفية في البول.",
+    "blockId": "block-infectious",
+    "subjectId": "subj-parasitology",
+    "topicId": "pt-parasito-05-trematodes",
+    "linkedTermIds": [
+      "para-2026-122"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-info-gcnmt-10",
+    "type": "single_choice",
+    "questionEn": "What is the main role of Pre-Tokenization Masking (Aho-Corasick) in Glossary-Constrained Neural Machine Translation (GC-NMT)?",
+    "questionAr": "ما الدور الرئيسي لمرحلة حجب الكيانات قبل الترميز (Pre-Tokenization Masking) في محرك GC-NMT؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Lock canonical WHO UMD medical terms as protected tokens before neural decoding so terminology accuracy stays 100%",
+        "textAr": "قفل المصطلحات الطبية المعتمدة في المعجم قبل الترميز العصبي لضمان دقة مصطلحية كاملة دون تحريف"
+      },
+      {
+        "key": "B",
+        "textEn": "Delete all Arabic diacritics and clinical abbreviations before translation",
+        "textAr": "حذف جميع الاختصارات الطبية قبل الترجمة"
+      },
+      {
+        "key": "C",
+        "textEn": "Replace SQLite FTS5 indexing with unindexed CSV scans",
+        "textAr": "استبدال فهرسة SQLite FTS5 بملفات CSV غير مفهرسة"
+      },
+      {
+        "key": "D",
+        "textEn": "Overwrite user SRS review history during OTA sync",
+        "textAr": "مسح سجل المراجعة المتباعدة للمستخدم أثناء المزامنة"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Aho-Corasick pre-tokenization masking detects exact medical glossary entities and constrains neural generation with canonical UMD translations.",
+    "explanationAr": "يقوم الحجب المسبق بالكشف السريع عن المصطلحات المعجمية وقفل ترجمتها القياسية أثناء التوليد العصبي.",
+    "blockId": "block-informatics",
+    "subjectId": "subj-medical-ai",
+    "topicId": "topic-ai-gcnmt-2",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-16T19:53:11.130Z"
+  }
+]

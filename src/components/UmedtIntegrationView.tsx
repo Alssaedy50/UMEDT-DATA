@@ -65,9 +65,10 @@ export const UmedtIntegrationView: React.FC<UmedtIntegrationViewProps> = ({
     }
   };
 
+  const catalogUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/data/catalog.json`;
   const manifestUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/data/releases/stable/manifest.json`;
-  const blocksUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/data/master/blocks.json`;
-  const termsUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/data/master/terms.json`;
+  const contractUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/docs/UMEDT-DATA-API-CONTRACT.md`;
+  const schemasUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/docs/schemas/content-entities.schema.json`;
   const mediaIndexUrl = `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/data/master/media-index.json`;
 
   return (
@@ -77,10 +78,10 @@ export const UmedtIntegrationView: React.FC<UmedtIntegrationViewProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-4 border-b border-slate-200">
           <div>
             <h1 className="text-lg font-bold text-slate-900">
-              ربط مستودع {state.meta.sourceRepo} بقراءة البيانات من {state.meta.dataRepo}
+              مواصفات وعقد القراءة الموحّد لربط {state.meta.sourceRepo} مستقبلاً مع {state.meta.dataRepo}
             </h1>
             <p className="text-xs text-slate-600 mt-1 max-w-3xl leading-relaxed">
-              تبقى جميع واجهات تطبيق UMEDT وبيانات المستخدم المحلية (المفضلة، SRS، الملاحظات الشخصية) داخل المشروع الأصلي دون أي تعديل هدّام، بينما تُجلب البلوكات والمصطلحات والملحقات من مستودع البيانات المستقل.
+              يوفّر مستودع UMEDT-DATA فهرساً ذاتي التعريف (<span dir="ltr" className="font-mono">data/catalog.json</span>) ومخططات JSON Schema وواجهة <span dir="ltr" className="font-mono">/api/v1/*</span> لتشمل البلوكات والمواد والمواضيع والمصطلحات والجمل والرسومات والكتب وملفات PDF والأسئلة والاختبارات، دون المساس ببيانات المستخدم المحلية أو تعديل مشروع UMEDT الخارجي من هنا.
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2 shrink-0">
@@ -143,24 +144,32 @@ export const UmedtIntegrationView: React.FC<UmedtIntegrationViewProps> = ({
 
           <div className="border border-slate-200 rounded-lg p-4 space-y-2">
             <div className="text-xs font-semibold text-slate-900">
-              الروابط الرسمية التي يقرؤها تطبيق UMEDT
+              نقاط القراءة الموحدة والموثقة (GitHub Raw &amp; HTTP API v1)
             </div>
             <div dir="ltr" className="space-y-1.5 text-xs font-mono text-slate-600 break-all">
+              <div>
+                <span className="text-slate-400">Catalog v2: </span>
+                {catalogUrl}
+              </div>
               <div>
                 <span className="text-slate-400">Manifest: </span>
                 {manifestUrl}
               </div>
               <div>
-                <span className="text-slate-400">Blocks: </span>
-                {blocksUrl}
+                <span className="text-slate-400">Contract: </span>
+                {contractUrl}
               </div>
               <div>
-                <span className="text-slate-400">Terms: </span>
-                {termsUrl}
+                <span className="text-slate-400">Schemas: </span>
+                {schemasUrl}
               </div>
               <div>
-                <span className="text-slate-400">Media: </span>
+                <span className="text-slate-400">Media Index: </span>
                 {mediaIndexUrl}
+              </div>
+              <div>
+                <span className="text-slate-400">HTTP Read API: </span>
+                /api/v1/catalog · /api/v1/collections/:domain · /api/v1/sync/plan
               </div>
             </div>
           </div>

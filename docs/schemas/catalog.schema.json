@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/catalog.schema.json",
+  "title": "UMEDT-DATA Unified Catalog Schema v2",
+  "type": "object",
+  "required": [
+    "catalogSchemaVersion",
+    "catalogVersion",
+    "schemaVersion",
+    "repository",
+    "branch",
+    "endpoints",
+    "collections"
+  ],
+  "properties": {
+    "catalogSchemaVersion": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "integer"
+    },
+    "minAppVersion": {
+      "type": "string"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endpoints": {
+      "type": "object",
+      "required": [
+        "catalogUrl",
+        "manifestStableUrl",
+        "masterBaseUrl",
+        "mediaBaseUrl"
+      ]
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "contentType",
+          "rendererType",
+          "path",
+          "rawUrl",
+          "primaryKey",
+          "recordCount",
+          "sha256",
+          "mergeStrategy"
+        ]
+      }
+    }
+  }
+}

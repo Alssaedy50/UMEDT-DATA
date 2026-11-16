@@ -11,10 +11,14 @@ export type ContentBlockType =
   | 'paragraph'
   | 'table'
   | 'image'
+  | 'diagram'
   | 'video'
   | 'video_link'
   | 'audio'
   | 'attachment'
+  | 'pdf_viewer'
+  | 'book_reference'
+  | 'exam_link'
   | 'question'
   | 'clinical_note';
 
@@ -235,19 +239,77 @@ export interface UnifiedQuizQuestion {
   createdAt: string;
 }
 
+export interface AcademicBookResource {
+  id: string;
+  titleEn: string;
+  titleAr: string;
+  subtitleAr?: string;
+  authors: string[];
+  publisher?: string;
+  edition?: string;
+  publicationYear?: number;
+  isbn?: string;
+  language: 'en' | 'ar' | 'bilingual';
+  resourceKind: 'textbook' | 'atlas' | 'pdf_lecture' | 'clinical_guideline' | 'study_notes' | 'slides';
+  format: 'pdf' | 'epub' | 'markdown' | 'html';
+  pageCount?: number;
+  blockId?: string;
+  subjectId?: string;
+  topicIds?: string[];
+  mediaAssetId?: string;
+  coverMediaAssetId?: string;
+  relativePath?: string;
+  downloadUrl: string;
+  sha256?: string;
+  sizeBytes?: number;
+  mimeType: string;
+  tags: string[];
+  descriptionEn?: string;
+  descriptionAr?: string;
+  publishedAt: string;
+  updatedAt: string;
+}
+
+export interface AcademicExamPackage {
+  id: string;
+  titleEn: string;
+  titleAr: string;
+  descriptionEn?: string;
+  descriptionAr?: string;
+  examType: 'block_exam' | 'subject_quiz' | 'comprehensive' | 'osce' | 'flash_drill';
+  blockId?: string;
+  subjectId?: string;
+  topicId?: string;
+  questionIds: string[];
+  durationMinutes: number;
+  passingScorePercent: number;
+  totalPoints: number;
+  shuffleQuestions: boolean;
+  difficulty?: 'easy' | 'medium' | 'hard';
+  tags: string[];
+  publishedAt: string;
+  updatedAt: string;
+}
+
 export interface MediaAssetRecord {
   id: string;
   fileName: string;
   relativePath: string;
-  mediaType: 'image' | 'diagram' | 'pdf' | 'audio' | 'attachment';
+  mediaType: 'image' | 'diagram' | 'pdf' | 'book' | 'audio' | 'video' | 'attachment';
   mimeType: string;
   sizeBytes: number;
   sha256: string;
-  linkedEntityType: 'block' | 'subject' | 'topic' | 'term' | 'global';
+  linkedEntityType: 'block' | 'subject' | 'topic' | 'term' | 'book' | 'question' | 'exam' | 'global';
   linkedEntityId?: string;
   captionAr?: string;
   captionEn?: string;
   rawUrl?: string;
+  downloadable?: boolean;
+  tags?: string[];
+  width?: number;
+  height?: number;
+  pageCount?: number;
+  durationSeconds?: number;
   createdAt: string;
   updatedAt: string;
 }
@@ -260,7 +322,9 @@ export interface MasterDataCounts {
   sentences: number;
   customAffixes: number;
   customAbbreviations: number;
+  books: number;
   questions: number;
+  exams: number;
   mediaAssets: number;
 }
 
@@ -284,7 +348,9 @@ export interface WorkspaceDataState {
   sentences: LinkedSentence[];
   customAffixes: MorphologicalAffix[];
   customAbbreviations: ClinicalAbbreviation[];
+  books: AcademicBookResource[];
   questions: UnifiedQuizQuestion[];
+  exams: AcademicExamPackage[];
   mediaAssets: MediaAssetRecord[];
 }
 
@@ -418,4 +484,96 @@ export interface ReleaseHistoryRecord {
   extendedCounts: MasterDataCounts;
   filesSha256: Record<string, string>;
   changedDomains: string[];
+}
+
+export type ContentRendererType =
+  | 'hierarchy_grid'
+  | 'subject_list'
+  | 'rich_article'
+  | 'lexicon_entry'
+  | 'sentence_pair'
+  | 'morphology_rule'
+  | 'abbreviation_rule'
+  | 'book_pdf_reader'
+  | 'quiz_question'
+  | 'exam_blueprint'
+  | 'media_gallery'
+  | 'generic_card';
+
+export interface CatalogCollectionDescriptor {
+  id: keyof MasterDataCounts;
+  contentType: string;
+  rendererType: ContentRendererType;
+  titleAr: string;
+  titleEn: string;
+  descriptionAr: string;
+  path: string;
+  rawUrl: string;
+  apiPath: string;
+  schemaUrl: string;
+  primaryKey: 'id';
+  recordCount: number;
+  sha256: string;
+  sizeBytes: number;
+  mergeStrategy: 'merge_preserve_user_state' | 'replace_master_preserve_progress';
+  userProtectedFields: string[];
+  relations: Record<string, string>;
+  searchableFields: string[];
+  filterableFields: string[];
+  updatedAt: string;
+}
+
+export interface DataCatalogDocument {
+  catalogSchemaVersion: number;
+  catalogVersion: string;
+  schemaVersion: number;
+  minAppVersion: string;
+  repository: string;
+  branch: string;
+  generatedAt: string;
+  endpoints: {
+    catalogUrl: string;
+    manifestStableUrl: string;
+    manifestBetaUrl: string;
+    masterBaseUrl: string;
+    mediaBaseUrl: string;
+    schemasBaseUrl: string;
+    contractDocUrl: string;
+    httpApiBasePath: string;
+  };
+  capabilities: {
+    selfDescribingCollections: boolean;
+    incrementalHashSync: boolean;
+    cryptographicSignatureVerification: boolean;
+    rollbackSupported: boolean;
+    preservesLocalUserData: boolean;
+  };
+  contentTypesRegistry: Array<{
+    contentType: string;
+    rendererType: ContentRendererType;
+    displayNameAr: string;
+    displayNameEn: string;
+    supportsDownload: boolean;
+    supportsOfflineCache: boolean;
+  }>;
+  collections: CatalogCollectionDescriptor[];
+}
+
+export interface UnifiedContentEnvelope<T = unknown> {
+  id: string;
+  domain: keyof MasterDataCounts;
+  contentType: string;
+  rendererType: ContentRendererType;
+  titleAr: string;
+  titleEn: string;
+  subtitle?: string;
+  hierarchy: {
+    blockId?: string;
+    subjectId?: string;
+    topicId?: string;
+  };
+  downloadUrl?: string;
+  sha256?: string;
+  media: MediaAssetRecord[];
+  payload: T;
 }

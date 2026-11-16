@@ -11,6 +11,8 @@ import {
   X
 } from 'lucide-react';
 import type {
+  AcademicBookResource,
+  AcademicExamPackage,
   ClinicalAbbreviation,
   DictionaryTerm,
   DiffReport,
@@ -75,7 +77,7 @@ export default function App() {
   const [tokenModalOpen, setTokenModalOpen] = useState(false);
   const [tokenDraft, setTokenDraft] = useState('');
   const [mediaEntityFilter, setMediaEntityFilter] = useState<{
-    type: 'block' | 'subject' | 'topic' | 'term';
+    type: 'block' | 'subject' | 'topic' | 'term' | 'book' | 'question' | 'exam';
     id: string;
   } | null>(null);
 
@@ -429,6 +431,16 @@ export default function App() {
                 applyUpdate(res);
                 showToast('success', 'تم حذف الموضوع.');
               }}
+              onSaveBook={async (book: AcademicBookResource) => {
+                const res = await hubApi.saveBook(book);
+                applyUpdate(res);
+                showToast('success', 'تم حفظ الكتاب / ملف PDF في المسودة.');
+              }}
+              onDeleteBook={async (id: string) => {
+                const res = await hubApi.deleteBook(id);
+                applyUpdate(res);
+                showToast('success', 'تم حذف الكتاب.');
+              }}
               onOpenMediaForEntity={(entityType, entityId) => {
                 setMediaEntityFilter({ type: entityType, id: entityId });
                 setActiveTab('media');
@@ -488,6 +500,16 @@ export default function App() {
                 const res = await hubApi.deleteQuestion(id);
                 applyUpdate(res);
                 showToast('success', 'تم حذف السؤال.');
+              }}
+              onSaveExam={async (exam: AcademicExamPackage) => {
+                const res = await hubApi.saveExam(exam);
+                applyUpdate(res);
+                showToast('success', 'تم حفظ الاختبار التقييمي.');
+              }}
+              onDeleteExam={async (id: string) => {
+                const res = await hubApi.deleteExam(id);
+                applyUpdate(res);
+                showToast('success', 'تم حذف الاختبار.');
               }}
             />
           )}

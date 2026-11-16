@@ -1,11 +1,15 @@
 import express from 'express';
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import JSZip from 'jszip';
 import type {
+  AcademicBookResource,
+  AcademicExamPackage,
   ClinicalAbbreviation,
   DictionaryTerm,
   LinkedSentence,
+  MasterDataCounts,
   MediaAssetRecord,
   MedicalBlock,
   MedicalSubject,
@@ -21,8 +25,17 @@ import {
   loadWorkspaceState,
   readMediaBinary,
   saveMediaBinary,
-  saveWorkspaceState
+  saveWorkspaceState,
+  writeCatalogAndDocsToRepoDisk,
+  writeMasterFilesToRepoDisk
 } from './server/workspaceStore.ts';
+import {
+  buildDataCatalogDocument,
+  COLLECTION_SPECS,
+  generateApiContractMarkdown,
+  generateJsonSchemaFiles,
+  wrapRecordInUnifiedEnvelope
+} from './server/catalogGenerator.ts';
 import {
   buildSignedReleasePackage,
   computeDiffAgainstRemote,
@@ -165,7 +178,9 @@ async function startServer() {
         sentences: remote.sentences || [],
         customAffixes: remote.customAffixes || [],
         customAbbreviations: remote.customAbbreviations || [],
+        books: remote.books && remote.books.length > 0 ? remote.books : state.books || [],
         questions: remote.questions || [],
+        exams: remote.exams && remote.exams.length > 0 ? remote.exams : state.exams || [],
         mediaAssets: remote.mediaAssets || []
       };
       saveWorkspaceState(nextState);
@@ -396,6 +411,84 @@ async function startServer() {
     res.json({ state, validation: validateWorkspaceData(state) });
   });
 
+  // Academic Books & PDFs CRUD
+  app.post('/api/workspace/books', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as AcademicBookResource;
+    if (!item?.id || (!item.titleEn?.trim() && !item.titleAr?.trim()) || !item.downloadUrl?.trim()) {
+      res.status(400).json({ error: 'معرف الكتاب والعنوان ورابط التحميل مطلوبون.' });
+      return;
+    }
+    const now = new Date().toISOString();
+    const normalized: AcademicBookResource = {
+      ...item,
+      titleEn: item.titleEn || item.titleAr,
+      titleAr: item.titleAr || item.titleEn,
+      authors: Array.isArray(item.authors) ? item.authors : [],
+      tags: Array.isArray(item.tags) ? item.tags : [],
+      topicIds: Array.isArray(item.topicIds) ? item.topicIds : [],
+      publishedAt: item.publishedAt || now.slice(0, 10),
+      updatedAt: now.slice(0, 10)
+    };
+    state.books = state.books || [];
+    const idx = state.books.findIndex((b) => b.id === normalized.id);
+    if (idx >= 0) state.books[idx] = normalized;
+    else state.books.unshift(normalized);
+    saveWorkspaceState(state);
+    writeMasterFilesToRepoDisk(state);
+    writeCatalogAndDocsToRepoDisk(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/books/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.books = (state.books || []).filter((b) => b.id !== req.params.id);
+    saveWorkspaceState(state);
+    writeMasterFilesToRepoDisk(state);
+    writeCatalogAndDocsToRepoDisk(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  // Academic Exams CRUD
+  app.post('/api/workspace/exams', (req, res) => {
+    const state = loadWorkspaceState();
+    const item = req.body as AcademicExamPackage;
+    if (!item?.id || (!item.titleEn?.trim() && !item.titleAr?.trim())) {
+      res.status(400).json({ error: 'معرف الاختبار وعنوانه مطلوبان.' });
+      return;
+    }
+    const now = new Date().toISOString().slice(0, 10);
+    const normalized: AcademicExamPackage = {
+      ...item,
+      titleEn: item.titleEn || item.titleAr,
+      titleAr: item.titleAr || item.titleEn,
+      questionIds: Array.isArray(item.questionIds) ? item.questionIds : [],
+      tags: Array.isArray(item.tags) ? item.tags : [],
+      durationMinutes: Number(item.durationMinutes) || 15,
+      passingScorePercent: Number(item.passingScorePercent) || 70,
+      totalPoints: Number(item.totalPoints) || (item.questionIds?.length || 1) * 10,
+      publishedAt: item.publishedAt || now,
+      updatedAt: now
+    };
+    state.exams = state.exams || [];
+    const idx = state.exams.findIndex((e) => e.id === normalized.id);
+    if (idx >= 0) state.exams[idx] = normalized;
+    else state.exams.unshift(normalized);
+    saveWorkspaceState(state);
+    writeMasterFilesToRepoDisk(state);
+    writeCatalogAndDocsToRepoDisk(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
+  app.delete('/api/workspace/exams/:id', (req, res) => {
+    const state = loadWorkspaceState();
+    state.exams = (state.exams || []).filter((e) => e.id !== req.params.id);
+    saveWorkspaceState(state);
+    writeMasterFilesToRepoDisk(state);
+    writeCatalogAndDocsToRepoDisk(state);
+    res.json({ state, validation: validateWorkspaceData(state) });
+  });
+
   // 3. Media & Attachments Vault (SHA-256 deduplicated binary storage)
   app.post('/api/workspace/media', (req, res) => {
     try {
@@ -409,6 +502,11 @@ async function startServer() {
         linkedEntityId?: string;
         captionAr?: string;
         captionEn?: string;
+        tags?: string[];
+        width?: number;
+        height?: number;
+        pageCount?: number;
+        durationSeconds?: number;
       };
       if (!body.fileName || !body.dataBase64) {
         res.status(400).json({ error: 'اسم الملف ومحتواه مطلوبان.' });
@@ -423,10 +521,14 @@ async function startServer() {
 
       const inferredType: MediaAssetRecord['mediaType'] =
         body.mediaType ||
-        (mimeType.startsWith('image/')
+        (mimeType === 'image/svg+xml'
+          ? 'diagram'
+          : mimeType.startsWith('image/')
           ? 'image'
           : mimeType.startsWith('audio/')
           ? 'audio'
+          : mimeType.startsWith('video/')
+          ? 'video'
           : mimeType.includes('pdf')
           ? 'pdf'
           : 'attachment');
@@ -436,10 +538,17 @@ async function startServer() {
       const record: MediaAssetRecord = existing
         ? {
             ...existing,
+            mediaType: body.mediaType || existing.mediaType,
             linkedEntityType: body.linkedEntityType || existing.linkedEntityType,
             linkedEntityId: body.linkedEntityId ?? existing.linkedEntityId,
             captionAr: body.captionAr ?? existing.captionAr,
             captionEn: body.captionEn ?? existing.captionEn,
+            tags: body.tags ?? existing.tags,
+            width: body.width ?? existing.width,
+            height: body.height ?? existing.height,
+            pageCount: body.pageCount ?? existing.pageCount,
+            durationSeconds: body.durationSeconds ?? existing.durationSeconds,
+            downloadable: true,
             updatedAt: now
           }
         : {
@@ -455,6 +564,12 @@ async function startServer() {
             captionAr: body.captionAr,
             captionEn: body.captionEn,
             rawUrl: `https://raw.githubusercontent.com/${state.meta.dataRepo}/main/${saved.relativePath}`,
+            downloadable: true,
+            tags: body.tags,
+            width: body.width,
+            height: body.height,
+            pageCount: body.pageCount,
+            durationSeconds: body.durationSeconds,
             createdAt: now,
             updatedAt: now
           };
@@ -673,8 +788,22 @@ async function startServer() {
         'data/master/custom-abbreviations.json',
         JSON.stringify(state.customAbbreviations, null, 2)
       );
+      zip.file('data/master/books.json', JSON.stringify(state.books || [], null, 2));
       zip.file('data/master/questions.json', JSON.stringify(state.questions, null, 2));
+      zip.file('data/master/exams.json', JSON.stringify(state.exams || [], null, 2));
       zip.file('data/master/media-index.json', JSON.stringify(state.mediaAssets, null, 2));
+      zip.file(
+        'data/catalog.json',
+        JSON.stringify(buildDataCatalogDocument(state, state.meta.dataRepo), null, 2)
+      );
+      const schemas = generateJsonSchemaFiles();
+      for (const [schemaPath, content] of Object.entries(schemas)) {
+        zip.file(schemaPath, content);
+      }
+      zip.file(
+        'docs/UMEDT-DATA-API-CONTRACT.md',
+        generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main')
+      );
 
       for (const asset of state.mediaAssets) {
         if (!asset.relativePath.startsWith('data/media/')) continue;
@@ -688,7 +817,7 @@ async function startServer() {
         const ch = body.channel === 'beta' ? 'beta' : 'stable';
         const built = await buildSignedReleasePackage({
           state,
-          version: body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd',
+          version: body.version?.trim() || state.meta.dataVersion || '2026.12.0-umd',
           channel: ch,
           summary: body.summary?.trim() || 'نشر بيانات UMEDT-DATA',
           privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
@@ -712,8 +841,199 @@ async function startServer() {
     }
   });
 
-  // Serve local data/ directory over HTTP for verification and direct inspection
+  // Unified Self-Describing Read API (/api/v1/*)
+  app.get('/api/v1/catalog', (_req, res) => {
+    const state = loadWorkspaceState();
+    res.json(buildDataCatalogDocument(state, state.meta.dataRepo));
+  });
+
+  app.get('/api/v1/manifest', (req, res) => {
+    const channel = req.query.channel === 'beta' ? 'beta' : 'stable';
+    const manifestPath = path.resolve(process.cwd(), 'data', 'releases', channel, 'manifest.json');
+    if (fs.existsSync(manifestPath)) {
+      try {
+        const parsed = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+        res.json(parsed);
+        return;
+      } catch {
+        // fallback below
+      }
+    }
+    res.status(404).json({ error: `لم يتم العثور على manifest للقناة ${channel}` });
+  });
+
+  app.get('/api/v1/collections', (_req, res) => {
+    const state = loadWorkspaceState();
+    const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
+    res.json({
+      catalogVersion: catalog.catalogVersion,
+      generatedAt: catalog.generatedAt,
+      collections: catalog.collections
+    });
+  });
+
+  app.get('/api/v1/collections/:domain', (req, res) => {
+    const domain = req.params.domain as keyof MasterDataCounts;
+    const spec = COLLECTION_SPECS.find((s) => s.id === domain);
+    if (!spec) {
+      res.status(404).json({
+        error: `النطاق غير معروف: ${req.params.domain}`,
+        availableDomains: COLLECTION_SPECS.map((s) => s.id)
+      });
+      return;
+    }
+
+    const state = loadWorkspaceState();
+    const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
+    const descriptor = catalog.collections.find((c) => c.id === domain);
+    let items = [...spec.getArray(state)] as Array<Record<string, unknown>>;
+
+    const blockId = typeof req.query.blockId === 'string' ? req.query.blockId.trim() : '';
+    const subjectId = typeof req.query.subjectId === 'string' ? req.query.subjectId.trim() : '';
+    const topicId = typeof req.query.topicId === 'string' ? req.query.topicId.trim() : '';
+    const mediaType = typeof req.query.mediaType === 'string' ? req.query.mediaType.trim() : '';
+    const q = typeof req.query.q === 'string' ? req.query.q.trim().toLowerCase() : '';
+
+    if (blockId) {
+      items = items.filter(
+        (it) =>
+          it.blockId === blockId ||
+          (Array.isArray(it.linkedBlockIds) && it.linkedBlockIds.includes(blockId)) ||
+          (domain === 'blocks' && it.id === blockId)
+      );
+    }
+    if (subjectId) {
+      items = items.filter(
+        (it) =>
+          it.subjectId === subjectId ||
+          (Array.isArray(it.linkedSubjectIds) && it.linkedSubjectIds.includes(subjectId)) ||
+          (domain === 'subjects' && it.id === subjectId)
+      );
+    }
+    if (topicId) {
+      items = items.filter(
+        (it) =>
+          it.topicId === topicId ||
+          (Array.isArray(it.topicIds) && it.topicIds.includes(topicId)) ||
+          (Array.isArray(it.linkedTopicIds) && it.linkedTopicIds.includes(topicId)) ||
+          (domain === 'topics' && it.id === topicId)
+      );
+    }
+    if (mediaType) {
+      items = items.filter((it) => it.mediaType === mediaType);
+    }
+    if (q) {
+      items = items.filter((it) =>
+        spec.searchableFields.some((field) => {
+          const val = it[field];
+          if (typeof val === 'string') return val.toLowerCase().includes(q);
+          if (Array.isArray(val)) return val.some((v) => String(v).toLowerCase().includes(q));
+          return false;
+        })
+      );
+    }
+
+    const page = Math.max(1, Number(req.query.page) || 1);
+    const limit = Math.min(200, Math.max(1, Number(req.query.limit) || 50));
+    const total = items.length;
+    const paged = items.slice((page - 1) * limit, page * limit);
+
+    res.json({
+      domain,
+      contentType: spec.contentType,
+      rendererType: spec.rendererType,
+      sha256: descriptor?.sha256,
+      total,
+      page,
+      limit,
+      totalPages: Math.max(1, Math.ceil(total / limit)),
+      items: paged,
+      envelopes: paged.map((item) => wrapRecordInUnifiedEnvelope(domain, item, state))
+    });
+  });
+
+  app.get('/api/v1/content/:domain/:id', (req, res) => {
+    const domain = req.params.domain as keyof MasterDataCounts;
+    const spec = COLLECTION_SPECS.find((s) => s.id === domain);
+    if (!spec) {
+      res.status(404).json({ error: `النطاق غير معروف: ${req.params.domain}` });
+      return;
+    }
+    const state = loadWorkspaceState();
+    const record = (spec.getArray(state) as Array<{ id?: string }>).find(
+      (item) => item?.id === req.params.id
+    );
+    if (!record) {
+      res.status(404).json({ error: `لم يتم العثور على السجل ${req.params.id} في ${domain}` });
+      return;
+    }
+    res.json(wrapRecordInUnifiedEnvelope(domain, record, state));
+  });
+
+  app.get('/api/v1/search', (req, res) => {
+    const q = typeof req.query.q === 'string' ? req.query.q.trim().toLowerCase() : '';
+    const domainFilter = typeof req.query.domain === 'string' ? req.query.domain.trim() : '';
+    const limit = Math.min(100, Math.max(1, Number(req.query.limit) || 30));
+    if (!q) {
+      res.status(400).json({ error: 'معامل البحث q مطلوب.' });
+      return;
+    }
+
+    const state = loadWorkspaceState();
+    const results = [];
+    for (const spec of COLLECTION_SPECS) {
+      if (domainFilter && spec.id !== domainFilter) continue;
+      for (const raw of spec.getArray(state) as Array<Record<string, unknown>>) {
+        const matched = spec.searchableFields.some((field) => {
+          const val = raw[field];
+          if (typeof val === 'string') return val.toLowerCase().includes(q);
+          if (Array.isArray(val)) return val.some((v) => String(v).toLowerCase().includes(q));
+          return false;
+        });
+        if (matched) {
+          results.push(wrapRecordInUnifiedEnvelope(spec.id, raw, state));
+          if (results.length >= limit) break;
+        }
+      }
+      if (results.length >= limit) break;
+    }
+
+    res.json({ query: q, total: results.length, results });
+  });
+
+  app.get('/api/v1/sync/plan', (req, res) => {
+    const state = loadWorkspaceState();
+    const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
+    let clientHashes: Record<string, string> = {};
+    if (typeof req.query.hashes === 'string' && req.query.hashes.trim()) {
+      try {
+        clientHashes = JSON.parse(req.query.hashes) as Record<string, string>;
+      } catch {
+        res.status(400).json({ error: 'صيغة JSON غير صالحة في معامل hashes.' });
+        return;
+      }
+    }
+
+    const changedCollections = catalog.collections.filter(
+      (c) => clientHashes[c.id] !== c.sha256
+    );
+    const unchangedDomains = catalog.collections
+      .filter((c) => clientHashes[c.id] === c.sha256)
+      .map((c) => c.id);
+
+    res.json({
+      catalogVersion: catalog.catalogVersion,
+      generatedAt: catalog.generatedAt,
+      upToDate: changedCollections.length === 0,
+      changedCount: changedCollections.length,
+      changedCollections,
+      unchangedDomains
+    });
+  });
+
+  // Serve local data/ and docs/ directories over HTTP for verification and direct inspection
   app.use('/raw/data', express.static(path.resolve(process.cwd(), 'data')));
+  app.use('/raw/docs', express.static(path.resolve(process.cwd(), 'docs')));
 
   // 7. Direct Atomic GitHub Push to Alssaedy50/UMEDT-DATA
   app.post('/api/github/publish-data', async (req, res) => {

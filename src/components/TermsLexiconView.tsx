@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { ChevronLeft, ChevronRight, Pencil, Plus, Search, Trash2, X } from 'lucide-react';
 import type {
+  AcademicExamPackage,
   ClinicalAbbreviation,
   DictionaryTerm,
   LexiconCategory,
@@ -22,9 +23,11 @@ interface TermsLexiconViewProps {
   onDeleteAbbreviation: (id: string) => Promise<void>;
   onSaveQuestion: (question: UnifiedQuizQuestion) => Promise<void>;
   onDeleteQuestion: (id: string) => Promise<void>;
+  onSaveExam: (exam: AcademicExamPackage) => Promise<void>;
+  onDeleteExam: (id: string) => Promise<void>;
 }
 
-type SubTab = 'terms' | 'sentences' | 'affixes' | 'abbreviations' | 'questions';
+type SubTab = 'terms' | 'sentences' | 'affixes' | 'abbreviations' | 'questions' | 'exams';
 
 const PAGE_SIZE = 50;
 
@@ -39,7 +42,9 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
   onSaveAbbreviation,
   onDeleteAbbreviation,
   onSaveQuestion,
-  onDeleteQuestion
+  onDeleteQuestion,
+  onSaveExam,
+  onDeleteExam
 }) => {
   const [subTab, setSubTab] = useState<SubTab>('terms');
   const [query, setQuery] = useState('');
@@ -52,6 +57,7 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
   const [editingAffix, setEditingAffix] = useState<MorphologicalAffix | null>(null);
   const [editingAbbr, setEditingAbbr] = useState<ClinicalAbbreviation | null>(null);
   const [editingQuestion, setEditingQuestion] = useState<UnifiedQuizQuestion | null>(null);
+  const [editingExam, setEditingExam] = useState<AcademicExamPackage | null>(null);
 
   const filteredTerms = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -107,6 +113,18 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
     );
   }, [state.questions, query]);
 
+  const filteredExams = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    const exams = state.exams || [];
+    if (!q) return exams;
+    return exams.filter(
+      (ex) =>
+        ex.titleEn.toLowerCase().includes(q) ||
+        ex.titleAr.toLowerCase().includes(q) ||
+        ex.id.toLowerCase().includes(q)
+    );
+  }, [state.exams, query]);
+
   const activeListLength =
     subTab === 'terms'
       ? filteredTerms.length
@@ -116,7 +134,9 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
       ? filteredAffixes.length
       : subTab === 'abbreviations'
       ? filteredAbbrs.length
-      : filteredQuestions.length;
+      : subTab === 'questions'
+      ? filteredQuestions.length
+      : filteredExams.length;
 
   const totalPages = Math.max(1, Math.ceil(activeListLength / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -177,7 +197,7 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
         priority: 80,
         candidates: []
       });
-    } else {
+    } else if (subTab === 'questions') {
       setEditingQuestion({
         id: `q-${Date.now()}`,
         type: 'single_choice',
@@ -195,6 +215,24 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
         linkedTermIds: [],
         createdAt: today
       });
+    } else {
+      setEditingExam({
+        id: `exam-${Date.now()}`,
+        titleEn: '',
+        titleAr: '',
+        descriptionAr: '',
+        examType: 'block_exam',
+        blockId: state.blocks[0]?.id || '',
+        questionIds: state.questions.slice(0, 4).map((q) => q.id),
+        durationMinutes: 20,
+        passingScorePercent: 70,
+        totalPoints: 40,
+        shuffleQuestions: true,
+        difficulty: 'medium',
+        tags: [],
+        publishedAt: today,
+        updatedAt: today
+      });
     }
   };
 
@@ -210,7 +248,8 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
                 ['sentences', `الجمل (${state.sentences.length})`],
                 ['affixes', `السوابق واللواحق (${state.customAffixes.length})`],
                 ['abbreviations', `الاختصارات (${state.customAbbreviations.length})`],
-                ['questions', `الأسئلة (${state.questions.length})`]
+                ['questions', `الأسئلة (${state.questions.length})`],
+                ['exams', `الاختبارات (${(state.exams || []).length})`]
               ] as Array<[SubTab, string]>
             ).map(([key, label]) => (
               <button
@@ -486,6 +525,55 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
                       <button
                         type="button"
                         onClick={() => onDeleteQuestion(q.id)}
+                        className="p-1.5 text-slate-400 hover:text-red-600 cursor-pointer"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          {subTab === 'exams' && (
+            <table className="w-full text-sm text-right">
+              <thead className="bg-slate-50 text-xs font-medium text-slate-600 border-b border-slate-200">
+                <tr>
+                  <th className="px-4 py-3">عنوان الاختبار</th>
+                  <th className="px-4 py-3">النوع</th>
+                  <th className="px-4 py-3">الأسئلة والمدة</th>
+                  <th className="px-4 py-3">نسبة النجاح</th>
+                  <th className="px-4 py-3 text-left">إجراءات</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {filteredExams.slice(startIdx, startIdx + PAGE_SIZE).map((ex) => (
+                  <tr key={ex.id} className="hover:bg-slate-50/70">
+                    <td className="px-4 py-2.5">
+                      <div className="text-sm font-medium text-slate-900">{ex.titleAr}</div>
+                      <div dir="ltr" className="text-xs font-mono text-slate-500 text-right">
+                        {ex.titleEn}
+                      </div>
+                    </td>
+                    <td className="px-4 py-2.5 text-xs font-mono text-slate-600">{ex.examType}</td>
+                    <td className="px-4 py-2.5 text-xs text-slate-700 tabular-nums">
+                      {ex.questionIds.length} أسئلة · {ex.durationMinutes} دقيقة
+                    </td>
+                    <td className="px-4 py-2.5 text-xs font-mono tabular-nums text-teal-800 font-semibold">
+                      {ex.passingScorePercent}%
+                    </td>
+                    <td className="px-4 py-2.5 text-left whitespace-nowrap">
+                      <button
+                        type="button"
+                        onClick={() => setEditingExam(ex)}
+                        className="p-1.5 text-slate-500 hover:text-teal-700 cursor-pointer"
+                      >
+                        <Pencil className="w-4 h-4" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => onDeleteExam(ex.id)}
                         className="p-1.5 text-slate-400 hover:text-red-600 cursor-pointer"
                       >
                         <Trash2 className="w-4 h-4" />
@@ -1024,6 +1112,168 @@ export const TermsLexiconView: React.FC<TermsLexiconViewProps> = ({
                 className="px-4 py-2 text-sm font-semibold text-white bg-teal-700 rounded-lg cursor-pointer"
               >
                 حفظ
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+      {/* Exam Modal */}
+      {editingExam && (
+        <div className="fixed inset-0 z-50 bg-slate-900/50 flex items-center justify-center p-4">
+          <form
+            onSubmit={async (e) => {
+              e.preventDefault();
+              setSaving(true);
+              try {
+                await onSaveExam(editingExam);
+                setEditingExam(null);
+              } finally {
+                setSaving(false);
+              }
+            }}
+            className="bg-white border border-slate-200 rounded-xl w-full max-w-2xl p-6 space-y-4 shadow-xl max-h-[90vh] overflow-y-auto"
+          >
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200">
+              <h3 className="text-base font-bold text-slate-900">تحرير حزمة الاختبار التقييمي</h3>
+              <button
+                type="button"
+                onClick={() => setEditingExam(null)}
+                className="p-1 text-slate-400 hover:text-slate-700 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">العنوان بالعربية</label>
+                <input
+                  required
+                  value={editingExam.titleAr}
+                  onChange={(e) => setEditingExam({ ...editingExam, titleAr: e.target.value })}
+                  className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">العنوان بالإنجليزية</label>
+                <input
+                  required
+                  dir="ltr"
+                  value={editingExam.titleEn}
+                  onChange={(e) => setEditingExam({ ...editingExam, titleEn: e.target.value })}
+                  className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">النوع</label>
+                <select
+                  value={editingExam.examType}
+                  onChange={(e) =>
+                    setEditingExam({
+                      ...editingExam,
+                      examType: e.target.value as AcademicExamPackage['examType']
+                    })
+                  }
+                  className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg bg-white"
+                >
+                  <option value="block_exam">امتحان بلوك</option>
+                  <option value="subject_quiz">اختبار مادة</option>
+                  <option value="comprehensive">امتحان شامل</option>
+                  <option value="osce">تقييم سريري OSCE</option>
+                  <option value="flash_drill">تدريب سريع</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">البلوك</label>
+                <select
+                  value={editingExam.blockId || ''}
+                  onChange={(e) => setEditingExam({ ...editingExam, blockId: e.target.value })}
+                  className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg bg-white"
+                >
+                  <option value="">شامل لكل البلوكات</option>
+                  {state.blocks.map((b) => (
+                    <option key={b.id} value={b.id}>
+                      {b.titleAr || b.titleEn}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">المدة (دقيقة)</label>
+                <input
+                  type="number"
+                  value={editingExam.durationMinutes}
+                  onChange={(e) =>
+                    setEditingExam({ ...editingExam, durationMinutes: Number(e.target.value) || 15 })
+                  }
+                  className="w-full px-3 py-2 text-xs font-mono border border-slate-300 rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-600 mb-1">نسبة النجاح %</label>
+                <input
+                  type="number"
+                  value={editingExam.passingScorePercent}
+                  onChange={(e) =>
+                    setEditingExam({
+                      ...editingExam,
+                      passingScorePercent: Number(e.target.value) || 70
+                    })
+                  }
+                  className="w-full px-3 py-2 text-xs font-mono border border-slate-300 rounded-lg"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-xs font-medium text-slate-600 mb-1">
+                الأسئلة المضمنة ({editingExam.questionIds.length} محدد)
+              </label>
+              <div className="border border-slate-200 rounded-lg max-h-48 overflow-y-auto divide-y divide-slate-100">
+                {state.questions.length === 0 ? (
+                  <div className="p-3 text-xs text-slate-500">
+                    لا توجد أسئلة بعد في بنك الأسئلة.
+                  </div>
+                ) : (
+                  state.questions.map((q) => {
+                    const checked = editingExam.questionIds.includes(q.id);
+                    return (
+                      <label
+                        key={q.id}
+                        className="flex items-start gap-2 px-3 py-2 text-xs cursor-pointer hover:bg-slate-50"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={(e) => {
+                            const next = e.target.checked
+                              ? Array.from(new Set([...editingExam.questionIds, q.id]))
+                              : editingExam.questionIds.filter((id) => id !== q.id);
+                            setEditingExam({ ...editingExam, questionIds: next });
+                          }}
+                          className="mt-0.5"
+                        />
+                        <span className="text-slate-800">{q.questionAr || q.questionEn}</span>
+                      </label>
+                    );
+                  })
+                )}
+              </div>
+            </div>
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setEditingExam(null)}
+                className="px-4 py-2 text-sm text-slate-700 border border-slate-300 rounded-lg cursor-pointer"
+              >
+                إلغاء
+              </button>
+              <button
+                type="submit"
+                disabled={saving}
+                className="px-4 py-2 text-sm font-semibold text-white bg-teal-700 rounded-lg cursor-pointer"
+              >
+                {saving ? 'جاري الحفظ...' : 'حفظ الاختبار'}
               </button>
             </div>
           </form>

@@ -1,0 +1,580 @@
+{
+  "catalogSchemaVersion": 2,
+  "catalogVersion": "2026.11.0-umd",
+  "schemaVersion": 2,
+  "minAppVersion": "2.4.0",
+  "repository": "Alssaedy50/UMEDT-DATA",
+  "branch": "main",
+  "generatedAt": "2026-11-16T19:53:53.645Z",
+  "endpoints": {
+    "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
+    "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
+    "manifestBetaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/beta/manifest.json",
+    "masterBaseUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master",
+    "mediaBaseUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media",
+    "schemasBaseUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas",
+    "contractDocUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/UMEDT-DATA-API-CONTRACT.md",
+    "httpApiBasePath": "/api/v1"
+  },
+  "capabilities": {
+    "selfDescribingCollections": true,
+    "incrementalHashSync": true,
+    "cryptographicSignatureVerification": true,
+    "rollbackSupported": true,
+    "preservesLocalUserData": true
+  },
+  "contentTypesRegistry": [
+    {
+      "contentType": "block",
+      "rendererType": "hierarchy_grid",
+      "displayNameAr": "بلوك دراسي",
+      "displayNameEn": "Academic Block",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "subject",
+      "rendererType": "subject_list",
+      "displayNameAr": "مادة علمية",
+      "displayNameEn": "Subject",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "topic",
+      "rendererType": "rich_article",
+      "displayNameAr": "موضوع / محاضرة",
+      "displayNameEn": "Topic Article",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "term",
+      "rendererType": "lexicon_entry",
+      "displayNameAr": "مصطلح طبي",
+      "displayNameEn": "Medical Term",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "sentence",
+      "rendererType": "sentence_pair",
+      "displayNameAr": "جملة سريرية",
+      "displayNameEn": "Clinical Sentence",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "affix",
+      "rendererType": "morphology_rule",
+      "displayNameAr": "سابقة / لاحقة",
+      "displayNameEn": "Morphological Affix",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "abbreviation",
+      "rendererType": "abbreviation_rule",
+      "displayNameAr": "اختصار سريري",
+      "displayNameEn": "Clinical Abbreviation",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "book",
+      "rendererType": "book_pdf_reader",
+      "displayNameAr": "كتاب / مرجع PDF",
+      "displayNameEn": "Book / PDF Document",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "pdf",
+      "rendererType": "book_pdf_reader",
+      "displayNameAr": "ملف PDF",
+      "displayNameEn": "PDF Document",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "image",
+      "rendererType": "media_gallery",
+      "displayNameAr": "صورة طبية",
+      "displayNameEn": "Medical Image",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "diagram",
+      "rendererType": "media_gallery",
+      "displayNameAr": "رسم وتخطيط توضيحي",
+      "displayNameEn": "Diagram / Flowchart",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "audio",
+      "rendererType": "media_gallery",
+      "displayNameAr": "مقطع صوتي",
+      "displayNameEn": "Audio Clip",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "attachment",
+      "rendererType": "media_gallery",
+      "displayNameAr": "مرفق قابل للتحميل",
+      "displayNameEn": "Attachment",
+      "supportsDownload": true,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "question",
+      "rendererType": "quiz_question",
+      "displayNameAr": "سؤال تقييمي",
+      "displayNameEn": "Quiz Question",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    },
+    {
+      "contentType": "exam",
+      "rendererType": "exam_blueprint",
+      "displayNameAr": "اختبار متكامل",
+      "displayNameEn": "Exam Package",
+      "supportsDownload": false,
+      "supportsOfflineCache": true
+    }
+  ],
+  "collections": [
+    {
+      "id": "blocks",
+      "contentType": "block",
+      "rendererType": "hierarchy_grid",
+      "titleAr": "البلوكات الطبية والأكاديمية",
+      "titleEn": "Academic & Medical Blocks",
+      "descriptionAr": "الوحدات الدراسية الكبرى التي تجمع المواد والمواضيع والكتب والاختبارات.",
+      "path": "data/master/blocks.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/blocks.json",
+      "apiPath": "/api/v1/collections/blocks",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/block",
+      "primaryKey": "id",
+      "recordCount": 4,
+      "sha256": "b0334e9aaa8595f16c2d32597ba1d7b10765f3824b0543cf3c73905e4335a939",
+      "sizeBytes": 3016,
+      "mergeStrategy": "replace_master_preserve_progress",
+      "userProtectedFields": [
+        "studyStats",
+        "bookmarks"
+      ],
+      "relations": {
+        "subjects": "subjects.blockId",
+        "topics": "topics.blockId",
+        "books": "books.blockId",
+        "exams": "exams.blockId"
+      },
+      "searchableFields": [
+        "id",
+        "code",
+        "titleEn",
+        "titleAr",
+        "descriptionAr"
+      ],
+      "filterableFields": [
+        "id",
+        "code"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "subjects",
+      "contentType": "subject",
+      "rendererType": "subject_list",
+      "titleAr": "المواد والتخصصات الدراسية",
+      "titleEn": "Subjects & Disciplines",
+      "descriptionAr": "المواد العلمية والتخصصات المرتبطة بالبلوكات أو المستقلة.",
+      "path": "data/master/subjects.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/subjects.json",
+      "apiPath": "/api/v1/collections/subjects",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/subject",
+      "primaryKey": "id",
+      "recordCount": 4,
+      "sha256": "fa6aadff5519b896e9ad3e5573ea988f0c47b7f7f27ed0d172cde5ef5489688a",
+      "sizeBytes": 3106,
+      "mergeStrategy": "replace_master_preserve_progress",
+      "userProtectedFields": [
+        "studyStats",
+        "bookmarks"
+      ],
+      "relations": {
+        "blockId": "blocks.id",
+        "topics": "topics.subjectId",
+        "books": "books.subjectId",
+        "exams": "exams.subjectId"
+      },
+      "searchableFields": [
+        "id",
+        "code",
+        "titleEn",
+        "titleAr"
+      ],
+      "filterableFields": [
+        "blockId",
+        "isStandalone"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "topics",
+      "contentType": "topic",
+      "rendererType": "rich_article",
+      "titleAr": "المواضيع والمحاضرات السريرية",
+      "titleEn": "Topics & Clinical Articles",
+      "descriptionAr": "مقالات ومحاضرات منظمة تحتوي أقساماً وجداول ومخططات وصوراً ومرفقات قابلة للتنزيل.",
+      "path": "data/master/topics.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/topics.json",
+      "apiPath": "/api/v1/collections/topics",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/topic",
+      "primaryKey": "id",
+      "recordCount": 25,
+      "sha256": "f6179adb6b55844db2830d47b103a3ce0ed6348d12305162cb471851156fa9a2",
+      "sizeBytes": 126532,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "favorite",
+        "notes",
+        "bookmarks",
+        "studyStats"
+      ],
+      "relations": {
+        "blockId": "blocks.id",
+        "subjectId": "subjects.id",
+        "relatedTopicIds": "topics.id"
+      },
+      "searchableFields": [
+        "id",
+        "title",
+        "titleEn",
+        "titleAr",
+        "subtitle",
+        "category"
+      ],
+      "filterableFields": [
+        "blockId",
+        "subjectId",
+        "category"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "terms",
+      "contentType": "term",
+      "rendererType": "lexicon_entry",
+      "titleAr": "المعجم الطبي والمصطلحات",
+      "titleEn": "Medical Lexicon Terms",
+      "descriptionAr": "مصطلحات ثنائية اللغة مع الصوتيّات والتحليل الصرفي والأمثلة والربط المرجعي.",
+      "path": "data/master/terms.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/terms.json",
+      "apiPath": "/api/v1/collections/terms",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/term",
+      "primaryKey": "id",
+      "recordCount": 1650,
+      "sha256": "6cc5a7c5bf4c5f960903e69312a9a086c6e7fca654735a92443bc237e412a553",
+      "sizeBytes": 1825596,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "favorite",
+        "srsData",
+        "collections",
+        "studyCount",
+        "lastStudiedAt"
+      ],
+      "relations": {
+        "linkedBlockIds": "blocks.id",
+        "linkedSubjectIds": "subjects.id",
+        "linkedTopicIds": "topics.id"
+      },
+      "searchableFields": [
+        "id",
+        "term",
+        "termNormalized",
+        "translation",
+        "umdCode",
+        "specialty"
+      ],
+      "filterableFields": [
+        "category",
+        "specialty",
+        "linkedBlockIds"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "sentences",
+      "contentType": "sentence",
+      "rendererType": "sentence_pair",
+      "titleAr": "الجمل السريرية المربوطة",
+      "titleEn": "Clinical Sentences",
+      "descriptionAr": "جمل وتراكيب سريرية إنجليزية مع الترجمة العربية وروابط المصطلحات.",
+      "path": "data/master/sentences.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/sentences.json",
+      "apiPath": "/api/v1/collections/sentences",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/sentence",
+      "primaryKey": "id",
+      "recordCount": 94,
+      "sha256": "9cc855d41edcd3e3b2a7de8bed82ee59fb19b073563206e8c6f8611ad5f0677e",
+      "sizeBytes": 67904,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "favorite",
+        "srsData",
+        "studyCount"
+      ],
+      "relations": {
+        "linkedTermIds": "terms.id"
+      },
+      "searchableFields": [
+        "id",
+        "en",
+        "ar",
+        "specialty",
+        "tags"
+      ],
+      "filterableFields": [
+        "category",
+        "specialty"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "customAffixes",
+      "contentType": "affix",
+      "rendererType": "morphology_rule",
+      "titleAr": "السوابق والجذور واللواحق الطبية",
+      "titleEn": "Morphological Affixes",
+      "descriptionAr": "قواعد البناء الصرفي اللاتيني واليوناني للمصطلحات الطبية.",
+      "path": "data/master/custom-affixes.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/custom-affixes.json",
+      "apiPath": "/api/v1/collections/customAffixes",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/affix",
+      "primaryKey": "id",
+      "recordCount": 131,
+      "sha256": "e66892513451a4c62df5a0f896da130be3fe6bac406d2d6433ae274cf7d6dd56",
+      "sizeBytes": 44437,
+      "mergeStrategy": "replace_master_preserve_progress",
+      "userProtectedFields": [
+        "favorite"
+      ],
+      "relations": {},
+      "searchableFields": [
+        "id",
+        "affix",
+        "cleanKey",
+        "meaningAr",
+        "meaningEn"
+      ],
+      "filterableFields": [
+        "type"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "customAbbreviations",
+      "contentType": "abbreviation",
+      "rendererType": "abbreviation_rule",
+      "titleAr": "الاختصارات والرموز السريرية",
+      "titleEn": "Clinical Abbreviations",
+      "descriptionAr": "الاختصارات الطبية الشائعة والملتبسة مع السياقات والتخصصات.",
+      "path": "data/master/custom-abbreviations.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/custom-abbreviations.json",
+      "apiPath": "/api/v1/collections/customAbbreviations",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/abbreviation",
+      "primaryKey": "id",
+      "recordCount": 73,
+      "sha256": "6b4b85b00df66587d24e6ed803746ed1955f28af2bd047de452c50beba02bfe9",
+      "sizeBytes": 33385,
+      "mergeStrategy": "replace_master_preserve_progress",
+      "userProtectedFields": [
+        "favorite"
+      ],
+      "relations": {},
+      "searchableFields": [
+        "id",
+        "abbr",
+        "defaultExpansionEn",
+        "defaultTranslationAr"
+      ],
+      "filterableFields": [
+        "category",
+        "isAmbiguous"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "books",
+      "contentType": "book",
+      "rendererType": "book_pdf_reader",
+      "titleAr": "الكتب الدراسية وملفات PDF والملازم",
+      "titleEn": "Academic Books & PDFs",
+      "descriptionAr": "مراجع وكتب وأطالس وملازم PDF مهيكلة مع روابط التحميل المباشر وبصمة SHA-256.",
+      "path": "data/master/books.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/books.json",
+      "apiPath": "/api/v1/collections/books",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/book",
+      "primaryKey": "id",
+      "recordCount": 4,
+      "sha256": "9499692857c7578cd3b6840cc85baadf988b62f6195711835d0e6b79586906f5",
+      "sizeBytes": 7844,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "bookmarks",
+        "readingProgress",
+        "favorite",
+        "notes"
+      ],
+      "relations": {
+        "blockId": "blocks.id",
+        "subjectId": "subjects.id",
+        "topicIds": "topics.id",
+        "mediaAssetId": "mediaAssets.id"
+      },
+      "searchableFields": [
+        "id",
+        "titleEn",
+        "titleAr",
+        "authors",
+        "isbn",
+        "tags"
+      ],
+      "filterableFields": [
+        "blockId",
+        "subjectId",
+        "resourceKind",
+        "format",
+        "language"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "questions",
+      "contentType": "question",
+      "rendererType": "quiz_question",
+      "titleAr": "بنك الأسئلة التقييمية",
+      "titleEn": "Assessment Question Bank",
+      "descriptionAr": "أسئلة متعددة الأنواع مع خيارات وشروحات ثنائية اللغة مرتبطة بالبلوكات والمواضيع.",
+      "path": "data/master/questions.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/questions.json",
+      "apiPath": "/api/v1/collections/questions",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/question",
+      "primaryKey": "id",
+      "recordCount": 10,
+      "sha256": "4eb93a3cb649e67c0a84cad9052b19504026c0bbcf787b2d16f85c02bb7d59ae",
+      "sizeBytes": 18672,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "userAttempts",
+        "bookmark",
+        "srsData"
+      ],
+      "relations": {
+        "blockId": "blocks.id",
+        "subjectId": "subjects.id",
+        "topicId": "topics.id",
+        "linkedTermIds": "terms.id"
+      },
+      "searchableFields": [
+        "id",
+        "questionEn",
+        "questionAr",
+        "explanationAr"
+      ],
+      "filterableFields": [
+        "blockId",
+        "subjectId",
+        "topicId",
+        "type",
+        "difficulty"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "exams",
+      "contentType": "exam",
+      "rendererType": "exam_blueprint",
+      "titleAr": "الاختبارات والامتحانات المجمّعة",
+      "titleEn": "Exams & Assessments",
+      "descriptionAr": "حزم امتحانية زمنية وتقييمات شاملة مبنية فوق بنك الأسئلة.",
+      "path": "data/master/exams.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/exams.json",
+      "apiPath": "/api/v1/collections/exams",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/exam",
+      "primaryKey": "id",
+      "recordCount": 2,
+      "sha256": "fc43032cda5f1807967b03b646f8dc4c9e21c8f93d92c81afde77cd710d029b9",
+      "sizeBytes": 2475,
+      "mergeStrategy": "merge_preserve_user_state",
+      "userProtectedFields": [
+        "examAttempts",
+        "bestScore",
+        "lastAttemptAt"
+      ],
+      "relations": {
+        "blockId": "blocks.id",
+        "subjectId": "subjects.id",
+        "topicId": "topics.id",
+        "questionIds": "questions.id"
+      },
+      "searchableFields": [
+        "id",
+        "titleEn",
+        "titleAr",
+        "descriptionAr",
+        "tags"
+      ],
+      "filterableFields": [
+        "blockId",
+        "subjectId",
+        "topicId",
+        "examType",
+        "difficulty"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    },
+    {
+      "id": "mediaAssets",
+      "contentType": "media",
+      "rendererType": "media_gallery",
+      "titleAr": "فهرس الوسائط والصور والرسومات والمرفقات",
+      "titleEn": "Media, Diagrams & Attachments Index",
+      "descriptionAr": "فهرس موحد لكل الصور والرسومات التوضيحية وملفات PDF والصوتيات والمرفقات القابلة للتحميل.",
+      "path": "data/master/media-index.json",
+      "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/media-index.json",
+      "apiPath": "/api/v1/collections/mediaAssets",
+      "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/media",
+      "primaryKey": "id",
+      "recordCount": 26,
+      "sha256": "b11f05db473652d90051a7320e08682eeabef99028c38c68f700f6442ca65964",
+      "sizeBytes": 20708,
+      "mergeStrategy": "replace_master_preserve_progress",
+      "userProtectedFields": [
+        "localCachedPath"
+      ],
+      "relations": {
+        "linkedEntityId": "polymorphic(block|subject|topic|term|book|question|exam)"
+      },
+      "searchableFields": [
+        "id",
+        "fileName",
+        "captionAr",
+        "captionEn",
+        "tags"
+      ],
+      "filterableFields": [
+        "mediaType",
+        "linkedEntityType",
+        "linkedEntityId",
+        "mimeType"
+      ],
+      "updatedAt": "2026-11-16T19:53:53.645Z"
+    }
+  ]
+}

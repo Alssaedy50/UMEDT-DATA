@@ -1,0 +1,359 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json",
+  "title": "UMEDT-DATA Academic Content Entities Schema v2",
+  "$defs": {
+    "block": {
+      "type": "object",
+      "required": [
+        "id",
+        "code",
+        "titleEn",
+        "titleAr",
+        "order"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "titleEn": {
+          "type": "string"
+        },
+        "titleAr": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer"
+        }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "required": [
+        "id",
+        "code",
+        "titleEn",
+        "titleAr",
+        "order"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "blockId": {
+          "type": "string"
+        },
+        "titleEn": {
+          "type": "string"
+        },
+        "titleAr": {
+          "type": "string"
+        }
+      }
+    },
+    "topic": {
+      "type": "object",
+      "required": [
+        "id",
+        "title",
+        "category",
+        "sections"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "blockId": {
+          "type": "string"
+        },
+        "subjectId": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "array"
+        }
+      }
+    },
+    "term": {
+      "type": "object",
+      "required": [
+        "id",
+        "term",
+        "translation"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "term": {
+          "type": "string"
+        },
+        "translation": {
+          "type": "string"
+        }
+      }
+    },
+    "sentence": {
+      "type": "object",
+      "required": [
+        "id",
+        "en",
+        "ar"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        },
+        "ar": {
+          "type": "string"
+        }
+      }
+    },
+    "affix": {
+      "type": "object",
+      "required": [
+        "id",
+        "affix",
+        "type",
+        "meaningAr"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "affix": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "prefix",
+            "root",
+            "suffix"
+          ]
+        },
+        "meaningAr": {
+          "type": "string"
+        }
+      }
+    },
+    "abbreviation": {
+      "type": "object",
+      "required": [
+        "id",
+        "abbr",
+        "defaultExpansionEn",
+        "defaultTranslationAr"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "abbr": {
+          "type": "string"
+        },
+        "defaultExpansionEn": {
+          "type": "string"
+        },
+        "defaultTranslationAr": {
+          "type": "string"
+        }
+      }
+    },
+    "book": {
+      "type": "object",
+      "required": [
+        "id",
+        "titleEn",
+        "titleAr",
+        "resourceKind",
+        "format",
+        "downloadUrl",
+        "mimeType"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "titleEn": {
+          "type": "string"
+        },
+        "titleAr": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resourceKind": {
+          "enum": [
+            "textbook",
+            "atlas",
+            "pdf_lecture",
+            "clinical_guideline",
+            "study_notes",
+            "slides"
+          ]
+        },
+        "format": {
+          "enum": [
+            "pdf",
+            "epub",
+            "markdown",
+            "html"
+          ]
+        },
+        "downloadUrl": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "sizeBytes": {
+          "type": "integer"
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "questionEn",
+        "options",
+        "correctOptionKeys"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "single_choice",
+            "multiple_select",
+            "true_false",
+            "matching",
+            "fill_blank",
+            "short_answer",
+            "image_based"
+          ]
+        },
+        "questionEn": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array"
+        },
+        "correctOptionKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "exam": {
+      "type": "object",
+      "required": [
+        "id",
+        "titleEn",
+        "titleAr",
+        "examType",
+        "questionIds",
+        "durationMinutes",
+        "passingScorePercent"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "titleEn": {
+          "type": "string"
+        },
+        "titleAr": {
+          "type": "string"
+        },
+        "examType": {
+          "enum": [
+            "block_exam",
+            "subject_quiz",
+            "comprehensive",
+            "osce",
+            "flash_drill"
+          ]
+        },
+        "questionIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "durationMinutes": {
+          "type": "integer"
+        },
+        "passingScorePercent": {
+          "type": "number"
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "required": [
+        "id",
+        "fileName",
+        "relativePath",
+        "mediaType",
+        "mimeType",
+        "sizeBytes",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "fileName": {
+          "type": "string"
+        },
+        "relativePath": {
+          "type": "string"
+        },
+        "mediaType": {
+          "enum": [
+            "image",
+            "diagram",
+            "pdf",
+            "book",
+            "audio",
+            "video",
+            "attachment"
+          ]
+        },
+        "mimeType": {
+          "type": "string"
+        },
+        "sizeBytes": {
+          "type": "integer"
+        },
+        "sha256": {
+          "type": "string"
+        },
+        "rawUrl": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

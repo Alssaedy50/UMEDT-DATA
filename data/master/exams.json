@@ -1,0 +1,62 @@
+[
+  {
+    "id": "exam-parasito-heme-integrated-1",
+    "titleEn": "Integrated Hematology & Medical Parasitology Diagnostic Exam",
+    "titleAr": "الاختبار التقييمي الشامل: أمراض الدم وعلم الطفيليات العملي",
+    "descriptionEn": "Comprehensive assessment covering iron-deficiency & megaloblastic anemias, hemostasis, acute leukemia, and diagnostic helminthology (Ascaris, Trichuris, Taenia, Schistosoma).",
+    "descriptionAr": "اختبار متكامل يغطي فقر الدم بعوز الحديد وB12، الإرقاء، اللوكيميا، وتشخيص الديدان والطفيليات المخبرية.",
+    "examType": "comprehensive",
+    "blockId": "block-hematology",
+    "subjectId": "subj-hematology",
+    "questionIds": [
+      "q-heme-ida-02",
+      "q-heme-b12-03",
+      "q-heme-hemostasis-04",
+      "q-heme-leukemia-05",
+      "q-para-ascaris-06",
+      "q-para-trichuris-07",
+      "q-para-cestode-08",
+      "q-para-schisto-09"
+    ],
+    "durationMinutes": 20,
+    "passingScorePercent": 70,
+    "totalPoints": 80,
+    "shuffleQuestions": true,
+    "difficulty": "medium",
+    "tags": [
+      "hematology",
+      "parasitology",
+      "spotter",
+      "clinical"
+    ],
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "exam-acs-informatics-core-2",
+    "titleEn": "Emergency Cardiology (ACS) & Medical AI Architecture Drill",
+    "titleAr": "اختبار الكفاءة السريع: طوارئ القلب والذكاء الاصطناعي الطبي",
+    "descriptionEn": "Focused clinical and systems evaluation covering acute myocardial reperfusion pathways and Glossary-Constrained NMT architecture.",
+    "descriptionAr": "اختبار مركز يربط مسار إعادة التروية في المتلازمة الإكليلية الحادة بمعمارية الترجمة الطبية المقيدة بالمعجم.",
+    "examType": "subject_quiz",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "questionIds": [
+      "q-acs-stemi-01",
+      "q-info-gcnmt-10"
+    ],
+    "durationMinutes": 10,
+    "passingScorePercent": 80,
+    "totalPoints": 20,
+    "shuffleQuestions": false,
+    "difficulty": "medium",
+    "tags": [
+      "acs",
+      "stemi",
+      "gc-nmt",
+      "informatics"
+    ],
+    "publishedAt": "2026-11-16T19:53:11.130Z",
+    "updatedAt": "2026-11-16T19:53:11.130Z"
+  }
+]
