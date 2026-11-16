@@ -389,21 +389,21 @@ function sanitizeSvgBuffer(input: Buffer): Buffer {
     throw new Error('SVG files larger than 2 MB are not accepted.');
   }
   let svg = input.toString('utf8');
-  if (!/<svg\\b[\\s\\S]*<\\/svg\\s*>/i.test(svg)) {
+  if (!/<svg\b[\s\S]*<\/svg\s*>/i.test(svg)) {
     throw new Error('Invalid SVG: root svg element is missing.');
   }
   svg = svg
-    .replace(/<!DOCTYPE[\\s\\S]*?>/gi, '')
-    .replace(/<!ENTITY[\\s\\S]*?>/gi, '')
-    .replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script\\s*>/gi, '')
-    .replace(/<foreignObject\\b[^>]*>[\\s\\S]*?<\\/foreignObject\\s*>/gi, '')
-    .replace(/<(?:iframe|object|embed|audio|video|link)\\b[^>]*>[\\s\\S]*?<\\/(?:iframe|object|embed|audio|video|link)\\s*>/gi, '')
-    .replace(/<(?:iframe|object|embed|audio|video|link)\\b[^>]*\\/?\\s*>/gi, '')
-    .replace(/\\s+on[a-z0-9_-]+\\s*=\\s*(?:"[^"]*"|'[^']*'|[^\\s>]+)/gi, '')
-    .replace(/\\s+(?:href|xlink:href)\\s*=\\s*(["'])(?!#)[\\s\\S]*?\\1/gi, '')
-    .replace(/url\\(\\s*(["']?)(?!#)[^)]*\\)/gi, 'none')
+    .replace(/<!DOCTYPE[\s\S]*?>/gi, '')
+    .replace(/<!ENTITY[\s\S]*?>/gi, '')
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '')
+    .replace(/<foreignObject\b[^>]*>[\s\S]*?<\/foreignObject\s*>/gi, '')
+    .replace(/<(?:iframe|object|embed|audio|video|link)\b[^>]*>[\s\S]*?<\/(?:iframe|object|embed|audio|video|link)\s*>/gi, '')
+    .replace(/<(?:iframe|object|embed|audio|video|link)\b[^>]*\/?\s*>/gi, '')
+    .replace(/\s+on[a-z0-9_-]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+    .replace(/\s+(?:href|xlink:href)\s*=\s*(["'])(?!#)[\s\S]*?\1/gi, '')
+    .replace(/url\(\s*(["']?)(?!#)[^)]*\)/gi, 'none')
     .replace(/@import[^;]*;?/gi, '');
-  if (/<script\\b|<foreignObject\\b|\\son[a-z0-9_-]+\\s*=|javascript:|@import/i.test(svg)) {
+  if (/<script\b|<foreignObject\b|\son[a-z0-9_-]+\s*=|javascript:|@import/i.test(svg)) {
     throw new Error('SVG contains active or unsafe content after sanitization.');
   }
   return Buffer.from(svg, 'utf8');
