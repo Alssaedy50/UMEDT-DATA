@@ -533,7 +533,9 @@ export async function fetchRemoteMasterData(
   if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(cleanData)) {
     throw new Error('اسم مستودع البيانات غير صالح. استخدم owner/repository.');
   }
-  const rawRoot = `https://raw.githubusercontent.com/${cleanData}/${encodeURIComponent(branch)}`;
+  const branchPath = branch.split('/').map((segment) => encodeURIComponent(segment)).join('/');
+  const rawRoot = `https://raw.githubusercontent.com/${cleanData}/${branchPath}`;
+  const allowedRawPrefix = `${rawRoot}/`;
   const catalogText = await fetchTextRequired(`${rawRoot}/data/catalog.json`, token);
   let catalog: {
     catalogVersion?: string;
@@ -547,6 +549,9 @@ export async function fetchRemoteMasterData(
   }
   if (!Array.isArray(catalog.collections)) {
     throw new Error('Catalog لا يحتوي على collections صالحة. لم يتم تغيير بيانات مساحة العمل.');
+  }
+  if (catalog.repository !== cleanData) {
+    throw new Error('Catalog repository identity does not match the requested repository.');
   }
 
   const manifestText = await fetchTextRequired(`${rawRoot}/data/releases/stable/manifest.json`, token);
@@ -582,6 +587,9 @@ export async function fetchRemoteMasterData(
       if (!descriptor?.rawUrl || !descriptor.sha256 || typeof descriptor.recordCount !== 'number') {
         throw new Error(`Catalog يفتقد بيانات التحقق المطلوبة للنطاق ${domain}. لم يتم تغيير مساحة العمل.`);
       }
+      if (!descriptor.rawUrl.startsWith(allowedRawPrefix)) {
+        throw new Error(`Catalog rawUrl for ${domain} points outside the configured repository. Import was cancelled.`);
+      }
       const raw = await fetchTextRequired(descriptor.rawUrl, token);
       let parsed: unknown;
       try {
@@ -600,7 +608,7 @@ export async function fetchRemoteMasterData(
         throw new Error(`عدد سجلات ${domain} لا يطابق Catalog. تم إلغاء الاستيراد بالكامل.`);
       }
       const manifestHash = manifest.filesSha256?.[fileName];
-      if (manifestHash && manifestHash !== canonicalHash) {
+      if (!manifestHash || manifestHash !== canonicalHash) {
         throw new Error(`بصمة ${fileName} لا تطابق Stable Manifest. تم إلغاء الاستيراد بالكامل.`);
       }
       return [domain, parsed] as const;
@@ -610,11 +618,14 @@ export async function fetchRemoteMasterData(
   const data = Object.fromEntries(downloaded) as Record<string, unknown[]>;
   const mediaAssets = data.mediaAssets as MediaAssetRecord[];
 
-  // Copy repository-owned binary assets into the local workspace only after every JSON collection passed validation.
-  const hydratedMediaAssets = await Promise.all(
+  // Download and verify every repository-owned binary first; only then write any asset to disk.
+  const verifiedMediaDownloads = await Promise.all(
     mediaAssets.map(async (asset) => {
-      if (!asset.relativePath?.startsWith('data/media/')) return asset;
+      if (!asset.relativePath?.startsWith('data/media/')) return { asset, bytes: null as Buffer | null };
       const mediaUrl = asset.rawUrl || `${rawRoot}/${asset.relativePath}`;
+      if (!mediaUrl.startsWith(allowedRawPrefix)) {
+        throw new Error(`رابط الوسيط ${asset.fileName || asset.id} خارج مستودع البيانات المحدد. تم إلغاء الاستيراد بالكامل.`);
+      }
       const response = await fetch(mediaUrl, {
         headers: token ? buildGitHubHeaders(token) : { 'User-Agent': 'UMEDT-Data-Hub/1.0' },
         cache: 'no-store'
@@ -627,16 +638,20 @@ export async function fetchRemoteMasterData(
       if (asset.sizeBytes !== bytes.byteLength || asset.sha256 !== digest) {
         throw new Error(`فشل التحقق من حجم أو SHA-256 للوسيط ${asset.fileName || asset.id}. تم إلغاء الاستيراد بالكامل.`);
       }
-      const saved = saveMediaBinary(asset.fileName || asset.id, asset.mimeType || 'application/octet-stream', bytes);
-      return {
-        ...asset,
-        relativePath: saved.relativePath,
-        sizeBytes: saved.sizeBytes,
-        sha256: saved.sha256,
-        rawUrl: `https://raw.githubusercontent.com/${cleanData}/${branch}/${saved.relativePath}`
-      };
+      return { asset, bytes };
     })
   );
+  const hydratedMediaAssets = verifiedMediaDownloads.map(({ asset, bytes }) => {
+    if (!bytes) return asset;
+    const saved = saveMediaBinary(asset.fileName || asset.id, asset.mimeType || 'application/octet-stream', bytes);
+    return {
+      ...asset,
+      relativePath: saved.relativePath,
+      sizeBytes: saved.sizeBytes,
+      sha256: saved.sha256,
+      rawUrl: `${rawRoot}/${saved.relativePath}`
+    };
+  });
 
   return {
     blocks: data.blocks as MedicalBlock[],
