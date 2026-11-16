@@ -822,6 +822,9 @@ export function rollbackChannelRelease(
   if (!target) {
     throw new Error(`الإصدار ${targetVersion} غير موجود في سجل قناة ${channel}.`);
   }
+  if (!target.signed || !target.signature || !target.keyFingerprint) {
+    throw new Error('تم رفض الاستعادة: لا يمكن إعادة تفعيل إصدار غير موقّع رقمياً.');
+  }
 
   const channelDir = path.resolve(process.cwd(), 'data', 'releases', channel);
   const pkgPath = path.join(channelDir, target.packageFileName);
