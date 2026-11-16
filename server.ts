@@ -1,6 +1,7 @@
 import express from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createPublicKey, verify as verifySignature } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import JSZip from 'jszip';
 import type {
@@ -39,6 +40,7 @@ import {
 import {
   buildSignedReleasePackage,
   computeDiffAgainstRemote,
+  sha256Hex,
   generateEcdsaSigningKeyPair,
   normalizeTermKey,
   publishLocalReleaseToDisk,
@@ -724,9 +726,12 @@ async function startServer() {
     }
   });
 
-  app.post('/api/release/rollback', (req, res) => {
+  app.post('/api/release/rollback', async (req, res) => {
+    let previousState: WorkspaceDataState | null = null;
+    let releaseSnapshots: Array<{ filePath: string; content: Buffer | null }> = [];
     try {
       const state = loadWorkspaceState();
+      previousState = state;
       const body = (req.body || {}) as { channel?: 'stable' | 'beta'; targetVersion?: string };
       const channel: 'stable' | 'beta' = body.channel === 'beta' ? 'beta' : 'stable';
       const targetVersion = body.targetVersion?.trim();
@@ -734,13 +739,145 @@ async function startServer() {
         res.status(400).json({ error: 'يجب تحديد رقم الإصدار المطلوب استعادته.' });
         return;
       }
+
+      const history = loadReleaseHistory(channel);
+      const target = history.find((entry) => entry.version === targetVersion);
+      if (!target) throw new Error(`الإصدار ${targetVersion} غير موجود في سجل قناة ${channel}.`);
+      if (!target.signed || !target.signature || !target.keyFingerprint) {
+        throw new Error('تم رفض الاستعادة: الإصدار المستهدف غير موقّع رقمياً.');
+      }
+
+      const publicPem = process.env.VITE_UMED_PUBLIC_KEY_PEM || process.env.UMED_PUBLISHER_PUBLIC_KEY_PEM || '';
+      if (!publicPem.trim()) throw new Error('يلزم المفتاح العام الموثوق للتحقق من توقيع الإصدار قبل الاستعادة.');
+      const publicKey = createPublicKey(publicPem);
+      const fingerprint = sha256Hex(publicKey.export({ type: 'spki', format: 'der' })).slice(0, 16);
+      if (fingerprint !== target.keyFingerprint) throw new Error('بصمة المفتاح العام لا تطابق بصمة الإصدار المستهدف.');
+
+      const channelDir = path.resolve(process.cwd(), 'data', 'releases', channel);
+      const packagePath = path.join(channelDir, target.packageFileName);
+      if (!fs.existsSync(packagePath)) throw new Error(`ملف الحزمة ${target.packageFileName} مفقود ولا يمكن استعادته.`);
+      const packageBytes = fs.readFileSync(packagePath);
+      if (sha256Hex(packageBytes) !== target.sha256) throw new Error('فشل التحقق من SHA-256 لحزمة الاستعادة.');
+      if (!verifySignature('sha256', packageBytes, publicKey, Buffer.from(target.signature, 'base64'))) {
+        throw new Error('فشل التحقق من التوقيع الرقمي لحزمة الاستعادة.');
+      }
+
+      const archive = await JSZip.loadAsync(packageBytes);
+      const innerManifestFile = archive.file('manifest.json');
+      if (!innerManifestFile) throw new Error('حزمة الاستعادة لا تحتوي على manifest.json.');
+      const innerManifest = JSON.parse(await innerManifestFile.async('string')) as { dataVersion?: string };
+      if (innerManifest.dataVersion !== target.version) throw new Error('إصدار Manifest داخل الحزمة لا يطابق سجل الإصدارات.');
+
+      const collectionFiles = [
+        ['blocks', 'blocks.json'],
+        ['subjects', 'subjects.json'],
+        ['topics', 'topics.json'],
+        ['terms', 'terms.json'],
+        ['sentences', 'sentences.json'],
+        ['customAffixes', 'custom-affixes.json'],
+        ['customAbbreviations', 'custom-abbreviations.json'],
+        ['books', 'books.json'],
+        ['questions', 'questions.json'],
+        ['exams', 'exams.json'],
+        ['mediaAssets', 'media-index.json']
+      ] as const;
+      const restoredCollections: Record<string, unknown[]> = {};
+      for (const [domain, fileName] of collectionFiles) {
+        const archivePath = `data/master/${fileName}`;
+        const file = archive.file(archivePath);
+        if (!file) throw new Error(`حزمة الاستعادة غير مكتملة: ${archivePath} مفقود.`);
+        const parsed = JSON.parse(await file.async('string')) as unknown;
+        if (!Array.isArray(parsed)) throw new Error(`ملف ${archivePath} ليس مصفوفة JSON.`);
+        const digest = sha256Hex(JSON.stringify(parsed, null, 2));
+        if (!target.filesSha256?.[fileName] || target.filesSha256[fileName] !== digest) {
+          throw new Error(`فشل التحقق من بصمة ${archivePath}.`);
+        }
+        restoredCollections[domain] = parsed;
+      }
+
+      const mediaAssets = restoredCollections.mediaAssets as MediaAssetRecord[];
+      const mediaBuffers = new Map<string, Buffer>();
+      for (const asset of mediaAssets) {
+        if (!asset.relativePath?.startsWith('data/media/')) continue;
+        const file = archive.file(asset.relativePath);
+        if (!file) throw new Error(`الوسيط ${asset.fileName} غير موجود داخل حزمة الاستعادة.`);
+        const bytes = await file.async('nodebuffer');
+        if (bytes.length !== asset.sizeBytes || sha256Hex(bytes) !== asset.sha256) {
+          throw new Error(`فشل التحقق من سلامة الوسيط ${asset.fileName}.`);
+        }
+        if (target.assetsSha256?.[asset.relativePath] !== asset.sha256) {
+          throw new Error(`بصمة الوسيط ${asset.fileName} لا تطابق سجل الإصدار.`);
+        }
+        mediaBuffers.set(asset.id, bytes);
+      }
+
+      const nextState: WorkspaceDataState = {
+        ...state,
+        meta: { ...state.meta, dataVersion: target.version },
+        blocks: restoredCollections.blocks as MedicalBlock[],
+        subjects: restoredCollections.subjects as MedicalSubject[],
+        topics: restoredCollections.topics as TopicArticle[],
+        terms: restoredCollections.terms as DictionaryTerm[],
+        sentences: restoredCollections.sentences as LinkedSentence[],
+        customAffixes: restoredCollections.customAffixes as MorphologicalAffix[],
+        customAbbreviations: restoredCollections.customAbbreviations as ClinicalAbbreviation[],
+        books: restoredCollections.books as AcademicBookResource[],
+        questions: restoredCollections.questions as UnifiedQuizQuestion[],
+        exams: restoredCollections.exams as AcademicExamPackage[],
+        mediaAssets
+      };
+      const initialValidation = validateWorkspaceData(nextState);
+      if (!initialValidation.valid) {
+        res.status(422).json({
+          error: 'بيانات الإصدار المستهدف غير صالحة؛ لم يتم تنفيذ الاستعادة.',
+          validation: initialValidation
+        });
+        return;
+      }
+
+      // Recreate every local binary asset from the verified archive before switching the active master data.
+      const restoredMediaAssets = mediaAssets.map((asset) => {
+        const bytes = mediaBuffers.get(asset.id);
+        if (!bytes) return asset;
+        const saved = saveMediaBinary(asset.fileName, asset.mimeType, bytes);
+        if (saved.sha256 !== asset.sha256 || saved.sizeBytes !== asset.sizeBytes) {
+          throw new Error(`تغيّر محتوى الوسيط ${asset.fileName} أثناء الحفظ الآمن؛ أُلغيت الاستعادة.`);
+        }
+        return { ...asset, relativePath: saved.relativePath };
+      });
+      nextState.mediaAssets = restoredMediaAssets;
+      const finalValidation = validateWorkspaceData(nextState);
+      if (!finalValidation.valid) throw new Error(finalValidation.errors[0]?.messageAr || 'فشل التحقق النهائي من بيانات الاستعادة.');
+
+      for (const name of ['manifest.json', 'CHANGELOG.md', 'history.json']) {
+        const filePath = path.join(channelDir, name);
+        releaseSnapshots.push({ filePath, content: fs.existsSync(filePath) ? fs.readFileSync(filePath) : null });
+      }
+
+      writeMasterFilesToRepoDisk(nextState);
+      writeCatalogAndDocsToRepoDisk(nextState);
       const restored = rollbackChannelRelease(channel, targetVersion, state.meta.dataRepo);
-      state.meta.dataVersion = restored.restoredManifest.dataVersion;
-      saveWorkspaceState(state);
-      res.json({ success: true, ...restored, state });
+      saveWorkspaceState(nextState);
+      res.json({ success: true, ...restored, state: nextState, validation: finalValidation });
     } catch (err) {
+      if (previousState) {
+        try {
+          writeMasterFilesToRepoDisk(previousState);
+          writeCatalogAndDocsToRepoDisk(previousState);
+          saveWorkspaceState(previousState);
+        } catch {
+          // Keep the original error; the recovery cache remains available for manual repair.
+        }
+      }
+      for (const snapshot of releaseSnapshots) {
+        try {
+          if (snapshot.content) fs.writeFileSync(snapshot.filePath, snapshot.content);
+        } catch {
+          // Preserve the original failure rather than masking it with a best-effort rollback error.
+        }
+      }
       res.status(400).json({
-        error: err instanceof Error ? err.message : 'تعذر استعادة الإصدار السابق'
+        error: err instanceof Error ? err.message : 'تعذر استعادة الإصدار السابق. لم يتم اعتماد بيانات جزئية.'
       });
     }
   });
