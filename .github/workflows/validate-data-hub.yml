@@ -27,3 +27,33 @@ jobs:
         run: npm run build
       - name: Validate published data metadata and local assets
         run: npm run validate:data -- --skip-release-artifact-check
+      - name: Test complete ZIP builder and ECDSA signing with temporary CI-only keys
+        run: |
+          node --input-type=module <<'NODE'
+          import { generateKeyPairSync } from 'node:crypto';
+          import { spawnSync } from 'node:child_process';
+          const pair = generateKeyPairSync('ec', {
+            namedCurve: 'prime256v1',
+            privateKeyEncoding: { type: 'pkcs8', format: 'pem' },
+            publicKeyEncoding: { type: 'spki', format: 'pem' }
+          });
+          const result = spawnSync(process.execPath, [
+            'scripts/build-data-release.mjs',
+            '--channel', 'stable',
+            '--version', '2099.1.0-umd',
+            '--dry-run'
+          ], {
+            encoding: 'utf8',
+            env: {
+              ...process.env,
+              UMED_PUBLISHER_PRIVATE_KEY_PEM: pair.privateKey,
+              VITE_UMED_PUBLIC_KEY_PEM: pair.publicKey
+            }
+          });
+          if (result.stdout) process.stdout.write(result.stdout);
+          if (result.stderr) process.stderr.write(result.stderr);
+          if (result.status !== 0) process.exit(result.status || 1);
+          if (!result.stdout.includes('"success": true')) {
+            throw new Error('Release builder did not report a successful signed package.');
+          }
+          NODE
