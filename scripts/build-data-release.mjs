@@ -3,7 +3,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
-import { spawnSync } from 'node:child_process';
 
 const ROOT = process.cwd();
 const args = process.argv.slice(2);
@@ -112,6 +111,10 @@ const targetVersion = readArg('--version') || (() => {
 })();
 if (compareVersion(targetVersion, highestVersion) <= 0) {
   throw new Error('Target dataVersion must be newer than current manifest/version floor '+highestVersion);
+}
+const requiredSuffix = channel === 'beta' ? '-beta' : '-umd';
+if (!targetVersion.endsWith(requiredSuffix)) {
+  throw new Error(`Target version for channel ${channel} must end with ${requiredSuffix}`);
 }
 
 const privatePem = process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM || '';
@@ -231,7 +234,10 @@ const newSection = [
   '- Records: '+Object.entries(counts).map(([key,value])=>key+'='+value).join(', '),
   ''
 ].join('\n');
-const changelog = oldChangelog.replace(/^# UMEDT-DATA Changelog\s*/,'# UMEDT-DATA Changelog\n\n')+'\n'+newSection;
+const headingMatch = oldChangelog.match(/^#.*(?:\\r?\\n|$)/);
+const changelogHeading = headingMatch?.[0]?.trimEnd() || '# UMEDT-DATA Changelog';
+const previousChangelogBody = headingMatch ? oldChangelog.slice(headingMatch[0].length).trim() : oldChangelog.trim();
+const changelog = [changelogHeading, newSection.trim(), previousChangelogBody].filter(Boolean).join('\\n\\n')+'\\n';
 const versionFloor = {dataVersion:targetVersion,channel,updatedAt:now};
 
 if (!hasArg('--dry-run')) {
