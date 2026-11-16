@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.0-umd",
+  "catalogVersion": "2026.12.0-umd",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-16T19:53:53.645Z",
+  "generatedAt": "2026-11-16T19:53:53.393Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",

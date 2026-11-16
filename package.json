@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "umedt-data-hub",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,10 @@
     "start": "node server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "validate:data": "node scripts/validate-data-repo.mjs",
+    "build:release": "node scripts/build-data-release.mjs",
+    "test": "npm run validate:data -- --skip-release-artifact-check"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -30,7 +33,6 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",

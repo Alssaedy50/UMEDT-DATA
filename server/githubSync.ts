@@ -64,6 +64,17 @@ async function fetchTextSafe(url: string, token?: string): Promise<string | null
   }
 }
 
+async function fetchTextRequired(url: string, token?: string): Promise<string> {
+  const res = await fetch(url, {
+    headers: token ? buildGitHubHeaders(token) : { 'User-Agent': 'UMEDT-Data-Hub/1.0' },
+    cache: 'no-store'
+  });
+  if (!res.ok) {
+    throw new Error(`تعذر تنزيل ملف البيانات من ${url} (HTTP ${res.status}). لم يتم تغيير بيانات مساحة العمل.`);
+  }
+  return res.text();
+}
+
 function emptyCounts(): MasterDataCounts {
   return {
     blocks: 0,
@@ -356,6 +367,20 @@ export async function importSeedFromUmedtRepo(
     fetchTextSafe(`${baseRaw}/src/services/learningHierarchyService.ts`, token)
   ]);
 
+  const requiredSeedFiles: Array<[string, unknown]> = [
+    ['terms.json', termsRaw],
+    ['sentences.json', sentencesRaw],
+    ['topics.json', topicsRaw],
+    ['custom-affixes.json', affixesRaw],
+    ['custom-abbreviations.json', abbrsRaw]
+  ];
+  const missingSeedFile = requiredSeedFiles.find(([, value]) => !Array.isArray(value));
+  if (missingSeedFile || !hierarchyTs) {
+    throw new Error(
+      `تعذر استيراد بيانات UMEDT: الملف ${missingSeedFile?.[0] || 'learningHierarchyService.ts'} مفقود أو غير صالح. لم يتم استبدال أي بيانات حالية.`
+    );
+  }
+
   const extractedBlocks = hierarchyTs
     ? extractTsExportLiteral<MedicalBlock[]>(hierarchyTs, 'INITIAL_MEDICAL_BLOCKS', '[') || []
     : [];
@@ -505,46 +530,141 @@ export async function fetchRemoteMasterData(
   token?: string
 ): Promise<Partial<WorkspaceDataState>> {
   const cleanData = dataRepo.trim().replace(/^https?:\/\/github\.com\//i, '').replace(/\.git$/i, '');
-  const baseRaw = `https://raw.githubusercontent.com/${cleanData}/${branch}/data/master`;
+  if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(cleanData)) {
+    throw new Error('اسم مستودع البيانات غير صالح. استخدم owner/repository.');
+  }
+  const branchPath = branch.split('/').map((segment) => encodeURIComponent(segment)).join('/');
+  const rawRoot = `https://raw.githubusercontent.com/${cleanData}/${branchPath}`;
+  const allowedRawPrefix = `${rawRoot}/`;
+  const catalogText = await fetchTextRequired(`${rawRoot}/data/catalog.json`, token);
+  let catalog: {
+    catalogVersion?: string;
+    repository?: string;
+    collections?: Array<{ id: string; path?: string; rawUrl?: string; sha256?: string; recordCount?: number }>;
+  };
+  try {
+    catalog = JSON.parse(catalogText);
+  } catch {
+    throw new Error('ملف data/catalog.json غير صالح JSON. لم يتم تغيير بيانات مساحة العمل.');
+  }
+  if (!Array.isArray(catalog.collections)) {
+    throw new Error('Catalog لا يحتوي على collections صالحة. لم يتم تغيير بيانات مساحة العمل.');
+  }
+  if (catalog.repository !== cleanData) {
+    throw new Error('Catalog repository identity does not match the requested repository.');
+  }
 
-  const [
-    blocks,
-    subjects,
-    topics,
-    terms,
-    sentences,
-    customAffixes,
-    customAbbreviations,
-    books,
-    questions,
-    exams,
-    mediaAssets
-  ] = await Promise.all([
-    fetchJsonSafe<MedicalBlock[]>(`${baseRaw}/blocks.json`, token),
-    fetchJsonSafe<MedicalSubject[]>(`${baseRaw}/subjects.json`, token),
-    fetchJsonSafe<TopicArticle[]>(`${baseRaw}/topics.json`, token),
-    fetchJsonSafe<DictionaryTerm[]>(`${baseRaw}/terms.json`, token),
-    fetchJsonSafe<LinkedSentence[]>(`${baseRaw}/sentences.json`, token),
-    fetchJsonSafe<MorphologicalAffix[]>(`${baseRaw}/custom-affixes.json`, token),
-    fetchJsonSafe<ClinicalAbbreviation[]>(`${baseRaw}/custom-abbreviations.json`, token),
-    fetchJsonSafe<AcademicBookResource[]>(`${baseRaw}/books.json`, token),
-    fetchJsonSafe<UnifiedQuizQuestion[]>(`${baseRaw}/questions.json`, token),
-    fetchJsonSafe<AcademicExamPackage[]>(`${baseRaw}/exams.json`, token),
-    fetchJsonSafe<MediaAssetRecord[]>(`${baseRaw}/media-index.json`, token)
-  ]);
+  const manifestText = await fetchTextRequired(`${rawRoot}/data/releases/stable/manifest.json`, token);
+  let manifest: { dataVersion?: string; filesSha256?: Record<string, string> };
+  try {
+    manifest = JSON.parse(manifestText);
+  } catch {
+    throw new Error('ملف Stable Manifest غير صالح JSON. لم يتم تغيير بيانات مساحة العمل.');
+  }
+  if (!manifest.dataVersion || catalog.catalogVersion !== manifest.dataVersion) {
+    throw new Error(
+      `إصدار Catalog (${catalog.catalogVersion || 'غير محدد'}) لا يطابق إصدار Stable Manifest (${manifest.dataVersion || 'غير محدد'}). أوقف الاستيراد لتجنب تحميل إصدار غير متسق.`
+    );
+  }
+
+  const domains = [
+    ['blocks', 'blocks.json'],
+    ['subjects', 'subjects.json'],
+    ['topics', 'topics.json'],
+    ['terms', 'terms.json'],
+    ['sentences', 'sentences.json'],
+    ['customAffixes', 'custom-affixes.json'],
+    ['customAbbreviations', 'custom-abbreviations.json'],
+    ['books', 'books.json'],
+    ['questions', 'questions.json'],
+    ['exams', 'exams.json'],
+    ['mediaAssets', 'media-index.json']
+  ] as const;
+
+  const downloaded = await Promise.all(
+    domains.map(async ([domain, fileName]) => {
+      const descriptor = catalog.collections!.find((item) => item.id === domain);
+      if (!descriptor?.rawUrl || !descriptor.sha256 || typeof descriptor.recordCount !== 'number') {
+        throw new Error(`Catalog يفتقد بيانات التحقق المطلوبة للنطاق ${domain}. لم يتم تغيير مساحة العمل.`);
+      }
+      if (!descriptor.rawUrl.startsWith(allowedRawPrefix)) {
+        throw new Error(`Catalog rawUrl for ${domain} points outside the configured repository. Import was cancelled.`);
+      }
+      const raw = await fetchTextRequired(descriptor.rawUrl, token);
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(raw);
+      } catch {
+        throw new Error(`ملف ${fileName} غير صالح JSON. لم يتم تغيير مساحة العمل.`);
+      }
+      if (!Array.isArray(parsed)) {
+        throw new Error(`ملف ${fileName} يجب أن يحتوي على Array. لم يتم تغيير مساحة العمل.`);
+      }
+      const canonicalHash = sha256Hex(JSON.stringify(parsed, null, 2));
+      if (canonicalHash !== descriptor.sha256) {
+        throw new Error(`فشلت مطابقة SHA-256 للنطاق ${domain}. تم إلغاء الاستيراد بالكامل.`);
+      }
+      if (parsed.length !== descriptor.recordCount) {
+        throw new Error(`عدد سجلات ${domain} لا يطابق Catalog. تم إلغاء الاستيراد بالكامل.`);
+      }
+      const manifestHash = manifest.filesSha256?.[fileName];
+      if (!manifestHash || manifestHash !== canonicalHash) {
+        throw new Error(`بصمة ${fileName} لا تطابق Stable Manifest. تم إلغاء الاستيراد بالكامل.`);
+      }
+      return [domain, parsed] as const;
+    })
+  );
+
+  const data = Object.fromEntries(downloaded) as Record<string, unknown[]>;
+  const mediaAssets = data.mediaAssets as MediaAssetRecord[];
+
+  // Download and verify every repository-owned binary first; only then write any asset to disk.
+  const verifiedMediaDownloads = await Promise.all(
+    mediaAssets.map(async (asset) => {
+      if (!asset.relativePath?.startsWith('data/media/')) return { asset, bytes: null as Buffer | null };
+      const mediaUrl = asset.rawUrl || `${rawRoot}/${asset.relativePath}`;
+      if (!mediaUrl.startsWith(allowedRawPrefix)) {
+        throw new Error(`رابط الوسيط ${asset.fileName || asset.id} خارج مستودع البيانات المحدد. تم إلغاء الاستيراد بالكامل.`);
+      }
+      const response = await fetch(mediaUrl, {
+        headers: token ? buildGitHubHeaders(token) : { 'User-Agent': 'UMEDT-Data-Hub/1.0' },
+        cache: 'no-store'
+      });
+      if (!response.ok) {
+        throw new Error(`تعذر تنزيل الوسيط ${asset.fileName || asset.id} (HTTP ${response.status}). تم إلغاء الاستيراد بالكامل.`);
+      }
+      const bytes = Buffer.from(await response.arrayBuffer());
+      const digest = sha256Hex(bytes);
+      if (asset.sizeBytes !== bytes.byteLength || asset.sha256 !== digest) {
+        throw new Error(`فشل التحقق من حجم أو SHA-256 للوسيط ${asset.fileName || asset.id}. تم إلغاء الاستيراد بالكامل.`);
+      }
+      return { asset, bytes };
+    })
+  );
+  const hydratedMediaAssets = verifiedMediaDownloads.map(({ asset, bytes }) => {
+    if (!bytes) return asset;
+    const saved = saveMediaBinary(asset.fileName || asset.id, asset.mimeType || 'application/octet-stream', bytes);
+    return {
+      ...asset,
+      relativePath: saved.relativePath,
+      sizeBytes: saved.sizeBytes,
+      sha256: saved.sha256,
+      rawUrl: `${rawRoot}/${saved.relativePath}`
+    };
+  });
 
   return {
-    blocks: Array.isArray(blocks) ? blocks : [],
-    subjects: Array.isArray(subjects) ? subjects : [],
-    topics: Array.isArray(topics) ? topics : [],
-    terms: Array.isArray(terms) ? terms : [],
-    sentences: Array.isArray(sentences) ? sentences : [],
-    customAffixes: Array.isArray(customAffixes) ? customAffixes : [],
-    customAbbreviations: Array.isArray(customAbbreviations) ? customAbbreviations : [],
-    books: Array.isArray(books) ? books : [],
-    questions: Array.isArray(questions) ? questions : [],
-    exams: Array.isArray(exams) ? exams : [],
-    mediaAssets: Array.isArray(mediaAssets) ? mediaAssets : []
+    blocks: data.blocks as MedicalBlock[],
+    subjects: data.subjects as MedicalSubject[],
+    topics: data.topics as TopicArticle[],
+    terms: data.terms as DictionaryTerm[],
+    sentences: data.sentences as LinkedSentence[],
+    customAffixes: data.customAffixes as MorphologicalAffix[],
+    customAbbreviations: data.customAbbreviations as ClinicalAbbreviation[],
+    books: data.books as AcademicBookResource[],
+    questions: data.questions as UnifiedQuizQuestion[],
+    exams: data.exams as AcademicExamPackage[],
+    mediaAssets: hydratedMediaAssets
   };
 }
 

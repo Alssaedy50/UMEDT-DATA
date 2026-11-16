@@ -1,34 +1,31 @@
-name: UMEDT Medical Data Release
+name: UMEDT Data Release
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'data/master/**'
       - 'data/media/**'
   workflow_dispatch:
     inputs:
       channel:
-        description: 'Release channel'
+        description: Release channel
         required: true
-        default: 'stable'
+        default: stable
         type: choice
-        options:
-          - stable
-          - beta
+        options: [stable, beta]
       target_version:
-        description: 'Optional data version (empty = automatic patch version)'
+        description: Optional explicit version (must be newer than current)
         required: false
         type: string
         default: ''
       summary:
-        description: 'Release notes'
+        description: Release notes
         required: false
         type: string
         default: ''
       dry_run:
-        description: 'Build and verify without committing release artifacts'
+        description: Build and verify without committing release artifacts
         required: false
         type: boolean
         default: false
@@ -55,97 +52,55 @@ jobs:
         with:
           node-version: 22
 
-      - name: Clone UMEDT publisher source
-        run: git clone --depth 1 https://github.com/Alssaedy50/UMEDT.git app
-
-      - name: Install publisher dependencies
-        run: npm ci --prefix app
-
-      - name: Validate master JSON files & media index
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const requiredFiles = [
-            'data/master/terms.json',
-            'data/master/sentences.json',
-            'data/master/topics.json',
-            'data/master/custom-affixes.json',
-            'data/master/custom-abbreviations.json'
-          ];
-          const optionalFiles = [
-            'data/master/blocks.json',
-            'data/master/subjects.json',
-            'data/master/books.json',
-            'data/master/questions.json',
-            'data/master/exams.json',
-            'data/master/media-index.json'
-          ];
-          let total = 0;
-          for (const file of requiredFiles) {
-            if (!fs.existsSync(file)) throw new Error(`Missing required data file: ${file}`);
-            const parsed = JSON.parse(fs.readFileSync(file, 'utf8'));
-            if (!Array.isArray(parsed)) throw new Error(`${file} must contain a JSON array`);
-            total += parsed.length;
-            console.log(`${file}: ${parsed.length} records`);
-          }
-          for (const file of optionalFiles) {
-            if (fs.existsSync(file)) {
-              const parsed = JSON.parse(fs.readFileSync(file, 'utf8'));
-              if (!Array.isArray(parsed)) throw new Error(`${file} must contain a JSON array`);
-              total += parsed.length;
-              console.log(`${file}: ${parsed.length} records`);
-            }
-          }
-          if (fs.existsSync('data/catalog.json')) {
-            const cat = JSON.parse(fs.readFileSync('data/catalog.json', 'utf8'));
-            if (!Array.isArray(cat.collections)) throw new Error('data/catalog.json missing collections array');
-            console.log(`data/catalog.json: ${cat.collections.length} collections`);
-          }
-          if (total === 0) throw new Error('Refusing to publish: all master data files are empty.');
-          NODE
-
-      - name: Type-check publisher source
-        run: npm --prefix app run lint
-
-      - name: Build and sign data release
+      - name: Validate complete data repository
         env:
-          UMED_DATA_REPOSITORY_ROOT: ${{ github.workspace }}
-          UMED_DATA_REPOSITORY: Alssaedy50/UMEDT-DATA
-          UMED_RELEASE_OUTPUT_DIR: ${{ github.workspace }}/data/releases/${{ github.event.inputs.channel || 'stable' }}
           UMED_RELEASE_CHANNEL: ${{ github.event.inputs.channel || 'stable' }}
-          UMED_RELEASE_VERSION: ${{ github.event.inputs.target_version }}
-          UMED_RELEASE_SUMMARY: ${{ github.event.inputs.summary }}
+        run: node scripts/validate-data-repo.mjs --pre-release
+
+      - name: Require permanent signing keys
+        env:
           UMED_PUBLISHER_PRIVATE_KEY_PEM: ${{ secrets.UMED_PUBLISHER_PRIVATE_KEY_PEM }}
           VITE_UMED_PUBLIC_KEY_PEM: ${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
         run: |
           if [ -z "$UMED_PUBLISHER_PRIVATE_KEY_PEM" ]; then
-            echo "::error::Missing secret UMED_PUBLISHER_PRIVATE_KEY_PEM in UMEDT-DATA."
+            echo "::error::Missing UMED_PUBLISHER_PRIVATE_KEY_PEM secret. Unsigned stable releases are prohibited."
             exit 1
           fi
           if [ -z "$VITE_UMED_PUBLIC_KEY_PEM" ]; then
-            echo "::error::Missing variable VITE_UMED_PUBLIC_KEY_PEM in UMEDT-DATA."
+            echo "::error::Missing VITE_UMED_PUBLIC_KEY_PEM repository variable."
             exit 1
           fi
-          cd app
-          ARGS=(--channel "$UMED_RELEASE_CHANNEL")
-          if [ -n "$UMED_RELEASE_VERSION" ]; then ARGS+=(--version "$UMED_RELEASE_VERSION"); fi
-          if [ -n "$UMED_RELEASE_SUMMARY" ]; then ARGS+=(--summary "$UMED_RELEASE_SUMMARY"); fi
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
-          npx tsx scripts/publish-data-release.ts "${ARGS[@]}"
 
-      - name: Commit signed release artifacts
+      - name: Build full signed data package
+        env:
+          UMED_PUBLISHER_PRIVATE_KEY_PEM: ${{ secrets.UMED_PUBLISHER_PRIVATE_KEY_PEM }}
+          VITE_UMED_PUBLIC_KEY_PEM: ${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
+        run: |
+          ARGS=(--channel "${{ github.event.inputs.channel || 'stable' }}")
+          if [ -n "${{ github.event.inputs.target_version }}" ]; then ARGS+=(--version "${{ github.event.inputs.target_version }}"); fi
+          if [ -n "${{ github.event.inputs.summary }}" ]; then ARGS+=(--summary "${{ github.event.inputs.summary }}"); fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
+          node scripts/build-data-release.mjs "${ARGS[@]}"
+
+      - name: Verify signed release and complete ZIP
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          UMED_RELEASE_CHANNEL: ${{ github.event.inputs.channel || 'stable' }}
+          VITE_UMED_PUBLIC_KEY_PEM: ${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
+        run: node scripts/validate-data-repo.mjs --require-signed
+
+      - name: Commit release artifacts
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
           CHANNEL: ${{ github.event.inputs.channel || 'stable' }}
         run: |
-          test -s "data/releases/$CHANNEL/manifest.json"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "data/releases/$CHANNEL/"
+          git add data/catalog.json "data/releases/$CHANNEL/"
           if git diff --cached --quiet; then
             echo "No release artifact changes to commit."
             exit 0
           fi
           VERSION=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/releases/$CHANNEL/manifest.json','utf8')).dataVersion)")
-          git commit -m "chore(release): publish UMEDT data v$VERSION [skip ci]"
+          git commit -m "chore(release): publish full UMEDT data v$VERSION [skip ci]"
           git push origin HEAD:main

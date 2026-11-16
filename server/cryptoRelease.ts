@@ -334,6 +334,22 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
         messageAr: `امتداد ملف مرفوض أمنياً: ${asset.fileName}`
       });
     }
+    if (ext === '.svg' && asset.mimeType !== 'image/svg+xml') {
+      errors.push({
+        severity: 'error',
+        domain: 'mediaAssets',
+        recordId: asset.id,
+        messageAr: `يجب أن يكون MIME type لملف SVG هو image/svg+xml: ${asset.fileName}`
+      });
+    }
+    if (ext === '.svg' && asset.sizeBytes > 2 * 1024 * 1024) {
+      errors.push({
+        severity: 'error',
+        domain: 'mediaAssets',
+        recordId: asset.id,
+        messageAr: `حجم SVG يتجاوز الحد الآمن البالغ 2 MB: ${asset.fileName}`
+      });
+    }
     if (
       asset.linkedEntityType === 'topic' &&
       asset.linkedEntityId &&
@@ -806,6 +822,9 @@ export function rollbackChannelRelease(
   if (!target) {
     throw new Error(`الإصدار ${targetVersion} غير موجود في سجل قناة ${channel}.`);
   }
+  if (!target.signed || !target.signature || !target.keyFingerprint) {
+    throw new Error('تم رفض الاستعادة: لا يمكن إعادة تفعيل إصدار غير موقّع رقمياً.');
+  }
 
   const channelDir = path.resolve(process.cwd(), 'data', 'releases', channel);
   const pkgPath = path.join(channelDir, target.packageFileName);
@@ -844,7 +863,8 @@ export function rollbackChannelRelease(
     author: 'UMEDT Data Hub (Rollback)',
     counts: target.counts,
     extendedCounts: target.extendedCounts,
-    filesSha256: target.filesSha256
+    filesSha256: target.filesSha256,
+    assetsSha256: target.assetsSha256
   };
 
   // Reorder history so restored version is at top without deleting newer entries for audit

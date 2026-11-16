@@ -15,7 +15,10 @@ import {
 } from './catalogGenerator.ts';
 
 const REPO_ROOT = process.cwd();
-const CACHE_ROOT = path.resolve(REPO_ROOT, '.umedt-hub-cache');
+// Set UMEDT_WORKSPACE_DIR to a persistent mounted directory on ephemeral/serverless hosts.
+const CACHE_ROOT = process.env.UMEDT_WORKSPACE_DIR?.trim()
+  ? path.resolve(process.env.UMEDT_WORKSPACE_DIR.trim())
+  : path.resolve(REPO_ROOT, '.umedt-hub-cache');
 const WORKSPACE_FILE = path.join(CACHE_ROOT, 'workspace.json');
 const CACHE_MEDIA_DIR = path.join(CACHE_ROOT, 'media');
 
@@ -188,16 +191,66 @@ export function loadWorkspaceState(): WorkspaceDataState {
       saveWorkspaceState(state);
     }
     return state;
-  } catch {
-    saveWorkspaceState(def);
-    return def;
+  } catch (error) {
+    // Never overwrite an unreadable workspace with defaults. Preserve the original bytes for recovery.
+    let backupPath: string | null = null;
+    try {
+      if (fs.existsSync(WORKSPACE_FILE)) {
+        backupPath = `${WORKSPACE_FILE}.recovery-${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+        fs.copyFileSync(WORKSPACE_FILE, backupPath, fs.constants.COPYFILE_EXCL);
+      }
+    } catch {
+      backupPath = null;
+    }
+    throw new Error(
+      `تعذر قراءة مساحة العمل المحلية. لم يتم استبدال البيانات الافتراضية فوق الملف الأصلي.${backupPath ? ` تم حفظ نسخة استرداد في: ${backupPath}` : ''} السبب: ${error instanceof Error ? error.message : String(error)}`
+    );
   }
 }
 
 export function saveWorkspaceState(state: WorkspaceDataState): WorkspaceDataState {
   ensureCacheDirs();
-  fs.writeFileSync(WORKSPACE_FILE, JSON.stringify(state, null, 2), 'utf8');
+  const tempFile = `${WORKSPACE_FILE}.${process.pid}.${Date.now()}.tmp`;
+  const serialized = JSON.stringify(state, null, 2);
+  fs.writeFileSync(tempFile, serialized, { encoding: 'utf8', flag: 'wx' });
+  fs.renameSync(tempFile, WORKSPACE_FILE);
   return state;
+}
+
+function writeFilesAtomically(files: Array<{ filePath: string; content: string | Buffer }>): void {
+  const staged = files.map((file) => {
+    fs.mkdirSync(path.dirname(file.filePath), { recursive: true });
+    const tempPath = `${file.filePath}.${process.pid}.${Date.now()}.${Math.random().toString(16).slice(2)}.tmp`;
+    return {
+      ...file,
+      tempPath,
+      previous: fs.existsSync(file.filePath) ? fs.readFileSync(file.filePath) : null
+    };
+  });
+  try {
+    for (const file of staged) {
+      fs.writeFileSync(file.tempPath, file.content, { flag: 'wx' });
+    }
+    for (const file of staged) {
+      fs.renameSync(file.tempPath, file.filePath);
+    }
+  } catch (error) {
+    for (const file of staged) {
+      try {
+        if (fs.existsSync(file.tempPath)) fs.unlinkSync(file.tempPath);
+        if (file.previous) {
+          const restorePath = `${file.filePath}.${process.pid}.restore.tmp`;
+          fs.writeFileSync(restorePath, file.previous);
+          fs.renameSync(restorePath, file.filePath);
+        } else if (fs.existsSync(file.filePath)) {
+          fs.unlinkSync(file.filePath);
+        }
+      } catch {
+        // Best-effort restoration; the original exception remains authoritative.
+      }
+    }
+    throw error;
+  }
 }
 
 export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<string, string> {
@@ -217,31 +270,30 @@ export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<st
   };
 
   const hashes: Record<string, string> = {};
-  for (const [name, payload] of Object.entries(files)) {
+  const stagedFiles = Object.entries(files).map(([name, payload]) => {
     const jsonText = JSON.stringify(payload, null, 2);
-    fs.writeFileSync(path.join(DATA_MASTER_DIR, name), jsonText, 'utf8');
     hashes[name] = crypto.createHash('sha256').update(jsonText).digest('hex');
-  }
+    return { filePath: path.join(DATA_MASTER_DIR, name), content: jsonText };
+  });
+  writeFilesAtomically(stagedFiles);
   return hashes;
 }
 
 export function writeCatalogAndDocsToRepoDisk(state: WorkspaceDataState): void {
   ensureCacheDirs();
   const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'catalog.json'),
-    JSON.stringify(catalog, null, 2),
-    'utf8'
-  );
+  const stagedDocs: Array<{ filePath: string; content: string }> = [
+    { filePath: path.join(DATA_DIR, 'catalog.json'), content: JSON.stringify(catalog, null, 2) }
+  ];
   const schemas = generateJsonSchemaFiles();
   for (const [relPath, content] of Object.entries(schemas)) {
-    fs.writeFileSync(path.resolve(REPO_ROOT, relPath), content, 'utf8');
+    stagedDocs.push({ filePath: path.resolve(REPO_ROOT, relPath), content });
   }
-  fs.writeFileSync(
-    path.resolve(REPO_ROOT, 'docs', 'UMEDT-DATA-API-CONTRACT.md'),
-    generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main'),
-    'utf8'
-  );
+  stagedDocs.push({
+    filePath: path.resolve(REPO_ROOT, 'docs', 'UMEDT-DATA-API-CONTRACT.md'),
+    content: generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main')
+  });
+  writeFilesAtomically(stagedDocs);
 }
 
 export function loadReleaseHistory(channel: 'stable' | 'beta'): ReleaseHistoryRecord[] {
@@ -332,12 +384,41 @@ export function sanitizeMediaFileName(name: string): string {
   return base.replace(/^-+|-+$/g, '') || 'attachment.bin';
 }
 
+function sanitizeSvgBuffer(input: Buffer): Buffer {
+  if (input.byteLength > 2 * 1024 * 1024) {
+    throw new Error('SVG files larger than 2 MB are not accepted.');
+  }
+  let svg = input.toString('utf8');
+  if (!/<svg\b[\s\S]*<\/svg\s*>/i.test(svg)) {
+    throw new Error('Invalid SVG: root svg element is missing.');
+  }
+  svg = svg
+    .replace(/<!DOCTYPE[\s\S]*?>/gi, '')
+    .replace(/<!ENTITY[\s\S]*?>/gi, '')
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, '')
+    .replace(/<foreignObject\b[^>]*>[\s\S]*?<\/foreignObject\s*>/gi, '')
+    .replace(/<(?:iframe|object|embed|audio|video|link)\b[^>]*>[\s\S]*?<\/(?:iframe|object|embed|audio|video|link)\s*>/gi, '')
+    .replace(/<(?:iframe|object|embed|audio|video|link)\b[^>]*\/?\s*>/gi, '')
+    .replace(/\s+on[a-z0-9_-]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+    .replace(/\s+(?:href|xlink:href)\s*=\s*(["'])(?!#)[\s\S]*?\1/gi, '')
+    .replace(/url\(\s*(["']?)(?!#)[^)]*\)/gi, 'none')
+    .replace(/@import[^;]*;?/gi, '');
+  if (/<script\b|<foreignObject\b|\son[a-z0-9_-]+\s*=|javascript:|@import/i.test(svg)) {
+    throw new Error('SVG contains active or unsafe content after sanitization.');
+  }
+  return Buffer.from(svg, 'utf8');
+}
+
 export function saveMediaBinary(
   fileName: string,
-  _mimeType: string,
+  mimeType: string,
   buffer: Buffer
 ): { sha256: string; relativePath: string; diskPath: string; sizeBytes: number } {
   ensureCacheDirs();
+  if (path.extname(fileName).toLowerCase() === '.svg' || mimeType.toLowerCase() === 'image/svg+xml') {
+    buffer = sanitizeSvgBuffer(buffer);
+    mimeType = 'image/svg+xml';
+  }
   const sha256 = crypto.createHash('sha256').update(buffer).digest('hex');
   const safeName = sanitizeMediaFileName(fileName);
   const storedName = `${sha256.slice(0, 12)}-${safeName}`;

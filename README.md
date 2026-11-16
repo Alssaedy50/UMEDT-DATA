@@ -59,3 +59,23 @@ docs/
 ## مبدأ الأمان وعدم الإضرار بالمشروع الأصلي
 1. جميع التحديثات تُقرأ وتُدمج عبر المعرفات الفريدة (`id`) بدون استبدال كود التطبيق أو تفضيلات المستخدم المحلية (`favorite`, `srsData`, `studyStats`).
 2. المرفقات تُخزن بأسماء تتضمن بصمة `SHA-256` لمنع التكرار وتقليل حجم التنزيل.
+
+
+## Release integrity and publishing
+
+The release workflow builds the package from this repository's complete data tree (all 11 `data/master/*.json` collections, the catalog, schemas, API contract, and every repository-owned file in `data/media/`). It does not use the legacy five-collection publisher in the UMEDT application repository.
+
+Before publishing, configure these GitHub repository settings:
+
+- Actions secret `UMED_PUBLISHER_PRIVATE_KEY_PEM`: the permanent ECDSA P-256 PKCS#8 private key.
+- Actions variable `VITE_UMED_PUBLIC_KEY_PEM`: the matching ECDSA P-256 SPKI public key. This must be the same trusted public key embedded in the UMEDT app build.
+
+Never commit the private key. The workflow intentionally fails rather than publish an unsigned package when either key is missing or the key pair does not match. If the old private key is lost, key rotation requires updating the trusted public key in UMEDT and rebuilding the app before publishing with the replacement pair.
+
+Run `npm run validate:data` to validate JSON collections, unique IDs, relationships, catalog descriptors, manifest hashes, and local media files. Run `npm run build:release -- --channel stable` only in an environment with the permanent signing keys configured. The release workflow performs these checks automatically.
+
+Set `UMEDT_WORKSPACE_DIR` to a persistent mounted directory when hosting the Data Hub on an ephemeral/serverless filesystem; otherwise its local workspace cache may not survive a redeploy.
+
+### GitHub token handling
+
+The Data Hub uses the GitHub PAT supplied with the individual request. A server-side `GITHUB_TOKEN` is not automatically used as a fallback. `UMEDT_ALLOW_SERVER_GITHUB_TOKEN=true` is an explicit opt-in for a private, single-user deployment only; do not enable it on a publicly reachable server.

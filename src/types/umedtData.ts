@@ -463,6 +463,7 @@ export interface DataPackageManifest {
   counts: UmedtManifestCounts;
   extendedCounts?: MasterDataCounts;
   filesSha256?: Record<string, string>;
+  assetsSha256?: Record<string, string>;
   incremental?: {
     previousVersion: string | null;
     changedDomains: string[];
@@ -483,6 +484,7 @@ export interface ReleaseHistoryRecord {
   counts: UmedtManifestCounts;
   extendedCounts: MasterDataCounts;
   filesSha256: Record<string, string>;
+  assetsSha256?: Record<string, string>;
   changedDomains: string[];
 }
 
