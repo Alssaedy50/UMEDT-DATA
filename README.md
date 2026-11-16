@@ -75,3 +75,7 @@ Never commit the private key. The workflow intentionally fails rather than publi
 Run `npm run validate:data` to validate JSON collections, unique IDs, relationships, catalog descriptors, manifest hashes, and local media files. Run `npm run build:release -- --channel stable` only in an environment with the permanent signing keys configured. The release workflow performs these checks automatically.
 
 Set `UMEDT_WORKSPACE_DIR` to a persistent mounted directory when hosting the Data Hub on an ephemeral/serverless filesystem; otherwise its local workspace cache may not survive a redeploy.
+
+### GitHub token handling
+
+The Data Hub uses the GitHub PAT supplied with the individual request. A server-side `GITHUB_TOKEN` is not automatically used as a fallback. `UMEDT_ALLOW_SERVER_GITHUB_TOKEN=true` is an explicit opt-in for a private, single-user deployment only; do not enable it on a publicly reachable server.
