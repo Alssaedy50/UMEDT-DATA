@@ -15,7 +15,10 @@ import {
 } from './catalogGenerator.ts';
 
 const REPO_ROOT = process.cwd();
-const CACHE_ROOT = path.resolve(REPO_ROOT, '.umedt-hub-cache');
+// Set UMEDT_WORKSPACE_DIR to a persistent mounted directory on ephemeral/serverless hosts.
+const CACHE_ROOT = process.env.UMEDT_WORKSPACE_DIR?.trim()
+  ? path.resolve(process.env.UMEDT_WORKSPACE_DIR.trim())
+  : path.resolve(REPO_ROOT, '.umedt-hub-cache');
 const WORKSPACE_FILE = path.join(CACHE_ROOT, 'workspace.json');
 const CACHE_MEDIA_DIR = path.join(CACHE_ROOT, 'media');
 
@@ -188,15 +191,29 @@ export function loadWorkspaceState(): WorkspaceDataState {
       saveWorkspaceState(state);
     }
     return state;
-  } catch {
-    saveWorkspaceState(def);
-    return def;
+  } catch (error) {
+    // Never overwrite an unreadable workspace with defaults. Preserve the original bytes for recovery.
+    let backupPath: string | null = null;
+    try {
+      if (fs.existsSync(WORKSPACE_FILE)) {
+        backupPath = `${WORKSPACE_FILE}.recovery-${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+        fs.copyFileSync(WORKSPACE_FILE, backupPath, fs.constants.COPYFILE_EXCL);
+      }
+    } catch {
+      backupPath = null;
+    }
+    throw new Error(
+      `تعذر قراءة مساحة العمل المحلية. لم يتم استبدال البيانات الافتراضية فوق الملف الأصلي.${backupPath ? ` تم حفظ نسخة استرداد في: ${backupPath}` : ''} السبب: ${error instanceof Error ? error.message : String(error)}`
+    );
   }
 }
 
 export function saveWorkspaceState(state: WorkspaceDataState): WorkspaceDataState {
   ensureCacheDirs();
-  fs.writeFileSync(WORKSPACE_FILE, JSON.stringify(state, null, 2), 'utf8');
+  const tempFile = `${WORKSPACE_FILE}.${process.pid}.${Date.now()}.tmp`;
+  const serialized = JSON.stringify(state, null, 2);
+  fs.writeFileSync(tempFile, serialized, { encoding: 'utf8', flag: 'wx' });
+  fs.renameSync(tempFile, WORKSPACE_FILE);
   return state;
 }
 
