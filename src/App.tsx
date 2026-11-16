@@ -163,7 +163,7 @@ export default function App() {
   if (!state || !validation) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center text-sm text-slate-600">
-        جاري تهيئة مركز بيانات UMEDT_DATA...
+        جاري تهيئة مركز بيانات UMEDT-DATA...
       </div>
     );
   }
@@ -292,7 +292,7 @@ export default function App() {
               onClick={() => setActiveTab('publish')}
               className="px-4 py-2 text-xs font-semibold text-white bg-teal-700 rounded-lg hover:bg-teal-800 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
-              نشر إلى UMEDT_DATA
+              نشر إلى UMEDT-DATA
             </button>
           </div>
         </header>
@@ -385,7 +385,7 @@ export default function App() {
                     githubToken
                   );
                   applyUpdate(res);
-                  showToast('success', 'تم جلب البيانات الحالية من مستودع UMEDT_DATA.');
+                  showToast('success', 'تم جلب البيانات الحالية من مستودع UMEDT-DATA.');
                 } catch (err) {
                   showToast('error', err instanceof Error ? err.message : 'فشل الجلب');
                 } finally {
@@ -531,6 +531,24 @@ export default function App() {
                 showToast('success', 'تم توليد زوج مفاتيح ECDSA-P256-SHA256 جديد.');
                 return res.keyPair;
               }}
+              onFetchHistory={async (ch) => {
+                const res = await hubApi.fetchReleaseHistory(ch);
+                return res.history;
+              }}
+              onPublishLocal={async (opts) => {
+                const res = await hubApi.publishLocalRelease(opts);
+                setState(res.state);
+                showToast('success', `تم اعتماد الإصدار ${res.manifest.dataVersion} محلياً في data/.`);
+                refreshDiff();
+                return res;
+              }}
+              onRollback={async (opts) => {
+                const res = await hubApi.rollbackRelease(opts);
+                setState(res.state);
+                showToast('success', `تمت استعادة الإصدار ${res.restoredManifest.dataVersion} بنجاح.`);
+                refreshDiff();
+                return res;
+              }}
               onDownloadReleaseZip={async (opts) => {
                 const blob = await hubApi.downloadSignedReleaseZip(opts);
                 triggerBlobDownload(blob, `umed2-data-${opts.version}.zip`);
@@ -538,8 +556,8 @@ export default function App() {
               }}
               onDownloadRepoBundle={async (opts) => {
                 const blob = await hubApi.downloadRepoBundleZip(opts);
-                triggerBlobDownload(blob, 'UMEDT_DATA-repo-bundle.zip');
-                showToast('success', 'تم تصدير مستودع UMEDT_DATA كاملاً.');
+                triggerBlobDownload(blob, 'UMEDT-DATA-repo-bundle.zip');
+                showToast('success', 'تم تصدير مستودع UMEDT-DATA كاملاً.');
               }}
               onPublishToGitHub={async (opts) => {
                 const res = await hubApi.publishToUmedtData(opts, githubToken);

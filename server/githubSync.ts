@@ -570,11 +570,15 @@ export async function publishAtomicCommitToUmedtData(options: {
   includeWorkflowUpgrade: boolean;
   releaseArtifacts?: {
     channel: 'stable' | 'beta';
+    version: string;
+    sha256: string;
     packageFileName: string;
     zipBuffer: Buffer;
     manifestJsonText: string;
     changelogMarkdown: string;
+    historyJsonText: string;
   };
+  allowOverwrite?: boolean;
 }): Promise<{
   commitSha: string;
   commitUrl: string;
@@ -584,6 +588,33 @@ export async function publishAtomicCommitToUmedtData(options: {
   const repo = state.meta.dataRepo.trim();
   const branch = state.meta.branch || 'main';
   const apiBase = `https://api.github.com/repos/${repo}`;
+
+  // 0. Verify write permissions and protect against overwriting an already-published version
+  const repoMeta = await ghApi<{ permissions?: { push?: boolean } }>(apiBase, token);
+  if (repoMeta.permissions && repoMeta.permissions.push === false) {
+    throw new Error(
+      `الرمز المقدم لا يملك صلاحية الكتابة (push) على المستودع ${repo}.`
+    );
+  }
+
+  if (releaseArtifacts && !options.allowOverwrite) {
+    const existingRemoteManifest = await fetchJsonSafe<{
+      dataVersion?: string;
+      sha256?: string;
+    }>(
+      `https://raw.githubusercontent.com/${repo}/${branch}/data/releases/${releaseArtifacts.channel}/manifest.json`,
+      token
+    );
+    if (
+      existingRemoteManifest?.dataVersion === releaseArtifacts.version &&
+      existingRemoteManifest.sha256 &&
+      existingRemoteManifest.sha256 !== releaseArtifacts.sha256
+    ) {
+      throw new Error(
+        `الإصدار ${releaseArtifacts.version} منشور مسبقاً على ${repo} ببصمة مختلفة. يرجى ترقية رقم الإصدار لمنع الكتابة فوق إصدار معتمد.`
+      );
+    }
+  }
 
   const files: GitBlobPayload[] = [
     { path: 'data/master/blocks.json', content: JSON.stringify(state.blocks, null, 2), encoding: 'utf-8' },
@@ -636,6 +667,11 @@ export async function publishAtomicCommitToUmedtData(options: {
     files.push({
       path: `${relPrefix}/CHANGELOG.md`,
       content: releaseArtifacts.changelogMarkdown,
+      encoding: 'utf-8'
+    });
+    files.push({
+      path: `${relPrefix}/history.json`,
+      content: releaseArtifacts.historyJsonText,
       encoding: 'utf-8'
     });
     files.push({
@@ -754,7 +790,7 @@ export async function createIntegrationPrOnUmedt(options: {
   });
 
   const commit = await ghApi<{ sha: string }>(`${apiBase}/git/commits`, token, 'POST', {
-    message: `feat(data-sync): integrate non-destructive UMEDT_DATA client (${dataRepo})`,
+    message: `feat(data-sync): integrate non-destructive UMEDT-DATA client (${dataRepo})`,
     tree: tree.sha,
     parents: [baseSha]
   });
@@ -773,7 +809,7 @@ export async function createIntegrationPrOnUmedt(options: {
       head: branchName,
       base: baseBranch,
       body: [
-        `يضيف هذا الطلب الموحّد عميل \`src/services/umedtDataRepoClient.ts\` وتوثيق \`docs/UMEDT_DATA_SEPARATION.md\`.`,
+        `يضيف هذا الطلب الموحّد عميل \`src/services/umedtDataRepoClient.ts\` وتوثيق \`docs/UMEDT-DATA_SEPARATION.md\`.`,
         `- يقرأ البلوكات والمواد والمواضيع والمصطلحات والملحقات من \`${dataRepo}\`.`,
         `- يحافظ على \`favorite\` و \`srsData\` و \`studyStats\` المحلية للمستخدم دون أي استبدال أو تلف.`
       ].join('\n')

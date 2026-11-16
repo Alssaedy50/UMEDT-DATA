@@ -1,4 +1,4 @@
-export function generateUmedtDataReadme(dataRepo = 'Alssaedy50/UMEDT_DATA'): string {
+export function generateUmedtDataReadme(dataRepo = 'Alssaedy50/UMEDT-DATA'): string {
   return `# مستودع بيانات UMEDT الطبي (${dataRepo})
 
 هذا المستودع هو المصدر الرسمي المستقل لبيانات برنامج **UMEDT** لنشر وتحديث:
@@ -51,7 +51,7 @@ data/
 
 export function generateUmedtDataWorkflowYml(
   sourceRepo = 'Alssaedy50/UMEDT',
-  dataRepo = 'Alssaedy50/UMEDT_DATA'
+  dataRepo = 'Alssaedy50/UMEDT-DATA'
 ): string {
   return `name: UMEDT Medical Data Release
 
@@ -167,11 +167,11 @@ jobs:
           VITE_UMED_PUBLIC_KEY_PEM: \${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
         run: |
           if [ -z "$UMED_PUBLISHER_PRIVATE_KEY_PEM" ]; then
-            echo "::error::Missing secret UMED_PUBLISHER_PRIVATE_KEY_PEM in UMEDT_DATA."
+            echo "::error::Missing secret UMED_PUBLISHER_PRIVATE_KEY_PEM in UMEDT-DATA."
             exit 1
           fi
           if [ -z "$VITE_UMED_PUBLIC_KEY_PEM" ]; then
-            echo "::error::Missing variable VITE_UMED_PUBLIC_KEY_PEM in UMEDT_DATA."
+            echo "::error::Missing variable VITE_UMED_PUBLIC_KEY_PEM in UMEDT-DATA."
             exit 1
           fi
           cd app
@@ -200,7 +200,7 @@ jobs:
 `;
 }
 
-export function generateUmedtRepoClientCode(dataRepo = 'Alssaedy50/UMEDT_DATA'): string {
+export function generateUmedtRepoClientCode(dataRepo = 'Alssaedy50/UMEDT-DATA'): string {
   return `import type {
   ClinicalAbbreviation,
   DictionaryTerm,
@@ -258,7 +258,7 @@ async function fetchJsonArray<T>(url: string): Promise<T[]> {
 }
 
 /**
- * Fetches live master datasets directly from UMEDT_DATA without touching local user code or DB.
+ * Fetches live master datasets directly from UMEDT-DATA without touching local user code or DB.
  */
 export async function fetchUmedtDataMasterSnapshot(
   dataRepo = DEFAULT_DATA_REPO,
@@ -348,7 +348,7 @@ export function mergeBlocksPreservingLocalOrder(
 
 export function generateUmedtIntegrationGuideMd(
   sourceRepo = 'Alssaedy50/UMEDT',
-  dataRepo = 'Alssaedy50/UMEDT_DATA'
+  dataRepo = 'Alssaedy50/UMEDT-DATA'
 ): string {
   return `# دليل ربط ${sourceRepo} مع مستودع البيانات ${dataRepo}
 
@@ -359,7 +359,7 @@ export function generateUmedtIntegrationGuideMd(
 1. \`src/services/umedtDataRepoClient.ts\`
    - يقرأ ملفات \`data/master/*.json\` و \`data/media/*\` من \`https://raw.githubusercontent.com/${dataRepo}/main/...\`.
    - يدمج المصطلحات مع الحفاظ الكامل على \`favorite\` و \`srsData\` و \`studyCount\` الخاصة بالمستخدم.
-2. \`docs/UMEDT_DATA_SEPARATION.md\`
+2. \`docs/UMEDT-DATA_SEPARATION.md\`
    - هذا الدليل التوثيقي لفصل المهام بين المستودعين.
 
 ## خطوات التفعيل في UMEDT
@@ -378,19 +378,19 @@ export interface RepoPatchItem {
 
 export function getUmedtIntegrationPatchFiles(
   sourceRepo = 'Alssaedy50/UMEDT',
-  dataRepo = 'Alssaedy50/UMEDT_DATA'
+  dataRepo = 'Alssaedy50/UMEDT-DATA'
 ): RepoPatchItem[] {
   return [
     {
       path: 'src/services/umedtDataRepoClient.ts',
       content: generateUmedtRepoClientCode(dataRepo),
       descriptionAr:
-        'عميل جلب ودمج آمن يقرأ البلوكات والمصطلحات والملحقات من UMEDT_DATA مع الحفاظ على المفضلة وSRS.'
+        'عميل جلب ودمج آمن يقرأ البلوكات والمصطلحات والملحقات من UMEDT-DATA مع الحفاظ على المفضلة وSRS.'
     },
     {
-      path: 'docs/UMEDT_DATA_SEPARATION.md',
+      path: 'docs/UMEDT-DATA_SEPARATION.md',
       content: generateUmedtIntegrationGuideMd(sourceRepo, dataRepo),
-      descriptionAr: 'دليل توثيق معمارية فصل البيانات عن الكود بين UMEDT و UMEDT_DATA.'
+      descriptionAr: 'دليل توثيق معمارية فصل البيانات عن الكود بين UMEDT و UMEDT-DATA.'
     }
   ];
 }

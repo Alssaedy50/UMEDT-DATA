@@ -149,7 +149,7 @@ export const MediaVaultView: React.FC<MediaVaultViewProps> = ({
         <label className="flex flex-col items-center justify-center border border-dashed border-slate-300 rounded-xl p-6 bg-slate-50/70 hover:bg-slate-100/70 transition-colors cursor-pointer">
           <Upload className="w-6 h-6 text-teal-700 mb-2" />
           <span className="text-sm font-semibold text-slate-800">
-            {uploading ? 'جاري فحص البصمة وحفظ المرفقات...' : 'اضغط لاختيار صور أو PDF أو صوتيات لإضافتها إلى UMEDT_DATA'}
+            {uploading ? 'جاري فحص البصمة وحفظ المرفقات...' : 'اضغط لاختيار صور أو PDF أو صوتيات لإضافتها إلى UMEDT-DATA'}
           </span>
           <span className="text-xs text-slate-500 mt-1">
             يدعم JPG, PNG, WebP, SVG, PDF, MP3, WAV, JSON, TXT — حد آمن وخالٍ من التنفيذيات

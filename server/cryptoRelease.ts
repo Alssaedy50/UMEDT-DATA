@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import crypto from 'node:crypto';
 import JSZip from 'jszip';
 import type {
@@ -5,12 +7,21 @@ import type {
   DiffReport,
   DomainDiffStats,
   MasterDataCounts,
+  ReleaseHistoryRecord,
   ReleaseKeyPair,
+  UmedtManifestCounts,
   ValidationIssueItem,
   ValidationReport,
   WorkspaceDataState
 } from '../src/types/umedtData.ts';
-import { computeWorkspaceCounts, readMediaBinary } from './workspaceStore.ts';
+import {
+  computeWorkspaceCounts,
+  loadReleaseHistory,
+  OFFICIAL_DATA_REPO,
+  saveReleaseHistory,
+  writeMasterFilesToRepoDisk,
+  writeReleaseArtifactsToRepoDisk
+} from './workspaceStore.ts';
 
 const DANGEROUS_EXTENSIONS = new Set([
   '.exe',
@@ -39,6 +50,8 @@ const DANGEROUS_EXTENSIONS = new Set([
   '.scr',
   '.com'
 ]);
+
+const VALID_AFFIX_TYPES = new Set(['prefix', 'root', 'suffix']);
 
 export function normalizeTermKey(value: string): string {
   return String(value || '')
@@ -110,7 +123,7 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
     });
   }
 
-  // Normalized term uniqueness
+  // UMEDT Term contract checks
   const termKeys = new Map<string, string>();
   for (const t of state.terms) {
     if (!t.term || !t.term.trim()) {
@@ -118,9 +131,17 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
         severity: 'error',
         domain: 'terms',
         recordId: t.id,
-        messageAr: `المصطلح (${t.id}) لا يحتوي على نص إنجليزي.`
+        messageAr: `المصطلح (${t.id}) لا يحتوي على نص إنجليزي 'term'.`
       });
       continue;
+    }
+    if (!t.translation || !t.translation.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'terms',
+        recordId: t.id,
+        messageAr: `المصطلح "${t.term}" يفتقد الترجمة العربية 'translation'.`
+      });
     }
     const key = normalizeTermKey(t.term);
     if (!key) {
@@ -145,20 +166,28 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
     }
   }
 
-  // Referential checks: subjects -> blocks
-  for (const subj of state.subjects) {
-    if (!subj.isStandalone && subj.blockId && !blockIds.has(subj.blockId)) {
-      warnings.push({
-        severity: 'warning',
-        domain: 'subjects',
-        recordId: subj.id,
-        messageAr: `المادة "${subj.titleAr || subj.titleEn}" تشير إلى بلوك غير موجود (${subj.blockId}).`
+  // UMEDT Sentence contract checks
+  for (const s of state.sentences) {
+    if (!s.en?.trim() || !s.ar?.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'sentences',
+        recordId: s.id,
+        messageAr: `الجملة (${s.id}) تفتقد النص الإنجليزي 'en' أو العربي 'ar'.`
       });
     }
   }
 
-  // Referential checks: topics -> blocks & subjects
+  // UMEDT Topic contract checks
   for (const tp of state.topics) {
+    if (!tp.title?.trim() || !Array.isArray(tp.sections)) {
+      errors.push({
+        severity: 'error',
+        domain: 'topics',
+        recordId: tp.id,
+        messageAr: `الموضوع (${tp.id}) يفتقد 'title' أو مصفوفة 'sections'.`
+      });
+    }
     if (tp.blockId && !blockIds.has(tp.blockId)) {
       warnings.push({
         severity: 'warning',
@@ -177,7 +206,42 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
     }
   }
 
-  // Media security checks (path traversal & dangerous extensions)
+  // UMEDT Affix & Abbreviation contract checks
+  for (const af of state.customAffixes) {
+    if (!af.affix?.trim() || !af.meaningAr?.trim() || !VALID_AFFIX_TYPES.has(af.type)) {
+      errors.push({
+        severity: 'error',
+        domain: 'customAffixes',
+        recordId: af.id,
+        messageAr: `السابقة/اللاحقة (${af.id}) تفتقد حقول UMEDT الأساسية.`
+      });
+    }
+  }
+
+  for (const ab of state.customAbbreviations) {
+    if (!ab.abbr?.trim() || !ab.defaultExpansionEn?.trim() || !ab.defaultTranslationAr?.trim()) {
+      errors.push({
+        severity: 'error',
+        domain: 'customAbbreviations',
+        recordId: ab.id,
+        messageAr: `الاختصار (${ab.id}) يفتقد حقول UMEDT الأساسية.`
+      });
+    }
+  }
+
+  // Subjects -> Blocks referential check
+  for (const subj of state.subjects) {
+    if (!subj.isStandalone && subj.blockId && !blockIds.has(subj.blockId)) {
+      warnings.push({
+        severity: 'warning',
+        domain: 'subjects',
+        recordId: subj.id,
+        messageAr: `المادة "${subj.titleAr || subj.titleEn}" تشير إلى بلوك غير موجود (${subj.blockId}).`
+      });
+    }
+  }
+
+  // Media security checks
   for (const asset of state.mediaAssets) {
     const rel = (asset.relativePath || '').replace(/\\/g, '/');
     if (rel.includes('..') || rel.startsWith('/')) {
@@ -399,6 +463,55 @@ export async function verifyBytesWithPublicKey(
   }
 }
 
+export function computeDomainFilesSha256(state: WorkspaceDataState): Record<string, string> {
+  return {
+    'blocks.json': sha256Hex(JSON.stringify(state.blocks, null, 2)),
+    'subjects.json': sha256Hex(JSON.stringify(state.subjects, null, 2)),
+    'topics.json': sha256Hex(JSON.stringify(state.topics, null, 2)),
+    'terms.json': sha256Hex(JSON.stringify(state.terms, null, 2)),
+    'sentences.json': sha256Hex(JSON.stringify(state.sentences, null, 2)),
+    'custom-affixes.json': sha256Hex(JSON.stringify(state.customAffixes, null, 2)),
+    'custom-abbreviations.json': sha256Hex(JSON.stringify(state.customAbbreviations, null, 2)),
+    'questions.json': sha256Hex(JSON.stringify(state.questions, null, 2)),
+    'media-index.json': sha256Hex(JSON.stringify(state.mediaAssets, null, 2))
+  };
+}
+
+export function assertVersionNotPublished(
+  channel: 'stable' | 'beta',
+  targetVersion: string,
+  allowOverwrite = false
+): void {
+  if (allowOverwrite) return;
+  const history = loadReleaseHistory(channel);
+  if (history.some((h) => h.version === targetVersion)) {
+    throw new Error(
+      `الإصدار "${targetVersion}" منشور مسبقاً في قناة ${channel}. يرجى ترقية رقم الإصدار لمنع الكتابة فوق إصدار معتمد.`
+    );
+  }
+}
+
+export function formatReleaseChangelogMarkdown(entries: ReleaseHistoryRecord[]): string {
+  const lines: string[] = [
+    '# سجل إصدارات بيانات UMEDT-DATA (Changelog)',
+    '',
+    'يحتوي هذا الملف على سجل الإصدارات المنشورة والمتوافقة مع تطبيق UMEDT.'
+  ];
+  for (const item of entries) {
+    lines.push(
+      '',
+      `## v${item.version} (${item.channel}) — ${item.releasedAt}`,
+      `- **الملخص:** ${item.summary}`,
+      `- **الحزمة:** \`${item.packageFileName}\` (${item.packageSizeKb} KB)`,
+      `- **SHA-256:** \`${item.sha256}\``,
+      `- **التوقيع الرقمي:** ${item.signed ? 'موقّع (ECDSA-P256-SHA256)' : 'حزمة متوافقة غير موقّعة'}`,
+      `- **النطاقات المتغيرة:** ${item.changedDomains.length > 0 ? item.changedDomains.join(', ') : 'إصدار أولي / كامل'}`,
+      `- **السجلات:** ${item.extendedCounts.blocks} بلوك · ${item.extendedCounts.subjects} مادة · ${item.counts.topics} موضوع · ${item.counts.terms} مصطلح · ${item.counts.sentences} جملة · ${item.counts.affixes} لاحقة · ${item.counts.abbreviations} اختصار · ${item.extendedCounts.mediaAssets} مرفق`
+    );
+  }
+  return lines.join('\n') + '\n';
+}
+
 export async function buildSignedReleasePackage(options: {
   state: WorkspaceDataState;
   version: string;
@@ -407,59 +520,87 @@ export async function buildSignedReleasePackage(options: {
   privateKeyPem?: string;
   publicKeyPem?: string;
   dataRepo?: string;
+  allowOverwrite?: boolean;
 }): Promise<{
   packageFileName: string;
   zipBuffer: Buffer;
   manifest: DataPackageManifest;
   manifestJsonText: string;
   changelogMarkdown: string;
+  historyRecord: ReleaseHistoryRecord;
+  historyList: ReleaseHistoryRecord[];
   signed: boolean;
 }> {
   const { state, version, channel, summary } = options;
-  const dataRepo = (options.dataRepo || state.meta.dataRepo || 'Alssaedy50/UMEDT_DATA').trim();
-  const counts = computeWorkspaceCounts(state);
-  const packageFileName = `umed2-data-${version}.zip`;
+  const cleanVersion = version.trim();
+  const dataRepo = (options.dataRepo || state.meta.dataRepo || OFFICIAL_DATA_REPO).trim();
+  const extendedCounts = computeWorkspaceCounts(state);
+  const counts: UmedtManifestCounts = {
+    terms: extendedCounts.terms,
+    sentences: extendedCounts.sentences,
+    topics: extendedCounts.topics,
+    affixes: extendedCounts.customAffixes,
+    abbreviations: extendedCounts.customAbbreviations
+  };
+
+  const existingHistory = loadReleaseHistory(channel);
+  assertVersionNotPublished(channel, cleanVersion, options.allowOverwrite);
+
+  const filesSha256 = computeDomainFilesSha256(state);
+  const prevRelease = existingHistory[0] || null;
+  const changedDomains = prevRelease
+    ? Object.keys(filesSha256).filter((k) => filesSha256[k] !== prevRelease.filesSha256?.[k])
+    : Object.keys(filesSha256);
+
+  const packageFileName = `umed2-data-${cleanVersion}.zip`;
   const rawReleaseBase = `https://raw.githubusercontent.com/${dataRepo}/main/data/releases/${channel}`;
   const downloadUrl = `${rawReleaseBase}/${packageFileName}`;
   const manifestUrl = `${rawReleaseBase}/manifest.json`;
-  const publishedAt = new Date().toISOString();
+  const releasedAt = new Date().toISOString();
 
+  // Build ZIP 100% compatible with UMEDT's inspectAndExtractSafeZipPackage & assemblePackageFromZipJsonMap:
+  // - Entry count = 10 (<= 64 maxEntryCount)
+  // - Depth = 1 (<= 4 maxPathDepth)
+  // - Uses exact filenames UMEDT looks for: manifest.json, terms.json, sentences.json, topics.json, affixes.json, abbreviations.json
+  // - Also includes blocks.json, subjects.json, questions.json, media-index.json for hierarchical sync
   const zip = new JSZip();
-  zip.file('data/blocks.json', JSON.stringify(state.blocks, null, 2));
-  zip.file('data/subjects.json', JSON.stringify(state.subjects, null, 2));
-  zip.file('data/topics.json', JSON.stringify(state.topics, null, 2));
-  zip.file('data/terms.json', JSON.stringify(state.terms, null, 2));
-  zip.file('data/sentences.json', JSON.stringify(state.sentences, null, 2));
-  zip.file('data/custom-affixes.json', JSON.stringify(state.customAffixes, null, 2));
-  zip.file('data/custom-abbreviations.json', JSON.stringify(state.customAbbreviations, null, 2));
-  zip.file('data/questions.json', JSON.stringify(state.questions, null, 2));
-  zip.file('data/media-index.json', JSON.stringify(state.mediaAssets, null, 2));
 
-  // Include local binary attachments under media/
-  for (const asset of state.mediaAssets) {
-    const bin = readMediaBinary(asset);
-    if (bin) {
-      const zipPath = asset.relativePath.replace(/^data\//, '');
-      zip.file(zipPath, bin);
-    }
-  }
-
-  const prelimManifest = {
-    packageId: `umed2-pkg-${version}`,
-    dataVersion: version,
+  const innerManifestBase = {
+    packageId: `umed2-pkg-${cleanVersion}`,
+    dataVersion: cleanVersion,
     minAppVersion: '2.4.0',
     schemaVersion: 2,
-    publishedAt,
+    releasedAt,
     channel,
     downloadUrl,
     manifestUrl,
     packageFormat: 'zip' as const,
-    summary,
+    description: summary,
+    releaseNotes: summary,
+    changelog: [
+      `${summary}`,
+      `تحديث ${extendedCounts.blocks} بلوكات، ${counts.topics} موضوعاً، ${counts.terms} مصطلحاً، و ${extendedCounts.mediaAssets} مرفقاً.`
+    ],
     author: 'UMEDT Data Hub',
-    counts
+    counts,
+    extendedCounts,
+    filesSha256,
+    incremental: {
+      previousVersion: prevRelease ? prevRelease.version : null,
+      changedDomains
+    }
   };
 
-  zip.file('manifest.json', JSON.stringify(prelimManifest, null, 2));
+  zip.file('manifest.json', JSON.stringify(innerManifestBase, null, 2));
+  zip.file('terms.json', JSON.stringify(state.terms, null, 2));
+  zip.file('sentences.json', JSON.stringify(state.sentences, null, 2));
+  zip.file('topics.json', JSON.stringify(state.topics, null, 2));
+  zip.file('affixes.json', JSON.stringify(state.customAffixes, null, 2));
+  zip.file('abbreviations.json', JSON.stringify(state.customAbbreviations, null, 2));
+  zip.file('blocks.json', JSON.stringify(state.blocks, null, 2));
+  zip.file('subjects.json', JSON.stringify(state.subjects, null, 2));
+  zip.file('questions.json', JSON.stringify(state.questions, null, 2));
+  zip.file('media-index.json', JSON.stringify(state.mediaAssets, null, 2));
 
   const zipUint8 = await zip.generateAsync({
     type: 'uint8array',
@@ -468,9 +609,10 @@ export async function buildSignedReleasePackage(options: {
   });
   const zipBuffer = Buffer.from(zipUint8);
   const digest = sha256Hex(zipBuffer);
+  const packageSizeKb = Math.max(1, Number((zipBuffer.byteLength / 1024).toFixed(1)));
 
   let signature = '';
-  let keyFingerprintSha256 = '';
+  let keyFingerprint = '';
   let signed = false;
 
   if (options.privateKeyPem && options.privateKeyPem.trim()) {
@@ -478,41 +620,44 @@ export async function buildSignedReleasePackage(options: {
     signed = true;
     if (options.publicKeyPem && options.publicKeyPem.trim()) {
       const spki = pemToArrayBuffer(options.publicKeyPem);
-      keyFingerprintSha256 = sha256Hex(Buffer.from(spki));
+      keyFingerprint = sha256Hex(Buffer.from(spki));
     }
   }
 
   const manifest: DataPackageManifest = {
-    ...prelimManifest,
+    ...innerManifestBase,
+    packageSizeKb,
     checksum: digest,
     sha256: digest,
     signature,
     signatureAlgorithm: 'ECDSA-P256-SHA256',
-    keyFingerprintSha256,
-    fileSizeBytes: zipBuffer.byteLength
+    keyFingerprint
   };
 
   const manifestJsonText = JSON.stringify(manifest, null, 2);
-  const changelogMarkdown = [
-    `# UMEDT Data Release ${version} (${channel})`,
-    '',
-    `- **Published At:** ${publishedAt}`,
-    `- **Summary:** ${summary}`,
-    `- **Package:** \`${packageFileName}\` (${(zipBuffer.byteLength / 1024).toFixed(1)} KB)`,
-    `- **SHA-256:** \`${digest}\``,
-    `- **Signed:** ${signed ? `Yes (${keyFingerprintSha256.slice(0, 16)}...)` : 'Unsigned preview bundle'}`,
-    '',
-    '## Included Counts',
-    `- Blocks: ${counts.blocks}`,
-    `- Subjects: ${counts.subjects}`,
-    `- Topics: ${counts.topics}`,
-    `- Terms: ${counts.terms}`,
-    `- Sentences: ${counts.sentences}`,
-    `- Affixes: ${counts.customAffixes}`,
-    `- Abbreviations: ${counts.customAbbreviations}`,
-    `- Questions: ${counts.questions}`,
-    `- Media Attachments: ${counts.mediaAssets}`
-  ].join('\n');
+
+  const historyRecord: ReleaseHistoryRecord = {
+    version: cleanVersion,
+    channel,
+    releasedAt,
+    packageFileName,
+    sha256: digest,
+    packageSizeKb,
+    signed,
+    signature,
+    keyFingerprint,
+    summary,
+    counts,
+    extendedCounts,
+    filesSha256,
+    changedDomains
+  };
+
+  const historyList = [
+    historyRecord,
+    ...existingHistory.filter((h) => h.version !== cleanVersion)
+  ];
+  const changelogMarkdown = formatReleaseChangelogMarkdown(historyList);
 
   return {
     packageFileName,
@@ -520,6 +665,122 @@ export async function buildSignedReleasePackage(options: {
     manifest,
     manifestJsonText,
     changelogMarkdown,
+    historyRecord,
+    historyList,
     signed
+  };
+}
+
+export async function publishLocalReleaseToDisk(options: {
+  state: WorkspaceDataState;
+  version: string;
+  channel: 'stable' | 'beta';
+  summary: string;
+  privateKeyPem?: string;
+  publicKeyPem?: string;
+  allowOverwrite?: boolean;
+}): Promise<{
+  manifest: DataPackageManifest;
+  packageFileName: string;
+  historyList: ReleaseHistoryRecord[];
+  signed: boolean;
+}> {
+  const validation = validateWorkspaceData(options.state);
+  if (!validation.valid) {
+    throw new Error(
+      validation.errors[0]?.messageAr || 'البيانات غير صالحة للنشر المحلي'
+    );
+  }
+
+  const built = await buildSignedReleasePackage(options);
+  writeMasterFilesToRepoDisk(options.state);
+  writeReleaseArtifactsToRepoDisk({
+    channel: options.channel,
+    packageFileName: built.packageFileName,
+    zipBuffer: built.zipBuffer,
+    manifestJsonText: built.manifestJsonText,
+    changelogMarkdown: built.changelogMarkdown,
+    history: built.historyList
+  });
+
+  return {
+    manifest: built.manifest,
+    packageFileName: built.packageFileName,
+    historyList: built.historyList,
+    signed: built.signed
+  };
+}
+
+export function rollbackChannelRelease(
+  channel: 'stable' | 'beta',
+  targetVersion: string,
+  dataRepo = OFFICIAL_DATA_REPO
+): {
+  restoredManifest: DataPackageManifest;
+  changelogMarkdown: string;
+  historyList: ReleaseHistoryRecord[];
+} {
+  const history = loadReleaseHistory(channel);
+  const target = history.find((h) => h.version === targetVersion);
+  if (!target) {
+    throw new Error(`الإصدار ${targetVersion} غير موجود في سجل قناة ${channel}.`);
+  }
+
+  const channelDir = path.resolve(process.cwd(), 'data', 'releases', channel);
+  const pkgPath = path.join(channelDir, target.packageFileName);
+  if (!fs.existsSync(pkgPath)) {
+    throw new Error(`ملف الحزمة ${target.packageFileName} مفقود ولا يمكن استعادته.`);
+  }
+
+  const zipBytes = fs.readFileSync(pkgPath);
+  const actualSha = sha256Hex(zipBytes);
+  if (actualSha !== target.sha256) {
+    throw new Error(
+      `فشل التحقق من بصمة SHA-256 للحزمة المحفوظة ${target.packageFileName} (ملف تالف).`
+    );
+  }
+
+  const rawReleaseBase = `https://raw.githubusercontent.com/${dataRepo}/main/data/releases/${channel}`;
+  const restoredManifest: DataPackageManifest = {
+    packageId: `umed2-pkg-${target.version}`,
+    dataVersion: target.version,
+    minAppVersion: '2.4.0',
+    schemaVersion: 2,
+    releasedAt: target.releasedAt,
+    channel,
+    downloadUrl: `${rawReleaseBase}/${target.packageFileName}`,
+    manifestUrl: `${rawReleaseBase}/manifest.json`,
+    packageFormat: 'zip',
+    packageSizeKb: target.packageSizeKb,
+    checksum: target.sha256,
+    sha256: target.sha256,
+    signature: target.signature || '',
+    signatureAlgorithm: 'ECDSA-P256-SHA256',
+    keyFingerprint: target.keyFingerprint || '',
+    description: `استعادة الإصدار السابق v${target.version}: ${target.summary}`,
+    releaseNotes: target.summary,
+    changelog: [`استعادة الإصدار المعتمد ${target.version}`],
+    author: 'UMEDT Data Hub (Rollback)',
+    counts: target.counts,
+    extendedCounts: target.extendedCounts,
+    filesSha256: target.filesSha256
+  };
+
+  // Reorder history so restored version is at top without deleting newer entries for audit
+  const reordered = [target, ...history.filter((h) => h.version !== target.version)];
+  const changelogMarkdown = formatReleaseChangelogMarkdown(reordered);
+
+  fs.writeFileSync(
+    path.join(channelDir, 'manifest.json'),
+    JSON.stringify(restoredManifest, null, 2),
+    'utf8'
+  );
+  fs.writeFileSync(path.join(channelDir, 'CHANGELOG.md'), changelogMarkdown, 'utf8');
+  saveReleaseHistory(channel, reordered);
+
+  return {
+    restoredManifest,
+    changelogMarkdown,
+    historyList: reordered
   };
 }

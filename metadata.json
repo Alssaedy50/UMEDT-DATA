@@ -1,6 +1,6 @@
 {
   "name": "UMEDT Data Hub",
-  "description": "مركز إدارة ونشر البيانات الطبية (البلوكات، المصطلحات، والملحقات) لمستودع UMEDT_DATA وتحديث تطبيق UMEDT بأمان.",
+  "description": "مركز إدارة ونشر البيانات الطبية (البلوكات، المصطلحات، والملحقات) لمستودع UMEDT-DATA وتحديث تطبيق UMEDT بأمان.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

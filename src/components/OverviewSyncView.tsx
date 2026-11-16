@@ -83,7 +83,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-5 border-b border-slate-200">
           <div>
             <h1 className="text-xl font-bold text-slate-900 text-balance">
-              ربط مستودع البيانات المستقل UMEDT_DATA مع برنامج UMEDT
+              ربط مستودع البيانات المستقل UMEDT-DATA مع برنامج UMEDT
             </h1>
             <p className="mt-1.5 text-sm text-slate-600 max-w-3xl leading-relaxed">
               تُدار البلوكات والمواد والمواضيع والمصطلحات والملحقات هنا وتُنشر مباشرة إلى مستودع{' '}
@@ -154,7 +154,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
               value={dataInput}
               onChange={(e) => setDataInput(e.target.value)}
               className="w-full px-3 py-2 text-sm font-mono bg-slate-50 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700"
-              placeholder="Alssaedy50/UMEDT_DATA"
+              placeholder="Alssaedy50/UMEDT-DATA"
             />
           </div>
           <div className="md:col-span-2 flex gap-2">
@@ -168,17 +168,17 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
         </form>
       </section>
 
-      {/* Alert if UMEDT_DATA on GitHub is currently empty */}
+      {/* Alert if UMEDT-DATA on GitHub is currently empty */}
       {dataRepoIsEmpty && (
         <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-start gap-3">
             <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-semibold text-amber-950">
-                مستودع UMEDT_DATA على GitHub فارغ حالياً (المصفوفات تحتوي 0 سجل)
+                مستودع UMEDT-DATA على GitHub فارغ حالياً (المصفوفات تحتوي 0 سجل)
               </p>
               <p className="text-xs text-amber-800 mt-1">
-                اضغط «استيراد البيانات من UMEDT» لجلب البلوكات والمواد والمواضيع والمصطلحات والملحقات من المستودع الأصلي ثم راجعها وانشرها إلى UMEDT_DATA.
+                اضغط «استيراد البيانات من UMEDT» لجلب البلوكات والمواد والمواضيع والمصطلحات والملحقات من المستودع الأصلي ثم راجعها وانشرها إلى UMEDT-DATA.
               </p>
             </div>
           </div>
@@ -188,7 +188,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
               onClick={() => onNavigateTab('publish')}
               className="px-4 py-2 text-xs font-semibold text-amber-950 bg-white border border-amber-300 rounded-lg hover:bg-amber-100 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
             >
-              الانتقال للنشر إلى UMEDT_DATA
+              الانتقال للنشر إلى UMEDT-DATA
             </button>
           )}
         </div>
@@ -261,7 +261,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
         <div className="bg-white border border-slate-200 rounded-xl p-5 space-y-4">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <div className="text-xs font-medium text-slate-500">مستودع البيانات (UMEDT_DATA)</div>
+              <div className="text-xs font-medium text-slate-500">مستودع البيانات (UMEDT-DATA)</div>
               <h2 dir="ltr" className="text-base font-bold font-mono text-slate-900 mt-0.5">
                 {repoStatus?.dataRepo.fullName || state.meta.dataRepo}
               </h2>
@@ -337,7 +337,7 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
               مصفوفة بيانات المسودة مقابل المستودع البعيد
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">
-              قائمة الملفات القياسية التي يقرؤها تطبيق UMEDT من مستودع UMEDT_DATA
+              قائمة الملفات القياسية التي يقرؤها تطبيق UMEDT من مستودع UMEDT-DATA
             </p>
           </div>
           <div className="flex items-center gap-2 text-xs">
@@ -360,9 +360,9 @@ export const OverviewSyncView: React.FC<OverviewSyncViewProps> = ({
             <thead className="bg-slate-50 text-xs font-medium text-slate-600 border-b border-slate-200">
               <tr>
                 <th className="px-6 py-3">النطاق</th>
-                <th className="px-6 py-3">ملف المصدر في UMEDT_DATA</th>
+                <th className="px-6 py-3">ملف المصدر في UMEDT-DATA</th>
                 <th className="px-6 py-3 text-left">في المسودة الحالية</th>
-                <th className="px-6 py-3 text-left">المنشور في UMEDT_DATA</th>
+                <th className="px-6 py-3 text-left">المنشور في UMEDT-DATA</th>
                 <th className="px-6 py-3">الإجراء</th>
               </tr>
             </thead>

@@ -366,23 +366,56 @@ export interface ReleaseKeyPair {
   createdAt: string;
 }
 
+export interface UmedtManifestCounts {
+  terms: number;
+  sentences: number;
+  topics: number;
+  affixes: number;
+  abbreviations: number;
+}
+
 export interface DataPackageManifest {
   packageId: string;
   dataVersion: string;
   minAppVersion: string;
   schemaVersion: number;
-  publishedAt: string;
+  releasedAt: string;
   channel: 'stable' | 'beta';
   downloadUrl: string;
-  manifestUrl: string;
-  packageFormat: 'zip';
+  manifestUrl?: string;
+  packageFormat?: 'zip';
+  packageSizeKb?: number;
   checksum: string;
   sha256: string;
   signature: string;
   signatureAlgorithm: 'ECDSA-P256-SHA256';
-  keyFingerprintSha256: string;
-  fileSizeBytes: number;
-  summary: string;
+  keyFingerprint: string;
+  description: string;
+  releaseNotes: string;
+  changelog: string[];
   author: string;
-  counts: MasterDataCounts;
+  counts: UmedtManifestCounts;
+  extendedCounts?: MasterDataCounts;
+  filesSha256?: Record<string, string>;
+  incremental?: {
+    previousVersion: string | null;
+    changedDomains: string[];
+  };
+}
+
+export interface ReleaseHistoryRecord {
+  version: string;
+  channel: 'stable' | 'beta';
+  releasedAt: string;
+  packageFileName: string;
+  sha256: string;
+  packageSizeKb: number;
+  signed: boolean;
+  signature?: string;
+  keyFingerprint?: string;
+  summary: string;
+  counts: UmedtManifestCounts;
+  extendedCounts: MasterDataCounts;
+  filesSha256: Record<string, string>;
+  changedDomains: string[];
 }

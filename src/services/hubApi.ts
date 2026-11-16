@@ -1,5 +1,6 @@
 import type {
   ClinicalAbbreviation,
+  DataPackageManifest,
   DictionaryTerm,
   DiffReport,
   DualRepoStatusResponse,
@@ -8,6 +9,7 @@ import type {
   MedicalBlock,
   MedicalSubject,
   MorphologicalAffix,
+  ReleaseHistoryRecord,
   ReleaseKeyPair,
   TopicArticle,
   UnifiedQuizQuestion,
@@ -293,6 +295,57 @@ export async function fetchWorkspaceDiff(
 
 export async function generateReleaseKeyPair(): Promise<{ keyPair: ReleaseKeyPair }> {
   const res = await fetch('/api/release/generate-keys', { method: 'POST' });
+  return handleJson(res);
+}
+
+export async function fetchReleaseHistory(channel: 'stable' | 'beta'): Promise<{
+  channel: 'stable' | 'beta';
+  history: ReleaseHistoryRecord[];
+}> {
+  const res = await fetch(`/api/release/history?channel=${encodeURIComponent(channel)}`, {
+    cache: 'no-store'
+  });
+  return handleJson(res);
+}
+
+export async function publishLocalRelease(payload: {
+  version: string;
+  channel: 'stable' | 'beta';
+  summary: string;
+  privateKeyPem?: string;
+  publicKeyPem?: string;
+  allowOverwrite?: boolean;
+}): Promise<{
+  success: boolean;
+  manifest: DataPackageManifest;
+  packageFileName: string;
+  historyList: ReleaseHistoryRecord[];
+  signed: boolean;
+  state: WorkspaceDataState;
+}> {
+  const res = await fetch('/api/release/publish-local', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  return handleJson(res);
+}
+
+export async function rollbackRelease(payload: {
+  channel: 'stable' | 'beta';
+  targetVersion: string;
+}): Promise<{
+  success: boolean;
+  restoredManifest: DataPackageManifest;
+  changelogMarkdown: string;
+  historyList: ReleaseHistoryRecord[];
+  state: WorkspaceDataState;
+}> {
+  const res = await fetch('/api/release/rollback', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
   return handleJson(res);
 }
 

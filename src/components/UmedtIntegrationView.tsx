@@ -135,7 +135,7 @@ export const UmedtIntegrationView: React.FC<UmedtIntegrationViewProps> = ({
               <span>ضمان حماية الأكواد والبيانات المحلية</span>
             </div>
             <ul className="text-xs text-slate-600 space-y-1.5 leading-relaxed">
-              <li>• لا يكتب مستودع UMEDT_DATA أي كود React أو Android داخل UMEDT.</li>
+              <li>• لا يكتب مستودع UMEDT-DATA أي كود React أو Android داخل UMEDT.</li>
               <li>• الدمج يعتمد على المعرّف الفريد <span dir="ltr" className="font-mono">id</span> ويُبقي حقول <span dir="ltr" className="font-mono">favorite</span> و <span dir="ltr" className="font-mono">srsData</span> المحلية سليمة.</li>
               <li>• يمكن التراجع عن أي تحديث بيانات دون إعادة بناء APK أو المساس بالشفرة البرمجية.</li>
             </ul>

@@ -17,6 +17,7 @@ import type {
 import {
   computeWorkspaceCounts,
   deleteMediaBinaryIfUnused,
+  loadReleaseHistory,
   loadWorkspaceState,
   readMediaBinary,
   saveMediaBinary,
@@ -27,6 +28,8 @@ import {
   computeDiffAgainstRemote,
   generateEcdsaSigningKeyPair,
   normalizeTermKey,
+  publishLocalReleaseToDisk,
+  rollbackChannelRelease,
   validateWorkspaceData
 } from './server/cryptoRelease.ts';
 import {
@@ -52,6 +55,9 @@ function extractToken(req: express.Request): string | undefined {
   if (auth && auth.toLowerCase().startsWith('bearer ')) {
     return auth.slice(7).trim();
   }
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) {
+    return process.env.GITHUB_TOKEN.trim();
+  }
   return undefined;
 }
 
@@ -61,7 +67,7 @@ async function startServer() {
 
   app.use(express.json({ limit: '50mb' }));
 
-  // 1. Live GitHub Repository Overview (UMEDT + UMEDT_DATA)
+  // 1. Live GitHub Repository Overview (UMEDT + UMEDT-DATA)
   app.get('/api/github/status', async (req, res) => {
     try {
       const state = loadWorkspaceState();
@@ -135,7 +141,7 @@ async function startServer() {
     }
   });
 
-  // Pull live master data currently published in UMEDT_DATA
+  // Pull live master data currently published in UMEDT-DATA
   app.post('/api/workspace/load-from-umedt-data', async (req, res) => {
     try {
       const state = loadWorkspaceState();
@@ -169,7 +175,7 @@ async function startServer() {
       });
     } catch (err) {
       res.status(500).json({
-        error: err instanceof Error ? err.message : 'تعذر جلب البيانات من مستودع UMEDT_DATA'
+        error: err instanceof Error ? err.message : 'تعذر جلب البيانات من مستودع UMEDT-DATA'
       });
     }
   });
@@ -505,7 +511,7 @@ async function startServer() {
     res.json({ state, validation: validateWorkspaceData(state) });
   });
 
-  // 4. Diff & Validation against live UMEDT_DATA
+  // 4. Diff & Validation against live UMEDT-DATA
   app.get('/api/workspace/diff', async (req, res) => {
     try {
       const state = loadWorkspaceState();
@@ -525,7 +531,7 @@ async function startServer() {
     }
   });
 
-  // 5. Cryptographic Keypair Generation & Signed Release Building
+  // 5. Cryptographic Keypair Generation, History, Local Release Publishing & Rollback
   app.post('/api/release/generate-keys', async (_req, res) => {
     try {
       const keyPair = await generateEcdsaSigningKeyPair();
@@ -533,6 +539,68 @@ async function startServer() {
     } catch (err) {
       res.status(500).json({
         error: err instanceof Error ? err.message : 'تعذر توليد زوج مفاتيح ECDSA-P256'
+      });
+    }
+  });
+
+  app.get('/api/release/history', (req, res) => {
+    const channel = req.query.channel === 'beta' ? 'beta' : 'stable';
+    const history = loadReleaseHistory(channel);
+    res.json({ channel, history });
+  });
+
+  app.post('/api/release/publish-local', async (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as {
+        version?: string;
+        channel?: 'stable' | 'beta';
+        summary?: string;
+        privateKeyPem?: string;
+        publicKeyPem?: string;
+        allowOverwrite?: boolean;
+      };
+      const version = body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd';
+      const channel: 'stable' | 'beta' = body.channel === 'beta' ? 'beta' : 'stable';
+      const result = await publishLocalReleaseToDisk({
+        state,
+        version,
+        channel,
+        summary: body.summary?.trim() || `إصدار بيانات UMEDT-DATA v${version}`,
+        privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
+        publicKeyPem: body.publicKeyPem?.trim() || process.env.VITE_UMED_PUBLIC_KEY_PEM,
+        allowOverwrite: Boolean(body.allowOverwrite)
+      });
+
+      state.meta.dataVersion = version;
+      state.meta.lastPublishedAt = new Date().toISOString();
+      saveWorkspaceState(state);
+
+      res.json({ success: true, ...result, state });
+    } catch (err) {
+      res.status(400).json({
+        error: err instanceof Error ? err.message : 'تعذر نشر الإصدار محلياً'
+      });
+    }
+  });
+
+  app.post('/api/release/rollback', (req, res) => {
+    try {
+      const state = loadWorkspaceState();
+      const body = (req.body || {}) as { channel?: 'stable' | 'beta'; targetVersion?: string };
+      const channel: 'stable' | 'beta' = body.channel === 'beta' ? 'beta' : 'stable';
+      const targetVersion = body.targetVersion?.trim();
+      if (!targetVersion) {
+        res.status(400).json({ error: 'يجب تحديد رقم الإصدار المطلوب استعادته.' });
+        return;
+      }
+      const restored = rollbackChannelRelease(channel, targetVersion, state.meta.dataRepo);
+      state.meta.dataVersion = restored.restoredManifest.dataVersion;
+      saveWorkspaceState(state);
+      res.json({ success: true, ...restored, state });
+    } catch (err) {
+      res.status(400).json({
+        error: err instanceof Error ? err.message : 'تعذر استعادة الإصدار السابق'
       });
     }
   });
@@ -559,8 +627,9 @@ async function startServer() {
         version: body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd',
         channel: body.channel === 'beta' ? 'beta' : 'stable',
         summary: body.summary?.trim() || 'تحديث البلوكات والمصطلحات والملحقات الطبية',
-        privateKeyPem: body.privateKeyPem,
-        publicKeyPem: body.publicKeyPem
+        privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
+        publicKeyPem: body.publicKeyPem?.trim() || process.env.VITE_UMED_PUBLIC_KEY_PEM,
+        allowOverwrite: true
       });
 
       res.setHeader('Content-Type', 'application/zip');
@@ -575,7 +644,7 @@ async function startServer() {
     }
   });
 
-  // 6. Export Complete Ready-to-Push UMEDT_DATA Repository Bundle (ZIP)
+  // 6. Export Complete Ready-to-Push UMEDT-DATA Repository Bundle (ZIP)
   app.post('/api/export/umedt-data-repo', async (req, res) => {
     try {
       const state = loadWorkspaceState();
@@ -621,18 +690,20 @@ async function startServer() {
           state,
           version: body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd',
           channel: ch,
-          summary: body.summary?.trim() || 'نشر بيانات UMEDT_DATA',
-          privateKeyPem: body.privateKeyPem,
-          publicKeyPem: body.publicKeyPem
+          summary: body.summary?.trim() || 'نشر بيانات UMEDT-DATA',
+          privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
+          publicKeyPem: body.publicKeyPem?.trim() || process.env.VITE_UMED_PUBLIC_KEY_PEM,
+          allowOverwrite: true
         });
         zip.file(`data/releases/${ch}/manifest.json`, built.manifestJsonText);
         zip.file(`data/releases/${ch}/CHANGELOG.md`, built.changelogMarkdown);
+        zip.file(`data/releases/${ch}/history.json`, JSON.stringify(built.historyList, null, 2));
         zip.file(`data/releases/${ch}/${built.packageFileName}`, built.zipBuffer);
       }
 
       const out = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
       res.setHeader('Content-Type', 'application/zip');
-      res.setHeader('Content-Disposition', 'attachment; filename="UMEDT_DATA-repo-bundle.zip"');
+      res.setHeader('Content-Disposition', 'attachment; filename="UMEDT-DATA-repo-bundle.zip"');
       res.send(out);
     } catch (err) {
       res.status(500).json({
@@ -641,7 +712,10 @@ async function startServer() {
     }
   });
 
-  // 7. Direct Atomic GitHub Push to Alssaedy50/UMEDT_DATA
+  // Serve local data/ directory over HTTP for verification and direct inspection
+  app.use('/raw/data', express.static(path.resolve(process.cwd(), 'data')));
+
+  // 7. Direct Atomic GitHub Push to Alssaedy50/UMEDT-DATA
   app.post('/api/github/publish-data', async (req, res) => {
     try {
       const token = extractToken(req);
@@ -670,6 +744,7 @@ async function startServer() {
         summary?: string;
         privateKeyPem?: string;
         publicKeyPem?: string;
+        allowOverwrite?: boolean;
       };
 
       const version = body.version?.trim() || state.meta.dataVersion || '2026.11.0-umd';
@@ -678,10 +753,13 @@ async function startServer() {
       let releaseArtifacts:
         | {
             channel: 'stable' | 'beta';
+            version: string;
+            sha256: string;
             packageFileName: string;
             zipBuffer: Buffer;
             manifestJsonText: string;
             changelogMarkdown: string;
+            historyJsonText: string;
           }
         | undefined;
 
@@ -691,15 +769,19 @@ async function startServer() {
           version,
           channel,
           summary: body.summary?.trim() || `تحديث بيانات UMEDT v${version}`,
-          privateKeyPem: body.privateKeyPem,
-          publicKeyPem: body.publicKeyPem
+          privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
+          publicKeyPem: body.publicKeyPem?.trim() || process.env.VITE_UMED_PUBLIC_KEY_PEM,
+          allowOverwrite: Boolean(body.allowOverwrite)
         });
         releaseArtifacts = {
           channel,
+          version,
+          sha256: built.manifest.sha256,
           packageFileName: built.packageFileName,
           zipBuffer: built.zipBuffer,
           manifestJsonText: built.manifestJsonText,
-          changelogMarkdown: built.changelogMarkdown
+          changelogMarkdown: built.changelogMarkdown,
+          historyJsonText: JSON.stringify(built.historyList, null, 2)
         };
       }
 
@@ -713,8 +795,20 @@ async function startServer() {
         token,
         commitMessage,
         includeWorkflowUpgrade: body.includeWorkflowUpgrade !== false,
-        releaseArtifacts
+        releaseArtifacts,
+        allowOverwrite: Boolean(body.allowOverwrite)
       });
+
+      // Keep local disk data/ synchronized after successful remote commit
+      await publishLocalReleaseToDisk({
+        state,
+        version,
+        channel,
+        summary: body.summary?.trim() || `تحديث بيانات UMEDT v${version}`,
+        privateKeyPem: body.privateKeyPem?.trim() || process.env.UMED_PUBLISHER_PRIVATE_KEY_PEM,
+        publicKeyPem: body.publicKeyPem?.trim() || process.env.VITE_UMED_PUBLIC_KEY_PEM,
+        allowOverwrite: true
+      }).catch(() => undefined);
 
       state.meta.dataVersion = version;
       state.meta.lastPublishedAt = new Date().toISOString();
@@ -728,7 +822,7 @@ async function startServer() {
       });
     } catch (err) {
       res.status(500).json({
-        error: err instanceof Error ? err.message : 'فشل النشر إلى مستودع UMEDT_DATA'
+        error: err instanceof Error ? err.message : 'فشل النشر إلى مستودع UMEDT-DATA'
       });
     }
   });
