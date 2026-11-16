@@ -860,7 +860,8 @@ export function rollbackChannelRelease(
     author: 'UMEDT Data Hub (Rollback)',
     counts: target.counts,
     extendedCounts: target.extendedCounts,
-    filesSha256: target.filesSha256
+    filesSha256: target.filesSha256,
+    assetsSha256: target.assetsSha256
   };
 
   // Reorder history so restored version is at top without deleting newer entries for audit
