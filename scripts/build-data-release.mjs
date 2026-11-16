@@ -220,7 +220,7 @@ if (!Array.isArray(history)) throw new Error('Release history must be a JSON arr
 const historyRecord = {
   version:targetVersion,channel,releasedAt:now,packageFileName:packageName,sha256:digest,
   packageSizeKb,signed:true,signature:manifest.signature,keyFingerprint,summary:manifest.description,
-  counts:countsLegacy,extendedCounts:counts,filesSha256,changedDomains
+  counts:countsLegacy,extendedCounts:counts,filesSha256,assetsSha256:mediaSha256,changedDomains
 };
 const nextHistory = [historyRecord,...history.filter((item)=>item.version!==targetVersion)].slice(0,30);
 const oldChangelog = fs.existsSync(changelogPath) ? fs.readFileSync(changelogPath,'utf8') : '# UMEDT-DATA Changelog\n';
