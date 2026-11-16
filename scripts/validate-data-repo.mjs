@@ -46,8 +46,10 @@ function readZipEntries(buffer) {
   }
   if (eocd < 0) throw new Error('ZIP end-of-central-directory record not found');
   const total = view.getUint16(eocd + 10, true);
+  if (total > 64) throw new Error('ZIP entry count exceeds UMEDT limit (64)');
   let cursor = view.getUint32(eocd + 16, true);
   const entries = new Map();
+  let totalUncompressed = 0;
   for (let index = 0; index < total; index++) {
     if (view.getUint32(cursor, true) !== 0x02014b50) throw new Error('Invalid ZIP central directory');
     const method = view.getUint16(cursor + 10, true);
@@ -63,6 +65,11 @@ function readZipEntries(buffer) {
     if (!name || name.startsWith('/') || name.split('/').includes('..') || /^[A-Za-z]:/.test(name)) {
       throw new Error('Unsafe ZIP entry path: ' + name);
     }
+    if (name.split('/').length > 4) throw new Error('ZIP entry path depth exceeds UMEDT limit: ' + name);
+    if (uncompressedSize > 20 * 1024 * 1024) throw new Error('ZIP entry exceeds UMEDT per-file limit: ' + name);
+    totalUncompressed += uncompressedSize;
+    if (totalUncompressed > 50 * 1024 * 1024) throw new Error('ZIP archive exceeds UMEDT total extraction limit');
+    if (compressedSize > 0 && uncompressedSize > 2048 && uncompressedSize / compressedSize > 80) throw new Error('ZIP compression ratio exceeds UMEDT limit: ' + name);
     if (view.getUint32(localOffset, true) !== 0x04034b50) throw new Error('Invalid local ZIP header: ' + name);
     const localNameLength = view.getUint16(localOffset + 26, true);
     const localExtraLength = view.getUint16(localOffset + 28, true);
@@ -197,10 +204,23 @@ if (!skipRelease && manifest) {
     try {
       const entries = readZipEntries(bytes);
       for (const fileName of Object.values(FILES)) {
-        if (!entries.has('data/master/' + fileName)) fail('Release ZIP missing data/master/' + fileName);
+        const entryName = 'data/master/' + fileName;
+        if (!entries.has(entryName)) fail('Release ZIP missing ' + entryName);
+        else {
+          try {
+            const zippedArray = JSON.parse(entries.get(entryName).toString('utf8'));
+            if (!Array.isArray(zippedArray) || sha256(Buffer.from(JSON.stringify(zippedArray, null, 2), 'utf8')) !== fileHashes[fileName]) {
+              fail('Release ZIP collection content/hash mismatch: ' + entryName);
+            }
+          } catch (error) { fail('Invalid JSON in release ZIP ' + entryName + ': ' + error.message); }
+        }
       }
       for (const asset of data.mediaAssets || []) {
-        if (asset.relativePath?.startsWith('data/media/') && !entries.has(asset.relativePath)) fail('Release ZIP missing media asset ' + asset.relativePath);
+        if (asset.relativePath?.startsWith('data/media/')) {
+          if (!entries.has(asset.relativePath)) fail('Release ZIP missing media asset ' + asset.relativePath);
+          else if (sha256(entries.get(asset.relativePath)) !== asset.sha256) fail('Release ZIP media SHA-256 mismatch: ' + asset.relativePath);
+          if (manifest.assetsSha256?.[asset.relativePath] !== asset.sha256) fail('Manifest assetsSha256 mismatch: ' + asset.relativePath);
+        }
       }
       if (!entries.has('data/catalog.json')) fail('Release ZIP missing data/catalog.json');
       if (!entries.has('manifest.json')) fail('Release ZIP missing inner manifest.json');
