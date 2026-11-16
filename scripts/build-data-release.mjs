@@ -91,7 +91,7 @@ function verifyZip(bytes) {
 
 const oldManifest = fs.existsSync(manifestPath) ? readJson('data/releases/'+channel+'/manifest.json') : {};
 const floorPath = path.join(outputDir, 'version-floor.json');
-const versionFloor = fs.existsSync(floorPath) ? String(readJson('data/releases/'+channel+'/version-floor.json').dataVersion || '') : '';
+const floorVersion = fs.existsSync(floorPath) ? String(readJson('data/releases/'+channel+'/version-floor.json').dataVersion || '') : '';
 const parseVersion = (value) => {
   const match = String(value || '').match(/^(\d+)\.(\d+)\.(\d+)(?:-[a-z0-9.-]+)?$/i);
   return match ? match.slice(1,4).map(Number) : null;
@@ -102,7 +102,7 @@ const compareVersion = (left, right) => {
   for (let i=0;i<3;i++) if (a[i] !== b[i]) return a[i] - b[i];
   return 0;
 };
-const highestVersion = versionFloor && compareVersion(versionFloor, currentVersion) > 0 ? versionFloor : currentVersion;
+const highestVersion = floorVersion && compareVersion(floorVersion, currentVersion) > 0 ? floorVersion : currentVersion;
 const targetVersion = readArg('--version') || (() => {
   const match = highestVersion.match(/^(\d+)\.(\d+)\.(\d+)(?:-[a-z0-9.-]+)?$/i);
   if (!match) throw new Error('Cannot auto-increment current data version: '+highestVersion);
