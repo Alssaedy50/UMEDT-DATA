@@ -6,9 +6,6 @@ on:
     paths:
       - 'data/master/**'
       - 'data/media/**'
-      - 'data/catalog.json'
-      - 'docs/schemas/**'
-      - 'docs/UMEDT-DATA-API-CONTRACT.md'
   workflow_dispatch:
     inputs:
       channel:
