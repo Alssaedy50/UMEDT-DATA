@@ -217,6 +217,42 @@ export function saveWorkspaceState(state: WorkspaceDataState): WorkspaceDataStat
   return state;
 }
 
+function writeFilesAtomically(files: Array<{ filePath: string; content: string | Buffer }>): void {
+  const staged = files.map((file) => {
+    fs.mkdirSync(path.dirname(file.filePath), { recursive: true });
+    const tempPath = `${file.filePath}.${process.pid}.${Date.now()}.${Math.random().toString(16).slice(2)}.tmp`;
+    return {
+      ...file,
+      tempPath,
+      previous: fs.existsSync(file.filePath) ? fs.readFileSync(file.filePath) : null
+    };
+  });
+  try {
+    for (const file of staged) {
+      fs.writeFileSync(file.tempPath, file.content, { flag: 'wx' });
+    }
+    for (const file of staged) {
+      fs.renameSync(file.tempPath, file.filePath);
+    }
+  } catch (error) {
+    for (const file of staged) {
+      try {
+        if (fs.existsSync(file.tempPath)) fs.unlinkSync(file.tempPath);
+        if (file.previous) {
+          const restorePath = `${file.filePath}.${process.pid}.restore.tmp`;
+          fs.writeFileSync(restorePath, file.previous);
+          fs.renameSync(restorePath, file.filePath);
+        } else if (fs.existsSync(file.filePath)) {
+          fs.unlinkSync(file.filePath);
+        }
+      } catch {
+        // Best-effort restoration; the original exception remains authoritative.
+      }
+    }
+    throw error;
+  }
+}
+
 export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<string, string> {
   ensureCacheDirs();
   const files: Record<string, unknown> = {
@@ -234,31 +270,30 @@ export function writeMasterFilesToRepoDisk(state: WorkspaceDataState): Record<st
   };
 
   const hashes: Record<string, string> = {};
-  for (const [name, payload] of Object.entries(files)) {
+  const stagedFiles = Object.entries(files).map(([name, payload]) => {
     const jsonText = JSON.stringify(payload, null, 2);
-    fs.writeFileSync(path.join(DATA_MASTER_DIR, name), jsonText, 'utf8');
     hashes[name] = crypto.createHash('sha256').update(jsonText).digest('hex');
-  }
+    return { filePath: path.join(DATA_MASTER_DIR, name), content: jsonText };
+  });
+  writeFilesAtomically(stagedFiles);
   return hashes;
 }
 
 export function writeCatalogAndDocsToRepoDisk(state: WorkspaceDataState): void {
   ensureCacheDirs();
   const catalog = buildDataCatalogDocument(state, state.meta.dataRepo);
-  fs.writeFileSync(
-    path.join(DATA_DIR, 'catalog.json'),
-    JSON.stringify(catalog, null, 2),
-    'utf8'
-  );
+  const stagedDocs: Array<{ filePath: string; content: string }> = [
+    { filePath: path.join(DATA_DIR, 'catalog.json'), content: JSON.stringify(catalog, null, 2) }
+  ];
   const schemas = generateJsonSchemaFiles();
   for (const [relPath, content] of Object.entries(schemas)) {
-    fs.writeFileSync(path.resolve(REPO_ROOT, relPath), content, 'utf8');
+    stagedDocs.push({ filePath: path.resolve(REPO_ROOT, relPath), content });
   }
-  fs.writeFileSync(
-    path.resolve(REPO_ROOT, 'docs', 'UMEDT-DATA-API-CONTRACT.md'),
-    generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main'),
-    'utf8'
-  );
+  stagedDocs.push({
+    filePath: path.resolve(REPO_ROOT, 'docs', 'UMEDT-DATA-API-CONTRACT.md'),
+    content: generateApiContractMarkdown(state.meta.dataRepo, state.meta.branch || 'main')
+  });
+  writeFilesAtomically(stagedDocs);
 }
 
 export function loadReleaseHistory(channel: 'stable' | 'beta'): ReleaseHistoryRecord[] {
