@@ -334,6 +334,22 @@ export function validateWorkspaceData(state: WorkspaceDataState): ValidationRepo
         messageAr: `امتداد ملف مرفوض أمنياً: ${asset.fileName}`
       });
     }
+    if (ext === '.svg' && asset.mimeType !== 'image/svg+xml') {
+      errors.push({
+        severity: 'error',
+        domain: 'mediaAssets',
+        recordId: asset.id,
+        messageAr: `يجب أن يكون MIME type لملف SVG هو image/svg+xml: ${asset.fileName}`
+      });
+    }
+    if (ext === '.svg' && asset.sizeBytes > 2 * 1024 * 1024) {
+      errors.push({
+        severity: 'error',
+        domain: 'mediaAssets',
+        recordId: asset.id,
+        messageAr: `حجم SVG يتجاوز الحد الآمن البالغ 2 MB: ${asset.fileName}`
+      });
+    }
     if (
       asset.linkedEntityType === 'topic' &&
       asset.linkedEntityId &&
