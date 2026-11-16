@@ -57,7 +57,7 @@ function createZip(entries) {
     central.writeUInt16LE(nameBytes.length,28); central.writeUInt16LE(0,30); central.writeUInt16LE(0,32);
     central.writeUInt16LE(0,34); central.writeUInt16LE(0,36); central.writeUInt32LE(0,38); central.writeUInt32LE(offset,42);
     nameBytes.copy(central,46); centralParts.push(central);
-    offset += local.length + nameBytes.length + compressed.length;
+    offset += local.length + compressed.length;
   }
   const centralBuffer = Buffer.concat(centralParts);
   const localBuffer = Buffer.concat(localParts);
