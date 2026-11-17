@@ -460,5 +460,23 @@
     "pageCount": 2,
     "createdAt": "2026-11-16T19:53:11.130Z",
     "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "img-bp-classification-01",
+    "fileName": "blood-pressure-classification.svg",
+    "relativePath": "data/media/9d7ff00165c9-blood-pressure-classification.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 2210,
+    "sha256": "9d7ff00165c9f76517a440f592810988fe5960015b3f01fba2f10258924ee41f",
+    "linkedEntityType": "topic",
+    "linkedEntityId": "topic-blood-pressure-2026-01",
+    "captionAr": "جدول بصري خفيف لتصنيف ضغط الدم لدى البالغين وفق ACC/AHA.",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/9d7ff00165c9-blood-pressure-classification.svg",
+    "createdAt": "2026-11-17T00:00:00.000Z",
+    "updatedAt": "2026-11-17T00:00:00.000Z",
+    "downloadable": true,
+    "width": 960,
+    "height": 560
   }
 ]
