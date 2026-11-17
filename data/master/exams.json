@@ -58,5 +58,40 @@
     ],
     "publishedAt": "2026-11-16T19:53:11.130Z",
     "updatedAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "exam-blood-pressure-2026-01",
+    "titleEn": "Blood Pressure: Core Physiology & Clinical Assessment",
+    "titleAr": "اختبار ضغط الدم: الفيزيولوجيا والتقييم السريري",
+    "descriptionEn": "Eight single-best-answer questions covering BP physiology, classification, measurement, hypertension, and orthostatic hypotension.",
+    "descriptionAr": "ثمانية أسئلة اختيار من متعدد تغطي فيزيولوجيا ضغط الدم وتصنيفه وقياسه وارتفاعه وهبوطه الانتصابي.",
+    "examType": "subject_quiz",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "questionIds": [
+      "q-bp-001",
+      "q-bp-002",
+      "q-bp-003",
+      "q-bp-004",
+      "q-bp-005",
+      "q-bp-006",
+      "q-bp-007",
+      "q-bp-008"
+    ],
+    "durationMinutes": 10,
+    "passingScorePercent": 70,
+    "totalPoints": 8,
+    "shuffleQuestions": true,
+    "difficulty": "medium",
+    "tags": [
+      "blood-pressure",
+      "cardiology",
+      "physiology",
+      "measurement",
+      "hypertension"
+    ],
+    "publishedAt": "2026-11-17T00:00:00.000Z",
+    "updatedAt": "2026-11-17T00:00:00.000Z"
   }
 ]
