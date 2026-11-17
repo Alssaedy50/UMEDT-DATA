@@ -478,5 +478,23 @@
     "downloadable": true,
     "width": 960,
     "height": 560
+  },
+  {
+    "id": "img-bp-measurement-02",
+    "fileName": "bp-measurement.svg",
+    "relativePath": "data/media/0926e42f40b0-bp-measurement.svg",
+    "mediaType": "diagram",
+    "mimeType": "image/svg+xml",
+    "sizeBytes": 2272,
+    "sha256": "0926e42f40b0736f3f6ee4642cd2bbc6f8457f9e03f47f6cede367e564b4d993",
+    "linkedEntityType": "topic",
+    "linkedEntityId": "topic-blood-pressure-2026-01",
+    "captionAr": "رسم يوضح وضعية المريض الصحيحة وموضع كُم قياس ضغط الدم.",
+    "rawUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/0926e42f40b0-bp-measurement.svg",
+    "createdAt": "2026-11-17T00:00:00.000Z",
+    "updatedAt": "2026-11-17T00:00:00.000Z",
+    "downloadable": true,
+    "width": 960,
+    "height": 480
   }
 ]
