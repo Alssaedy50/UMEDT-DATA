@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.17-cardiovascular-histology",
+  "catalogVersion": "2026.11.17-cvh-assessment-expansion",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-17T18:00:00.000Z",
+  "generatedAt": "2026-11-17T20:00:00.000Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
@@ -466,9 +466,9 @@
       "apiPath": "/api/v1/collections/questions",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/question",
       "primaryKey": "id",
-      "recordCount": 48,
-      "sha256": "4134c3cd6f256405ec33523931e298c2526811b5a6c30e98e1a34eaa2ec2b880",
-      "sizeBytes": 42688,
+      "recordCount": 352,
+      "sha256": "b953d6b2ad4c9adb9a999781d7b10959367d8dc23aa22db16658dbaedc5d5876",
+      "sizeBytes": 312990,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "userAttempts",
@@ -494,7 +494,7 @@
         "type",
         "difficulty"
       ],
-      "updatedAt": "2026-11-17T00:00:00.000Z"
+      "updatedAt": "2026-11-17T20:00:00.000Z"
     },
     {
       "id": "exams",
@@ -508,9 +508,9 @@
       "apiPath": "/api/v1/collections/exams",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/exam",
       "primaryKey": "id",
-      "recordCount": 5,
-      "sha256": "fa3bc8c47080c4839ad069dec05f973fea8d8d9e8dcef889eb621627fb581452",
-      "sizeBytes": 5311,
+      "recordCount": 49,
+      "sha256": "cd3321f380e58f40bb574277365c5ddb2a8df8c0675c03000d3ea2aa593b8336",
+      "sizeBytes": 64071,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "examAttempts",
@@ -537,7 +537,7 @@
         "examType",
         "difficulty"
       ],
-      "updatedAt": "2026-11-17T00:00:00.000Z"
+      "updatedAt": "2026-11-17T20:00:00.000Z"
     },
     {
       "id": "mediaAssets",
