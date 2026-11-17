@@ -6,7 +6,7 @@
   "arabicPolicy": "Arabic is limited to term translations and supplementary explanations.",
   "minimumUniqueTerms": 5000,
   "termCount": 5001,
-  "topicCount": 18,
+  "topicCount": 38,
   "topicIds": [
     "cvh-01",
     "cvh-02",
@@ -25,9 +25,29 @@
     "cvh-15",
     "cvh-16",
     "cvh-17",
-    "cvh-18"
+    "cvh-18",
+    "cvh-19",
+    "cvh-20",
+    "cvh-21",
+    "cvh-22",
+    "cvh-23",
+    "cvh-24",
+    "cvh-25",
+    "cvh-26",
+    "cvh-27",
+    "cvh-28",
+    "cvh-29",
+    "cvh-30",
+    "cvh-31",
+    "cvh-32",
+    "cvh-33",
+    "cvh-34",
+    "cvh-35",
+    "cvh-36",
+    "cvh-37",
+    "cvh-38"
   ],
-  "questionCount": 10,
+  "questionCount": 30,
   "examId": "exam-cvh-comprehensive-01",
   "coverage": [
     "Foundations of Histology and Microscopy",
@@ -51,5 +71,9 @@
   ],
   "editorialNote": "The glossary contains 5,000 unique context-specific compound histology entries plus one retained UMEDT live-sync test record. These compounds combine named cardiovascular histological structures with anatomical compartments and should not be mistaken for 5,000 independent standardized canonical headwords. The course topics provide the core syllabus; an institution-specific lecture checklist and faculty review are still required before claiming exhaustive coverage of a particular university's curriculum.",
   "createdAt": "2026-11-17",
-  "actualUniqueTerms": 5001
+  "actualUniqueTerms": 5001,
+  "examIds": [
+    "exam-cvh-comprehensive-01",
+    "exam-cvh-advanced-spotter-01"
+  ]
 }
