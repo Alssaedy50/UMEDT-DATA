@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.0-umd",
+  "catalogVersion": "2026.11.1-umd-sync-test",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-16T19:53:53.645Z",
+  "generatedAt": "2026-11-17T00:00:00.000Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
@@ -277,9 +277,9 @@
       "apiPath": "/api/v1/collections/terms",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/term",
       "primaryKey": "id",
-      "recordCount": 1650,
-      "sha256": "6cc5a7c5bf4c5f960903e69312a9a086c6e7fca654735a92443bc237e412a553",
-      "sizeBytes": 1825596,
+      "recordCount": 1,
+      "sha256": "38731a411fa3b3579196d69780fe563c30993d9a70e63c154ac3fdaafe8d59ba",
+      "sizeBytes": 1202,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -306,7 +306,7 @@
         "specialty",
         "linkedBlockIds"
       ],
-      "updatedAt": "2026-11-16T19:53:53.645Z"
+      "updatedAt": "2026-11-17T00:00:00.000Z"
     },
     {
       "id": "sentences",
