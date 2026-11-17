@@ -1809,5 +1809,155 @@
     "subjectId": "subj-parasitology",
     "titleEn": "08. Comprehensive Parasitology Assessment: 22 High-Yield MCQs & Rapid Viva",
     "titleAr": "اختبار شامل للطفيليات العملية — 22 سؤال MCQ و Rapid Viva"
+  },
+  {
+    "id": "topic-blood-pressure-2026-01",
+    "title": "ضغط الدم: الفيزيولوجيا والقياس وارتفاع وانخفاض الضغط",
+    "subtitle": "Blood Pressure: Physiology, Measurement, Hypertension & Hypotension",
+    "category": "Medical",
+    "author": "UMEDT Medical Learning",
+    "publishedAt": "2026-11-17",
+    "readingTimeMinutes": 12,
+    "favorite": false,
+    "sections": [
+      {
+        "id": "bp-sec-01",
+        "heading": "1. Definition and Basic Concepts | التعريف والمفاهيم الأساسية",
+        "paragraphs": [
+          "Blood pressure (BP) is the lateral force exerted by circulating blood on the walls of blood vessels. In clinical practice, it is usually measured in the brachial artery and expressed in millimetres of mercury (mmHg).",
+          "يُكتب ضغط الدم برقمين: Systolic Blood Pressure (SBP) وهو الضغط أثناء انقباض البطينين، وDiastolic Blood Pressure (DBP) وهو الضغط أثناء ارتخاء القلب وامتلائه. مثال: 120/80 mmHg.",
+          "Pulse Pressure (PP) = SBP − DBP. Mean Arterial Pressure (MAP) is approximately DBP + 1/3(PP) at a normal resting heart rate; it represents the average driving pressure for organ perfusion."
+        ]
+      },
+      {
+        "id": "bp-sec-02",
+        "heading": "2. Hemodynamic Regulation | التنظيم الديناميكي الدموي",
+        "paragraphs": [
+          "A useful relationship is: Blood Pressure ≈ Cardiac Output (CO) × Total Peripheral Resistance (TPR). Cardiac Output = Heart Rate × Stroke Volume.",
+          "يرتفع الضغط عندما يزداد Cardiac Output أو Total Peripheral Resistance. تتحكم الكلى في حجم السوائل والصوديوم، بينما ينظم Sympathetic Nervous System قطر الأوعية ومعدل القلب. ويساهم Renin–Angiotensin–Aldosterone System (RAAS) في تنظيم ضغط الدم وحجم الدم.",
+          "Arterial baroreceptors in the carotid sinus and aortic arch detect stretch and rapidly modify autonomic outflow. Long-term regulation depends strongly on renal sodium and water balance."
+        ]
+      },
+      {
+        "id": "bp-sec-03",
+        "heading": "3. Adult BP Categories | تصنيف ضغط الدم لدى البالغين",
+        "paragraphs": [
+          "The following table uses the ACC/AHA adult categories. If systolic and diastolic values fall into different categories, classify the patient in the higher category.",
+          "NORMAL: SBP <120 AND DBP <80 mmHg. | ELEVATED: SBP 120–129 AND DBP <80 mmHg. | STAGE 1 HYPERTENSION: SBP 130–139 OR DBP 80–89 mmHg. | STAGE 2 HYPERTENSION: SBP ≥140 OR DBP ≥90 mmHg. | SEVERE RANGE: SBP >180 AND/OR DBP >120 mmHg.",
+          "مهم: هذه فئات تصنيف ACC/AHA وليست بديلاً عن معايير تأكيد التشخيص. تعرف WHO ارتفاع ضغط الدم لدى البالغين عادةً بقراءات ≥140 systolic و/أو ≥90 diastolic في يومين مختلفين. تختلف العتبات بين الإرشادات."
+        ]
+      },
+      {
+        "id": "bp-sec-04",
+        "heading": "4. Accurate Measurement | الطريقة الصحيحة لقياس الضغط",
+        "paragraphs": [
+          "Use a validated upper-arm device and the correct cuff size. Avoid smoking, caffeine and exercise for at least 30 minutes; empty the bladder; then sit quietly for 5 minutes.",
+          "اجعل الظهر مسنوداً، والقدمين مستويتين على الأرض، والساقين غير متقاطعتين. يوضع الكُم على الذراع العارية، ويُسند الذراع عند مستوى القلب. لا تتحدث أثناء القياس.",
+          "Take at least two readings about one minute apart and record them. For home monitoring, take readings consistently at the times advised by the clinician. A cuff that is too small may produce a falsely high reading; one that is too large may produce a falsely low reading.",
+          "In the auscultatory method, the first Korotkoff sound (Phase I) indicates SBP; disappearance of sounds (Phase V) usually indicates DBP in adults."
+        ]
+      },
+      {
+        "id": "bp-sec-05",
+        "heading": "5. Hypertension | ارتفاع ضغط الدم",
+        "paragraphs": [
+          "Hypertension is persistent elevation of arterial blood pressure. Primary (essential) hypertension has no single identifiable cause and is multifactorial. Secondary hypertension results from an identifiable condition such as renal disease, primary aldosteronism, obstructive sleep apnoea, or certain medications.",
+          "Risk factors include increasing age, family history, excess dietary sodium, obesity, physical inactivity, tobacco exposure, excess alcohol intake, diabetes and chronic kidney disease.",
+          "غالباً يكون Hypertension asymptomatic؛ لذلك لا ينفي غياب الصداع أو الدوار وجود المرض. يعتمد التشخيص على قياسات صحيحة ومتكررة، وقد يُستخدم Home BP Monitoring أو Ambulatory BP Monitoring لتأكيده واستبعاد White-Coat Hypertension."
+        ]
+      },
+      {
+        "id": "bp-sec-06",
+        "heading": "6. Complications and Management | المضاعفات والتدبير",
+        "paragraphs": [
+          "Persistent uncontrolled hypertension damages target organs: heart (left ventricular hypertrophy, coronary disease and heart failure), brain (stroke), kidneys (chronic kidney disease), retina (hypertensive retinopathy) and blood vessels.",
+          "Lifestyle measures include reducing dietary sodium, a balanced DASH-style dietary pattern, regular physical activity, weight management, stopping tobacco, limiting alcohol and adequate sleep.",
+          "Medication classes commonly used include thiazide/thiazide-like diuretics, ACE inhibitors, ARBs and calcium-channel blockers. Selection depends on age, comorbidities, pregnancy status, kidney function, contraindications and local guidelines; treatment must be individualized by a qualified clinician."
+        ]
+      },
+      {
+        "id": "bp-sec-07",
+        "heading": "7. Hypotension and Orthostatic Hypotension | انخفاض الضغط وهبوط الضغط الانتصابي",
+        "paragraphs": [
+          "Hypotension is often described as BP below 90/60 mmHg, but clinical significance depends on symptoms, baseline BP and perfusion. Causes include dehydration, blood loss, sepsis, cardiac dysfunction and medications.",
+          "Orthostatic hypotension is conventionally defined as a sustained fall in SBP of at least 20 mmHg or DBP of at least 10 mmHg within 3 minutes of standing. It may cause dizziness, blurred vision, weakness or syncope.",
+          "قيّم الأعراض والسياق السريري، ولا تعتمد على رقم منفرد. الإغماء، ألم الصدر، ضيق النفس، الارتباك أو علامات الصدمة تستدعي تقييماً عاجلاً."
+        ]
+      },
+      {
+        "id": "bp-sec-08",
+        "heading": "8. Hypertensive Crisis: Safety Alert | الارتفاع الشديد والتنبيه السريري",
+        "paragraphs": [
+          "A reading above 180 systolic and/or 120 diastolic is a severe range. Repeat the measurement after at least one minute using correct technique. If it remains very high, contact a healthcare professional urgently.",
+          "If severe BP is accompanied by chest pain, shortness of breath, weakness or numbness, vision change, difficulty speaking, confusion or other evidence of acute target-organ injury, treat it as a medical emergency and seek emergency care immediately. Do not attempt rapid self-treatment."
+        ]
+      },
+      {
+        "id": "bp-sec-09",
+        "heading": "9. Clinical Application | تطبيق سريري سريع",
+        "paragraphs": [
+          "A 52-year-old adult has repeated office readings of 146/92 mmHg on separate visits. The systolic value is ≥140 and the diastolic value is ≥90; this is in the Stage 2 range by ACC/AHA categories and meets the WHO threshold for hypertension if confirmed on two different days.",
+          "Clinical reasoning: verify measurement technique, review home or ambulatory readings when appropriate, assess cardiovascular risk and target-organ disease, investigate possible secondary causes when indicated, and develop an individualized management plan."
+        ]
+      },
+      {
+        "id": "bp-sec-10",
+        "heading": "10. High-Yield Review | خلاصة للمراجعة",
+        "paragraphs": [
+          "SBP = ventricular contraction; DBP = ventricular relaxation. BP ≈ CO × TPR. PP = SBP − DBP. MAP ≈ DBP + 1/3(PP).",
+          "Correct cuff size and patient positioning are essential. Hypertension is commonly silent. Confirm elevated readings with repeated standardized measurements. Remember the distinction between ACC/AHA classification categories and WHO diagnostic confirmation threshold."
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": "img-bp-classification-01",
+        "url": "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22960%22%20height%3D%22560%22%20viewBox%3D%220%200%20960%20560%22%3E%0A%3Crect%20width%3D%22960%22%20height%3D%22560%22%20rx%3D%2226%22%20fill%3D%22%23f8fafc%22%2F%3E%0A%3Ctext%20x%3D%22480%22%20y%3D%2258%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22700%22%20fill%3D%22%230f172a%22%3EADULT%20BLOOD%20PRESSURE%20CLASSIFICATION%3C%2Ftext%3E%0A%3Ctext%20x%3D%22480%22%20y%3D%2291%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2218%22%20fill%3D%22%23475569%22%3EACC%2FAHA%20categories%20%E2%80%A2%20mmHg%20%E2%80%A2%20Either%20number%20can%20determine%20the%20higher%20category%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%22122%22%20width%3D%22864%22%20height%3D%2266%22%20rx%3D%2212%22%20fill%3D%22%23dcfce7%22%2F%3E%0A%3Ctext%20x%3D%2278%22%20y%3D%22163%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22700%22%20fill%3D%22%23166534%22%3ENORMAL%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22163%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%2314532d%22%3ESBP%20%26lt%3B120%20AND%20DBP%20%26lt%3B80%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%22202%22%20width%3D%22864%22%20height%3D%2266%22%20rx%3D%2212%22%20fill%3D%22%23dbeafe%22%2F%3E%0A%3Ctext%20x%3D%2278%22%20y%3D%22243%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22700%22%20fill%3D%22%231d4ed8%22%3EELEVATED%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22243%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%231e3a8a%22%3ESBP%20120%E2%80%93129%20AND%20DBP%20%26lt%3B80%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%22282%22%20width%3D%22864%22%20height%3D%2266%22%20rx%3D%2212%22%20fill%3D%22%23fef3c7%22%2F%3E%0A%3Ctext%20x%3D%2278%22%20y%3D%22323%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22700%22%20fill%3D%22%2392400e%22%3ESTAGE%201%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22323%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%2378350f%22%3ESBP%20130%E2%80%93139%20OR%20DBP%2080%E2%80%9389%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%22362%22%20width%3D%22864%22%20height%3D%2266%22%20rx%3D%2212%22%20fill%3D%22%23ffedd5%22%2F%3E%0A%3Ctext%20x%3D%2278%22%20y%3D%22403%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22700%22%20fill%3D%22%239a3412%22%3ESTAGE%202%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22403%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%237c2d12%22%3ESBP%20%E2%89%A5140%20OR%20DBP%20%E2%89%A590%3C%2Ftext%3E%0A%3Crect%20x%3D%2248%22%20y%3D%22442%22%20width%3D%22864%22%20height%3D%2266%22%20rx%3D%2212%22%20fill%3D%22%23fee2e2%22%2F%3E%0A%3Ctext%20x%3D%2278%22%20y%3D%22483%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2223%22%20font-weight%3D%22700%22%20fill%3D%22%23991b1b%22%3ESEVERE%20RANGE%3C%2Ftext%3E%3Ctext%20x%3D%22410%22%20y%3D%22483%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20fill%3D%22%237f1d1d%22%3ESBP%20%26gt%3B180%20AND%2FOR%20DBP%20%26gt%3B120%3C%2Ftext%3E%0A%3Ctext%20x%3D%22480%22%20y%3D%22540%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2215%22%20fill%3D%22%23475569%22%3EGuideline%20categories%20are%20not%20identical%20to%20WHO%20diagnostic%20confirmation%20criteria.%3C%2Ftext%3E%0A%3C%2Fsvg%3E",
+        "caption": "Adult blood pressure categories (ACC/AHA). A compact visual table in SVG format.",
+        "fileName": "blood-pressure-classification.svg",
+        "mimeType": "image/svg+xml",
+        "sizeBytes": 2196,
+        "externalUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/blood-pressure-classification.svg"
+      }
+    ],
+    "links": [
+      {
+        "id": "bp-link-who",
+        "title": "WHO — Hypertension Fact Sheet",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/hypertension",
+        "description": "تعريف ارتفاع ضغط الدم ومعايير التشخيص والمخاطر والوقاية والعلاج."
+      },
+      {
+        "id": "bp-link-video",
+        "title": "AHA Video — Blood Pressure Done Right",
+        "url": "https://www.youtube.com/watch?v=TLiD3vh_X8o",
+        "description": "فيديو تعليمي قصير من American Heart Association حول القياس المنزلي الصحيح."
+      },
+      {
+        "id": "bp-link-audio",
+        "title": "AHA House Calls — Monitoring Blood Pressure at Home (Audio/Podcast)",
+        "url": "https://www.heart.org/en/health-topics/house-calls/how-to-measure-your-blood-pressure-at-home",
+        "description": "مادة صوتية/بودكاست تعليمية من American Heart Association عن اختيار الجهاز وتقنية القياس المنزلي."
+      },
+      {
+        "id": "bp-link-measurement",
+        "title": "AHA Scientific Statement — Measurement of Blood Pressure in Humans",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11409525/",
+        "description": "مرجع علمي تفصيلي حول بروتوكول قياس ضغط الدم وأخطاء القياس."
+      }
+    ],
+    "attachments": [
+      {
+        "id": "bp-attachment-quickreview",
+        "fileName": "Blood_Pressure_Quick_Review.txt",
+        "fileType": "TEXT / STUDY SHEET",
+        "fileSizeLabel": "~1 KB",
+        "contentDataUrlOrText": "BLOOD PRESSURE — QUICK REVIEW\n\nSBP: ventricular systole.\nDBP: ventricular diastole.\nPP = SBP - DBP.\nMAP ≈ DBP + 1/3(PP).\nBP ≈ CO × TPR.\n\nACC/AHA adult categories:\nNormal: <120 AND <80 mmHg.\nElevated: 120–129 AND <80 mmHg.\nStage 1: 130–139 OR 80–89 mmHg.\nStage 2: ≥140 OR ≥90 mmHg.\nSevere range: >180 and/or >120 mmHg.\n\nWHO diagnosis: ≥140 systolic and/or ≥90 diastolic on two different days.\nOrthostatic hypotension: fall ≥20 SBP or ≥10 DBP within 3 minutes of standing.\n\nMeasurement: avoid caffeine, smoking and exercise for 30 min; empty bladder; rest 5 min; back supported; feet flat; arm at heart level; correct cuff; no talking; repeat readings."
+      }
+    ],
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "titleEn": "Blood Pressure: Physiology, Measurement, Hypertension & Hypotension",
+    "titleAr": "ضغط الدم: الفيزيولوجيا والقياس وارتفاع وانخفاض الضغط"
   }
 ]
