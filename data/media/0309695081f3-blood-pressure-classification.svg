@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+<rect width="960" height="560" rx="26" fill="#f8fafc"/>
+<text x="480" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">ADULT BLOOD PRESSURE CLASSIFICATION</text>
+<text x="480" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#475569">ACC/AHA categories • mmHg • Either number can determine the higher category</text>
+<rect x="48" y="122" width="864" height="66" rx="12" fill="#dcfce7"/>
+<text x="78" y="163" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#166534">NORMAL</text><text x="410" y="163" font-family="Arial,sans-serif" font-size="22" fill="#14532d">SBP &lt;120 AND DBP &lt;80</text>
+<rect x="48" y="202" width="864" height="66" rx="12" fill="#dbeafe"/>
+<text x="78" y="243" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#1d4ed8">ELEVATED</text><text x="410" y="243" font-family="Arial,sans-serif" font-size="22" fill="#1e3a8a">SBP 120–129 AND DBP &lt;80</text>
+<rect x="48" y="282" width="864" height="66" rx="12" fill="#fef3c7"/>
+<text x="78" y="323" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#92400e">STAGE 1</text><text x="410" y="323" font-family="Arial,sans-serif" font-size="22" fill="#78350f">SBP 130–139 OR DBP 80–89</text>
+<rect x="48" y="362" width="864" height="66" rx="12" fill="#ffedd5"/>
+<text x="78" y="403" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#9a3412">STAGE 2</text><text x="410" y="403" font-family="Arial,sans-serif" font-size="22" fill="#7c2d12">SBP ≥140 OR DBP ≥90</text>
+<rect x="48" y="442" width="864" height="66" rx="12" fill="#fee2e2"/>
+<text x="78" y="483" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#991b1b">SEVERE RANGE</text><text x="410" y="483" font-family="Arial,sans-serif" font-size="22" fill="#7f1d1d">SBP &gt;180 AND/OR DBP &gt;120</text>
+<text x="480" y="540" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#475569">Guideline categories are not identical to WHO diagnostic confirmation criteria.</text>
+</svg>
