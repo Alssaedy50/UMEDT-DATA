@@ -405,5 +405,317 @@
     "linkedTermIds": [],
     "difficulty": "medium",
     "createdAt": "2026-11-16T19:53:11.130Z"
+  },
+  {
+    "id": "q-bp-001",
+    "type": "single_choice",
+    "questionEn": "What does systolic blood pressure represent?",
+    "questionAr": "ماذا يمثل ضغط الدم الانقباضي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Arterial pressure during ventricular contraction",
+        "textAr": "ضغط الشرايين أثناء انقباض البطينين"
+      },
+      {
+        "key": "B",
+        "textEn": "Arterial pressure during ventricular relaxation",
+        "textAr": "ضغط الشرايين أثناء ارتخاء البطينين"
+      },
+      {
+        "key": "C",
+        "textEn": "Pressure in the right atrium",
+        "textAr": "الضغط في الأذين الأيمن"
+      },
+      {
+        "key": "D",
+        "textEn": "Venous pressure during inspiration",
+        "textAr": "الضغط الوريدي أثناء الشهيق"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "SBP is the peak arterial pressure generated during ventricular systole.",
+    "explanationAr": "SBP هو أعلى ضغط شرياني ويحدث أثناء انقباض البطينين.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "easy",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-002",
+    "type": "single_choice",
+    "questionEn": "Which value is classified as NORMAL by ACC/AHA adult categories?",
+    "questionAr": "أي قراءة تُصنّف طبيعية وفق فئات ACC/AHA للبالغين؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "128/76 mmHg",
+        "textAr": "128/76"
+      },
+      {
+        "key": "B",
+        "textEn": "118/78 mmHg",
+        "textAr": "118/78"
+      },
+      {
+        "key": "C",
+        "textEn": "132/84 mmHg",
+        "textAr": "132/84"
+      },
+      {
+        "key": "D",
+        "textEn": "145/92 mmHg",
+        "textAr": "145/92"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "Normal is SBP below 120 AND DBP below 80 mmHg.",
+    "explanationAr": "الطبيعي أقل من 120 انقباضياً وأقل من 80 انبساطياً معاً.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "easy",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-003",
+    "type": "single_choice",
+    "questionEn": "A BP of 134/86 mmHg falls into which ACC/AHA category?",
+    "questionAr": "قراءة ضغط 134/86 mmHg تقع ضمن أي تصنيف وفق ACC/AHA؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Normal",
+        "textAr": "طبيعي"
+      },
+      {
+        "key": "B",
+        "textEn": "Elevated",
+        "textAr": "مرتفع قليلاً"
+      },
+      {
+        "key": "C",
+        "textEn": "Stage 1 hypertension",
+        "textAr": "ارتفاع ضغط المرحلة الأولى"
+      },
+      {
+        "key": "D",
+        "textEn": "Stage 2 hypertension",
+        "textAr": "ارتفاع ضغط المرحلة الثانية"
+      }
+    ],
+    "correctOptionKeys": [
+      "C"
+    ],
+    "explanationEn": "Either SBP 130–139 or DBP 80–89 qualifies for Stage 1; the higher category applies.",
+    "explanationAr": "يكفي أن يكون SBP بين 130–139 أو DBP بين 80–89 لتصنيف المرحلة الأولى.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-004",
+    "type": "single_choice",
+    "questionEn": "Using a cuff that is too SMALL for the patient's arm may cause which error?",
+    "questionAr": "ما الخطأ المتوقع عند استخدام كُم أصغر من مقاس ذراع المريض؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Falsely low BP",
+        "textAr": "قراءة منخفضة كاذبة"
+      },
+      {
+        "key": "B",
+        "textEn": "Falsely high BP",
+        "textAr": "قراءة مرتفعة كاذبة"
+      },
+      {
+        "key": "C",
+        "textEn": "No effect on BP",
+        "textAr": "لا يؤثر في القراءة"
+      },
+      {
+        "key": "D",
+        "textEn": "Only lowers pulse rate",
+        "textAr": "يخفض معدل النبض فقط"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "A cuff that is too small tends to overestimate blood pressure.",
+    "explanationAr": "الكُم الصغير أكثر من اللازم قد يعطي قراءة أعلى من الضغط الحقيقي.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-005",
+    "type": "single_choice",
+    "questionEn": "In the adult auscultatory method, disappearance of Korotkoff sounds (Phase V) usually indicates:",
+    "questionAr": "في طريقة القياس بالسماعة لدى البالغين، اختفاء أصوات Korotkoff (Phase V) يدل عادةً على:",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Systolic BP",
+        "textAr": "الضغط الانقباضي"
+      },
+      {
+        "key": "B",
+        "textEn": "Diastolic BP",
+        "textAr": "الضغط الانبساطي"
+      },
+      {
+        "key": "C",
+        "textEn": "Pulse pressure",
+        "textAr": "ضغط النبض"
+      },
+      {
+        "key": "D",
+        "textEn": "Mean arterial pressure",
+        "textAr": "متوسط الضغط الشرياني"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "The first Korotkoff sound (Phase I) marks SBP; disappearance (Phase V) usually marks DBP in adults.",
+    "explanationAr": "ظهور الصوت الأول يحدد SBP، واختفاء الأصوات في Phase V يحدد DBP عادة لدى البالغين.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-006",
+    "type": "single_choice",
+    "questionEn": "Which change meets the conventional definition of orthostatic hypotension?",
+    "questionAr": "أي تغير يحقق التعريف التقليدي لهبوط الضغط الانتصابي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "SBP rises by 20 mmHg after standing",
+        "textAr": "ارتفاع SBP بمقدار 20"
+      },
+      {
+        "key": "B",
+        "textEn": "SBP falls by ≥20 mmHg within 3 minutes of standing",
+        "textAr": "انخفاض SBP بمقدار 20 أو أكثر خلال 3 دقائق من الوقوف"
+      },
+      {
+        "key": "C",
+        "textEn": "Heart rate falls by 5 beats/min",
+        "textAr": "انخفاض النبض 5 ضربات"
+      },
+      {
+        "key": "D",
+        "textEn": "DBP rises by 10 mmHg",
+        "textAr": "ارتفاع DBP بمقدار 10"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "Orthostatic hypotension is a sustained fall of ≥20 mmHg systolic or ≥10 mmHg diastolic within 3 minutes of standing.",
+    "explanationAr": "التعريف: انخفاض مستمر ≥20 mmHg في SBP أو ≥10 mmHg في DBP خلال 3 دقائق من الوقوف.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-007",
+    "type": "single_choice",
+    "questionEn": "According to WHO, hypertension in adults is generally diagnosed when BP is ≥140/90 mmHg on:",
+    "questionAr": "وفق WHO، يُشخّص ارتفاع ضغط الدم لدى البالغين عادةً عندما تكون القراءة ≥140/90 في:",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "One reading only",
+        "textAr": "قراءة واحدة فقط"
+      },
+      {
+        "key": "B",
+        "textEn": "Two different days",
+        "textAr": "يومين مختلفين"
+      },
+      {
+        "key": "C",
+        "textEn": "Only after exercise",
+        "textAr": "بعد التمرين فقط"
+      },
+      {
+        "key": "D",
+        "textEn": "A single standing measurement",
+        "textAr": "قياس واحد أثناء الوقوف"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "WHO confirmation uses elevated systolic and/or diastolic readings on two different days.",
+    "explanationAr": "تؤكد WHO التشخيص بوجود ارتفاع انقباضي و/أو انبساطي في يومين مختلفين.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "medium",
+    "createdAt": "2026-11-17T00:00:00.000Z"
+  },
+  {
+    "id": "q-bp-008",
+    "type": "single_choice",
+    "questionEn": "Which relationship best summarizes the main hemodynamic determinants of arterial blood pressure?",
+    "questionAr": "أي علاقة تلخص المحددات الديناميكية الدموية الرئيسية لضغط الدم الشرياني؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "BP ≈ Cardiac Output × Total Peripheral Resistance",
+        "textAr": "الضغط ≈ النتاج القلبي × المقاومة المحيطية الكلية"
+      },
+      {
+        "key": "B",
+        "textEn": "BP ≈ Respiratory Rate × Tidal Volume",
+        "textAr": "الضغط ≈ معدل التنفس × الحجم الجاري"
+      },
+      {
+        "key": "C",
+        "textEn": "BP ≈ Hemoglobin × Platelet Count",
+        "textAr": "الضغط ≈ الهيموغلوبين × الصفائح"
+      },
+      {
+        "key": "D",
+        "textEn": "BP ≈ Temperature × Respiratory Rate",
+        "textAr": "الضغط ≈ الحرارة × معدل التنفس"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Arterial BP is approximately the product of cardiac output and total peripheral resistance.",
+    "explanationAr": "يتحدد ضغط الدم تقريبياً بحاصل ضرب النتاج القلبي في المقاومة المحيطية الكلية.",
+    "blockId": "block-clinical-medicine",
+    "subjectId": "subj-cardiology",
+    "topicId": "topic-blood-pressure-2026-01",
+    "linkedTermIds": [],
+    "difficulty": "easy",
+    "createdAt": "2026-11-17T00:00:00.000Z"
   }
 ]
