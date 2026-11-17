@@ -5,7 +5,7 @@
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-17T16:30:00.000Z",
+  "generatedAt": "2026-11-17T17:00:00.000Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
@@ -278,8 +278,8 @@
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/term",
       "primaryKey": "id",
       "recordCount": 5001,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "sizeBytes": 0,
+      "sha256": "0bcbf23efe23f8654c8685fceffca7acc903d05df731112827c708f40b160d6e",
+      "sizeBytes": 747849,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
