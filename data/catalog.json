@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.18.1",
+  "catalogVersion": "2026.11.19.3",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-18T20:30:00.000Z",
+  "generatedAt": "2026-11-19T12:00:00.000Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
@@ -158,9 +158,9 @@
       "apiPath": "/api/v1/collections/blocks",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/block",
       "primaryKey": "id",
-      "recordCount": 5,
-      "sha256": "358f2890308240d4617a384684e0125522bd45cf96aad223f0208467b14312bc",
-      "sizeBytes": 3160,
+      "recordCount": 1,
+      "sha256": "71fd65445b40e90c1cace1069cc6b3d25d27ae18d599e809ffcb609424f880e1",
+      "sizeBytes": 508,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "studyStats",
@@ -183,7 +183,7 @@
         "id",
         "code"
       ],
-      "updatedAt": "2026-11-16T19:53:53.645Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "subjects",
@@ -197,9 +197,9 @@
       "apiPath": "/api/v1/collections/subjects",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/subject",
       "primaryKey": "id",
-      "recordCount": 6,
-      "sha256": "573ee2c2c001458c77e7ddd7b15a7fec1483833cc026128a5d8c14df90b0d1e3",
-      "sizeBytes": 3383,
+      "recordCount": 1,
+      "sha256": "3d04c8aec06272aca814088fe46a5f7e80321189a98a4c25e1e2e7a0c04cb1df",
+      "sizeBytes": 675,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "studyStats",
@@ -221,7 +221,7 @@
         "blockId",
         "isStandalone"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "topics",
@@ -235,9 +235,9 @@
       "apiPath": "/api/v1/collections/topics",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/topic",
       "primaryKey": "id",
-      "recordCount": 68,
-      "sha256": "47ce136e8c4435c09228e013c916ec43fecddf61884b73f859778bfe052d78d1",
-      "sizeBytes": 274853,
+      "recordCount": 1,
+      "sha256": "9f92ff18fa79b0e8aaf3c397c98a6541e1719abd26fa0fb617d2eb3de215b015",
+      "sizeBytes": 43111,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -263,7 +263,7 @@
         "subjectId",
         "category"
       ],
-      "updatedAt": "2026-11-19T00:00:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "terms",
@@ -277,9 +277,9 @@
       "apiPath": "/api/v1/collections/terms",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/term",
       "primaryKey": "id",
-      "recordCount": 5035,
-      "sha256": "80841d4fe183f5f7c42ac2f99b63e768649ef159edf6e42e6a827e0c94e69a2f",
-      "sizeBytes": 747849,
+      "recordCount": 35,
+      "sha256": "42e97ff6432fc6a9d3a9f8e387cb9d61d7191696d912b23cffdc4649c1a81b7e",
+      "sizeBytes": 14348,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -306,7 +306,7 @@
         "specialty",
         "linkedBlockIds"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "sentences",
@@ -320,9 +320,9 @@
       "apiPath": "/api/v1/collections/sentences",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/sentence",
       "primaryKey": "id",
-      "recordCount": 100,
-      "sha256": "45b0ba0c857094f1345ac5d6cc397c54a91cd224a5e5b9794b1d078a2d3edcbf",
-      "sizeBytes": 67904,
+      "recordCount": 5,
+      "sha256": "c1aa1c579b989519dfb01846ae11155aefd989cd73d6a66bb2534c7713efd06e",
+      "sizeBytes": 1961,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -343,7 +343,7 @@
         "category",
         "specialty"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "customAffixes",
@@ -357,9 +357,9 @@
       "apiPath": "/api/v1/collections/customAffixes",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/affix",
       "primaryKey": "id",
-      "recordCount": 131,
-      "sha256": "e66892513451a4c62df5a0f896da130be3fe6bac406d2d6433ae274cf7d6dd56",
-      "sizeBytes": 44437,
+      "recordCount": 2,
+      "sha256": "c188141adfa0851d06e33351abdbfaaa42b096ba2b6d71e507d16d6f14067d4f",
+      "sizeBytes": 422,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "favorite"
@@ -375,7 +375,7 @@
       "filterableFields": [
         "type"
       ],
-      "updatedAt": "2026-11-16T19:53:53.645Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "customAbbreviations",
@@ -389,9 +389,9 @@
       "apiPath": "/api/v1/collections/customAbbreviations",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/abbreviation",
       "primaryKey": "id",
-      "recordCount": 73,
-      "sha256": "6b4b85b00df66587d24e6ed803746ed1955f28af2bd047de452c50beba02bfe9",
-      "sizeBytes": 33385,
+      "recordCount": 7,
+      "sha256": "d7c94a85cbae3afbb1e75f970b2aab049c3051ac3b983eb402ee03751a89c9ad",
+      "sizeBytes": 1405,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "favorite"
@@ -407,7 +407,7 @@
         "category",
         "isAmbiguous"
       ],
-      "updatedAt": "2026-11-16T19:53:53.645Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "books",
@@ -421,9 +421,9 @@
       "apiPath": "/api/v1/collections/books",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/book",
       "primaryKey": "id",
-      "recordCount": 4,
-      "sha256": "9499692857c7578cd3b6840cc85baadf988b62f6195711835d0e6b79586906f5",
-      "sizeBytes": 7844,
+      "recordCount": 1,
+      "sha256": "129ec13cb4e46095a65a92052fdd82373bb97d05da033924ea845a16679db7e1",
+      "sizeBytes": 2347,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "bookmarks",
@@ -452,7 +452,7 @@
         "format",
         "language"
       ],
-      "updatedAt": "2026-11-16T19:53:53.645Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "questions",
@@ -466,9 +466,9 @@
       "apiPath": "/api/v1/collections/questions",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/question",
       "primaryKey": "id",
-      "recordCount": 362,
-      "sha256": "baa904e4eb5c69f65e284bf5c7e3933374bac091c28b400e65e7bd0e962052bd",
-      "sizeBytes": 312990,
+      "recordCount": 12,
+      "sha256": "ce20e1573bae1e6218de3cdc48ca25e035a4e778ea33d4a0f58c27d067b381a0",
+      "sizeBytes": 12182,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "userAttempts",
@@ -494,7 +494,7 @@
         "type",
         "difficulty"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "exams",
@@ -508,9 +508,9 @@
       "apiPath": "/api/v1/collections/exams",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/exam",
       "primaryKey": "id",
-      "recordCount": 50,
-      "sha256": "fee87f4fdbdc5ce913f6dde0d08b9bacb562320104ed882615d63f54a31a710f",
-      "sizeBytes": 64071,
+      "recordCount": 1,
+      "sha256": "ec8f36c10201f743bd3066ac75923c9c9ab1e8511bc4ad959ed39ce7e1255b2f",
+      "sizeBytes": 1131,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "examAttempts",
@@ -537,7 +537,7 @@
         "examType",
         "difficulty"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     },
     {
       "id": "mediaAssets",
@@ -551,9 +551,9 @@
       "apiPath": "/api/v1/collections/mediaAssets",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/media",
       "primaryKey": "id",
-      "recordCount": 28,
-      "sha256": "bf6ebed792c5342a3815fd7284c0ba5214df6bc383def38f7645b05e3ef5a819",
-      "sizeBytes": 22340,
+      "recordCount": 0,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sizeBytes": 3,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "localCachedPath"
@@ -574,7 +574,7 @@
         "linkedEntityId",
         "mimeType"
       ],
-      "updatedAt": "2026-11-17T00:00:00.000Z"
+      "updatedAt": "2026-11-19T12:00:00.000Z"
     }
   ]
 }
