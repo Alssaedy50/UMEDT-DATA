@@ -181,7 +181,9 @@
             "mediaFileName": "anatomy-checklist.txt",
             "mediaMimeType": "text/plain",
             "text": "RIGHT ATRIUM: SVC + IVC + coronary sinus.\nRIGHT VENTRICLE: pulmonary trunk.\nLEFT ATRIUM: pulmonary veins.\nLEFT VENTRICLE: ascending aorta.\nSA node → AV node → Bundle of His → Purkinje fibres.",
-            "textAr": "الأذين الأيمن: الوريدان الأجوفان والجيب التاجي. البطين الأيمن: الجذع الرئوي. الأذين الأيسر: الأوردة الرئوية. البطين الأيسر: الأبهر الصاعد."
+            "textAr": "الأذين الأيمن: الوريدان الأجوفان والجيب التاجي. البطين الأيمن: الجذع الرئوي. الأذين الأيسر: الأوردة الرئوية. البطين الأيسر: الأبهر الصاعد.",
+            "mediaUrl": "data:text/plain;charset=utf-8,RIGHT%20ATRIUM%3A%20SVC%20%2B%20IVC%20%2B%20coronary%20sinus.%0ARIGHT%20VENTRICLE%3A%20pulmonary%20trunk.%0ALEFT%20ATRIUM%3A%20pulmonary%20veins.%0ALEFT%20VENTRICLE%3A%20ascending%20aorta.%0ASA%20node%20%E2%86%92%20AV%20node%20%E2%86%92%20Bundle%20of%20His%20%E2%86%92%20Purkinje%20fibres.",
+            "mediaSizeBytes": 210
           },
           {
             "id": "cvb-07",
@@ -201,7 +203,10 @@
             "order": 8,
             "titleEn": "Study note record",
             "titleAr": "مرجع الملزمة",
-            "bookId": "cv-anat-book-001"
+            "bookId": "cv-anat-book-001",
+            "mediaUrl": "data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA0IDAgUiA+PiA+PiAvQ29udGVudHMgNSAwIFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhID4+CmVuZG9iago1IDAgb2JqCjw8IC9MZW5ndGggNTA5ID4+CnN0cmVhbQpCVCAvRjEgMTMgVGYgNDggNzkwIFRkIChVTUVEVCBDYXJkaW92YXNjdWxhciBBbmF0b215IC0gUXVpY2sgTm90ZXMpIFRqIDAgLTI4IFRkIChSaWdodCBhdHJpdW0gcmVjZWl2ZXMgU1ZDLCBJVkMgYW5kIGNvcm9uYXJ5IHNpbnVzLikgVGogMCAtMjQgVGQgKFJpZ2h0IHZlbnRyaWNsZSBlamVjdHMgaW50byBwdWxtb25hcnkgdHJ1bmsuKSBUaiAwIC0yNCBUZCAoUHVsbW9uYXJ5IHZlaW5zIGVudGVyIGxlZnQgYXRyaXVtOyBsZWZ0IHZlbnRyaWNsZSBlamVjdHMgaW50byBhb3J0YS4pIFRqIDAgLTI0IFRkIChWaXNjZXJhbCBzZXJvdXMgcGVyaWNhcmRpdW0gaXMgdGhlIGVwaWNhcmRpdW0uKSBUaiAwIC0yNCBUZCAoTGVmdCBtYWluIGNvcm9uYXJ5IGFydGVyeSBjb21tb25seSBkaXZpZGVzIGludG8gTEFEIGFuZCBjaXJjdW1mbGV4LikgVGogMCAtMjQgVGQgKFNBIG5vZGUgLT4gQVYgbm9kZSAtPiBIaXMgYnVuZGxlIC0+IGJ1bmRsZSBicmFuY2hlcyAtPiBQdXJraW5qZSBmaWJyZXMuKSBUaiBFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAwOSAwMDAwMCBuIAowMDAwMDAwMDU4IDAwMDAwIG4gCjAwMDAwMDAxMTUgMDAwMDAgbiAKMDAwMDAwMDI0MSAwMDAwMCBuIAowMDAwMDAwMzExIDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgNiAvUm9vdCAxIDAgUiA+PgpzdGFydHhyZWYKODcxCiUlRU9G",
+            "mediaMimeType": "application/pdf",
+            "mediaFileName": "cv-anatomy-notes.pdf"
           },
           {
             "id": "cvb-09",
