@@ -236,8 +236,8 @@
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/topic",
       "primaryKey": "id",
       "recordCount": 68,
-      "sha256": "ea1caccbff3b452ff3759543315bf7bf4f959fb9975bafb4d9cc1b986021c105",
-      "sizeBytes": 194649,
+      "sha256": "47ce136e8c4435c09228e013c916ec43fecddf61884b73f859778bfe052d78d1",
+      "sizeBytes": 274853,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -263,7 +263,7 @@
         "subjectId",
         "category"
       ],
-      "updatedAt": "2026-11-18T20:30:00.000Z"
+      "updatedAt": "2026-11-19T00:00:00.000Z"
     },
     {
       "id": "terms",
