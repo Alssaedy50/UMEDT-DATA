@@ -1,6 +1,6 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.19.2",
+  "catalogVersion": "2026.11.19.3",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
@@ -236,8 +236,8 @@
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/topic",
       "primaryKey": "id",
       "recordCount": 1,
-      "sha256": "52877ae774425d836e40e45b296b69f3ca8a077f48e866ed61e939dbc1cad3a0",
-      "sizeBytes": 41168,
+      "sha256": "9f92ff18fa79b0e8aaf3c397c98a6541e1719abd26fa0fb617d2eb3de215b015",
+      "sizeBytes": 43111,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
