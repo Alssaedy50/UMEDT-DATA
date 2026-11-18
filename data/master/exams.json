@@ -2262,5 +2262,39 @@
     ],
     "publishedAt": "2026-11-17",
     "updatedAt": "2026-11-17"
+  },
+  {
+    "id": "exam-heart-anatomy-core-01",
+    "titleEn": "Gross Anatomy of the Heart — Core MCQ Assessment",
+    "titleAr": "اختبار أساسيات التشريح العياني للقلب",
+    "descriptionEn": "Ten single-best-answer questions covering cardiac position, chambers, valves, coronary circulation and the conducting system.",
+    "descriptionAr": "اختبار من عشرة أسئلة اختيار من متعدد يغطي موقع القلب وحجراته وصماماته والتروية التاجية وجهاز التوصيل.",
+    "examType": "subject_quiz",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "questionIds": [
+      "q-ha-001",
+      "q-ha-002",
+      "q-ha-003",
+      "q-ha-004",
+      "q-ha-005",
+      "q-ha-006",
+      "q-ha-007",
+      "q-ha-008",
+      "q-ha-009",
+      "q-ha-010"
+    ],
+    "durationMinutes": 12,
+    "passingScorePercent": 70,
+    "totalPoints": 100,
+    "shuffleQuestions": true,
+    "difficulty": "medium",
+    "tags": [
+      "heart anatomy",
+      "gross anatomy",
+      "cardiovascular"
+    ],
+    "publishedAt": "2026-11-18T20:30:00.000Z",
+    "updatedAt": "2026-11-18T20:30:00.000Z"
   }
 ]

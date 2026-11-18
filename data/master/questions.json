@@ -11739,5 +11739,445 @@
     "linkedTermIds": [],
     "difficulty": "hard",
     "createdAt": "2026-11-17"
+  },
+  {
+    "id": "q-ha-001",
+    "type": "single_choice",
+    "questionEn": "Which chamber forms most of the anterior (sternocostal) surface of the heart?",
+    "questionAr": "أي حجرة تشكل معظم السطح الأمامي للقلب؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Right ventricle",
+        "textAr": "Right ventricle"
+      },
+      {
+        "key": "B",
+        "textEn": "Left ventricle",
+        "textAr": "Left ventricle"
+      },
+      {
+        "key": "C",
+        "textEn": "Right atrium",
+        "textAr": "Right atrium"
+      },
+      {
+        "key": "D",
+        "textEn": "Left atrium",
+        "textAr": "Left atrium"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "The right ventricle forms most of the sternocostal surface.",
+    "explanationAr": "يشكل البطين الأيمن معظم السطح الأمامي.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-01",
+    "linkedTermIds": [
+      "ha-term-001",
+      "ha-term-005",
+      "ha-term-009",
+      "ha-term-013"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-002",
+    "type": "single_choice",
+    "questionEn": "The apex beat is normally felt at:",
+    "questionAr": "أين تُجس ضربة قمة القلب عادةً؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Right 2nd intercostal space",
+        "textAr": "Right 2nd intercostal space"
+      },
+      {
+        "key": "B",
+        "textEn": "Left 5th intercostal space near the midclavicular line",
+        "textAr": "Left 5th intercostal space near the midclavicular line"
+      },
+      {
+        "key": "C",
+        "textEn": "Left 2nd intercostal space",
+        "textAr": "Left 2nd intercostal space"
+      },
+      {
+        "key": "D",
+        "textEn": "Right 5th intercostal space",
+        "textAr": "Right 5th intercostal space"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "The apex is usually in the left fifth intercostal space near the midclavicular line.",
+    "explanationAr": "تقع القمة عادةً في الحيز الوربي الخامس الأيسر قرب الخط المنصف الترقوي.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-01",
+    "linkedTermIds": [
+      "ha-term-001",
+      "ha-term-005",
+      "ha-term-009",
+      "ha-term-013"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-003",
+    "type": "single_choice",
+    "questionEn": "Which chamber has the thickest muscular wall?",
+    "questionAr": "أي حجرة تمتلك أسمك جدار عضلي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Right atrium",
+        "textAr": "Right atrium"
+      },
+      {
+        "key": "B",
+        "textEn": "Right ventricle",
+        "textAr": "Right ventricle"
+      },
+      {
+        "key": "C",
+        "textEn": "Left atrium",
+        "textAr": "Left atrium"
+      },
+      {
+        "key": "D",
+        "textEn": "Left ventricle",
+        "textAr": "Left ventricle"
+      }
+    ],
+    "correctOptionKeys": [
+      "D"
+    ],
+    "explanationEn": "The left ventricle pumps into the systemic circulation.",
+    "explanationAr": "يضخ البطين الأيسر الدم إلى الدوران الجهازي.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-02",
+    "linkedTermIds": [
+      "ha-term-002",
+      "ha-term-006",
+      "ha-term-010",
+      "ha-term-014"
+    ],
+    "difficulty": "easy",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-004",
+    "type": "single_choice",
+    "questionEn": "Which valve lies between the left atrium and left ventricle?",
+    "questionAr": "ما الصمام بين الأذين الأيسر والبطين الأيسر؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Tricuspid",
+        "textAr": "Tricuspid"
+      },
+      {
+        "key": "B",
+        "textEn": "Pulmonary",
+        "textAr": "Pulmonary"
+      },
+      {
+        "key": "C",
+        "textEn": "Mitral",
+        "textAr": "Mitral"
+      },
+      {
+        "key": "D",
+        "textEn": "Aortic",
+        "textAr": "Aortic"
+      }
+    ],
+    "correctOptionKeys": [
+      "C"
+    ],
+    "explanationEn": "The mitral valve separates the left atrium and ventricle.",
+    "explanationAr": "يفصل الصمام التاجي الأذين الأيسر عن البطين الأيسر.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-02",
+    "linkedTermIds": [
+      "ha-term-002",
+      "ha-term-006",
+      "ha-term-010",
+      "ha-term-014"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-005",
+    "type": "single_choice",
+    "questionEn": "Which structures prevent prolapse of AV valve cusps during systole?",
+    "questionAr": "ما الذي يمنع انقلاب شرفات الصمامات الأذينية البطينية أثناء الانقباض؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Chordae tendineae and papillary muscles",
+        "textAr": "Chordae tendineae and papillary muscles"
+      },
+      {
+        "key": "B",
+        "textEn": "Trabeculae carneae alone",
+        "textAr": "Trabeculae carneae alone"
+      },
+      {
+        "key": "C",
+        "textEn": "Aortic sinuses",
+        "textAr": "Aortic sinuses"
+      },
+      {
+        "key": "D",
+        "textEn": "Moderator band",
+        "textAr": "Moderator band"
+      }
+    ],
+    "correctOptionKeys": [
+      "A"
+    ],
+    "explanationEn": "Chordae tether the cusps to papillary muscles.",
+    "explanationAr": "تربط الحبال الوترية الشرفات بالعضلات الحليمية.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-02",
+    "linkedTermIds": [
+      "ha-term-002",
+      "ha-term-006",
+      "ha-term-010",
+      "ha-term-014"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-006",
+    "type": "single_choice",
+    "questionEn": "Coronary dominance is determined by the origin of the:",
+    "questionAr": "بماذا تُحدد السيادة التاجية؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "LAD",
+        "textAr": "LAD"
+      },
+      {
+        "key": "B",
+        "textEn": "Posterior interventricular artery (PDA)",
+        "textAr": "Posterior interventricular artery (PDA)"
+      },
+      {
+        "key": "C",
+        "textEn": "Circumflex artery",
+        "textAr": "Circumflex artery"
+      },
+      {
+        "key": "D",
+        "textEn": "Right marginal artery",
+        "textAr": "Right marginal artery"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "Dominance is defined by the artery giving rise to the PDA.",
+    "explanationAr": "تُحدد السيادة بالشريان الذي يعطي الشريان الخلفي بين البطينين.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-03",
+    "linkedTermIds": [
+      "ha-term-003",
+      "ha-term-007",
+      "ha-term-011",
+      "ha-term-015"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-007",
+    "type": "single_choice",
+    "questionEn": "Most venous blood from the myocardium drains into the:",
+    "questionAr": "إلى أين يُصرّف معظم الدم الوريدي لعضلة القلب؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Pulmonary veins",
+        "textAr": "Pulmonary veins"
+      },
+      {
+        "key": "B",
+        "textEn": "Superior vena cava",
+        "textAr": "Superior vena cava"
+      },
+      {
+        "key": "C",
+        "textEn": "Coronary sinus",
+        "textAr": "Coronary sinus"
+      },
+      {
+        "key": "D",
+        "textEn": "Aortic sinus",
+        "textAr": "Aortic sinus"
+      }
+    ],
+    "correctOptionKeys": [
+      "C"
+    ],
+    "explanationEn": "The coronary sinus opens into the right atrium.",
+    "explanationAr": "يفتح الجيب التاجي في الأذين الأيمن.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-03",
+    "linkedTermIds": [
+      "ha-term-003",
+      "ha-term-007",
+      "ha-term-011",
+      "ha-term-015"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-008",
+    "type": "single_choice",
+    "questionEn": "What is the normal sequence of cardiac impulse conduction?",
+    "questionAr": "ما التسلسل الطبيعي لانتقال التنبيه القلبي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "AV node → SA node → Purkinje",
+        "textAr": "AV node → SA node → Purkinje"
+      },
+      {
+        "key": "B",
+        "textEn": "SA node → AV node → His bundle → bundle branches → Purkinje",
+        "textAr": "SA node → AV node → His bundle → bundle branches → Purkinje"
+      },
+      {
+        "key": "C",
+        "textEn": "Purkinje → SA node → AV node",
+        "textAr": "Purkinje → SA node → AV node"
+      },
+      {
+        "key": "D",
+        "textEn": "SA node → Purkinje → AV node",
+        "textAr": "SA node → Purkinje → AV node"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "The impulse passes from SA to AV node, His bundle, bundle branches and Purkinje fibers.",
+    "explanationAr": "ينتقل التنبيه من SA إلى AV ثم حزمة هس فالفرعين وألياف بوركنجي.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-04",
+    "linkedTermIds": [
+      "ha-term-004",
+      "ha-term-008",
+      "ha-term-012",
+      "ha-term-016"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-009",
+    "type": "single_choice",
+    "questionEn": "A ventricular septal defect commonly involves the:",
+    "questionAr": "أي جزء يتأثر غالباً في عيب الحاجز البطيني؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Muscular apex only",
+        "textAr": "Muscular apex only"
+      },
+      {
+        "key": "B",
+        "textEn": "Membranous part",
+        "textAr": "Membranous part"
+      },
+      {
+        "key": "C",
+        "textEn": "Entire atrial septum",
+        "textAr": "Entire atrial septum"
+      },
+      {
+        "key": "D",
+        "textEn": "Interatrial groove",
+        "textAr": "Interatrial groove"
+      }
+    ],
+    "correctOptionKeys": [
+      "B"
+    ],
+    "explanationEn": "The membranous part is a common site of VSD.",
+    "explanationAr": "الجزء الغشائي هو الموقع الشائع لعيوب الحاجز البطيني.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-04",
+    "linkedTermIds": [
+      "ha-term-004",
+      "ha-term-008",
+      "ha-term-012",
+      "ha-term-016"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
+  },
+  {
+    "id": "q-ha-010",
+    "type": "single_choice",
+    "questionEn": "The visceral layer of the serous pericardium is called:",
+    "questionAr": "ما اسم الطبقة الحشوية من التامور المصلي؟",
+    "options": [
+      {
+        "key": "A",
+        "textEn": "Endocardium",
+        "textAr": "Endocardium"
+      },
+      {
+        "key": "B",
+        "textEn": "Myocardium",
+        "textAr": "Myocardium"
+      },
+      {
+        "key": "C",
+        "textEn": "Epicardium",
+        "textAr": "Epicardium"
+      },
+      {
+        "key": "D",
+        "textEn": "Fibrous pericardium",
+        "textAr": "Fibrous pericardium"
+      }
+    ],
+    "correctOptionKeys": [
+      "C"
+    ],
+    "explanationEn": "The visceral serous pericardium is the epicardium.",
+    "explanationAr": "الطبقة الحشوية للتامور المصلي هي النِّخاب.",
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-heart-anatomy",
+    "topicId": "topic-heart-anatomy-01",
+    "linkedTermIds": [
+      "ha-term-001",
+      "ha-term-005",
+      "ha-term-009",
+      "ha-term-013"
+    ],
+    "difficulty": "medium",
+    "createdAt": "2026-11-18T20:30:00.000Z"
   }
 ]

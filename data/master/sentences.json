@@ -1711,5 +1711,107 @@
     ],
     "favorite": false,
     "createdAt": "مثال سياقي · Heuristic"
+  },
+  {
+    "id": "ha-sent-001",
+    "en": "The apex of the heart is usually located in the left fifth intercostal space.",
+    "ar": "تقع قمة القلب عادةً في الحيز الوربي الخامس الأيسر.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-001"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
+  },
+  {
+    "id": "ha-sent-002",
+    "en": "The right atrium receives blood from the superior and inferior venae cavae.",
+    "ar": "يستقبل الأذين الأيمن الدم من الوريدين الأجوفين العلوي والسفلي.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-005"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
+  },
+  {
+    "id": "ha-sent-003",
+    "en": "The left ventricle has the thickest myocardium.",
+    "ar": "يمتلك البطين الأيسر أسمك طبقة عضلية قلبية.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-009"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
+  },
+  {
+    "id": "ha-sent-004",
+    "en": "The mitral valve separates the left atrium from the left ventricle.",
+    "ar": "يفصل الصمام التاجي الأذين الأيسر عن البطين الأيسر.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-013"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
+  },
+  {
+    "id": "ha-sent-005",
+    "en": "Most venous blood from the myocardium drains into the coronary sinus.",
+    "ar": "يُصرّف معظم الدم الوريدي لعضلة القلب عبر الجيب التاجي.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-017"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
+  },
+  {
+    "id": "ha-sent-006",
+    "en": "The sinoatrial node is the normal pacemaker of the heart.",
+    "ar": "العقدة الجيبية الأذينية هي المنظم الطبيعي لضربات القلب.",
+    "category": "Medical",
+    "specialty": "Cardiovascular Anatomy",
+    "sourceType": "UMEDT curriculum",
+    "linkedTermIds": [
+      "ha-term-021"
+    ],
+    "tags": [
+      "Heart Anatomy",
+      "Anatomy"
+    ],
+    "favorite": false,
+    "createdAt": "2026-11-18"
   }
 ]
