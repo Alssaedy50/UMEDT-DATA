@@ -1,9 +1,0 @@
-{
-  "architecture": "Hybrid GC-NMT v2",
-  "layers": [
-    "Layer 1: Aho-Corasick + [-7,+7] Contextual Disambiguation",
-    "Layer 2: Multi-Root OOV Morphological Decomposer",
-    "Layer 3: Neural Structural Translator",
-    "Layer 4: UMD Bilingual Post-Processor"
-  ]
-}

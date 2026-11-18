@@ -1,5 +1,0 @@
-=== ACUTE CORONARY SYNDROME (ACS) EMERGENCY CHECKLIST ===
-1. 12-Lead ECG within 10 minutes of arrival.
-2. High-sensitivity Cardiac Troponin I/T at 0h and 1h.
-3. Monitor for Tachycardia, Arrhythmia, Hypoxia, and Pulmonary Edema.
-4. Primary PCI / Angioplasty within 90 minutes for STEMI.
