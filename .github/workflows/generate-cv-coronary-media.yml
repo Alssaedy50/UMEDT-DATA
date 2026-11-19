@@ -125,8 +125,8 @@ jobs:
               p=os.path.join(OUT,f'cv-slide-{n+1}.png'); src.save(p); slide_files.append(p)
           concat=os.path.join(OUT,'cv-slides.txt')
           with open(concat,'w') as fobj:
-              for p in slide_files: fobj.write(f"file '{p}'\\nduration 12\\n")
-              fobj.write(f"file '{slide_files[-1]}'\\n")
+              for p in slide_files: fobj.write(f"file '{p}'\nduration 12\n")
+              fobj.write(f"file '{slide_files[-1]}'\n")
           subprocess.run(['ffmpeg','-y','-f','concat','-safe','0','-i',concat,'-i',os.path.join(OUT,'coronary-circulation-narration.mp3'),
              '-vf','scale=960:540,fps=24,format=yuv420p','-c:v','libx264','-preset','veryfast','-crf','30',
              '-c:a','aac','-b:a','40k','-shortest','-movflags','+faststart',os.path.join(OUT,'coronary-circulation-overview.mp4')],
@@ -188,7 +188,7 @@ jobs:
                 'rawUrl':f'https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/media/{name}',
                 'linkedEntityType':'topic','linkedEntityId':'topic-cv-coronary-arteries-venous-drainage',
                 'titleEn':title,'titleAr':title,'license':'Original UMEDT educational media generated for this topic.'})
-          with open(idxpath,'w',encoding='utf-8') as fobj: json.dump(idx,fobj,ensure_ascii=False,indent=2); fobj.write('\\n')
+          with open(idxpath,'w',encoding='utf-8') as fobj: json.dump(idx,fobj,ensure_ascii=False,indent=2); fobj.write('\n')
           catpath=os.path.join(ROOT,'data','catalog.json')
           with open(catpath,encoding='utf-8') as fobj: cat=json.load(fobj)
           now=datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
@@ -197,7 +197,7 @@ jobs:
               raw=open(path,'rb').read(); col=next(c for c in cat['collections'] if c['id']==cid)
               col.update({'recordCount':count,'sha256':hashlib.sha256(raw).hexdigest(),'sizeBytes':len(raw),'updatedAt':now})
           cat['catalogVersion']='2026.11.19.4'; cat['generatedAt']=now
-          with open(catpath,'w',encoding='utf-8') as fobj: json.dump(cat,fobj,ensure_ascii=False,indent=2); fobj.write('\\n')
+          with open(catpath,'w',encoding='utf-8') as fobj: json.dump(cat,fobj,ensure_ascii=False,indent=2); fobj.write('\n')
           print('Created 3 PNG images, MP3 narration, MP4 video, real PDF, media index and updated catalog hashes.')
           PY
 
