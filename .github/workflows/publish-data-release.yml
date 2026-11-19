@@ -78,7 +78,8 @@ jobs:
             'data/master/books.json',
             'data/master/questions.json',
             'data/master/exams.json',
-            'data/master/media-index.json'
+            'data/master/media-index.json',
+            'data/master/public-deletions.json'
           ];
           let total = 0;
           for (const file of requiredFiles) {
@@ -101,6 +102,33 @@ jobs:
             if (!Array.isArray(cat.collections)) throw new Error('data/catalog.json missing collections array');
             console.log(`data/catalog.json: ${cat.collections.length} collections`);
           }
+          const tombstones = fs.existsSync('data/master/public-deletions.json')
+            ? JSON.parse(fs.readFileSync('data/master/public-deletions.json', 'utf8'))
+            : [];
+          if (!Array.isArray(tombstones)) throw new Error('public-deletions.json must contain an array');
+          const domainFiles = {
+            terms: 'terms.json', sentences: 'sentences.json', topics: 'topics.json',
+            customAffixes: 'custom-affixes.json', customAbbreviations: 'custom-abbreviations.json',
+            blocks: 'blocks.json', subjects: 'subjects.json', books: 'books.json',
+            questions: 'questions.json', exams: 'exams.json', mediaAssets: 'media-index.json'
+          };
+          const seenTombstones = new Set();
+          for (const tombstone of tombstones) {
+            if (!tombstone || !domainFiles[tombstone.domain] || typeof tombstone.id !== 'string' || !tombstone.id.trim()) {
+              throw new Error('Invalid public deletion tombstone entry');
+            }
+            const key = `${tombstone.domain}:${tombstone.id}`;
+            if (seenTombstones.has(key)) throw new Error(`Duplicate public deletion tombstone: ${key}`);
+            seenTombstones.add(key);
+            const file = `data/master/${domainFiles[tombstone.domain]}`;
+            if (fs.existsSync(file)) {
+              const active = JSON.parse(fs.readFileSync(file, 'utf8'));
+              if (active.some((record) => record && record.id === tombstone.id)) {
+                throw new Error(`Deleted public content is still present in ${file}: ${tombstone.id}`);
+              }
+            }
+          }
+          console.log(`Permanent public deletion tombstones: ${tombstones.length}`);
           if (total === 0) throw new Error('Refusing to publish: all master data files are empty.');
           NODE
 
@@ -148,4 +176,60 @@ jobs:
           fi
           VERSION=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/releases/$CHANNEL/manifest.json','utf8')).dataVersion)")
           git commit -m "chore(release): publish UMEDT data v$VERSION [skip ci]"
+          git push origin HEAD:main
+
+  publish-beta-after-global-deletion:
+    needs: publish-data
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      contains(github.event.head_commit.modified, 'data/master/public-deletions.json')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest data repository after stable release
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Clone UMEDT publisher source
+        run: git clone --depth 1 https://github.com/Alssaedy50/UMEDT.git app
+
+      - name: Install publisher dependencies
+        run: npm ci --prefix app
+
+      - name: Build and sign beta release with the same permanent deletion registry
+        env:
+          UMED_DATA_REPOSITORY_ROOT: ${{ github.workspace }}
+          UMED_DATA_REPOSITORY: Alssaedy50/UMEDT-DATA
+          UMED_RELEASE_OUTPUT_DIR: ${{ github.workspace }}/data/releases/beta
+          UMED_RELEASE_CHANNEL: beta
+          UMED_RELEASE_SUMMARY: Global public content deletion synchronization
+          UMED_PUBLISHER_PRIVATE_KEY_PEM: ${{ secrets.UMED_PUBLISHER_PRIVATE_KEY_PEM }}
+          VITE_UMED_PUBLIC_KEY_PEM: ${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
+        run: |
+          if [ -z "$UMED_PUBLISHER_PRIVATE_KEY_PEM" ] || [ -z "$VITE_UMED_PUBLIC_KEY_PEM" ]; then
+            echo "::error::Permanent publisher signing keys are required for both release channels."
+            exit 1
+          fi
+          cd app
+          npx tsx scripts/publish-data-release.ts --channel beta --summary "$UMED_RELEASE_SUMMARY"
+
+      - name: Commit signed beta release artifacts
+        run: |
+          test -s data/releases/beta/manifest.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/releases/beta/
+          if git diff --cached --quiet; then
+            echo "No beta release artifact changes to commit."
+            exit 0
+          fi
+          VERSION=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/releases/beta/manifest.json','utf8')).dataVersion)")
+          git commit -m "chore(release): publish UMEDT beta deletion sync v$VERSION [skip ci]"
           git push origin HEAD:main
