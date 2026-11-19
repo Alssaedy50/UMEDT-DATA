@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 2,
-  "catalogVersion": "2026.11.19.3",
+  "catalogVersion": "2026.11.19.4",
   "schemaVersion": 2,
   "minAppVersion": "2.4.0",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-19T12:00:00.000Z",
+  "generatedAt": "2026-11-19T00:27:26Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "manifestStableUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json",
@@ -235,9 +235,9 @@
       "apiPath": "/api/v1/collections/topics",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/topic",
       "primaryKey": "id",
-      "recordCount": 1,
-      "sha256": "9f92ff18fa79b0e8aaf3c397c98a6541e1719abd26fa0fb617d2eb3de215b015",
-      "sizeBytes": 43111,
+      "recordCount": 2,
+      "sha256": "47ab0c18630fbff278683aa1c2a5f49c3babbe92c7446ca4c1bfbd81a8249957",
+      "sizeBytes": 59145,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -263,7 +263,7 @@
         "subjectId",
         "category"
       ],
-      "updatedAt": "2026-11-19T12:00:00.000Z"
+      "updatedAt": "2026-11-19T00:27:26Z"
     },
     {
       "id": "terms",
@@ -551,9 +551,9 @@
       "apiPath": "/api/v1/collections/mediaAssets",
       "schemaUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/content-entities.schema.json#/$defs/media",
       "primaryKey": "id",
-      "recordCount": 0,
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "sizeBytes": 3,
+      "recordCount": 6,
+      "sha256": "eedad389c3a177fcfdf1ccd06172674e36eaabff07ecb6c8a15049627149970b",
+      "sizeBytes": 4349,
       "mergeStrategy": "replace_master_preserve_progress",
       "userProtectedFields": [
         "localCachedPath"
@@ -574,7 +574,7 @@
         "linkedEntityId",
         "mimeType"
       ],
-      "updatedAt": "2026-11-19T12:00:00.000Z"
+      "updatedAt": "2026-11-19T00:27:26Z"
     }
   ]
 }
