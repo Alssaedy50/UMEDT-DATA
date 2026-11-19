@@ -291,5 +291,303 @@
         "contentDataUrlOrText": "SVC + IVC → Right atrium → Right ventricle → Pulmonary trunk.\nPulmonary veins → Left atrium → Left ventricle → Aorta."
       }
     ]
+  },
+  {
+    "id": "topic-cv-coronary-arteries-venous-drainage",
+    "title": "الشرايين التاجية والتصريف الوريدي للقلب",
+    "titleEn": "Coronary Arteries and Cardiac Venous Drainage",
+    "titleAr": "الشرايين التاجية والتصريف الوريدي للقلب",
+    "subtitle": "Cardiovascular System Block — Cardiovascular Anatomy",
+    "category": "Medical",
+    "author": "UMEDT Academic Editorial Board",
+    "publishedAt": "نوفمبر 2026",
+    "readingTimeMinutes": 20,
+    "blockId": "block-cardiovascular",
+    "subjectId": "subj-cv-anatomy",
+    "sections": [
+      {
+        "id": "cv-coronary-sec-1",
+        "heading": "1. Overview and anatomical origins",
+        "paragraphs": [
+          "The myocardium receives its arterial blood supply from the right coronary artery (RCA) and left coronary artery (LCA), which arise from the corresponding aortic sinuses of the ascending aorta, just superior to the aortic valve.",
+          "تنشأ الشرايين التاجية اليمنى واليسرى من الجيبين الأبهريين المقابلين فوق الصمام الأبهري مباشرة، وتغذي عضلة القلب.",
+          "The left main coronary artery (LMCA) is usually short and divides into the left anterior descending artery (LAD) and left circumflex artery (LCx). The RCA and its branches run mainly in the right atrioventricular groove."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-img-1",
+            "type": "image",
+            "order": 1,
+            "titleEn": "Coronary arteries — anterior view",
+            "titleAr": "الشرايين التاجية — منظر أمامي",
+            "mediaUrl": "data/media/coronary-arteries-schematic.png",
+            "mediaMimeType": "image/png",
+            "mediaFileName": "coronary-arteries-schematic.png",
+            "captionEn": "Original UMEDT schematic showing the aortic root, RCA, LAD and LCx; simplified and not to scale.",
+            "captionAr": "رسم تعليمي أصلي يوضح جذر الأبهر والشريان التاجي الأيمن وLAD وLCx، وليس مقياسياً."
+          }
+        ]
+      },
+      {
+        "id": "cv-coronary-sec-2",
+        "heading": "2. Right coronary artery (RCA)",
+        "paragraphs": [
+          "The RCA arises from the right aortic sinus and passes between the right auricle and pulmonary trunk before entering the right atrioventricular (coronary) groove. It curves around the right margin toward the diaphragmatic surface.",
+          "أهم الفروع الشائعة: conus branch، sinoatrial nodal branch (variable origin)، right marginal (acute marginal) branch، atrioventricular nodal branch، and posterior interventricular artery (PDA) in right-dominant circulation.",
+          "The RCA commonly supplies the right atrium, most of the right ventricle, and variable portions of the inferior left ventricle. Its contribution to the SA and AV nodes varies between individuals."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-table-1",
+            "type": "table",
+            "order": 1,
+            "titleEn": "RCA — key branches",
+            "titleAr": "فروع الشريان التاجي الأيمن",
+            "tableHeaders": [
+              "Branch",
+              "Course / landmark",
+              "High-yield note"
+            ],
+            "tableRows": [
+              [
+                "Conus branch",
+                "Infundibulum of right ventricle",
+                "May arise separately from the aorta"
+              ],
+              [
+                "SA nodal branch",
+                "Toward the SA node",
+                "Often from RCA; may arise from LCx"
+              ],
+              [
+                "Right marginal branch",
+                "Along acute/right margin",
+                "Supplies right ventricular free wall"
+              ],
+              [
+                "AV nodal branch",
+                "Near crux of heart",
+                "Commonly from dominant artery"
+              ],
+              [
+                "PDA",
+                "Posterior interventricular groove",
+                "Usually RCA in right dominance"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cv-coronary-sec-3",
+        "heading": "3. Left coronary artery (LCA): LAD and LCx",
+        "paragraphs": [
+          "The LMCA arises from the left aortic sinus and passes between the pulmonary trunk and the left auricle. It usually divides into the LAD and LCx; a ramus intermedius may be present as a trifurcation variant.",
+          "The LAD (anterior interventricular artery) descends in the anterior interventricular groove toward the apex. Its diagonal branches supply anterolateral myocardium, while septal perforators supply the interventricular septum. The LAD commonly supplies the anterior wall of the left ventricle, apex, and anterior two-thirds of the interventricular septum.",
+          "The LCx runs in the left atrioventricular groove and gives obtuse marginal branches to the lateral left ventricle. In left-dominant hearts, it may give rise to the PDA.",
+          "ينزل LAD في الثلم بين البطينين الأمامي، بينما يسير LCx في الثلم الأذيني البطيني الأيسر. تذكّر أن الفروع والتوزيع قد يختلفان تشريحياً."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-img-2",
+            "type": "image",
+            "order": 1,
+            "titleEn": "Coronary dominance patterns",
+            "titleAr": "أنماط السيادة التاجية",
+            "mediaUrl": "data/media/coronary-dominance.png",
+            "mediaMimeType": "image/png",
+            "mediaFileName": "coronary-dominance.png",
+            "captionEn": "Dominance is determined by the origin of the PDA.",
+            "captionAr": "تُحدد السيادة التاجية بحسب منشأ الشريان بين البطينين الخلفي."
+          }
+        ]
+      },
+      {
+        "id": "cv-coronary-sec-4",
+        "heading": "4. Coronary dominance",
+        "paragraphs": [
+          "Coronary dominance is defined by the artery that gives rise to the posterior interventricular artery (PDA), not by the size of the coronary artery.",
+          "Right dominance: PDA arises from the RCA. Left dominance: PDA arises from the LCx. Co-dominance: the posterior interventricular region receives contributions from both coronary systems. Right dominance is the most common pattern.",
+          "السيادة التاجية لا تعني أن أحد الشريانين أكبر حجماً؛ بل تعتمد على الشريان الذي يُصدر PDA."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-table-2",
+            "type": "table",
+            "order": 1,
+            "titleEn": "Coronary dominance comparison",
+            "titleAr": "مقارنة أنماط السيادة التاجية",
+            "tableHeaders": [
+              "Pattern",
+              "PDA origin",
+              "Definition"
+            ],
+            "tableRows": [
+              [
+                "Right dominant",
+                "RCA",
+                "PDA arises from the right coronary artery"
+              ],
+              [
+                "Left dominant",
+                "LCx",
+                "PDA arises from the left circumflex artery"
+              ],
+              [
+                "Co-dominant",
+                "Both systems contribute",
+                "Shared posterior interventricular supply"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cv-coronary-sec-5",
+        "heading": "5. Cardiac venous drainage",
+        "paragraphs": [
+          "Most venous blood from the myocardium drains through the coronary sinus, which lies in the posterior atrioventricular groove and opens into the right atrium.",
+          "The great cardiac vein begins near the apex, accompanies the LAD in the anterior interventricular groove, then turns into the left atrioventricular groove. The middle cardiac vein accompanies the PDA in the posterior interventricular groove. The small cardiac vein runs near the right margin and right atrioventricular groove.",
+          "Anterior cardiac veins drain the anterior right ventricular wall directly into the right atrium. The smallest cardiac veins (Thebesian veins) open directly into the cardiac chambers. Venous tributaries show anatomical variation.",
+          "يصرف coronary sinus معظم الدم الوريدي لعضلة القلب إلى الأذين الأيمن. أما anterior cardiac veins فتصب مباشرة في الأذين الأيمن، وThebesian veins تفتح مباشرة في حجرات القلب."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-img-3",
+            "type": "image",
+            "order": 1,
+            "titleEn": "Cardiac venous drainage",
+            "titleAr": "التصريف الوريدي للقلب",
+            "mediaUrl": "data/media/cardiac-venous-drainage.png",
+            "mediaMimeType": "image/png",
+            "mediaFileName": "cardiac-venous-drainage.png",
+            "captionEn": "Major tributaries of the coronary sinus and its opening into the right atrium.",
+            "captionAr": "الروافد الرئيسية للجيب التاجي وفتحه في الأذين الأيمن."
+          },
+          {
+            "id": "cv-cor-media-audio",
+            "type": "audio",
+            "order": 2,
+            "titleEn": "Coronary circulation — English audio narration",
+            "titleAr": "تسجيل صوتي: الدورة التاجية",
+            "mediaUrl": "data/media/coronary-circulation-narration.mp3",
+            "mediaMimeType": "audio/mpeg",
+            "mediaFileName": "coronary-circulation-narration.mp3",
+            "mediaDurationSeconds": 34,
+            "captionEn": "Short spoken English review of coronary origins, major branches and venous return.",
+            "captionAr": "مراجعة صوتية قصيرة باللغة الإنجليزية لمنشأ الشرايين التاجية وفروعها والتصريف الوريدي."
+          }
+        ]
+      },
+      {
+        "id": "cv-coronary-sec-6",
+        "heading": "6. Video, PDF and clinical anatomy",
+        "paragraphs": [
+          "Watch the short narrated overview, then use the PDF handout to revise the arterial branches, dominance patterns and venous return.",
+          "Clinical correlation: proximal LAD occlusion may compromise a large area of left ventricular myocardium and the anterior interventricular septum. Coronary artery bypass grafting may use the internal thoracic artery as a conduit. Coronary angiography demonstrates the coronary lumen and branching pattern."
+        ],
+        "contentBlocks": [
+          {
+            "id": "cv-cor-media-video",
+            "type": "video",
+            "order": 1,
+            "titleEn": "Coronary circulation — narrated video overview",
+            "titleAr": "فيديو تعليمي: الدورة التاجية",
+            "mediaUrl": "data/media/coronary-circulation-overview.mp4",
+            "mediaMimeType": "video/mp4",
+            "mediaFileName": "coronary-circulation-overview.mp4",
+            "mediaDurationSeconds": 36,
+            "captionEn": "Original UMEDT MP4 teaching video with spoken narration and three anatomical slides.",
+            "captionAr": "فيديو MP4 تعليمي أصلي من UMEDT يتضمن تعليقاً صوتياً وثلاث شرائح تشريحية."
+          },
+          {
+            "id": "cv-cor-media-pdf",
+            "type": "pdf_viewer",
+            "order": 2,
+            "titleEn": "Downloadable PDF — Coronary arteries and cardiac venous drainage",
+            "titleAr": "ملف PDF — الشرايين التاجية والتصريف الوريدي",
+            "mediaUrl": "data/media/coronary-arteries-venous-drainage.pdf",
+            "mediaMimeType": "application/pdf",
+            "mediaFileName": "coronary-arteries-venous-drainage.pdf",
+            "captionEn": "Genuine multi-page PDF study note with diagrams and a comparison table.",
+            "captionAr": "ملف PDF حقيقي متعدد الصفحات يتضمن رسومات وجدول مقارنة."
+          },
+          {
+            "id": "cv-cor-media-quiz",
+            "type": "question",
+            "order": 3,
+            "titleEn": "Quick anatomy check",
+            "titleAr": "اختبر فهمك",
+            "inlineQuestion": {
+              "id": "cv-cor-inline-q1",
+              "type": "single_choice",
+              "questionEn": "Coronary dominance is determined by the artery that gives rise to which vessel?",
+              "questionAr": "بماذا تُحدد السيادة التاجية؟",
+              "options": [
+                {
+                  "key": "A",
+                  "textEn": "Anterior interventricular artery (LAD)",
+                  "textAr": "الشريان بين البطينين الأمامي"
+                },
+                {
+                  "key": "B",
+                  "textEn": "Posterior interventricular artery (PDA)",
+                  "textAr": "الشريان بين البطينين الخلفي"
+                },
+                {
+                  "key": "C",
+                  "textEn": "Right marginal artery",
+                  "textAr": "الشريان الهامشي الأيمن"
+                },
+                {
+                  "key": "D",
+                  "textEn": "Great cardiac vein",
+                  "textAr": "الوريد القلبي الكبير"
+                }
+              ],
+              "correctOptionKeys": [
+                "B"
+              ],
+              "explanationEn": "Dominance is defined by whether the PDA arises from the RCA, LCx, or contributions from both systems.",
+              "explanationAr": "تُحدد السيادة بحسب منشأ PDA: من RCA أو LCx أو مساهمة كليهما.",
+              "linkedTermIds": [],
+              "createdAt": "2026-11-19T00:00:00.000Z"
+            }
+          },
+          {
+            "id": "cv-cor-media-note",
+            "type": "clinical_note",
+            "order": 4,
+            "titleEn": "Clinical and anatomical variation",
+            "titleAr": "ملاحظة سريرية واختلافات تشريحية",
+            "text": "Coronary branching, nodal artery origin and dominance vary. The patterns shown are common teaching patterns, not universal rules.",
+            "textAr": "تختلف تفرعات الشرايين التاجية ومنشأ فروع العقد والسيادة بين الأفراد. الأنماط المعروضة شائعة وليست قاعدة ثابتة لكل الأشخاص.",
+            "noteSeverity": "clinical-correlation"
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "id": "cv-cor-link-statpearls-arteries",
+        "title": "NCBI Bookshelf — Anatomy, Thorax, Heart Arteries",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK470522/",
+        "description": "Anatomical overview of coronary arteries and cardiac venous anatomy."
+      },
+      {
+        "id": "cv-cor-link-statpearls-veins",
+        "title": "NCBI Bookshelf — Anatomy, Thorax, Heart Veins",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK549786/",
+        "description": "Detailed description of coronary sinus and cardiac venous tributaries."
+      },
+      {
+        "id": "cv-cor-link-lad",
+        "title": "NCBI Bookshelf — Left Anterior Descending Artery",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK482375/",
+        "description": "LAD origin, course, branches and myocardial territory."
+      }
+    ],
+    "images": [],
+    "attachments": []
   }
 ]
