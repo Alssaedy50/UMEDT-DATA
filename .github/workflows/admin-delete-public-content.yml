@@ -67,6 +67,23 @@ jobs:
         run: |
           node scripts/delete-public-content.mjs --domain "$DOMAIN" --id "$RECORD_ID" --reason "$REASON"
 
+      - name: Preflight both signed release channels before any repository commit
+        env:
+          UMED_DATA_REPOSITORY_ROOT: ${{ github.workspace }}
+          UMED_DATA_REPOSITORY: Alssaedy50/UMEDT-DATA
+          UMED_PUBLISHER_PRIVATE_KEY_PEM: ${{ secrets.UMED_PUBLISHER_PRIVATE_KEY_PEM }}
+          VITE_UMED_PUBLIC_KEY_PEM: ${{ vars.VITE_UMED_PUBLIC_KEY_PEM }}
+        run: |
+          if [ -z "$UMED_PUBLISHER_PRIVATE_KEY_PEM" ] || [ -z "$VITE_UMED_PUBLIC_KEY_PEM" ]; then
+            echo "::error::Permanent signing keys are required. No repository commit was made."
+            exit 1
+          fi
+          git clone --depth 1 https://github.com/Alssaedy50/UMEDT.git app
+          npm ci --prefix app
+          cd app
+          npx tsx scripts/publish-data-release.ts --channel stable --dry-run --summary "Global public content deletion"
+          npx tsx scripts/publish-data-release.ts --channel beta --dry-run --summary "Global public content deletion"
+
       - name: Commit deletion registry and remove superseded package archives
         run: |
           git config user.name "github-actions[bot]"
