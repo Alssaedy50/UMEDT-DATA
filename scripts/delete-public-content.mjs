@@ -5,6 +5,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const MASTER = path.join(ROOT, 'data', 'master');
 const DOMAIN_FILES = {
   terms: 'terms.json',
   sentences: 'sentences.json',
@@ -18,30 +19,44 @@ const DOMAIN_FILES = {
   exams: 'exams.json',
   mediaAssets: 'media-index.json'
 };
-const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, arg, index, all) => {
-  if (arg.startsWith('--')) pairs.push([arg.slice(2), all[index + 1] && !all[index + 1].startsWith('--') ? all[index + 1] : '']);
-  return pairs;
-}, []));
-const domain = args.domain;
-const id = (args.id || '').trim();
-const reason = (args.reason || '').trim();
-if (!DOMAIN_FILES[domain] || !id || !reason) {
-  throw new Error('Usage: node scripts/delete-public-content.mjs --domain <domain> --id <exact-id> --reason <reason>');
-}
-if (reason.length < 8 || reason.length > 500) throw new Error('Reason must contain 8–500 characters.');
 
-const masterDir = path.join(ROOT, 'data', 'master');
-const registryPath = path.join(masterDir, 'public-deletions.json');
-const readArray = (file) => {
-  const fullPath = path.join(masterDir, file);
-  if (!fs.existsSync(fullPath)) return [];
-  const value = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-  if (!Array.isArray(value)) throw new Error(`data/master/${file} must be a JSON array.`);
-  return value;
-};
+const args = {};
+for (let i = 2; i < process.argv.length; i++) {
+  const key = process.argv[i];
+  if (!key.startsWith('--')) continue;
+  args[key.slice(2)] = process.argv[i + 1] && !process.argv[i + 1].startsWith('--')
+    ? process.argv[++i]
+    : '';
+}
+const domain = args.domain;
+const id = String(args.id || '').trim();
+const reason = String(args.reason || '').trim();
+if (!Object.hasOwn(DOMAIN_FILES, domain) || !id || reason.length < 8 || reason.length > 500) {
+  throw new Error('Usage: node scripts/delete-public-content.mjs --domain <domain> --id <exact-id> --reason <8-500 chars>');
+}
+
+function readArray(fileName) {
+  const filePath = path.join(MASTER, fileName);
+  if (!fs.existsSync(filePath)) return [];
+  const parsed = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  if (!Array.isArray(parsed)) throw new Error(`data/master/${fileName} must contain a JSON array.`);
+  return parsed;
+}
+function writeAtomic(filePath, content) {
+  const tempPath = `${filePath}.delete-tmp-${process.pid}`;
+  fs.writeFileSync(tempPath, content, { encoding: 'utf8', flag: 'wx' });
+  fs.renameSync(tempPath, filePath);
+}
+function containsExactToken(value, tokens) {
+  if (typeof value === 'string') return tokens.has(value);
+  if (Array.isArray(value)) return value.some((item) => containsExactToken(item, tokens));
+  if (value && typeof value === 'object') return Object.values(value).some((item) => containsExactToken(item, tokens));
+  return false;
+}
+
 const registry = readArray('public-deletions.json');
-if (registry.some((entry) => entry.domain === domain && entry.id === id)) {
-  throw new Error(`A permanent tombstone already exists for ${domain}:${id}.`);
+if (registry.some((entry) => entry?.domain === domain && entry?.id === id)) {
+  throw new Error(`Permanent tombstone already exists for ${domain}:${id}.`);
 }
 const targetFile = DOMAIN_FILES[domain];
 const records = readArray(targetFile);
@@ -50,61 +65,66 @@ if (matches.length !== 1) {
   throw new Error(`Expected exactly one ${domain} record with id "${id}", found ${matches.length}. No changes made.`);
 }
 const target = matches[0];
-const referenceTokens = new Set([id]);
+const tokens = new Set([id]);
 if (domain === 'mediaAssets') {
   for (const key of ['relativePath', 'rawUrl', 'fileName']) {
-    if (typeof target[key] === 'string' && target[key].trim()) referenceTokens.add(target[key].trim());
+    if (typeof target[key] === 'string' && target[key].trim()) tokens.add(target[key].trim());
   }
 }
-const containsReference = (value) => {
-  if (typeof value === 'string') return referenceTokens.has(value);
-  if (Array.isArray(value)) return value.some(containsReference);
-  if (value && typeof value === 'object') return Object.values(value).some(containsReference);
-  return false;
-};
+
 const blockers = [];
-for (const [otherDomain, file] of Object.entries(DOMAIN_FILES)) {
-  const otherRecords = readArray(file);
+for (const [otherDomain, fileName] of Object.entries(DOMAIN_FILES)) {
+  const otherRecords = readArray(fileName);
   for (const record of otherRecords) {
     if (otherDomain === domain && record?.id === id) continue;
-    if (containsReference(record)) blockers.push(`${otherDomain}:${record?.id || '(missing id)'}`);
+    if (containsExactToken(record, tokens)) blockers.push(`${otherDomain}:${record?.id || '(missing id)'}`);
   }
 }
 if (blockers.length) {
   throw new Error(
-    `Deletion blocked: the record is still referenced by ${blockers.slice(0, 20).join(', ')}` +
+    `Deletion blocked because this content is still referenced by: ${blockers.slice(0, 20).join(', ')}` +
     (blockers.length > 20 ? ` and ${blockers.length - 20} more` : '') +
-    '. Remove or relink dependent records first; no changes made.'
+    '. Remove/relink dependent records first. No files were changed.'
   );
 }
 
+let mediaAbsolutePath = null;
+let mediaRelativePath = null;
+if (domain === 'mediaAssets' && typeof target.relativePath === 'string' && target.relativePath.trim()) {
+  mediaRelativePath = target.relativePath.replace(/\\/g, '/').replace(/^\/+/, '');
+  mediaAbsolutePath = path.resolve(ROOT, mediaRelativePath);
+  if (!mediaAbsolutePath.startsWith(path.resolve(ROOT) + path.sep)) {
+    throw new Error('Unsafe media path; refusing to remove a file outside the repository.');
+  }
+}
+
 const nextRecords = records.filter((record) => record?.id !== id);
-const recordHash = crypto.createHash('sha256').update(JSON.stringify(target)).digest('hex');
+const recordSha256 = crypto.createHash('sha256').update(JSON.stringify(target)).digest('hex');
 const tombstone = {
   domain,
   id,
   deletedAt: new Date().toISOString(),
   reason,
-  recordSha256: recordHash
+  recordSha256
 };
-registry.push(tombstone);
+const nextRegistry = [...registry, tombstone];
 
-// Remove an unreferenced media binary from the current published tree.
+// Stage both JSON files before replacing either. The workflow commit then records the exact
+// source removal and its permanent tombstone in one Git commit.
+const targetPath = path.join(MASTER, targetFile);
+const registryPath = path.join(MASTER, 'public-deletions.json');
+const targetTemp = `${targetPath}.delete-tmp-${process.pid}`;
+const registryTemp = `${registryPath}.delete-tmp-${process.pid}`;
+fs.writeFileSync(targetTemp, JSON.stringify(nextRecords, null, 2) + '\n', { encoding: 'utf8', flag: 'wx' });
+fs.writeFileSync(registryTemp, JSON.stringify(nextRegistry, null, 2) + '\n', { encoding: 'utf8', flag: 'wx' });
+fs.renameSync(targetTemp, targetPath);
+fs.renameSync(registryTemp, registryPath);
+
 let removedMediaPath = null;
-if (domain === 'mediaAssets' && typeof target.relativePath === 'string' && target.relativePath.trim()) {
-  const normalized = target.relativePath.replace(/\\/g, '/').replace(/^\/+/, '');
-  const absolute = path.resolve(ROOT, normalized);
-  if (!absolute.startsWith(path.resolve(ROOT) + path.sep)) {
-    throw new Error('Unsafe media path; refusing to remove a file outside the repository.');
-  }
-  if (fs.existsSync(absolute)) {
-    fs.rmSync(absolute);
-    removedMediaPath = normalized;
-  }
+if (mediaAbsolutePath && fs.existsSync(mediaAbsolutePath)) {
+  fs.rmSync(mediaAbsolutePath);
+  removedMediaPath = mediaRelativePath;
 }
-
-// Delete old published ZIPs from the current repository tree so their public raw URLs stop serving
-// superseded packages. New stable/beta releases will be generated by the publishing workflow.
 const removedPackages = [];
 for (const channel of ['stable', 'beta']) {
   const releaseDir = path.join(ROOT, 'data', 'releases', channel);
@@ -117,16 +137,14 @@ for (const channel of ['stable', 'beta']) {
   }
 }
 
-fs.writeFileSync(path.join(masterDir, targetFile), JSON.stringify(nextRecords, null, 2) + '\n');
-fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2) + '\n');
 console.log(JSON.stringify({
   success: true,
   domain,
   id,
   deletedAt: tombstone.deletedAt,
   remainingRecords: nextRecords.length,
-  tombstones: registry.length,
+  tombstones: nextRegistry.length,
   removedMediaPath,
   removedPackages,
-  note: 'Git history and copies already downloaded by users are not erased by this operation.'
+  limitation: 'Current published files/assets are removed. Git history, forks, backups and files already downloaded by users are not erased.'
 }, null, 2));
