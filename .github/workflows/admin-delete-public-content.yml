@@ -1,0 +1,94 @@
+name: Admin — permanently delete public UMEDT content
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: Content collection
+        required: true
+        type: choice
+        options:
+          - terms
+          - sentences
+          - topics
+          - customAffixes
+          - customAbbreviations
+          - blocks
+          - subjects
+          - books
+          - questions
+          - exams
+          - mediaAssets
+      record_id:
+        description: Exact record ID (case-sensitive)
+        required: true
+        type: string
+      reason:
+        description: Auditable reason for permanent public deletion
+        required: true
+        type: string
+      confirmation:
+        description: Type DELETE-PUBLIC-CONTENT to confirm the global deletion
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: umedt-public-content-deletion
+  cancel-in-progress: false
+
+jobs:
+  delete-public-content:
+    if: github.ref == 'refs/heads/main' && github.actor == 'Alssaedy50'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Verify explicit destructive confirmation
+        env:
+          CONFIRMATION: ${{ inputs.confirmation }}
+        run: |
+          if [ "$CONFIRMATION" != "DELETE-PUBLIC-CONTENT" ]; then
+            echo "::error::Confirmation phrase did not match. No content was changed."
+            exit 1
+          fi
+
+      - name: Validate exact target and remove public record
+        env:
+          DOMAIN: ${{ inputs.domain }}
+          RECORD_ID: ${{ inputs.record_id }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          node scripts/delete-public-content.mjs --domain "$DOMAIN" --id "$RECORD_ID" --reason "$REASON"
+
+      - name: Commit deletion registry and remove superseded package archives
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data/master data/media data/releases
+          if git diff --cached --quiet; then
+            echo "::error::No deletion changes were staged."
+            exit 1
+          fi
+          git commit -m "data: permanently delete public ${{ inputs.domain }} record"
+          git push origin HEAD:main
+
+      - name: Remove superseded ZIP assets from GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          while IFS= read -r tag; do
+            [ -n "$tag" ] || continue
+            while IFS= read -r asset; do
+              [ -n "$asset" ] || continue
+              if [[ "$asset" =~ ^umed2-data-.*\.zip$ ]]; then
+                gh release delete-asset "$tag" "$asset" --yes || true
+              fi
+            done < <(gh release view "$tag" --json assets --jq '.assets[].name' 2>/dev/null || true)
+          done < <(gh release list --limit 100 --json tagName --jq '.[].tagName')
