@@ -68,7 +68,7 @@ jobs:
         run: |
           node scripts/delete-public-content.mjs --domain "$DOMAIN" --id "$RECORD_ID" --reason "$REASON"
 
-      - name: Preflight both signed release channels before any repository commit
+      - name: Build and verify both signed release channels before any repository commit
         env:
           UMED_DATA_REPOSITORY_ROOT: ${{ github.workspace }}
           UMED_DATA_REPOSITORY: Alssaedy50/UMEDT-DATA
@@ -82,8 +82,8 @@ jobs:
           git clone --depth 1 https://github.com/Alssaedy50/UMEDT.git app
           npm ci --prefix app
           cd app
-          npx tsx scripts/publish-data-release.ts --channel stable --dry-run --summary "Global public content deletion"
-          npx tsx scripts/publish-data-release.ts --channel beta --dry-run --summary "Global public content deletion"
+          npx tsx scripts/publish-data-release.ts --channel stable --summary "Global public content deletion"
+          npx tsx scripts/publish-data-release.ts --channel beta --summary "Global public content deletion"
 
       - name: Commit deletion registry and remove superseded package archives
         run: |
@@ -96,26 +96,6 @@ jobs:
           fi
           git commit -m "data: permanently delete public ${{ inputs.domain }} record"
           git push origin HEAD:main
-
-      - name: Publish new signed stable and beta packages
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh workflow run publish-data-release.yml --ref main --field channel=stable --field summary="Global public content deletion"
-          STABLE_RUN=$(gh run list --workflow publish-data-release.yml --branch main --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId')
-          if [ -z "$STABLE_RUN" ]; then
-            echo "::error::Could not locate the stable release workflow run."
-            exit 1
-          fi
-          gh run watch "$STABLE_RUN" --exit-status
-
-          gh workflow run publish-data-release.yml --ref main --field channel=beta --field summary="Global public content deletion"
-          BETA_RUN=$(gh run list --workflow publish-data-release.yml --branch main --event workflow_dispatch --limit 1 --json databaseId --jq '.[0].databaseId')
-          if [ -z "$BETA_RUN" ]; then
-            echo "::error::Could not locate the beta release workflow run."
-            exit 1
-          fi
-          gh run watch "$BETA_RUN" --exit-status
 
       - name: Remove superseded ZIP assets from GitHub Releases
         env:
