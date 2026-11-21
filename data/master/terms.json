@@ -2498,5 +2498,1763 @@
       ],
       "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ساركوما وعائية دموية» في السياق الطبي."
     }
+  },
+  {
+    "id": "term-atherothrombosis",
+    "term": "Atherothrombosis",
+    "translation": "الخثار العصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "Thrombus formation on a disrupted atherosclerotic plaque, potentially causing acute arterial occlusion.",
+    "definitionAr": "تكوّن خثرة فوق لويحة عصيدية متشققة، وقد يؤدي إلى انسداد شرياني حاد.",
+    "exampleEn": "Atherothrombosis caused the acute coronary occlusion.",
+    "exampleAr": "تسبب الخثار العصيدي في انسداد الشريان التاجي الحاد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ather/o",
+          "role": "combining-form",
+          "meaningAr": "عصيدة",
+          "meaningEn": "atheromatous material"
+        },
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة أو عملية مرضية",
+          "meaningEn": "abnormal condition or process"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الخثار العصيدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-atherogenic",
+    "term": "Atherogenic",
+    "translation": "مُعزِّز لتكوّن العصيدة",
+    "pronunciation": "/ˌæθ.ə.roʊˈdʒen.ɪk/",
+    "definitionEn": "Promoting the development of atherosclerotic lesions, as certain lipid profiles and vascular exposures may do.",
+    "definitionAr": "يعزز نشوء الآفات العصيدية، كما تفعل بعض أنماط الدهون والتعرضات الوعائية.",
+    "exampleEn": "An atherogenic lipid profile increases long-term vascular risk.",
+    "exampleAr": "يزيد النمط الدهني المعزز للعصيدة الخطر الوعائي طويل الأمد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ather/o",
+          "role": "combining-form",
+          "meaningAr": "عصيدة",
+          "meaningEn": "atheromatous material"
+        },
+        {
+          "affix": "-genic",
+          "role": "suffix",
+          "meaningAr": "مُحدِث أو مُنتِج",
+          "meaningEn": "producing or causing"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «مُعزِّز لتكوّن العصيدة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-atheromatous",
+    "term": "Atheromatous",
+    "translation": "عصيدي",
+    "pronunciation": "/ˌæθ.əˈrɑː.mə.təs/",
+    "definitionEn": "Relating to or containing atheroma, especially an arterial plaque with lipid-rich material.",
+    "definitionAr": "متعلق بالعصيدة أو محتوي عليها، خصوصًا اللويحة الشريانية الغنية بالدهون.",
+    "exampleEn": "Atheromatous debris was released into the distal circulation.",
+    "exampleAr": "تحرر حطام عصيدي إلى الدورة الدموية البعيدة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ather/o",
+          "role": "combining-form",
+          "meaningAr": "عصيدة",
+          "meaningEn": "atheromatous material"
+        },
+        {
+          "affix": "-omatous",
+          "role": "suffix",
+          "meaningAr": "متعلق بكتلة أو آفة",
+          "meaningEn": "pertaining to a mass or lesion"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «عصيدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-valvulitis",
+    "term": "Valvulitis",
+    "translation": "التهاب الصمامات القلبية",
+    "pronunciation": "/ˌvæl.vjəˈlaɪ.tɪs/",
+    "definitionEn": "Inflammation involving a heart valve, potentially causing leaflet thickening, regurgitation, or stenosis.",
+    "definitionAr": "التهاب يصيب أحد صمامات القلب، وقد يؤدي إلى تثخن الوريقات أو القلس أو التضيق.",
+    "exampleEn": "Infective valvulitis damaged the native valve.",
+    "exampleAr": "أدى التهاب الصمام الإنتاني إلى تلف الصمام الأصلي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "valvul/o",
+          "role": "combining-form",
+          "meaningAr": "صمام",
+          "meaningEn": "valve"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب الصمامات القلبية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-valvular",
+    "term": "Valvular",
+    "translation": "صمامي",
+    "pronunciation": "/ˈvæl.vjə.lɚ/",
+    "definitionEn": "Relating to a valve, particularly a cardiac valve and its structure or function.",
+    "definitionAr": "متعلق بالصمام، ولا سيما الصمام القلبي وبنيته أو وظيفته.",
+    "exampleEn": "Valvular disease may produce pressure or volume overload.",
+    "exampleAr": "قد يسبب مرض الصمامات حملًا زائدًا ضغطيًا أو حجميًا.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "valvul",
+          "role": "root",
+          "meaningAr": "صمام",
+          "meaningEn": "valve"
+        },
+        {
+          "affix": "-ar",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «صمامي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-insufficiency",
+    "term": "Insufficiency",
+    "translation": "قصور أو عدم كفاءة",
+    "pronunciation": "/ˌɪn.səˈfɪʃ.ən.si/",
+    "definitionEn": "Failure of a structure to perform adequately; valvular insufficiency allows abnormal backward blood flow.",
+    "definitionAr": "فشل بنية ما في أداء وظيفتها بصورة كافية؛ ويسمح قصور الصمام بارتجاع الدم بصورة غير طبيعية.",
+    "exampleEn": "Aortic insufficiency caused diastolic backflow.",
+    "exampleAr": "سبب قصور الصمام الأبهري رجوع الدم أثناء الانبساط."
+  },
+  {
+    "id": "term-endocardiosis",
+    "term": "Endocardiosis",
+    "translation": "تنكس الشغاف أو الصمامات",
+    "pronunciation": "/ˌen.doʊ.kɑːr.diˈoʊ.sɪs/",
+    "definitionEn": "A degenerative, usually noninflammatory change of the endocardium or valve tissue; usage varies by clinical context.",
+    "definitionAr": "تغير تنكسي غالبًا غير التهابي يصيب الشغاف أو نسيج الصمام، ويختلف استعمال المصطلح بحسب السياق السريري.",
+    "exampleEn": "The veterinary report described chronic valvular endocardiosis.",
+    "exampleAr": "وصف التقرير البيطري تنكسًا صماميًا مزمنًا في الشغاف.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "endo-",
+          "role": "prefix",
+          "meaningAr": "داخل أو باطن",
+          "meaningEn": "within or inner"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تنكس الشغاف أو الصمامات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-pericardial",
+    "term": "Pericardial",
+    "translation": "تاموري",
+    "pronunciation": "/ˌper.ɪˈkɑːr.di.əl/",
+    "definitionEn": "Relating to the pericardium, the fibroserous sac surrounding the heart.",
+    "definitionAr": "متعلق بالتامور، وهو الكيس الليفي المصلي المحيط بالقلب.",
+    "exampleEn": "Pericardial thickening was visible on imaging.",
+    "exampleAr": "ظهر تثخن التامور في التصوير.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "peri-",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تاموري» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-myocardial",
+    "term": "Myocardial",
+    "translation": "متعلق بعضلة القلب",
+    "pronunciation": "/ˌmaɪ.oʊˈkɑːr.di.əl/",
+    "definitionEn": "Relating to the myocardium, the muscular layer responsible for cardiac contraction.",
+    "definitionAr": "متعلق بعضلة القلب، وهي الطبقة العضلية المسؤولة عن انقباض القلب.",
+    "exampleEn": "Myocardial oxygen demand rises during exercise.",
+    "exampleAr": "يزداد احتياج عضلة القلب للأكسجين أثناء التمرين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «متعلق بعضلة القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-endocardial",
+    "term": "Endocardial",
+    "translation": "شغافي",
+    "pronunciation": "/ˌen.doʊˈkɑːr.di.əl/",
+    "definitionEn": "Relating to the endocardium, the endothelial lining of the heart chambers and valves.",
+    "definitionAr": "متعلق بالشغاف، وهو البطانة الداخلية لحجرات القلب وصماماته.",
+    "exampleEn": "Endocardial injury may promote mural thrombus formation.",
+    "exampleAr": "قد تعزز أذية الشغاف تكوّن خثرة جدارية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "endo-",
+          "role": "prefix",
+          "meaningAr": "داخل أو باطن",
+          "meaningEn": "within or inner"
+        },
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «شغافي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-epicardial",
+    "term": "Epicardial",
+    "translation": "نخابي",
+    "pronunciation": "/ˌep.ɪˈkɑːr.di.əl/",
+    "definitionEn": "Relating to the epicardium, the outer layer of the heart wall and visceral pericardium.",
+    "definitionAr": "متعلق بالنخاب، وهو الطبقة الخارجية لجدار القلب والوريقة الحشوية للتامور.",
+    "exampleEn": "Epicardial coronary arteries supply the myocardium.",
+    "exampleAr": "تغذي الشرايين التاجية النخابية عضلة القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "epi-",
+          "role": "prefix",
+          "meaningAr": "على أو فوق",
+          "meaningEn": "upon or on"
+        },
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نخابي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-endotheliitis",
+    "term": "Endotheliitis",
+    "translation": "التهاب البطانة الوعائية",
+    "pronunciation": "/enˌdoʊ.θiː.liˈaɪ.tɪs/",
+    "definitionEn": "Inflammation of endothelial cells lining blood vessels or cardiac structures.",
+    "definitionAr": "التهاب يصيب الخلايا البطانية المبطنة للأوعية الدموية أو البنى القلبية.",
+    "exampleEn": "Endotheliitis can impair vascular barrier function.",
+    "exampleAr": "قد يضعف التهاب البطانة الوعائية وظيفة الحاجز الوعائي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "endotheli",
+          "role": "root",
+          "meaningAr": "البطانة الوعائية",
+          "meaningEn": "endothelium"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب البطانة الوعائية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-endothelial",
+    "term": "Endothelial",
+    "translation": "بطاني",
+    "pronunciation": "/ˌen.doʊˈθiː.li.əl/",
+    "definitionEn": "Relating to the endothelium, the cellular lining of blood and lymphatic vessels and the heart.",
+    "definitionAr": "متعلق بالبطانة الوعائية، وهي الطبقة الخلوية المبطنة للأوعية الدموية واللمفاوية والقلب.",
+    "exampleEn": "Endothelial dysfunction is central to atherosclerosis.",
+    "exampleAr": "يُعد خلل وظيفة البطانة الوعائية عنصرًا محوريًا في التصلب العصيدي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "endotheli",
+          "role": "root",
+          "meaningAr": "البطانة الوعائية",
+          "meaningEn": "endothelium"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «بطاني» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasculitic",
+    "term": "Vasculitic",
+    "translation": "التهابي وعائي",
+    "pronunciation": "/ˌvæs.kjəˈlɪt.ɪk/",
+    "definitionEn": "Relating to vasculitis or characterized by inflammation of blood vessel walls.",
+    "definitionAr": "متعلق بالتهاب الأوعية أو متصف بوجود التهاب في جدرانها.",
+    "exampleEn": "Vasculitic neuropathy may cause asymmetric weakness.",
+    "exampleAr": "قد يسبب الاعتلال العصبي الالتهابي الوعائي ضعفًا غير متناظر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vascul",
+          "role": "root",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-itic",
+          "role": "suffix",
+          "meaningAr": "متعلق بالالتهاب",
+          "meaningEn": "pertaining to inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهابي وعائي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angiogenic",
+    "term": "Angiogenic",
+    "translation": "محفز لتكوّن الأوعية",
+    "pronunciation": "/ˌæn.dʒi.oʊˈdʒen.ɪk/",
+    "definitionEn": "Promoting the formation or growth of blood vessels.",
+    "definitionAr": "يعزز تكوين الأوعية الدموية أو نموها.",
+    "exampleEn": "VEGF is a potent angiogenic signal.",
+    "exampleAr": "يُعد VEGF إشارة قوية محفزة لتكوّن الأوعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-genic",
+          "role": "suffix",
+          "meaningAr": "مُحدِث أو مُنتِج",
+          "meaningEn": "producing or causing"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «محفز لتكوّن الأوعية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-neovascularization",
+    "term": "Neovascularization",
+    "translation": "توعّي حديث",
+    "pronunciation": "/ˌniːˌvæs.kjə.lə.rəˈzeɪ.ʃən/",
+    "definitionEn": "Formation of new blood vessels in a tissue, sometimes pathological as in ischemic retina or atherosclerotic plaque.",
+    "definitionAr": "تشكّل أوعية دموية جديدة داخل نسيج ما، وقد يكون مرضيًا كما في الشبكية الإقفارية أو اللويحة العصيدية.",
+    "exampleEn": "Retinal neovascularization threatened vision.",
+    "exampleAr": "هدد التوعّي الحديث في الشبكية القدرة على الإبصار.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "neo-",
+          "role": "prefix",
+          "meaningAr": "جديد",
+          "meaningEn": "new"
+        },
+        {
+          "affix": "vascul",
+          "role": "root",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-ization",
+          "role": "suffix",
+          "meaningAr": "عملية تكوين أو إحداث",
+          "meaningEn": "process of making or forming"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «توعّي حديث» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-microangiopathy",
+    "term": "Microangiopathy",
+    "translation": "اعتلال الأوعية الدقيقة",
+    "pronunciation": "/ˌmaɪ.kroʊˌæn.dʒiˈɑː.pə.θi/",
+    "definitionEn": "Disease of small blood vessels, often involving endothelial injury, basement membrane thickening, or capillary dysfunction.",
+    "definitionAr": "مرض يصيب الأوعية الدموية الصغيرة، وغالبًا ما يتضمن أذية بطانية أو تثخن الغشاء القاعدي أو خلل الشعيرات.",
+    "exampleEn": "Diabetic microangiopathy can affect the retina and kidneys.",
+    "exampleAr": "قد يصيب اعتلال الأوعية الدقيقة السكري الشبكية والكليتين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "micro-",
+          "role": "prefix",
+          "meaningAr": "صغير",
+          "meaningEn": "small"
+        },
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الأوعية الدقيقة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-macroangiopathy",
+    "term": "Macroangiopathy",
+    "translation": "اعتلال الأوعية الكبيرة",
+    "pronunciation": "/ˌmæk.roʊˌæn.dʒiˈɑː.pə.θi/",
+    "definitionEn": "Disease of large and medium-sized arteries, commonly associated with atherosclerosis.",
+    "definitionAr": "مرض يصيب الشرايين الكبيرة والمتوسطة، ويرتبط غالبًا بالتصلب العصيدي.",
+    "exampleEn": "Diabetic macroangiopathy increases the risk of coronary disease.",
+    "exampleAr": "يزيد اعتلال الأوعية الكبيرة السكري خطر مرض الشرايين التاجية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "macro-",
+          "role": "prefix",
+          "meaningAr": "كبير",
+          "meaningEn": "large"
+        },
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الأوعية الكبيرة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-capillaropathy",
+    "term": "Capillaropathy",
+    "translation": "اعتلال الشعيرات الدموية",
+    "pronunciation": "/ˌkæp.ɪˌlerˈɑː.pə.θi/",
+    "definitionEn": "A disorder affecting capillaries, potentially altering exchange, permeability, or microvascular perfusion.",
+    "definitionAr": "اضطراب يصيب الشعيرات الدموية وقد يغير التبادل أو النفاذية أو التروية المجهرية.",
+    "exampleEn": "Capillaropathy contributed to tissue edema.",
+    "exampleAr": "أسهم اعتلال الشعيرات في حدوث وذمة الأنسجة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "capillar/o",
+          "role": "combining-form",
+          "meaningAr": "شعيرة دموية",
+          "meaningEn": "capillary"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الشعيرات الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arteriopathy",
+    "term": "Arteriopathy",
+    "translation": "اعتلال الشرايين",
+    "pronunciation": "/ɑːrˌtɪr.iˈɑː.pə.θi/",
+    "definitionEn": "A general disease of arteries involving structural or functional abnormalities.",
+    "definitionAr": "مرض عام يصيب الشرايين ويتضمن اضطرابات بنيوية أو وظيفية.",
+    "exampleEn": "Peripheral arteriopathy reduced limb perfusion.",
+    "exampleAr": "قلل اعتلال الشرايين المحيطية تروية الطرف.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteri/o",
+          "role": "combining-form",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الشرايين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venopathy",
+    "term": "Venopathy",
+    "translation": "اعتلال الأوردة",
+    "pronunciation": "/viːˈnɑː.pə.θi/",
+    "definitionEn": "Disease or dysfunction of veins, including impaired return, wall damage, or valvular failure.",
+    "definitionAr": "مرض أو خلل وظيفي يصيب الأوردة، ويشمل ضعف العودة الوريدية أو تلف الجدار أو فشل الصمامات.",
+    "exampleEn": "Chronic venopathy may cause dependent edema.",
+    "exampleAr": "قد يسبب اعتلال الأوردة المزمن وذمة تزداد مع تدلي الطرف.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الأوردة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebopathy",
+    "term": "Phlebopathy",
+    "translation": "اعتلال وريدي",
+    "pronunciation": "/fliːˈbɑː.pə.θi/",
+    "definitionEn": "A disorder of the veins, particularly involving venous wall or valve function.",
+    "definitionAr": "اضطراب يصيب الأوردة، خصوصًا جدارها أو وظيفة صماماتها.",
+    "exampleEn": "The patient had chronic phlebopathy with venous stasis.",
+    "exampleAr": "كان لدى المريض اعتلال وريدي مزمن مع ركودة وريدية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-varicosity",
+    "term": "Varicosity",
+    "translation": "دوالي",
+    "pronunciation": "/ˌver.ɪˈkɑː.sə.ti/",
+    "definitionEn": "An abnormally dilated and tortuous vein, usually caused by chronic venous hypertension or valve incompetence.",
+    "definitionAr": "وريد متوسع ومتعرج بصورة غير طبيعية، وينجم غالبًا عن فرط الضغط الوريدي المزمن أو قصور الصمامات.",
+    "exampleEn": "A painful varicosity developed along the great saphenous vein.",
+    "exampleAr": "ظهرت دوالي مؤلمة على مسار الوريد الصافن الكبير."
+  },
+  {
+    "id": "term-varicosis",
+    "term": "Varicosis",
+    "translation": "داء الدوالي",
+    "pronunciation": "/ˌver.ɪˈkoʊ.sɪs/",
+    "definitionEn": "A condition characterized by varicose veins, commonly affecting superficial veins of the lower limbs.",
+    "definitionAr": "حالة تتميز بوجود أوردة دوالي، وتصيب غالبًا الأوردة السطحية في الطرفين السفليين.",
+    "exampleEn": "Chronic varicosis was associated with ankle edema.",
+    "exampleAr": "ارتبط داء الدوالي المزمن بوذمة الكاحل."
+  },
+  {
+    "id": "term-venectasia",
+    "term": "Venectasia",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˌviː.nɪkˈteɪ.ʒə/",
+    "definitionEn": "Dilation of a vein, either localized or diffuse.",
+    "definitionAr": "توسع يصيب الوريد، وقد يكون موضعيًا أو منتشرًا.",
+    "exampleEn": "Venectasia was visible on the forearm.",
+    "exampleAr": "كان التوسع الوريدي ظاهرًا على الساعد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-ectasia",
+          "role": "suffix",
+          "meaningAr": "توسع أو تمدد",
+          "meaningEn": "dilation or expansion"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «توسع وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venostenosis",
+    "term": "Venostenosis",
+    "translation": "تضيق وريدي",
+    "pronunciation": "/ˌviː.noʊ.stəˈnoʊ.sɪs/",
+    "definitionEn": "Narrowing of a vein that may impede venous return and cause collateral formation.",
+    "definitionAr": "تضيق يصيب الوريد وقد يعيق العودة الوريدية ويسبب تشكل أوعية جانبية.",
+    "exampleEn": "Central venostenosis impaired upper-limb venous drainage.",
+    "exampleAr": "أعاق التضيق الوريدي المركزي تصريف الدم الوريدي من الطرف العلوي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "veno-",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "sten/o",
+          "role": "combining-form",
+          "meaningAr": "ضيق",
+          "meaningEn": "narrow"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تضيق وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venous",
+    "term": "Venous",
+    "translation": "وريدي",
+    "pronunciation": "/ˈviː.nəs/",
+    "definitionEn": "Relating to veins or to blood returning toward the heart.",
+    "definitionAr": "متعلق بالأوردة أو بالدم العائد باتجاه القلب.",
+    "exampleEn": "Venous congestion increased hepatic size.",
+    "exampleAr": "زاد الاحتقان الوريدي حجم الكبد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven",
+          "role": "root",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-ous",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arterial",
+    "term": "Arterial",
+    "translation": "شرياني",
+    "pronunciation": "/ɑːrˈtɪr.i.əl/",
+    "definitionEn": "Relating to arteries or the blood carried away from the heart.",
+    "definitionAr": "متعلق بالشرايين أو بالدم الذي تحمله بعيدًا عن القلب.",
+    "exampleEn": "Arterial pressure was measured invasively.",
+    "exampleAr": "قيس الضغط الشرياني بطريقة باضعة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteri",
+          "role": "root",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «شرياني» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arteriolar",
+    "term": "Arteriolar",
+    "translation": "شُريني",
+    "pronunciation": "/ɑːrˈtɪr.i.oʊ.lɚ/",
+    "definitionEn": "Relating to arterioles, the small resistance vessels that regulate tissue perfusion.",
+    "definitionAr": "متعلق بالشُرينات، وهي أوعية المقاومة الصغيرة التي تنظم تروية الأنسجة.",
+    "exampleEn": "Arteriolar constriction increased systemic vascular resistance.",
+    "exampleAr": "زاد تضيق الشُرينات المقاومة الوعائية الجهازية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteriol",
+          "role": "root",
+          "meaningAr": "شرين",
+          "meaningEn": "small artery"
+        },
+        {
+          "affix": "-ar",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «شُريني» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasospastic",
+    "term": "Vasospastic",
+    "translation": "تشنجي وعائي",
+    "pronunciation": "/ˌveɪ.zoʊˈspæs.tɪk/",
+    "definitionEn": "Characterized by episodic vascular spasm and transient narrowing of a blood vessel.",
+    "definitionAr": "متصف بتشنج وعائي نَوْبي وتضيق عابر في الوعاء الدموي.",
+    "exampleEn": "Vasospastic angina occurred at rest.",
+    "exampleAr": "حدثت الذبحة التشنجية الوعائية أثناء الراحة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vas/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "spast",
+          "role": "root",
+          "meaningAr": "تشنج",
+          "meaningEn": "spasm"
+        },
+        {
+          "affix": "-ic",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ أو متصف بـ",
+          "meaningEn": "pertaining to or characterized by"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تشنجي وعائي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasoparesis",
+    "term": "Vasoparesis",
+    "translation": "ضعف التوتر الوعائي",
+    "pronunciation": "/ˌveɪ.zoʊ.pəˈriː.sɪs/",
+    "definitionEn": "Partial loss or reduction of vascular tone, resulting in abnormal vessel relaxation.",
+    "definitionAr": "فقدان جزئي أو انخفاض في التوتر الوعائي يؤدي إلى ارتخاء غير طبيعي للأوعية.",
+    "exampleEn": "Vasoparesis contributed to persistent hypotension.",
+    "exampleAr": "أسهم ضعف التوتر الوعائي في استمرار انخفاض ضغط الدم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vas/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-paresis",
+          "role": "suffix",
+          "meaningAr": "ضعف أو شلل جزئي",
+          "meaningEn": "weakness or partial paralysis"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ضعف التوتر الوعائي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasoreactivity",
+    "term": "Vasoreactivity",
+    "translation": "التفاعلية الوعائية",
+    "pronunciation": "/ˌveɪ.zoʊ.riˌækˈtɪv.ə.ti/",
+    "definitionEn": "The capacity of blood vessels to change diameter in response to neural, hormonal, or local stimuli.",
+    "definitionAr": "قدرة الأوعية الدموية على تغيير قطرها استجابةً للمؤثرات العصبية أو الهرمونية أو الموضعية.",
+    "exampleEn": "Impaired vasoreactivity may contribute to coronary dysfunction.",
+    "exampleAr": "قد يسهم اضطراب التفاعلية الوعائية في خلل وظيفة الشرايين التاجية."
+  },
+  {
+    "id": "term-vasotoxicity",
+    "term": "Vasotoxicity",
+    "translation": "السمية الوعائية",
+    "pronunciation": "/ˌveɪ.zoʊ.tɑːkˈsɪs.ə.ti/",
+    "definitionEn": "Toxic injury to blood vessels or endothelial structures caused by drugs, chemicals, or other exposures.",
+    "definitionAr": "أذية سامة تصيب الأوعية الدموية أو البنى البطانية بسبب أدوية أو مواد كيميائية أو تعرضات أخرى.",
+    "exampleEn": "The drug's vasotoxicity was monitored during treatment.",
+    "exampleAr": "جرت مراقبة السمية الوعائية للدواء أثناء العلاج.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vas/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "toxic",
+          "role": "root",
+          "meaningAr": "سام أو مسبب للأذية",
+          "meaningEn": "poisonous or harmful"
+        },
+        {
+          "affix": "-ity",
+          "role": "suffix",
+          "meaningAr": "حالة أو صفة",
+          "meaningEn": "state or quality"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «السمية الوعائية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemorrhagic",
+    "term": "Hemorrhagic",
+    "translation": "نزفي",
+    "pronunciation": "/ˌhem.əˈrædʒ.ɪk/",
+    "definitionEn": "Relating to or characterized by bleeding or hemorrhage.",
+    "definitionAr": "متعلق بالنزف أو متصف بحدوثه.",
+    "exampleEn": "Hemorrhagic transformation complicated the cerebral infarction.",
+    "exampleAr": "عقّد التحول النزفي الاحتشاء الدماغي."
+  },
+  {
+    "id": "term-hematoma",
+    "term": "Hematoma",
+    "translation": "ورم دموي",
+    "pronunciation": "/ˌhiː.məˈtoʊ.mə/",
+    "definitionEn": "A localized collection of blood outside blood vessels, usually within tissue or a body cavity.",
+    "definitionAr": "تجمع موضعي للدم خارج الأوعية الدموية، غالبًا داخل نسيج أو تجويف جسمي.",
+    "exampleEn": "A large groin hematoma developed after catheterization.",
+    "exampleAr": "تكوّن ورم دموي كبير في الأربية بعد القسطرة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hemat/o",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "-oma",
+          "role": "suffix",
+          "meaningAr": "كتلة أو تجمع",
+          "meaningEn": "mass or collection"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ورم دموي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemopericardium",
+    "term": "Hemopericardium",
+    "translation": "تجمع الدم في التامور",
+    "pronunciation": "/ˌhiː.moʊˌper.ɪˈkɑːr.di.əm/",
+    "definitionEn": "Accumulation of blood within the pericardial cavity, potentially causing cardiac tamponade.",
+    "definitionAr": "تجمع الدم داخل جوف التامور، وقد يؤدي إلى اندحاس القلب.",
+    "exampleEn": "Aortic rupture caused hemopericardium and tamponade.",
+    "exampleAr": "سبب تمزق الأبهر تجمع الدم في التامور واندحاس القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hem/o",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "peri-",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-um",
+          "role": "suffix",
+          "meaningAr": "اسم بنيوي",
+          "meaningEn": "noun ending"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تجمع الدم في التامور» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemoperitoneum",
+    "term": "Hemoperitoneum",
+    "translation": "تجمع الدم في الصفاق",
+    "pronunciation": "/ˌhiː.moʊˌper.ɪ.təˈniː.əm/",
+    "definitionEn": "Presence of blood within the peritoneal cavity, often following trauma or vascular rupture.",
+    "definitionAr": "وجود الدم داخل التجويف الصفاقي، وغالبًا بعد الرضوض أو تمزق وعائي.",
+    "exampleEn": "Ruptured abdominal aneurysm produced hemoperitoneum.",
+    "exampleAr": "سبب تمزق أم الدم البطنية تجمع الدم في الصفاق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hem/o",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "peri-",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "tone",
+          "role": "root",
+          "meaningAr": "شد أو غشاء",
+          "meaningEn": "tension or membrane"
+        },
+        {
+          "affix": "-um",
+          "role": "suffix",
+          "meaningAr": "اسم بنيوي",
+          "meaningEn": "noun ending"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تجمع الدم في الصفاق» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombolytic",
+    "term": "Thrombolytic",
+    "translation": "حالّ للخثرة",
+    "pronunciation": "/ˌθrɑːm.boʊˈlɪt.ɪk/",
+    "definitionEn": "Capable of dissolving a thrombus, particularly by promoting conversion of plasminogen to plasmin.",
+    "definitionAr": "قادر على إذابة الخثرة، خصوصًا عبر تعزيز تحويل البلاسمينوجين إلى بلاسمين.",
+    "exampleEn": "A thrombolytic agent was considered for acute ischemic stroke.",
+    "exampleAr": "دُرس استخدام عامل حالّ للخثرة في السكتة الدماغية الإقفارية الحادة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-lytic",
+          "role": "suffix",
+          "meaningAr": "حالّ أو مفكك",
+          "meaningEn": "dissolving or breaking down"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «حالّ للخثرة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombogenicity",
+    "term": "Thrombogenicity",
+    "translation": "القابلية لإحداث الخثار",
+    "pronunciation": "/ˌθrɑːm.boʊ.dʒəˈnɪs.ə.ti/",
+    "definitionEn": "The tendency of a surface, material, or biological state to promote thrombus formation.",
+    "definitionAr": "ميل سطح أو مادة أو حالة بيولوجية إلى تعزيز تكوّن الخثرات.",
+    "exampleEn": "The graft material's thrombogenicity was evaluated before implantation.",
+    "exampleAr": "قُيّمت قابلية مادة الطعم لإحداث الخثار قبل زرعها.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-genic",
+          "role": "suffix",
+          "meaningAr": "مُحدِث أو مُنتِج",
+          "meaningEn": "producing or causing"
+        },
+        {
+          "affix": "-ity",
+          "role": "suffix",
+          "meaningAr": "حالة أو صفة",
+          "meaningEn": "state or quality"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «القابلية لإحداث الخثار» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-embolization",
+    "term": "Embolization",
+    "translation": "إحداث الانصمام",
+    "pronunciation": "/ˌem.bə.ləˈzeɪ.ʃən/",
+    "definitionEn": "Intentional occlusion of a blood vessel by introducing embolic material, usually as an interventional treatment.",
+    "definitionAr": "إغلاق مقصود لوعاء دموي بإدخال مادة صمية، غالبًا كعلاج تداخلي.",
+    "exampleEn": "Selective embolization controlled the arterial bleeding.",
+    "exampleAr": "سيطر الانصمام الانتقائي على النزف الشرياني."
+  },
+  {
+    "id": "term-cholesterolosis",
+    "term": "Cholesterolosis",
+    "translation": "ترسب الكوليسترول",
+    "pronunciation": "/kəˌles.tə.roʊˈloʊ.sɪs/",
+    "definitionEn": "Abnormal accumulation of cholesterol in tissue; in vascular pathology cholesterol deposition is a feature of atherosclerotic lesions.",
+    "definitionAr": "تراكم غير طبيعي للكوليسترول في الأنسجة؛ ويُعد ترسبه سمة في الآفات العصيدية الوعائية.",
+    "exampleEn": "Cholesterolosis was noted in the gallbladder specimen.",
+    "exampleAr": "لوحظ ترسب الكوليسترول في عينة المرارة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cholesterol",
+          "role": "root",
+          "meaningAr": "كوليسترول",
+          "meaningEn": "cholesterol"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ترسب الكوليسترول» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypolipidemia",
+    "term": "Hypolipidemia",
+    "translation": "نقص شحميات الدم",
+    "pronunciation": "/ˌhaɪ.poʊ.lɪˈpɪd.iː.mi.ə/",
+    "definitionEn": "An abnormally low concentration of circulating lipids.",
+    "definitionAr": "انخفاض غير طبيعي في تركيز الدهون المتداولة في الدم.",
+    "exampleEn": "Severe hypolipidemia prompted evaluation for an underlying disorder.",
+    "exampleAr": "استدعى نقص شحميات الدم الشديد تقييم اضطراب كامن.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hypo-",
+          "role": "prefix",
+          "meaningAr": "نقص أو انخفاض",
+          "meaningEn": "below normal or deficient"
+        },
+        {
+          "affix": "lipid",
+          "role": "root",
+          "meaningAr": "دهن",
+          "meaningEn": "fat"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نقص شحميات الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyperlipoproteinemia",
+    "term": "Hyperlipoproteinemia",
+    "translation": "فرط البروتينات الدهنية في الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌlɪp.oʊˌproʊ.tiˈniː.mi.ə/",
+    "definitionEn": "An increased concentration of one or more classes of plasma lipoproteins.",
+    "definitionAr": "ارتفاع تركيز فئة واحدة أو أكثر من البروتينات الدهنية في البلازما.",
+    "exampleEn": "Familial hyperlipoproteinemia was associated with premature vascular disease.",
+    "exampleAr": "ارتبط فرط البروتينات الدهنية العائلي بمرض وعائي مبكر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "lipo-",
+          "role": "combining-form",
+          "meaningAr": "دهن",
+          "meaningEn": "fat"
+        },
+        {
+          "affix": "protein/o",
+          "role": "combining-form",
+          "meaningAr": "بروتين",
+          "meaningEn": "protein"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط البروتينات الدهنية في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypocholesterolemia",
+    "term": "Hypocholesterolemia",
+    "translation": "نقص كوليسترول الدم",
+    "pronunciation": "/ˌhaɪ.poʊ.kəˌles.tə.roʊˈliː.mi.ə/",
+    "definitionEn": "An abnormally low concentration of cholesterol in the blood.",
+    "definitionAr": "انخفاض غير طبيعي في تركيز الكوليسترول في الدم.",
+    "exampleEn": "Marked hypocholesterolemia was investigated for secondary causes.",
+    "exampleAr": "جرى تقصي الأسباب الثانوية لنقص كوليسترول الدم الواضح.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hypo-",
+          "role": "prefix",
+          "meaningAr": "نقص أو انخفاض",
+          "meaningEn": "below normal or deficient"
+        },
+        {
+          "affix": "cholesterol",
+          "role": "root",
+          "meaningAr": "كوليسترول",
+          "meaningEn": "cholesterol"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نقص كوليسترول الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyperlipasemia",
+    "term": "Hyperlipasemia",
+    "translation": "فرط الليباز في الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌlɪp.əˈsiː.mi.ə/",
+    "definitionEn": "An elevated serum lipase concentration; although not a lipid disorder itself, it may accompany acute pancreatitis.",
+    "definitionAr": "ارتفاع تركيز إنزيم الليباز في المصل؛ ورغم أنه ليس اضطرابًا دهنيًا بحد ذاته فقد يرافق التهاب البنكرياس الحاد.",
+    "exampleEn": "Hyperlipasemia supported the diagnosis of acute pancreatitis.",
+    "exampleAr": "دعم ارتفاع الليباز في الدم تشخيص التهاب البنكرياس الحاد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "lipase",
+          "role": "root",
+          "meaningAr": "إنزيم الليباز",
+          "meaningEn": "lipase enzyme"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط الليباز في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyperglycemia",
+    "term": "Hyperglycemia",
+    "translation": "فرط سكر الدم",
+    "pronunciation": "/ˌhaɪ.pɚ.ɡlaɪˈsiː.mi.ə/",
+    "definitionEn": "An elevated blood glucose concentration, a major metabolic risk factor associated with vascular injury in diabetes.",
+    "definitionAr": "ارتفاع تركيز الغلوكوز في الدم، وهو عامل استقلابي مهم يرتبط بالأذية الوعائية في السكري.",
+    "exampleEn": "Persistent hyperglycemia accelerates diabetic vascular complications.",
+    "exampleAr": "يسرّع فرط سكر الدم المستمر المضاعفات الوعائية للسكري.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "glyc/o",
+          "role": "combining-form",
+          "meaningAr": "سكر أو غلوكوز",
+          "meaningEn": "sugar or glucose"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط سكر الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypoglycemia",
+    "term": "Hypoglycemia",
+    "translation": "نقص سكر الدم",
+    "pronunciation": "/ˌhaɪ.poʊ.ɡlaɪˈsiː.mi.ə/",
+    "definitionEn": "An abnormally low blood glucose concentration that may cause adrenergic and neuroglycopenic symptoms.",
+    "definitionAr": "انخفاض غير طبيعي في تركيز الغلوكوز في الدم، وقد يسبب أعراضًا أدرينالية وعصبية ناجمة عن نقص الغلوكوز.",
+    "exampleEn": "Severe hypoglycemia may provoke sympathetic activation and tachycardia.",
+    "exampleAr": "قد يحفز نقص سكر الدم الشديد التنشيط الودي وتسرع القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hypo-",
+          "role": "prefix",
+          "meaningAr": "نقص أو انخفاض",
+          "meaningEn": "below normal or deficient"
+        },
+        {
+          "affix": "glyc/o",
+          "role": "combining-form",
+          "meaningAr": "سكر أو غلوكوز",
+          "meaningEn": "sugar or glucose"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نقص سكر الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-insulinresistance",
+    "term": "Insulinresistance",
+    "translation": "مقاومة الإنسولين",
+    "pronunciation": "/ˈɪn.sə.lɪn rɪˈzɪs.təns/",
+    "definitionEn": "Reduced biological response to insulin, contributing to hyperglycemia, dyslipidemia, and cardiovascular risk.",
+    "definitionAr": "انخفاض استجابة الأنسجة للإنسولين، مما يسهم في فرط سكر الدم واضطراب الدهون والخطر القلبي الوعائي.",
+    "exampleEn": "Insulin resistance is strongly associated with metabolic syndrome.",
+    "exampleAr": "ترتبط مقاومة الإنسولين بقوة بمتلازمة الأيض."
+  },
+  {
+    "id": "term-metabolic",
+    "term": "Metabolic",
+    "translation": "استقلابي",
+    "pronunciation": "/ˌmet.əˈbɑː.lɪk/",
+    "definitionEn": "Relating to metabolism, the biochemical processes that maintain cellular and organismal function.",
+    "definitionAr": "متعلق بالاستقلاب، أي العمليات الكيميائية الحيوية التي تحافظ على وظيفة الخلايا والجسم.",
+    "exampleEn": "Metabolic syndrome increases cardiovascular risk.",
+    "exampleAr": "تزيد متلازمة الأيض الخطر القلبي الوعائي."
+  },
+  {
+    "id": "term-dysmetabolism",
+    "term": "Dysmetabolism",
+    "translation": "اضطراب الاستقلاب",
+    "pronunciation": "/ˌdɪs.məˈtæb.ə.lɪ.zəm/",
+    "definitionEn": "Abnormal metabolic processing that may affect glucose, lipids, or other substrates.",
+    "definitionAr": "خلل في العمليات الاستقلابية قد يؤثر في الغلوكوز أو الدهون أو ركائز أخرى.",
+    "exampleEn": "Dysmetabolism can contribute to vascular complications.",
+    "exampleAr": "قد يسهم اضطراب الاستقلاب في المضاعفات الوعائية."
+  },
+  {
+    "id": "term-hyperuricemia",
+    "term": "Hyperuricemia",
+    "translation": "فرط حمض اليوريك في الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌjʊr.ɪˈsiː.mi.ə/",
+    "definitionEn": "An elevated serum urate concentration, associated with gout and sometimes with cardiometabolic risk.",
+    "definitionAr": "ارتفاع تركيز اليورات في المصل، ويرتبط بالنقرس وأحيانًا بالمخاطر القلبية الاستقلابية.",
+    "exampleEn": "Hyperuricemia was detected during the metabolic evaluation.",
+    "exampleAr": "كُشف فرط حمض اليوريك أثناء التقييم الاستقلابي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "uric",
+          "role": "root",
+          "meaningAr": "حمض اليوريك",
+          "meaningEn": "uric acid"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط حمض اليوريك في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-dysglycemia",
+    "term": "Dysglycemia",
+    "translation": "اضطراب سكر الدم",
+    "pronunciation": "/ˌdɪs.ɡlaɪˈsiː.mi.ə/",
+    "definitionEn": "Abnormal glucose regulation, encompassing hyperglycemia, hypoglycemia, and impaired glucose tolerance.",
+    "definitionAr": "خلل في تنظيم الغلوكوز، ويشمل فرط سكر الدم ونقصه وضعف تحمل الغلوكوز.",
+    "exampleEn": "Dysglycemia is associated with endothelial dysfunction.",
+    "exampleAr": "يرتبط اضطراب سكر الدم بخلل وظيفة البطانة الوعائية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dys-",
+          "role": "prefix",
+          "meaningAr": "خلل أو اضطراب",
+          "meaningEn": "abnormal or impaired"
+        },
+        {
+          "affix": "glyc/o",
+          "role": "combining-form",
+          "meaningAr": "سكر أو غلوكوز",
+          "meaningEn": "sugar or glucose"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اضطراب سكر الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypertensive",
+    "term": "Hypertensive",
+    "translation": "مصاب بارتفاع ضغط الدم",
+    "pronunciation": "/ˌhaɪ.pɚˈten.sɪv/",
+    "definitionEn": "Characterized by or associated with elevated arterial blood pressure.",
+    "definitionAr": "متصف بارتفاع ضغط الدم الشرياني أو مرتبط به.",
+    "exampleEn": "Hypertensive emergency requires controlled blood pressure reduction.",
+    "exampleAr": "تتطلب حالة فرط ضغط الدم الطارئة خفض الضغط بصورة مضبوطة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "tens",
+          "role": "root",
+          "meaningAr": "ضغط أو شد",
+          "meaningEn": "pressure or tension"
+        },
+        {
+          "affix": "-ive",
+          "role": "suffix",
+          "meaningAr": "متصف بـ",
+          "meaningEn": "characterized by"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «مصاب بارتفاع ضغط الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypotensive",
+    "term": "Hypotensive",
+    "translation": "خافض للضغط أو منخفض الضغط",
+    "pronunciation": "/ˌhaɪ.poʊˈten.sɪv/",
+    "definitionEn": "Characterized by low blood pressure or capable of lowering arterial pressure, depending on context.",
+    "definitionAr": "متصف بانخفاض ضغط الدم أو قادر على خفض الضغط الشرياني بحسب السياق.",
+    "exampleEn": "The patient remained hypotensive after fluid resuscitation.",
+    "exampleAr": "ظل المريض منخفض ضغط الدم بعد الإنعاش بالسوائل.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hypo-",
+          "role": "prefix",
+          "meaningAr": "نقص أو انخفاض",
+          "meaningEn": "below normal or deficient"
+        },
+        {
+          "affix": "tens",
+          "role": "root",
+          "meaningAr": "ضغط أو شد",
+          "meaningEn": "pressure or tension"
+        },
+        {
+          "affix": "-ive",
+          "role": "suffix",
+          "meaningAr": "متصف بـ",
+          "meaningEn": "characterized by"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «خافض للضغط أو منخفض الضغط» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-atrophy",
+    "term": "Atrophy",
+    "translation": "ضمور",
+    "pronunciation": "/ˈæt.rə.fi/",
+    "definitionEn": "Reduction in cell size or tissue mass due to decreased workload, denervation, ischemia, or other causes.",
+    "definitionAr": "انخفاض حجم الخلايا أو كتلة النسيج بسبب قلة الاستخدام أو فقدان التعصيب أو نقص التروية أو أسباب أخرى.",
+    "exampleEn": "Chronic ischemia may cause myocardial atrophy in selected settings.",
+    "exampleAr": "قد يسبب نقص التروية المزمن ضمورًا في عضلة القلب في بعض الحالات."
+  },
+  {
+    "id": "term-cardiomegalic",
+    "term": "Cardiomegalic",
+    "translation": "متضخم القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊ.məˈɡæl.ɪk/",
+    "definitionEn": "Relating to or characterized by cardiomegaly.",
+    "definitionAr": "متعلق بتضخم القلب أو متصف به.",
+    "exampleEn": "The cardiomegalic silhouette was confirmed on echocardiography.",
+    "exampleAr": "تأكد تضخم ظل القلب بتخطيط صدى القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-megaly",
+          "role": "suffix",
+          "meaningAr": "تضخم",
+          "meaningEn": "enlargement"
+        },
+        {
+          "affix": "-ic",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «متضخم القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiomyopathic",
+    "term": "Cardiomyopathic",
+    "translation": "اعتلالي عضلي قلبي",
+    "pronunciation": "/ˌkɑːr.di.oʊˌmaɪ.oʊˈpæθ.ɪk/",
+    "definitionEn": "Relating to cardiomyopathy or resulting from myocardial disease.",
+    "definitionAr": "متعلق باعتلال عضلة القلب أو ناجم عنه.",
+    "exampleEn": "Cardiomyopathic changes were evident on imaging.",
+    "exampleAr": "كانت التغيرات الاعتلالية في عضلة القلب واضحة بالتصوير.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "-pathic",
+          "role": "suffix",
+          "meaningAr": "متعلق بالمرض",
+          "meaningEn": "pertaining to disease"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلالي عضلي قلبي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-myonecrosis",
+    "term": "Myonecrosis",
+    "translation": "نخر العضلات",
+    "pronunciation": "/ˌmaɪ.oʊ.nəˈkroʊ.sɪs/",
+    "definitionEn": "Necrotic death of muscle tissue caused by ischemia, toxins, infection, or trauma.",
+    "definitionAr": "موت نخري يصيب النسيج العضلي بسبب نقص التروية أو السموم أو العدوى أو الرضوض.",
+    "exampleEn": "Severe ischemia produced skeletal myonecrosis.",
+    "exampleAr": "سبب نقص التروية الشديد نخرًا في العضلات الهيكلية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "necr/o",
+          "role": "combining-form",
+          "meaningAr": "موت أو نخر",
+          "meaningEn": "death or necrosis"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نخر العضلات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-myocardionecrosis",
+    "term": "Myocardionecrosis",
+    "translation": "نخر عضلة القلب",
+    "pronunciation": "/ˌmaɪ.oʊˌkɑːr.di.oʊ.nəˈkroʊ.sɪs/",
+    "definitionEn": "Necrotic death of myocardial tissue, classically resulting from prolonged ischemia during myocardial infarction.",
+    "definitionAr": "موت نخري يصيب نسيج عضلة القلب، وينجم تقليديًا عن نقص تروية مطول أثناء احتشاء القلب.",
+    "exampleEn": "Myocardionecrosis was confirmed by histopathology.",
+    "exampleAr": "تأكد نخر عضلة القلب بالفحص النسيجي المرضي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "necr/o",
+          "role": "combining-form",
+          "meaningAr": "نخر أو موت",
+          "meaningEn": "necrosis or death"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نخر عضلة القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-fibrotic",
+    "term": "Fibrotic",
+    "translation": "ليفي",
+    "pronunciation": "/faɪˈbrɑː.tɪk/",
+    "definitionEn": "Characterized by fibrosis or excessive connective-tissue deposition.",
+    "definitionAr": "متصف بوجود التليف أو الترسب المفرط للنسيج الضام.",
+    "exampleEn": "Fibrotic remodeling altered ventricular geometry.",
+    "exampleAr": "غيّر الترميم الليفي هندسة البطين."
+  },
+  {
+    "id": "term-sclerosis",
+    "term": "Sclerosis",
+    "translation": "تصلب",
+    "pronunciation": "/skləˈroʊ.sɪs/",
+    "definitionEn": "Abnormal hardening of tissue, commonly due to fibrosis, calcification, or other structural changes.",
+    "definitionAr": "تصلب غير طبيعي في النسيج، وينجم غالبًا عن التليف أو التكلس أو تغيرات بنيوية أخرى.",
+    "exampleEn": "Vascular sclerosis reduced arterial compliance.",
+    "exampleAr": "قلل التصلب الوعائي مطاوعة الشرايين."
+  },
+  {
+    "id": "term-sclerotic",
+    "term": "Sclerotic",
+    "translation": "متصلب",
+    "pronunciation": "/skləˈrɑː.tɪk/",
+    "definitionEn": "Characterized by abnormal tissue hardening or sclerosis.",
+    "definitionAr": "متصف بتصلب نسيجي غير طبيعي.",
+    "exampleEn": "Sclerotic arterial walls were less compliant.",
+    "exampleAr": "كانت جدران الشرايين المتصلبة أقل مطاوعة."
+  },
+  {
+    "id": "term-calcific",
+    "term": "Calcific",
+    "translation": "متكلس",
+    "pronunciation": "/kælˈsɪf.ɪk/",
+    "definitionEn": "Relating to or characterized by calcium deposition in tissue.",
+    "definitionAr": "متعلق بترسب الكالسيوم في الأنسجة أو متصف به.",
+    "exampleEn": "Calcific aortic valve disease progressed over several years.",
+    "exampleAr": "تطور مرض الصمام الأبهري المتكلس على مدى عدة سنوات.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "calc",
+          "role": "root",
+          "meaningAr": "كالسيوم أو مادة كلسية",
+          "meaningEn": "calcium or lime"
+        },
+        {
+          "affix": "-ific",
+          "role": "suffix",
+          "meaningAr": "مُحدِث أو متعلق بالتكوين",
+          "meaningEn": "making or relating to formation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «متكلس» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-ossification",
+    "term": "Ossification",
+    "translation": "تعظم",
+    "pronunciation": "/ˌɑː.sə.fɪˈkeɪ.ʃən/",
+    "definitionEn": "Formation of bone tissue, which may occur abnormally in soft tissues or vascular lesions.",
+    "definitionAr": "تكوّن نسيج عظمي، وقد يحدث بصورة غير طبيعية في الأنسجة الرخوة أو الآفات الوعائية.",
+    "exampleEn": "Vascular ossification was detected in the calcified lesion.",
+    "exampleAr": "كُشف التعظم الوعائي في الآفة المتكلسة."
+  },
+  {
+    "id": "term-metaplasia",
+    "term": "Metaplasia",
+    "translation": "حؤول",
+    "pronunciation": "/ˌmet.əˈpleɪ.ʒə/",
+    "definitionEn": "Reversible replacement of one differentiated cell type by another, sometimes occurring in chronically injured tissues.",
+    "definitionAr": "استبدال عكوس لنوع من الخلايا المتمايزة بنوع آخر، وقد يحدث في الأنسجة المصابة مزمنًا.",
+    "exampleEn": "Metaplasia was not a feature of the sampled arterial lesion.",
+    "exampleAr": "لم يكن الحؤول سمة في الآفة الشريانية المأخوذة بالعينة."
+  },
+  {
+    "id": "term-dysplasia",
+    "term": "Dysplasia",
+    "translation": "خلل التنسج",
+    "pronunciation": "/dɪsˈpleɪ.ʒə/",
+    "definitionEn": "Disordered cellular growth and maturation, a term used mainly in epithelial pathology rather than routine vascular lesions.",
+    "definitionAr": "اضطراب في نمو الخلايا ونضجها، ويستخدم المصطلح أساسًا في أمراض الظهارة لا في الآفات الوعائية المعتادة.",
+    "exampleEn": "The biopsy showed no evidence of dysplasia.",
+    "exampleAr": "لم تُظهر الخزعة دليلًا على خلل التنسج."
+  },
+  {
+    "id": "term-reperfusion",
+    "term": "Reperfusion",
+    "translation": "إعادة التروية",
+    "pronunciation": "/ˌriː.pɚˈfjuː.ʒən/",
+    "definitionEn": "Restoration of blood flow to tissue after a period of ischemia, which may itself cause additional injury.",
+    "definitionAr": "استعادة جريان الدم إلى نسيج بعد فترة من نقص التروية، وقد تسبب بحد ذاتها أذية إضافية.",
+    "exampleEn": "Early reperfusion limited infarct size.",
+    "exampleAr": "حدّت إعادة التروية المبكرة من حجم الاحتشاء."
+  },
+  {
+    "id": "term-reperfusioninjury",
+    "term": "Reperfusioninjury",
+    "translation": "أذية إعادة التروية",
+    "pronunciation": "/ˌriː.pɚˈfjuː.ʒən ˈɪn.dʒɚ.i/",
+    "definitionEn": "Tissue damage occurring when blood supply returns after ischemia, involving oxidative stress, calcium overload, and inflammation.",
+    "definitionAr": "أذية نسيجية تحدث عند عودة الدم بعد نقص التروية، وتتضمن الإجهاد التأكسدي وزيادة الكالسيوم والالتهاب.",
+    "exampleEn": "Reperfusion injury complicated the restoration of coronary flow.",
+    "exampleAr": "عقّدت أذية إعادة التروية استعادة الجريان التاجي."
+  },
+  {
+    "id": "term-infarct",
+    "term": "Infarct",
+    "translation": "منطقة احتشاء",
+    "pronunciation": "/ˈɪn.fɑːrkt/",
+    "definitionEn": "An area of tissue that has undergone ischemic necrosis.",
+    "definitionAr": "منطقة من النسيج تعرضت للنخر الإقفاري.",
+    "exampleEn": "The infarct involved the anterior wall of the left ventricle.",
+    "exampleAr": "شمل الاحتشاء الجدار الأمامي للبطين الأيسر."
+  },
+  {
+    "id": "term-infarcted",
+    "term": "Infarcted",
+    "translation": "مصاب بالاحتشاء",
+    "pronunciation": "/ɪnˈfɑːrk.tɪd/",
+    "definitionEn": "Affected by infarction or containing an area of ischemic necrosis.",
+    "definitionAr": "مصاب بالاحتشاء أو يحتوي منطقة من النخر الإقفاري.",
+    "exampleEn": "The infarcted myocardium showed loss of normal architecture.",
+    "exampleAr": "أظهرت عضلة القلب المحتشية فقدان البنية الطبيعية."
+  },
+  {
+    "id": "term-anginal",
+    "term": "Anginal",
+    "translation": "متعلق بالذبحة الصدرية",
+    "pronunciation": "/ˈæn.dʒɪ.nəl/",
+    "definitionEn": "Relating to angina or characterized by symptoms resembling myocardial ischemic chest discomfort.",
+    "definitionAr": "متعلق بالذبحة أو متصف بأعراض تشبه الانزعاج الصدري الإقفاري.",
+    "exampleEn": "The patient described anginal pain radiating to the jaw.",
+    "exampleAr": "وصف المريض ألمًا ذبحيًا يمتد إلى الفك."
   }
 ]
