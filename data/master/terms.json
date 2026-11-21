@@ -14147,5 +14147,85 @@
       ],
       "literalSynthesisAr": "صفة تعني موجودًا داخل الجدار."
     }
+  },
+  {
+    "id": "term-lipoprotein",
+    "term": "Lipoprotein",
+    "translation": "بروتين دهني",
+    "definitionEn": "A particle composed of lipids and apolipoproteins that transports hydrophobic lipids through blood and lymph.",
+    "definitionAr": "جسيم يتكون من الدهون والبروتينات الشحمية وينقل الدهون الكارهة للماء عبر الدم واللمف.\n\nWord components: lipo- = fat; protein = protein. Combined meaning: a lipid-protein transport particle.",
+    "pronunciation": "جسيم يتكون من الدهون والبروتينات الشحمية وينقل الدهون الكارهة للماء عبر الدم واللمف.\n\nمكونات الكلمة: lipo- = fat; protein = protein. والمعنى المركب: a lipid-protein transport particle.",
+    "exampleEn": "/ˌlɪp.oʊˈproʊ.tiːn/",
+    "exampleAr": "Low-density lipoprotein transports cholesterol to peripheral tissues."
+  },
+  {
+    "id": "term-apolipoprotein",
+    "term": "Apolipoprotein",
+    "translation": "بروتين شحمي",
+    "definitionEn": "The protein component of a lipoprotein that stabilizes the particle and regulates its interactions with enzymes and cellular receptors.",
+    "definitionAr": "المكوّن البروتيني للبروتين الدهني، ويعمل على تثبيت الجسيم وتنظيم تفاعلاته مع الإنزيمات والمستقبلات الخلوية.\n\nWord components: apo- = component separated from a complex; lipo- = fat; protein = protein. Combined meaning: the protein component associated with a lipid particle.",
+    "pronunciation": "المكوّن البروتيني للبروتين الدهني، ويعمل على تثبيت الجسيم وتنظيم تفاعلاته مع الإنزيمات والمستقبلات الخلوية.\n\nمكونات الكلمة: apo- = component separated from a complex; lipo- = fat; protein = protein. والمعنى المركب: the protein component associated with a lipid particle.",
+    "exampleEn": "/ˌæp.oʊˌlɪp.oʊˈproʊ.tiːn/",
+    "exampleAr": "Apolipoprotein B is present in atherogenic lipoprotein particles."
+  },
+  {
+    "id": "term-chylomicron",
+    "term": "Chylomicron",
+    "translation": "كيلوميكرون",
+    "definitionEn": "A large triglyceride-rich lipoprotein particle assembled in intestinal enterocytes to transport dietary lipids through lymph and blood.",
+    "definitionAr": "جسيم كبير من البروتينات الدهنية غني بثلاثي الغليسريد، يتكون في الخلايا المعوية لنقل الدهون الغذائية عبر اللمف والدم.",
+    "pronunciation": "/ˌkaɪ.ləˈmaɪ.krɑːn/",
+    "exampleEn": "Chylomicrons transport dietary triglycerides after a meal.",
+    "exampleAr": "تنقل الكيلوميكرونات ثلاثي الغليسريد الغذائي بعد الوجبة."
+  },
+  {
+    "id": "term-lumen",
+    "term": "Lumen",
+    "translation": "لمعة",
+    "definitionEn": "The internal cavity or channel of a tubular structure, such as an artery or vein, through which blood flows.",
+    "definitionAr": "التجويف أو القناة الداخلية لبنية أنبوبية مثل الشريان أو الوريد، ويتدفق الدم عبرها.",
+    "pronunciation": "/ˈluː.mən/",
+    "exampleEn": "Severe stenosis reduced the arterial lumen.",
+    "exampleAr": "قلل التضيق الشديد لمعة الشريان."
+  },
+  {
+    "id": "term-prothrombotic",
+    "term": "Prothrombotic",
+    "translation": "مُعزّز للتخثّر",
+    "definitionEn": "Favoring the formation of thrombi through changes in coagulation, platelets, endothelium, or blood flow.",
+    "definitionAr": "يميل إلى تعزيز تكوّن الخثرات عبر تغيرات في التخثر أو الصفائح أو البطانة أو تدفق الدم.",
+    "pronunciation": "/ˌproʊ.θrɑːmˈbɑː.tɪk/",
+    "exampleEn": "Endothelial dysfunction creates a prothrombotic surface.",
+    "exampleAr": "يُنشئ خلل وظيفة البطانة سطحاً معززاً للتخثر."
+  },
+  {
+    "id": "term-petechia",
+    "term": "Petechia",
+    "translation": "حَبَرة",
+    "definitionEn": "A pinpoint, non-blanching hemorrhagic spot in the skin or mucosa caused by leakage of blood from small vessels.",
+    "definitionAr": "بقعة نزفية دقيقة لا تختفي بالضغط، تظهر في الجلد أو الأغشية المخاطية بسبب تسرب الدم من الأوعية الصغيرة.",
+    "pronunciation": "/pɪˈtiː.ki.ə/",
+    "exampleEn": "Petechiae were observed around the ankles.",
+    "exampleAr": "لوحظت حبرات حول الكاحلين."
+  },
+  {
+    "id": "term-ecchymosis",
+    "term": "Ecchymosis",
+    "translation": "كدمة نزفية",
+    "definitionEn": "A flat area of subcutaneous bleeding larger than a petechia, producing a bruise-like discoloration.",
+    "definitionAr": "منطقة مسطحة من النزف تحت الجلد أكبر من الحبرة، وتسبب تغيراً لونياً يشبه الكدمة.",
+    "pronunciation": "/ˌek.ɪˈmoʊ.sɪs/",
+    "exampleEn": "Extensive ecchymosis appeared around the injection site.",
+    "exampleAr": "ظهرت كدمة نزفية واسعة حول موضع الحقن."
+  },
+  {
+    "id": "term-purpura",
+    "term": "Purpura",
+    "translation": "فرفرية",
+    "definitionEn": "A group of non-blanching red-purple skin or mucosal lesions caused by extravasated blood, ranging from small spots to larger patches.",
+    "definitionAr": "مجموعة آفات جلدية أو مخاطية حمراء أرجوانية لا تختفي بالضغط، تنتج عن خروج الدم من الأوعية وتتراوح من نقاط صغيرة إلى لطخات أكبر.",
+    "pronunciation": "/ˈpɝː.pjʊr.ə/",
+    "exampleEn": "Palpable purpura suggested small-vessel vasculitis.",
+    "exampleAr": "أشارت الفرفرية المجسوسة إلى التهاب الأوعية الصغيرة."
   }
 ]
