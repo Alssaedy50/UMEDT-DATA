@@ -13888,5 +13888,25 @@
     "definitionAr": "متعلق بالأبهر والوريد الأجوف، خاصة الاتصال الناسوري غير الطبيعي.",
     "exampleEn": "An aortocaval fistula may cause venous hypertension and high-output failure.",
     "exampleAr": "قد يسبب الناسور الأبهري الأجوف فرط ضغط وريديًا وفشلًا عالي النتاج."
+  },
+  {
+    "id": "term-fibroatheroma",
+    "term": "Fibroatheroma",
+    "translation": "العصيدة الليفية",
+    "pronunciation": "/ˌfaɪ.broʊˌæθ.əˈroʊ.mə/",
+    "definitionEn": "An atherosclerotic plaque with a fibrous cap overlying a lipid-rich necrotic core; cap thickness and inflammation influence its stability.\n\nWord components: fibr/o = fiber or fibrous tissue; ather/o = fatty plaque; -oma = mass or lesion. Combined meaning: a fibrous atherosclerotic lesion.",
+    "definitionAr": "لويحة عصيدية ذات غطاء ليفي يعلو لبًا نخريًا غنيًا بالدهون؛ وتؤثر سماكة الغطاء وشدة الالتهاب في استقرارها.\n\nمكونات الكلمة: fibr/o = fiber or fibrous tissue; ather/o = fatty plaque; -oma = mass or lesion. والمعنى المركب: a fibrous atherosclerotic lesion.",
+    "exampleEn": "Histology demonstrated a fibroatheroma with a thin fibrous cap.",
+    "exampleAr": "أظهر الفحص النسيجي عصيدة ليفية ذات غطاء ليفي رقيق."
+  },
+  {
+    "id": "term-calcinosis",
+    "term": "Calcinosis",
+    "translation": "التكلّس النسيجي",
+    "pronunciation": "/ˌkæl.sɪˈnoʊ.sɪs/",
+    "definitionEn": "Abnormal deposition of calcium salts in soft tissues; vascular calcinosis may involve the intima or media and has different mechanisms in each layer.\n\nWord components: calcin/o = calcium or lime; -osis = condition. Combined meaning: a condition involving calcium-salt deposition.",
+    "definitionAr": "ترسب غير طبيعي لأملاح الكالسيوم في الأنسجة الرخوة؛ وقد يصيب التكلس الوعائي الغلالة الباطنة أو الوسطى بآليات مختلفة.\n\nمكونات الكلمة: calcin/o = calcium or lime; -osis = condition. والمعنى المركب: a condition involving calcium-salt deposition.",
+    "exampleEn": "Vascular calcinosis was detected on the radiograph.",
+    "exampleAr": "كُشف التكلس الوعائي في الصورة الشعاعية."
   }
 ]
