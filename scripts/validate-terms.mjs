@@ -48,6 +48,15 @@ for (let i = 0; i < terms.length; i++) {
   if (typeof t.translation === 'string' && !/[\u0600-\u06FF]/.test(t.translation)) {
     errors.push(`${label}: translation must contain Arabic script`);
   }
+  if (typeof t.translation === 'string' && /^(مصطلح طبي|ترجمة عربية|غير معروف)$/i.test(t.translation.trim())) {
+    errors.push(`${label}: generic placeholder translation is not accepted`);
+  }
+  if (typeof t.definitionEn === 'string' && /^clinical medical term:/i.test(t.definitionEn.trim())) {
+    errors.push(`${label}: generic English definition placeholder is not accepted`);
+  }
+  if (typeof t.definitionAr === 'string' && /^مصطلح طبي سريري يعني/i.test(t.definitionAr.trim())) {
+    errors.push(`${label}: generic Arabic definition placeholder is not accepted`);
+  }
   if (t.term && t.translation && normalize(t.term) === normalize(t.translation)) {
     errors.push(`${label}: English term and Arabic translation must not be identical`);
   }
