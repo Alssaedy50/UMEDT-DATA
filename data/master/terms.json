@@ -12550,5 +12550,1343 @@
     "definitionAr": "تركيب غير قياسي لخثار داخل وريد دوالي.",
     "exampleEn": "The report specified superficial venous thrombosis.",
     "exampleAr": "حدد التقرير خثارًا وريديًا سطحيًا."
+  },
+  {
+    "id": "term-aortomalacia",
+    "term": "Aortomalacia",
+    "translation": "تلين الأبهر",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊ.məˈleɪ.ʃə/",
+    "definitionEn": "Abnormal softening of the aortic wall; a rare descriptive pathological term.",
+    "definitionAr": "تلين غير طبيعي في جدار الأبهر؛ وهو مصطلح وصفي مرضي نادر.",
+    "exampleEn": "The historical report used aortomalacia to describe a weakened aortic wall.",
+    "exampleAr": "استخدم التقرير التاريخي مصطلح تلين الأبهر لوصف ضعف جداره.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "aort/o",
+          "role": "combining-form",
+          "meaningAr": "الأبهر",
+          "meaningEn": "aorta"
+        },
+        {
+          "affix": "-malacia",
+          "role": "suffix",
+          "meaningAr": "تلين أو رخاوة",
+          "meaningEn": "softening"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تلين الأبهر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-atheromatogenesis",
+    "term": "Atheromatogenesis",
+    "translation": "تكوّن العصيدة",
+    "pronunciation": "/ˌæθ.əˌroʊ.mə.toʊˈdʒen.ə.sɪs/",
+    "definitionEn": "The development and formation of atheromatous lesions within the arterial intima.",
+    "definitionAr": "نشوء وتكوّن الآفات العصيدية داخل بطانة الشرايين.",
+    "exampleEn": "Atheromatogenesis begins with retention of apoB-containing lipoproteins.",
+    "exampleAr": "يبدأ تكوّن العصيدة باحتباس البروتينات الدهنية الحاوية على ApoB.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ather/o",
+          "role": "combining-form",
+          "meaningAr": "عصيدة",
+          "meaningEn": "atheroma"
+        },
+        {
+          "affix": "-genesis",
+          "role": "suffix",
+          "meaningAr": "تكوّن أو نشوء",
+          "meaningEn": "formation or origin"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تكوّن العصيدة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasculature",
+    "term": "Vasculature",
+    "translation": "الجهاز الوعائي",
+    "pronunciation": "/ˈvæs.kjə.lə.tʃɚ/",
+    "definitionEn": "The collective network of blood vessels within an organ or throughout the body.",
+    "definitionAr": "مجمل شبكة الأوعية الدموية داخل عضو أو في أنحاء الجسم.",
+    "exampleEn": "The tumor recruited a dense vascularature to support its growth.",
+    "exampleAr": "كوّن الورم شبكة وعائية كثيفة لدعم نموه."
+  },
+  {
+    "id": "term-endotheliosis",
+    "term": "Endotheliosis",
+    "translation": "اعتلال أو تنكس بطاني",
+    "pronunciation": "/enˌdoʊ.θiː.liˈoʊ.sɪs/",
+    "definitionEn": "A pathological condition involving endothelial cells; the exact meaning depends on the clinical context.",
+    "definitionAr": "حالة مرضية تشمل الخلايا البطانية، ويتحدد معناها الدقيق بحسب السياق السريري.",
+    "exampleEn": "The term endotheliosis was used descriptively in the pathology report.",
+    "exampleAr": "استُخدم مصطلح الاعتلال البطاني بصورة وصفية في تقرير علم الأمراض."
+  },
+  {
+    "id": "term-phlebectatic",
+    "term": "Phlebectatic",
+    "translation": "متوسع وريديًا",
+    "pronunciation": "/ˌfleb.ekˈtæt.ɪk/",
+    "definitionEn": "Relating to or characterized by venous dilation.",
+    "definitionAr": "متعلق بتوسع الأوردة أو متصف به.",
+    "exampleEn": "Phlebectatic changes were noted in the superficial venous system.",
+    "exampleAr": "لوحظت تغيرات توسعية في الجهاز الوريدي السطحي."
+  },
+  {
+    "id": "term-thromboresistance",
+    "term": "Thromboresistance",
+    "translation": "مقاومة التخثر",
+    "pronunciation": "/ˌθrɑːm.boʊ.rɪˈzɪs.təns/",
+    "definitionEn": "The resistance of a vascular surface to inappropriate thrombus formation, supported by intact endothelium and anticoagulant mechanisms.",
+    "definitionAr": "مقاومة السطح الوعائي لتكوّن الخثرات غير الملائم، وتدعمها سلامة البطانة وآليات مضادة للتخثر.",
+    "exampleEn": "Endothelial thromboresistance depends partly on nitric oxide and thrombomodulin.",
+    "exampleAr": "تعتمد مقاومة البطانة للتخثر جزئيًا على أكسيد النيتريك والثرومبومودولين."
+  },
+  {
+    "id": "term-thromboinflammation",
+    "term": "Thromboinflammation",
+    "translation": "الالتهاب الخثاري",
+    "pronunciation": "/ˌθrɑːm.boʊˌɪn.fləˈmeɪ.ʃən/",
+    "definitionEn": "The reciprocal interaction between coagulation, platelets, and inflammatory pathways during vascular injury.",
+    "definitionAr": "التفاعل المتبادل بين التخثر والصفيحات ومسارات الالتهاب أثناء الأذية الوعائية.",
+    "exampleEn": "Thromboinflammation contributes to microvascular injury in severe infection.",
+    "exampleAr": "يسهم الالتهاب الخثاري في أذية الأوعية الدقيقة أثناء العدوى الشديدة."
+  },
+  {
+    "id": "term-hyperfibrinolysis",
+    "term": "Hyperfibrinolysis",
+    "translation": "فرط انحلال الفيبرين",
+    "pronunciation": "/ˌhaɪ.pɚˌfaɪ.brɪˈnɑː.lə.sɪs/",
+    "definitionEn": "Excessive fibrin breakdown that can impair clot stability and contribute to severe bleeding.",
+    "definitionAr": "تحلل مفرط للفيبرين قد يضعف ثبات الخثرة ويسهم في النزف الشديد.",
+    "exampleEn": "Hyperfibrinolysis may occur after major trauma or during severe coagulopathy.",
+    "exampleAr": "قد يحدث فرط انحلال الفيبرين بعد الرضوض الشديدة أو أثناء اعتلال التخثر الشديد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "فرط أو زيادة",
+          "meaningEn": "excessive"
+        },
+        {
+          "affix": "fibrin/o",
+          "role": "combining-form",
+          "meaningAr": "فيبرين",
+          "meaningEn": "fibrin"
+        },
+        {
+          "affix": "-lysis",
+          "role": "suffix",
+          "meaningAr": "تحلل",
+          "meaningEn": "breakdown"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط انحلال الفيبرين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypofibrinolysis",
+    "term": "Hypofibrinolysis",
+    "translation": "نقص انحلال الفيبرين",
+    "pronunciation": "/ˌhaɪ.poʊˌfaɪ.brɪˈnɑː.lə.sɪs/",
+    "definitionEn": "Reduced fibrin degradation, which may favor persistence of thrombi.",
+    "definitionAr": "انخفاض تحلل الفيبرين، مما قد يعزز استمرار الخثرات.",
+    "exampleEn": "Hypofibrinolysis may contribute to a prothrombotic state.",
+    "exampleAr": "قد يسهم نقص انحلال الفيبرين في حالة مهيئة للخثار.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hypo-",
+          "role": "prefix",
+          "meaningAr": "نقص أو انخفاض",
+          "meaningEn": "below normal"
+        },
+        {
+          "affix": "fibrin/o",
+          "role": "combining-form",
+          "meaningAr": "فيبرين",
+          "meaningEn": "fibrin"
+        },
+        {
+          "affix": "-lysis",
+          "role": "suffix",
+          "meaningAr": "تحلل",
+          "meaningEn": "breakdown"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نقص انحلال الفيبرين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-dyscoagulation",
+    "term": "Dyscoagulation",
+    "translation": "اضطراب التخثر",
+    "pronunciation": "/ˌdɪs.koʊˌæɡ.jəˈleɪ.ʃən/",
+    "definitionEn": "Abnormal regulation or function of blood coagulation; a broad descriptive term rather than a single defined diagnosis.",
+    "definitionAr": "خلل في تنظيم تخثر الدم أو وظيفته؛ وهو وصف عام وليس تشخيصًا محددًا واحدًا.",
+    "exampleEn": "Sepsis can produce dyscoagulation with both bleeding and thrombosis.",
+    "exampleAr": "قد يسبب الإنتان اضطراب التخثر مع النزف والخثار معًا."
+  },
+  {
+    "id": "term-hypercoagulant",
+    "term": "Hypercoagulant",
+    "translation": "مفرط التخثير",
+    "pronunciation": "/ˌhaɪ.pɚ.koʊˈæɡ.jə.lənt/",
+    "definitionEn": "Promoting coagulation or describing a state in which clot formation is increased.",
+    "definitionAr": "يعزز التخثر أو يصف حالة يزداد فيها تكوّن الخثرات.",
+    "exampleEn": "The malignancy created a hypercoagulant state.",
+    "exampleAr": "أوجد الورم الخبيث حالة مفرطة التخثر."
+  },
+  {
+    "id": "term-hemodilution",
+    "term": "Hemodilution",
+    "translation": "تمديد الدم",
+    "pronunciation": "/ˌhiː.moʊ.daɪˈluː.ʃən/",
+    "definitionEn": "Reduction in the concentration of blood cells or solutes due to increased plasma volume or fluid administration.",
+    "definitionAr": "انخفاض تركيز خلايا الدم أو المواد المذابة نتيجة زيادة حجم البلازما أو إعطاء السوائل.",
+    "exampleEn": "Excessive hemodilution can reduce oxygen-carrying capacity.",
+    "exampleAr": "قد يقلل تمديد الدم المفرط قدرة الدم على حمل الأكسجين."
+  },
+  {
+    "id": "term-hemoconcentration",
+    "term": "Hemoconcentration",
+    "translation": "تركيز الدم",
+    "pronunciation": "/ˌhiː.moʊˌkɑːn.sənˈtreɪ.ʃən/",
+    "definitionEn": "An increase in the concentration of blood cells or proteins, often due to reduced plasma volume.",
+    "definitionAr": "زيادة تركيز خلايا الدم أو البروتينات، وغالبًا بسبب انخفاض حجم البلازما.",
+    "exampleEn": "Dehydration may cause hemoconcentration and elevated hematocrit.",
+    "exampleAr": "قد يسبب التجفاف تركيز الدم وارتفاع الهيماتوكريت."
+  },
+  {
+    "id": "term-dyskalemia",
+    "term": "Dyskalemia",
+    "translation": "اضطراب بوتاسيوم الدم",
+    "pronunciation": "/ˌdɪs.kəˈliː.mi.ə/",
+    "definitionEn": "An abnormal serum potassium concentration, encompassing hyperkalemia and hypokalemia.",
+    "definitionAr": "اضطراب تركيز البوتاسيوم في المصل، ويشمل فرط بوتاسيوم الدم ونقصه.",
+    "exampleEn": "Dyskalemia can precipitate clinically significant arrhythmias.",
+    "exampleAr": "قد يؤدي اضطراب بوتاسيوم الدم إلى اضطرابات نظم مهمة سريريًا.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dys-",
+          "role": "prefix",
+          "meaningAr": "خلل أو اضطراب",
+          "meaningEn": "abnormal or impaired"
+        },
+        {
+          "affix": "kal/i",
+          "role": "root",
+          "meaningAr": "بوتاسيوم",
+          "meaningEn": "potassium"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة دموية",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اضطراب بوتاسيوم الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-dysnatremia",
+    "term": "Dysnatremia",
+    "translation": "اضطراب صوديوم الدم",
+    "pronunciation": "/ˌdɪs.nəˈtriː.mi.ə/",
+    "definitionEn": "An abnormal serum sodium concentration, including hyponatremia and hypernatremia.",
+    "definitionAr": "اضطراب تركيز الصوديوم في المصل، ويشمل نقص صوديوم الدم وفرطه.",
+    "exampleEn": "Dysnatremia may accompany severe cardiac or renal disease.",
+    "exampleAr": "قد يصاحب اضطراب صوديوم الدم أمراض القلب أو الكلى الشديدة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dys-",
+          "role": "prefix",
+          "meaningAr": "خلل أو اضطراب",
+          "meaningEn": "abnormal or impaired"
+        },
+        {
+          "affix": "natr/o",
+          "role": "combining-form",
+          "meaningAr": "صوديوم",
+          "meaningEn": "sodium"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة دموية",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اضطراب صوديوم الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypoalphalipoproteinemia",
+    "term": "Hypoalphalipoproteinemia",
+    "translation": "نقص البروتينات الدهنية عالية الكثافة",
+    "pronunciation": "/ˌhaɪ.poʊˌæl.fəˌlɪp.oʊˌproʊ.tiˌniː.mi.ə/",
+    "definitionEn": "A reduced concentration of HDL particles in plasma, often reflected by low HDL cholesterol.",
+    "definitionAr": "انخفاض تركيز جسيمات HDL في البلازما، ويظهر غالبًا بانخفاض كوليسترول HDL.",
+    "exampleEn": "Hypoalphalipoproteinemia may accompany insulin resistance and metabolic syndrome.",
+    "exampleAr": "قد يصاحب نقص البروتينات الدهنية عالية الكثافة مقاومة الإنسولين والمتلازمة الاستقلابية."
+  },
+  {
+    "id": "term-hyperalphalipoproteinemia",
+    "term": "Hyperalphalipoproteinemia",
+    "translation": "فرط البروتينات الدهنية عالية الكثافة",
+    "pronunciation": "/ˌhaɪ.pɚˌæl.fəˌlɪp.oʊˌproʊ.tiˌniː.mi.ə/",
+    "definitionEn": "An increased concentration of HDL particles in plasma.",
+    "definitionAr": "زيادة تركيز جسيمات HDL في البلازما.",
+    "exampleEn": "Marked hyperalphalipoproteinemia may result from genetic variation in HDL metabolism.",
+    "exampleAr": "قد ينجم فرط البروتينات الدهنية عالية الكثافة عن اختلافات وراثية في استقلاب HDL."
+  },
+  {
+    "id": "term-hyperbetalipoproteinemia",
+    "term": "Hyperbetalipoproteinemia",
+    "translation": "فرط البروتينات الدهنية منخفضة الكثافة",
+    "pronunciation": "/ˌhaɪ.pɚˌbeɪ.təˌlɪp.oʊˌproʊ.tiˌniː.mi.ə/",
+    "definitionEn": "An increased concentration of beta-lipoproteins, historically associated with elevated LDL-containing particles.",
+    "definitionAr": "زيادة تركيز البروتينات الدهنية بيتا، وارتبطت تاريخيًا بزيادة الجسيمات الحاوية على LDL.",
+    "exampleEn": "Hyperbetalipoproteinemia can increase atherosclerotic risk.",
+    "exampleAr": "قد يزيد فرط البروتينات الدهنية بيتا خطر التصلب العصيدي."
+  },
+  {
+    "id": "term-hypobetalipoproteinemia",
+    "term": "Hypobetalipoproteinemia",
+    "translation": "نقص البروتينات الدهنية بيتا",
+    "pronunciation": "/ˌhaɪ.poʊˌbeɪ.təˌlɪp.oʊˌproʊ.tiˌniː.mi.ə/",
+    "definitionEn": "A reduced concentration of apoB-containing lipoproteins, including LDL and VLDL.",
+    "definitionAr": "انخفاض تركيز البروتينات الدهنية الحاوية على ApoB، بما فيها LDL وVLDL.",
+    "exampleEn": "Familial hypobetalipoproteinemia is often associated with low LDL cholesterol.",
+    "exampleAr": "يرتبط نقص البروتينات الدهنية بيتا العائلي غالبًا بانخفاض كوليسترول LDL."
+  },
+  {
+    "id": "term-dysbetalipoproteinemia",
+    "term": "Dysbetalipoproteinemia",
+    "translation": "اضطراب البروتينات الدهنية بيتا",
+    "pronunciation": "/ˌdɪsˌbeɪ.təˌlɪp.oʊˌproʊ.tiˌniː.mi.ə/",
+    "definitionEn": "A lipoprotein disorder characterized by accumulation of cholesterol-rich remnant particles, often due to APOE-related defects.",
+    "definitionAr": "اضطراب في البروتينات الدهنية يتميز بتراكم بقايا الجسيمات الغنية بالكوليسترول، وغالبًا بسبب خلل مرتبط بـ APOE.",
+    "exampleEn": "Dysbetalipoproteinemia may cause palmar xanthomas and premature atherosclerosis.",
+    "exampleAr": "قد يسبب اضطراب البروتينات الدهنية بيتا الورم الأصفر الراحي والتصلب العصيدي المبكر."
+  },
+  {
+    "id": "term-chylomicronemia",
+    "term": "Chylomicronemia",
+    "translation": "فرط الكيلوميكرونات في الدم",
+    "pronunciation": "/ˌkaɪ.loʊ.maɪ.krəˈniː.mi.ə/",
+    "definitionEn": "An excessive concentration of chylomicrons in plasma, especially after fasting, often associated with severe hypertriglyceridemia.",
+    "definitionAr": "زيادة مفرطة في تركيز الكيلوميكرونات في البلازما، خاصة بعد الصيام، وترتبط غالبًا بفرط شديد لثلاثي الغليسريد.",
+    "exampleEn": "Familial chylomicronemia can cause recurrent acute pancreatitis.",
+    "exampleAr": "قد يسبب فرط الكيلوميكرونات العائلي التهاب البنكرياس الحاد المتكرر."
+  },
+  {
+    "id": "term-xanthelasma",
+    "term": "Xanthelasma",
+    "translation": "لويحة صفراء جفنية",
+    "pronunciation": "/ˌzæn.θəˈlæs.mə/",
+    "definitionEn": "A yellowish cholesterol-rich plaque, usually located near the medial eyelids.",
+    "definitionAr": "لويحة صفراء غنية بالكوليسترول، تقع عادة قرب الزاوية الإنسية للجفون.",
+    "exampleEn": "Xanthelasma may prompt evaluation of the patient's lipid profile.",
+    "exampleAr": "قد تستدعي اللويحة الصفراء الجفنية تقييم ملف الدهون لدى المريض.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "xanth/o",
+          "role": "combining-form",
+          "meaningAr": "أصفر",
+          "meaningEn": "yellow"
+        },
+        {
+          "affix": "-elasma",
+          "role": "suffix",
+          "meaningAr": "صفيحة أو لويحة",
+          "meaningEn": "plate or plaque"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «لويحة صفراء جفنية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-lipoproteinosis",
+    "term": "Lipoproteinosis",
+    "translation": "داء البروتينات الدهنية",
+    "pronunciation": "/ˌlɪp.oʊˌproʊ.tiˌnoʊˈsɪs/",
+    "definitionEn": "A pathological accumulation or abnormal deposition of lipoprotein-related material; the term is uncommon and context-dependent.",
+    "definitionAr": "تراكم مرضي أو ترسب غير طبيعي لمادة مرتبطة بالبروتينات الدهنية؛ وهو مصطلح غير شائع ويتحدد بالسياق.",
+    "exampleEn": "The rare term lipoproteinosis should be interpreted in its specific pathological context.",
+    "exampleAr": "ينبغي تفسير مصطلح داء البروتينات الدهنية النادر وفق سياقه المرضي المحدد."
+  },
+  {
+    "id": "term-myocardiosis",
+    "term": "Myocardiosis",
+    "translation": "اعتلال عضلة القلب التنكسي",
+    "pronunciation": "/ˌmaɪ.oʊˌkɑːr.diˈoʊ.sɪs/",
+    "definitionEn": "A descriptive term for a pathological condition of the myocardium, often used historically for degenerative myocardial change.",
+    "definitionAr": "مصطلح وصفي لحالة مرضية في عضلة القلب، واستُخدم تاريخيًا للتغيرات التنكسية فيها.",
+    "exampleEn": "The older pathology text used myocardiosis for degenerative myocardial lesions.",
+    "exampleAr": "استخدم المرجع المرضي القديم مصطلح اعتلال عضلة القلب التنكسي للآفات التنكسية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال عضلة القلب التنكسي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-myocardiopathy",
+    "term": "Myocardiopathy",
+    "translation": "اعتلال عضلة القلب",
+    "pronunciation": "/ˌmaɪ.oʊˌkɑːr.diˈɑː.pə.θi/",
+    "definitionEn": "A disorder of the myocardium; the term is less commonly used than cardiomyopathy.",
+    "definitionAr": "اضطراب يصيب عضلة القلب؛ ويُستخدم المصطلح بدرجة أقل من Cardiomyopathy.",
+    "exampleEn": "The report described a restrictive myocardiopathy.",
+    "exampleAr": "وصف التقرير اعتلالًا تقييديًا في عضلة القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "my/o",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "اعتلال أو مرض",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال عضلة القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiomyoliposis",
+    "term": "Cardiomyoliposis",
+    "translation": "تراكم الدهون في عضلة القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊˌmaɪ.oʊ.lɪˈpoʊ.sɪs/",
+    "definitionEn": "A rare descriptive term for fatty infiltration or accumulation within cardiac muscle.",
+    "definitionAr": "مصطلح وصفي نادر لتسلل الدهون أو تراكمها داخل عضلة القلب.",
+    "exampleEn": "The historical term cardiomyoliposis was used for fatty myocardial change.",
+    "exampleAr": "استُخدم المصطلح التاريخي لتراكم الدهون في عضلة القلب لوصف التغير الدهني العضلي."
+  },
+  {
+    "id": "term-cardiospecific",
+    "term": "Cardiospecific",
+    "translation": "نوعي قلبي",
+    "pronunciation": "/ˌkɑːr.di.oʊ.spəˈsɪf.ɪk/",
+    "definitionEn": "Specific to cardiac tissue or preferentially associated with the heart; often used descriptively for biomarkers or effects.",
+    "definitionAr": "نوعي لنسيج القلب أو مرتبط به على نحو تفضيلي؛ ويُستخدم وصفًا للمؤشرات الحيوية أو التأثيرات.",
+    "exampleEn": "Cardiospecific troponin assays improve detection of myocardial injury.",
+    "exampleAr": "تحسن اختبارات التروبونين النوعية للقلب كشف أذية عضلة القلب."
+  },
+  {
+    "id": "term-cardiotropic",
+    "term": "Cardiotropic",
+    "translation": "موجّه أو مؤثر في القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊˈtrɑː.pɪk/",
+    "definitionEn": "Having an affinity for, or a preferential effect on, cardiac tissue.",
+    "definitionAr": "ذو ميل إلى نسيج القلب أو تأثير تفضيلي فيه.",
+    "exampleEn": "Some viruses are cardiotropic and may cause myocarditis.",
+    "exampleAr": "تُظهر بعض الفيروسات ميلًا لنسيج القلب وقد تسبب التهاب عضلة القلب."
+  },
+  {
+    "id": "term-cardioactive",
+    "term": "Cardioactive",
+    "translation": "فعال قلبيًا",
+    "pronunciation": "/ˌkɑːr.di.oʊˈæk.tɪv/",
+    "definitionEn": "Having a direct or indirect physiological effect on cardiac function.",
+    "definitionAr": "له تأثير فسيولوجي مباشر أو غير مباشر في وظيفة القلب.",
+    "exampleEn": "The drug has cardioactive effects on contractility and heart rate.",
+    "exampleAr": "للدواء تأثيرات قلبية في قوة الانقباض ومعدل القلب."
+  },
+  {
+    "id": "term-cardiodepressive",
+    "term": "Cardiodepressive",
+    "translation": "مثبط لوظيفة القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊ.dɪˈpres.ɪv/",
+    "definitionEn": "Reducing cardiac activity, contractility, or conduction.",
+    "definitionAr": "يقلل النشاط القلبي أو قوة الانقباض أو التوصيل.",
+    "exampleEn": "Excessive dosing produced a cardiodepressive effect.",
+    "exampleAr": "أحدثت الجرعة المفرطة تأثيرًا مثبطًا لوظيفة القلب."
+  },
+  {
+    "id": "term-cardioversion",
+    "term": "Cardioversion",
+    "translation": "تقويم نظم القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊˈvɝː.ʒən/",
+    "definitionEn": "Restoration of a normal cardiac rhythm by synchronized electrical shock or medication.",
+    "definitionAr": "إعادة النظم القلبي الطبيعي باستخدام صدمة كهربائية متزامنة أو دواء.",
+    "exampleEn": "Electrical cardioversion restored sinus rhythm in the patient with atrial fibrillation.",
+    "exampleAr": "أعاد تقويم نظم القلب الكهربائي النظم الجيبي لدى مريض الرجفان الأذيني."
+  },
+  {
+    "id": "term-cardioplegia",
+    "term": "Cardioplegia",
+    "translation": "شلل القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊˈpliː.dʒə/",
+    "definitionEn": "Intentional temporary arrest of cardiac activity, usually during cardiac surgery, to protect the myocardium.",
+    "definitionAr": "إيقاف مقصود ومؤقت لنشاط القلب، غالبًا أثناء جراحة القلب، لحماية عضلة القلب.",
+    "exampleEn": "Cardioplegia protects the myocardium during open-heart surgery.",
+    "exampleAr": "تحمي محاليل شلل القلب عضلة القلب أثناء جراحة القلب المفتوح.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-plegia",
+          "role": "suffix",
+          "meaningAr": "شلل أو إيقاف",
+          "meaningEn": "paralysis or arrest"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «شلل القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiorenal",
+    "term": "Cardiorenal",
+    "translation": "قلبي كلوي",
+    "pronunciation": "/ˌkɑːr.di.oʊˈriː.nəl/",
+    "definitionEn": "Relating to interactions between cardiac and renal function or disease.",
+    "definitionAr": "متعلق بالتفاعلات بين وظيفة القلب والكلى أو أمراضهما.",
+    "exampleEn": "Cardiorenal syndrome involves bidirectional heart-kidney dysfunction.",
+    "exampleAr": "تتضمن المتلازمة القلبية الكلوية خللًا متبادلًا في القلب والكلى."
+  },
+  {
+    "id": "term-cardiopulmonary",
+    "term": "Cardiopulmonary",
+    "translation": "قلبي رئوي",
+    "pronunciation": "/ˌkɑːr.di.oʊˈpʊl.məˌner.i/",
+    "definitionEn": "Relating to the heart and lungs or their integrated physiological function.",
+    "definitionAr": "متعلق بالقلب والرئتين أو بوظيفتهما الفسيولوجية المتكاملة.",
+    "exampleEn": "Cardiopulmonary bypass supports circulation during selected cardiac operations.",
+    "exampleAr": "يدعم المجاز القلبي الرئوي الدورة الدموية أثناء بعض عمليات القلب."
+  },
+  {
+    "id": "term-cardiogenicity",
+    "term": "Cardiogenicity",
+    "translation": "القدرة على إحداث تأثير قلبي",
+    "pronunciation": "/ˌkɑːr.di.oʊ.dʒəˈnɪs.ə.ti/",
+    "definitionEn": "The capacity of a condition or agent to produce a cardiac effect; uncommon and context-dependent.",
+    "definitionAr": "قدرة حالة أو عامل على إحداث تأثير قلبي؛ وهو استعمال غير شائع ويتحدد بالسياق.",
+    "exampleEn": "The paper discussed the cardiogenicity of the inflammatory response.",
+    "exampleAr": "ناقشت الورقة قدرة الاستجابة الالتهابية على إحداث تأثير قلبي."
+  },
+  {
+    "id": "term-pericardiosclerosis",
+    "term": "Pericardiosclerosis",
+    "translation": "تصلب التامور",
+    "pronunciation": "/ˌper.ɪˌkɑːr.di.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "Fibrotic thickening and hardening of the pericardium.",
+    "definitionAr": "تثخن وتصلب ليفي في التامور.",
+    "exampleEn": "Pericardiosclerosis may contribute to impaired cardiac filling.",
+    "exampleAr": "قد يسهم تصلب التامور في ضعف امتلاء القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "peri-",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "scler/o",
+          "role": "combining-form",
+          "meaningAr": "تصلب",
+          "meaningEn": "hardening"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصلب التامور» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-valvularization",
+    "term": "Valvularization",
+    "translation": "تكوّن بنية صمامية",
+    "pronunciation": "/ˌvæl.vjə.lə.rəˈzeɪ.ʃən/",
+    "definitionEn": "Development or formation of valve-like structures; uncommon and context-dependent.",
+    "definitionAr": "تطور أو تكوّن بنى شبيهة بالصمامات؛ وهو مصطلح غير شائع ويتحدد بالسياق.",
+    "exampleEn": "The experimental study examined valvularization of the engineered tissue.",
+    "exampleAr": "درست التجربة تكوّن بنى صمامية في النسيج المصمم."
+  },
+  {
+    "id": "term-valvectomy",
+    "term": "Valvectomy",
+    "translation": "استئصال الصمام",
+    "pronunciation": "/vælˈvek.tə.mi/",
+    "definitionEn": "Surgical removal of a heart valve, usually as part of a larger reconstructive procedure.",
+    "definitionAr": "استئصال جراحي لصمام قلبي، وغالبًا كجزء من إجراء ترميمي أكبر.",
+    "exampleEn": "Valvectomy was followed by valve replacement.",
+    "exampleAr": "أُتبع استئصال الصمام باستبداله.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "valv/o",
+          "role": "combining-form",
+          "meaningAr": "صمام",
+          "meaningEn": "valve"
+        },
+        {
+          "affix": "-ectomy",
+          "role": "suffix",
+          "meaningAr": "استئصال جراحي",
+          "meaningEn": "surgical removal"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «استئصال الصمام» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-valvulogenesis",
+    "term": "Valvulogenesis",
+    "translation": "تكوّن الصمامات",
+    "pronunciation": "/ˌvæl.vjə.loʊˈdʒen.ə.sɪs/",
+    "definitionEn": "The developmental process by which cardiac valves form during embryogenesis.",
+    "definitionAr": "عملية التطور التي تتكون خلالها صمامات القلب أثناء التخلق الجنيني.",
+    "exampleEn": "Abnormal valvulogenesis can result in congenital valve malformations.",
+    "exampleAr": "قد يؤدي اضطراب تكوّن الصمامات إلى تشوهات صمامية خلقية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "valvul/o",
+          "role": "combining-form",
+          "meaningAr": "صمام",
+          "meaningEn": "valve"
+        },
+        {
+          "affix": "-genesis",
+          "role": "suffix",
+          "meaningAr": "تكوّن أو نشوء",
+          "meaningEn": "formation or origin"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تكوّن الصمامات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-atriomegalia",
+    "term": "Atriomegalia",
+    "translation": "تضخم الأذين",
+    "pronunciation": "/ˌeɪ.tri.oʊ.məˈɡeɪ.li.ə/",
+    "definitionEn": "A variant or less common form referring to enlargement of the atrium.",
+    "definitionAr": "صيغة بديلة أو أقل شيوعًا تشير إلى تضخم الأذين.",
+    "exampleEn": "The older report described atriomegalia on the left side.",
+    "exampleAr": "وصف التقرير القديم تضخم الأذين في الجانب الأيسر."
+  },
+  {
+    "id": "term-ventriculomegalic",
+    "term": "Ventriculomegalic",
+    "translation": "متضخم البطين",
+    "pronunciation": "/venˌtrɪk.jəˌloʊ.məˈɡæl.ɪk/",
+    "definitionEn": "Characterized by enlargement of a cardiac ventricle.",
+    "definitionAr": "متصف بتضخم أحد بطيني القلب.",
+    "exampleEn": "The ventriculomegalic heart showed global systolic dysfunction.",
+    "exampleAr": "أظهر القلب المتضخم البطين خللًا انقباضيًا عامًا."
+  },
+  {
+    "id": "term-septalization",
+    "term": "Septalization",
+    "translation": "تكوين حاجز",
+    "pronunciation": "/ˌsep.təl.əˈzeɪ.ʃən/",
+    "definitionEn": "Development or formation of a septum; used mainly in developmental or descriptive contexts.",
+    "definitionAr": "تطور أو تكوّن حاجز؛ ويُستخدم غالبًا في السياقات التطورية أو الوصفية.",
+    "exampleEn": "The study examined septalization during cardiac morphogenesis.",
+    "exampleAr": "درست الورقة تكوّن الحاجز أثناء تشكل القلب."
+  },
+  {
+    "id": "term-conduction",
+    "term": "Conduction",
+    "translation": "التوصيل",
+    "pronunciation": "/kənˈdʌk.ʃən/",
+    "definitionEn": "Transmission of electrical impulses through cardiac tissue and the specialized conduction system.",
+    "definitionAr": "انتقال النبضات الكهربائية عبر نسيج القلب وجهاز التوصيل المتخصص.",
+    "exampleEn": "Conduction delay was evident in the atrioventricular node.",
+    "exampleAr": "ظهر تأخر التوصيل في العقدة الأذينية البطينية."
+  },
+  {
+    "id": "term-conductivity",
+    "term": "Conductivity",
+    "translation": "قابلية التوصيل",
+    "pronunciation": "/ˌkɑːn.dʌkˈtɪv.ə.ti/",
+    "definitionEn": "The ability of cardiac tissue to conduct electrical impulses.",
+    "definitionAr": "قدرة نسيج القلب على توصيل النبضات الكهربائية.",
+    "exampleEn": "Reduced conduction velocity can facilitate re-entry arrhythmias.",
+    "exampleAr": "قد تسهّل سرعة التوصيل المنخفضة حدوث اضطرابات نظم عائدة الدخول."
+  },
+  {
+    "id": "term-conductional",
+    "term": "Conductional",
+    "translation": "توصيلي",
+    "pronunciation": "/kənˈdʌk.ʃən.əl/",
+    "definitionEn": "Relating to electrical conduction, especially within cardiac tissue.",
+    "definitionAr": "متعلق بالتوصيل الكهربائي، خاصة داخل نسيج القلب.",
+    "exampleEn": "Conductional abnormalities were detected on the electrocardiogram.",
+    "exampleAr": "كُشفت اضطرابات توصيلية في تخطيط القلب."
+  },
+  {
+    "id": "term-arrhythmogenic",
+    "term": "Arrhythmogenic",
+    "translation": "مسبب لاضطراب النظم",
+    "pronunciation": "/əˌrɪð.moʊˈdʒen.ɪk/",
+    "definitionEn": "Capable of initiating or promoting cardiac arrhythmias.",
+    "definitionAr": "قادر على بدء اضطرابات النظم القلبي أو تعزيزها.",
+    "exampleEn": "Myocardial scar can provide an arrhythmogenic substrate.",
+    "exampleAr": "قد توفر الندبة القلبية ركيزة مسببة لاضطراب النظم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "a-",
+          "role": "prefix",
+          "meaningAr": "غياب أو نفي",
+          "meaningEn": "without or absence"
+        },
+        {
+          "affix": "rhythm",
+          "role": "root",
+          "meaningAr": "نظم أو إيقاع",
+          "meaningEn": "regular sequence"
+        },
+        {
+          "affix": "-genic",
+          "role": "suffix",
+          "meaningAr": "مسبب أو منشئ",
+          "meaningEn": "producing or causing"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «مسبب لاضطراب النظم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arrhythmogenicity",
+    "term": "Arrhythmogenicity",
+    "translation": "قابلية إحداث اضطراب النظم",
+    "pronunciation": "/əˌrɪð.moʊ.dʒəˈnɪs.ə.ti/",
+    "definitionEn": "The capacity of a tissue, disease, or intervention to promote cardiac arrhythmias.",
+    "definitionAr": "قدرة نسيج أو مرض أو تدخل على تعزيز اضطرابات النظم القلبي.",
+    "exampleEn": "The arrhythmogenicity of the scar was assessed by electrophysiological testing.",
+    "exampleAr": "قُيّمت قابلية الندبة لإحداث اضطراب النظم بالفحص الفيزيولوجي الكهربائي."
+  },
+  {
+    "id": "term-bradyarrhythmia",
+    "term": "Bradyarrhythmia",
+    "translation": "اضطراب النظم بطيء القلب",
+    "pronunciation": "/ˌbreɪ.di.əˈrɪð.mi.ə/",
+    "definitionEn": "A cardiac rhythm disorder characterized by an abnormally slow rate or impaired impulse formation or conduction.",
+    "definitionAr": "اضطراب نظم قلبي يتميز بمعدل بطيء غير طبيعي أو خلل في توليد النبضات أو توصيلها.",
+    "exampleEn": "High-grade atrioventricular block is a cause of bradyarrhythmia.",
+    "exampleAr": "يُعد الحصار الأذيني البطيني عالي الدرجة سببًا لاضطراب النظم بطيء القلب."
+  },
+  {
+    "id": "term-tachyarrhythmia",
+    "term": "Tachyarrhythmia",
+    "translation": "اضطراب النظم تسرعي القلب",
+    "pronunciation": "/ˌtæk.i.əˈrɪð.mi.ə/",
+    "definitionEn": "A cardiac rhythm disorder with an abnormally rapid rate, arising from abnormal impulse generation or conduction.",
+    "definitionAr": "اضطراب نظم قلبي يتميز بمعدل سريع غير طبيعي نتيجة توليد النبضات أو توصيلها بصورة غير طبيعية.",
+    "exampleEn": "Atrial fibrillation is a common tachyarrhythmia.",
+    "exampleAr": "يُعد الرجفان الأذيني اضطراب نظم تسرعيًا شائعًا."
+  },
+  {
+    "id": "term-supraventricular",
+    "term": "Supraventricular",
+    "translation": "فوق بطيني",
+    "pronunciation": "/ˌsuː.prə.venˈtrɪk.jə.lɚ/",
+    "definitionEn": "Originating above the ventricles, usually in the atria or atrioventricular junction.",
+    "definitionAr": "ينشأ فوق البطينين، عادة في الأذينين أو الوصل الأذيني البطيني.",
+    "exampleEn": "Supraventricular tachycardia often presents with sudden palpitations.",
+    "exampleAr": "يظهر تسرع القلب فوق البطيني غالبًا بخفقان مفاجئ."
+  },
+  {
+    "id": "term-intraventricular",
+    "term": "Intraventricular",
+    "translation": "داخل البطين",
+    "pronunciation": "/ˌɪn.trə.venˈtrɪk.jə.lɚ/",
+    "definitionEn": "Located within or occurring inside a cardiac ventricle.",
+    "definitionAr": "موجود داخل البطين أو يحدث فيه.",
+    "exampleEn": "Intraventricular conduction delay widened the QRS complex.",
+    "exampleAr": "أدى تأخر التوصيل داخل البطين إلى اتساع مركب QRS."
+  },
+  {
+    "id": "term-atrioventricular",
+    "term": "Atrioventricular",
+    "translation": "أذيني بطيني",
+    "pronunciation": "/ˌeɪ.tri.oʊ.venˈtrɪk.jə.lɚ/",
+    "definitionEn": "Relating to the atria and ventricles or the junction connecting them.",
+    "definitionAr": "متعلق بالأذينين والبطينين أو بالوصلة التي تربطهما.",
+    "exampleEn": "Atrioventricular block delayed conduction from atria to ventricles.",
+    "exampleAr": "أخر الحصار الأذيني البطيني التوصيل من الأذينين إلى البطينين."
+  },
+  {
+    "id": "term-sinoatrial",
+    "term": "Sinoatrial",
+    "translation": "جيبي أذيني",
+    "pronunciation": "/ˌsaɪ.noʊˈeɪ.tri.əl/",
+    "definitionEn": "Relating to the sinoatrial node or the junction between the sinus node and atrium.",
+    "definitionAr": "متعلق بالعقدة الجيبية الأذينية أو بالوصلة بينها وبين الأذين.",
+    "exampleEn": "Sinoatrial dysfunction may cause sinus pauses.",
+    "exampleAr": "قد يسبب خلل العقدة الجيبية الأذينية توقفات جيبية."
+  },
+  {
+    "id": "term-electrophysiologic",
+    "term": "Electrophysiologic",
+    "translation": "فيزيولوجي كهربائي",
+    "pronunciation": "/ɪˌlek.troʊˌfɪz.i.əˈlɑː.dʒɪk/",
+    "definitionEn": "Relating to the electrical properties and conduction behavior of excitable cardiac tissue.",
+    "definitionAr": "متعلق بالخصائص الكهربائية وسلوك التوصيل في النسيج القلبي القابل للاستثارة.",
+    "exampleEn": "Electrophysiologic mapping identified the re-entry circuit.",
+    "exampleAr": "حدد التخطيط الفيزيولوجي الكهربائي دائرة عودة الدخول."
+  },
+  {
+    "id": "term-electrocardiographic",
+    "term": "Electrocardiographic",
+    "translation": "تخطيطي قلبي كهربائي",
+    "pronunciation": "/ɪˌlek.troʊˌkɑːr.di.oʊˈɡræf.ɪk/",
+    "definitionEn": "Relating to the recording or interpretation of the heart's electrical activity.",
+    "definitionAr": "متعلق بتسجيل النشاط الكهربائي للقلب أو تفسيره.",
+    "exampleEn": "Electrocardiographic changes suggested acute myocardial ischemia.",
+    "exampleAr": "أشارت التغيرات التخطيطية القلبية الكهربائية إلى نقص تروية حاد في عضلة القلب."
+  },
+  {
+    "id": "term-electrocardiography",
+    "term": "Electrocardiography",
+    "translation": "تخطيط كهربائية القلب",
+    "pronunciation": "/ɪˌlek.troʊˌkɑːr.diˈɑː.ɡrə.fi/",
+    "definitionEn": "The process of recording the electrical activity of the heart using surface or intracardiac electrodes.",
+    "definitionAr": "عملية تسجيل النشاط الكهربائي للقلب باستخدام أقطاب سطحية أو داخل القلب.",
+    "exampleEn": "Electrocardiography is essential in the initial assessment of chest pain.",
+    "exampleAr": "يُعد تخطيط كهربائية القلب أساسيًا في التقييم الأولي لألم الصدر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "electro-",
+          "role": "prefix",
+          "meaningAr": "كهربائي",
+          "meaningEn": "electric"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تسجيل أو تصوير",
+          "meaningEn": "recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تخطيط كهربائية القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-echocardiography",
+    "term": "Echocardiography",
+    "translation": "تخطيط صدى القلب",
+    "pronunciation": "/ˌek.oʊˌkɑːr.diˈɑː.ɡrə.fi/",
+    "definitionEn": "Ultrasound imaging used to assess cardiac structure, valves, chamber dimensions, and function.",
+    "definitionAr": "تصوير بالموجات فوق الصوتية لتقييم بنية القلب وصماماته وأبعاد حجراته ووظيفته.",
+    "exampleEn": "Echocardiography demonstrated reduced left ventricular ejection fraction.",
+    "exampleAr": "أظهر تخطيط صدى القلب انخفاض الكسر القذفي للبطين الأيسر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "echo-",
+          "role": "prefix",
+          "meaningAr": "صدى",
+          "meaningEn": "echo"
+        },
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تخطيط صدى القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angiography",
+    "term": "Angiography",
+    "translation": "تصوير الأوعية",
+    "pronunciation": "/ˌæn.dʒiˈɑː.ɡrə.fi/",
+    "definitionEn": "Imaging of blood vessels, commonly using contrast agents and fluoroscopy or computed tomography.",
+    "definitionAr": "تصوير الأوعية الدموية، غالبًا باستخدام مواد ظليلة والتنظير التألقي أو التصوير المقطعي.",
+    "exampleEn": "Coronary angiography identified a critical proximal stenosis.",
+    "exampleAr": "حدد تصوير الشرايين التاجية تضيقًا حرجًا قريبًا.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصوير الأوعية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arteriography",
+    "term": "Arteriography",
+    "translation": "تصوير الشرايين",
+    "pronunciation": "/ɑːrˌtɪr.iˈɑː.ɡrə.fi/",
+    "definitionEn": "Radiographic or cross-sectional imaging of arteries after contrast administration.",
+    "definitionAr": "تصوير الشرايين بالأشعة أو بالمقاطع بعد إعطاء مادة ظليلة.",
+    "exampleEn": "Arteriography demonstrated an occlusion of the femoral artery.",
+    "exampleAr": "أظهر تصوير الشرايين انسداد الشريان الفخذي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteri/o",
+          "role": "combining-form",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصوير الشرايين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venography",
+    "term": "Venography",
+    "translation": "تصوير الأوردة",
+    "pronunciation": "/vɪˈnɑː.ɡrə.fi/",
+    "definitionEn": "Imaging of veins, usually after injection of contrast material.",
+    "definitionAr": "تصوير الأوردة، عادة بعد حقن مادة ظليلة.",
+    "exampleEn": "Venography confirmed extensive deep venous thrombosis.",
+    "exampleAr": "أكد تصوير الأوردة وجود خثار وريدي عميق واسع.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصوير الأوردة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebography",
+    "term": "Phlebography",
+    "translation": "تصوير الأوردة",
+    "pronunciation": "/flɪˈbɑː.ɡrə.fi/",
+    "definitionEn": "Radiographic imaging of veins using contrast material; another term for venography.",
+    "definitionAr": "تصوير الأوردة بالأشعة باستخدام مادة ظليلة؛ وهو مصطلح آخر لـ Venography.",
+    "exampleEn": "Ascending phlebography was historically used to diagnose deep-vein thrombosis.",
+    "exampleAr": "استُخدم تصوير الأوردة الصاعد تاريخيًا لتشخيص الخثار الوريدي العميق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصوير الأوردة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arteriometry",
+    "term": "Arteriometry",
+    "translation": "قياس الشرايين",
+    "pronunciation": "/ɑːrˌtɪr.iˈɑː.mə.tri/",
+    "definitionEn": "Measurement of arterial dimensions or hemodynamic properties; a technical descriptive term.",
+    "definitionAr": "قياس أبعاد الشرايين أو خصائصها الديناميكية الدموية؛ وهو مصطلح تقني وصفي.",
+    "exampleEn": "Arteriometry was used to quantify arterial diameter changes.",
+    "exampleAr": "استُخدم قياس الشرايين لتحديد تغيرات قطرها.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteri/o",
+          "role": "combining-form",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-metry",
+          "role": "suffix",
+          "meaningAr": "قياس",
+          "meaningEn": "measurement"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «قياس الشرايين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemodynamics",
+    "term": "Hemodynamics",
+    "translation": "الديناميكا الدموية",
+    "pronunciation": "/ˌhiː.moʊ.daɪˈnæm.ɪks/",
+    "definitionEn": "The study of blood flow, pressure, resistance, and related forces within the circulation.",
+    "definitionAr": "دراسة جريان الدم والضغط والمقاومة والقوى المرتبطة بها داخل الدورة الدموية.",
+    "exampleEn": "Hemodynamics changed markedly after valve replacement.",
+    "exampleAr": "تغيرت الديناميكا الدموية بصورة واضحة بعد استبدال الصمام.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hemo-",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "dynam/o",
+          "role": "combining-form",
+          "meaningAr": "قوة أو حركة",
+          "meaningEn": "force or movement"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الديناميكا الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemodynamic",
+    "term": "Hemodynamic",
+    "translation": "ديناميكي دموي",
+    "pronunciation": "/ˌhiː.moʊ.daɪˈnæm.ɪk/",
+    "definitionEn": "Relating to the forces and flow characteristics of circulating blood.",
+    "definitionAr": "متعلق بالقوى وخصائص جريان الدم في الدورة الدموية.",
+    "exampleEn": "The patient remained hemodynamically stable.",
+    "exampleAr": "ظل المريض مستقرًا من الناحية الديناميكية الدموية."
+  },
+  {
+    "id": "term-hemodynamicity",
+    "term": "Hemodynamicity",
+    "translation": "الصفة الديناميكية الدموية",
+    "pronunciation": "/ˌhiː.moʊ.daɪˈnæmˈɪs.ə.ti/",
+    "definitionEn": "An uncommon nominal formation referring to hemodynamic character; not a preferred standard clinical term.",
+    "definitionAr": "صياغة اسمية غير شائعة تشير إلى الخصائص الديناميكية الدموية، وليست مصطلحًا سريريًا معياريًا مفضلًا.",
+    "exampleEn": "The authors avoided the vague term hemodynamicity in the final report.",
+    "exampleAr": "تجنب المؤلفون المصطلح المبهم في التقرير النهائي."
+  },
+  {
+    "id": "term-perfusion",
+    "term": "Perfusion",
+    "translation": "الإرواء",
+    "pronunciation": "/pɚˈfjuː.ʒən/",
+    "definitionEn": "Delivery of blood through the vascular bed of a tissue or organ.",
+    "definitionAr": "إيصال الدم عبر الشبكة الوعائية لنسيج أو عضو.",
+    "exampleEn": "Coronary perfusion occurs predominantly during diastole.",
+    "exampleAr": "يحدث الإرواء التاجي بصورة أساسية أثناء الانبساط."
+  },
+  {
+    "id": "term-autophagy",
+    "term": "Autophagy",
+    "translation": "الالتهام الذاتي",
+    "pronunciation": "/ɔːˈtɑː.fə.dʒi/",
+    "definitionEn": "A regulated cellular process in which lysosomes degrade intracellular components for recycling and stress adaptation.",
+    "definitionAr": "عملية خلوية منظمة تحلل فيها الجسيمات الحالّة مكونات داخل الخلية لإعادة تدويرها والتكيف مع الإجهاد.",
+    "exampleEn": "Autophagy helps cardiomyocytes respond to metabolic stress.",
+    "exampleAr": "يساعد الالتهام الذاتي الخلايا العضلية القلبية على الاستجابة للإجهاد الاستقلابي."
+  },
+  {
+    "id": "term-fibroplasia",
+    "term": "Fibroplasia",
+    "translation": "تكون النسيج الليفي",
+    "pronunciation": "/ˌfaɪ.broʊˈpleɪ.ʒə/",
+    "definitionEn": "Formation or proliferation of fibrous connective tissue during repair or pathological remodeling.",
+    "definitionAr": "تكوّن أو تكاثر النسيج الضام الليفي أثناء الالتئام أو إعادة التشكيل المرضية.",
+    "exampleEn": "Fibroplasia contributed to scar formation after myocardial injury.",
+    "exampleAr": "أسهم تكوّن النسيج الليفي في تشكل الندبة بعد أذية عضلة القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "fibr/o",
+          "role": "combining-form",
+          "meaningAr": "ليف",
+          "meaningEn": "fiber"
+        },
+        {
+          "affix": "-plasia",
+          "role": "suffix",
+          "meaningAr": "تكوّن أو نمو",
+          "meaningEn": "formation or growth"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تكون النسيج الليفي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyalinization",
+    "term": "Hyalinization",
+    "translation": "التحول الزجاجي",
+    "pronunciation": "/ˌhaɪ.ə.lɪ.nəˈzeɪ.ʃən/",
+    "definitionEn": "Development of a homogeneous, eosinophilic, glassy appearance in tissue or vessel walls.",
+    "definitionAr": "تطور مظهر زجاجي متجانس محب للإيوزين في الأنسجة أو جدران الأوعية.",
+    "exampleEn": "Hyalinization of small arteries was seen in the specimen.",
+    "exampleAr": "شوهد تحول زجاجي في الشرايين الصغيرة بالعينة."
+  },
+  {
+    "id": "term-dystrophic",
+    "term": "Dystrophic",
+    "translation": "حَثَلي",
+    "pronunciation": "/dɪˈstrɑː.fɪk/",
+    "definitionEn": "Relating to tissue degeneration; in dystrophic calcification, calcium deposits in damaged tissue despite normal serum calcium.",
+    "definitionAr": "متعلق بالتنكس النسيجي؛ وفي التكلس الحثلي يترسب الكالسيوم في نسيج متضرر رغم طبيعية كالسيوم المصل.",
+    "exampleEn": "Dystrophic calcification developed within the old myocardial scar.",
+    "exampleAr": "تطور التكلس الحثلي داخل ندبة عضلة القلب القديمة."
+  },
+  {
+    "id": "term-metastatic",
+    "term": "Metastatic",
+    "translation": "نقائلي أو انتقالِي",
+    "pronunciation": "/ˌmet.əˈstæt.ɪk/",
+    "definitionEn": "Relating to spread of disease from one site to another; metastatic calcification occurs in otherwise normal tissues due to systemic mineral imbalance.",
+    "definitionAr": "متعلق بانتشار المرض من موضع إلى آخر؛ ويحدث التكلس النقائلي في أنسجة طبيعية بسبب اختلال المعادن الجهازي.",
+    "exampleEn": "Metastatic calcification may involve vascular walls in chronic kidney disease.",
+    "exampleAr": "قد يصيب التكلس النقائلي جدران الأوعية في مرض الكلى المزمن."
+  },
+  {
+    "id": "term-osteogenic",
+    "term": "Osteogenic",
+    "translation": "مولد للعظم",
+    "pronunciation": "/ˌɑː.sti.oʊˈdʒen.ɪk/",
+    "definitionEn": "Capable of producing bone or promoting osteogenic differentiation.",
+    "definitionAr": "قادر على إنتاج العظم أو تعزيز التمايز المولد للعظم.",
+    "exampleEn": "Vascular smooth muscle cells may acquire an osteogenic phenotype during calcification.",
+    "exampleAr": "قد تكتسب خلايا العضلات الملساء الوعائية نمطًا ظاهريًا مولدًا للعظم أثناء التكلس."
+  },
+  {
+    "id": "term-aneurysmoplasty",
+    "term": "Aneurysmoplasty",
+    "translation": "رأب أم الدم",
+    "pronunciation": "/ˌæn.jə.rɪzˈmoʊˌplæs.ti/",
+    "definitionEn": "Surgical reconstruction or repair of an aneurysmal vessel segment.",
+    "definitionAr": "إعادة بناء أو إصلاح جراحي لجزء وعائي متمدد.",
+    "exampleEn": "Aneurysmoplasty restored the contour of the arterial segment.",
+    "exampleAr": "أعاد رأب أم الدم الشكل الطبيعي للجزء الشرياني.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "aneurysm/o",
+          "role": "combining-form",
+          "meaningAr": "تمدد وعائي",
+          "meaningEn": "aneurysm"
+        },
+        {
+          "affix": "-plasty",
+          "role": "suffix",
+          "meaningAr": "إصلاح أو ترميم جراحي",
+          "meaningEn": "surgical repair"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «رأب أم الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-aneurysmorraphy",
+    "term": "Aneurysmorraphy",
+    "translation": "خياطة أم الدم",
+    "pronunciation": "/ˌæn.jə.rɪzˈmɔːr.ə.fi/",
+    "definitionEn": "A variant spelling for aneurysmorrhaphy, referring to surgical suturing of an aneurysm.",
+    "definitionAr": "صيغة إملائية بديلة لـ Aneurysmorrhaphy، وتعني الخياطة الجراحية لأم الدم.",
+    "exampleEn": "The older surgical text used the variant aneurysmorraphy.",
+    "exampleAr": "استخدم المرجع الجراحي القديم الصيغة الإملائية البديلة لخياطة أم الدم."
+  },
+  {
+    "id": "term-aortography",
+    "term": "Aortography",
+    "translation": "تصوير الأبهر",
+    "pronunciation": "/ˌeɪ.ɔːrˈtɑː.ɡrə.fi/",
+    "definitionEn": "Contrast imaging of the aorta to assess its lumen, branches, and wall abnormalities.",
+    "definitionAr": "تصوير الأبهر بالمادة الظليلة لتقييم لمعتِه وفروعه واضطرابات جداره.",
+    "exampleEn": "Aortography demonstrated an aortic dissection flap.",
+    "exampleAr": "أظهر تصوير الأبهر سديلة تسلخية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "aort/o",
+          "role": "combining-form",
+          "meaningAr": "الأبهر",
+          "meaningEn": "aorta"
+        },
+        {
+          "affix": "-graphy",
+          "role": "suffix",
+          "meaningAr": "تصوير أو تسجيل",
+          "meaningEn": "imaging or recording"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصوير الأبهر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-aortomegaly",
+    "term": "Aortomegaly",
+    "translation": "توسع الأبهر",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈmeɡ.ə.li/",
+    "definitionEn": "Abnormal enlargement or dilation of the aorta; a descriptive term.",
+    "definitionAr": "زيادة أو توسع غير طبيعي في حجم الأبهر؛ وهو مصطلح وصفي.",
+    "exampleEn": "Aortomegaly was noted on the chest radiograph.",
+    "exampleAr": "لوحظ توسع الأبهر في صورة الصدر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "aort/o",
+          "role": "combining-form",
+          "meaningAr": "الأبهر",
+          "meaningEn": "aorta"
+        },
+        {
+          "affix": "-megaly",
+          "role": "suffix",
+          "meaningAr": "تضخم",
+          "meaningEn": "enlargement"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «توسع الأبهر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-aortogenic",
+    "term": "Aortogenic",
+    "translation": "ناشئ من الأبهر",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈdʒen.ɪk/",
+    "definitionEn": "Originating from or caused by the aorta; uncommon descriptive usage.",
+    "definitionAr": "ناشئ من الأبهر أو ناجم عنه؛ استعمال وصفي غير شائع.",
+    "exampleEn": "The embolus was considered aortogenic after imaging showed complex plaque.",
+    "exampleAr": "اعتُبرت الصمة ناشئة من الأبهر بعد أن أظهر التصوير لويحة معقدة."
+  },
+  {
+    "id": "term-aortocoronary",
+    "term": "Aortocoronary",
+    "translation": "أبهري تاجي",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈkɔːr.əˌner.i/",
+    "definitionEn": "Relating to the aorta and coronary arteries, especially bypass graft connections.",
+    "definitionAr": "متعلق بالأبهر والشرايين التاجية، خاصة وصلات طعوم المجازة.",
+    "exampleEn": "An aortocoronary bypass graft restored coronary perfusion.",
+    "exampleAr": "أعاد طعم المجازة الأبهرية التاجية التروية التاجية."
+  },
+  {
+    "id": "term-aortopulmonary",
+    "term": "Aortopulmonary",
+    "translation": "أبهري رئوي",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈpʊl.məˌner.i/",
+    "definitionEn": "Relating to the aorta and pulmonary artery or their anatomical connection.",
+    "definitionAr": "متعلق بالأبهر والشريان الرئوي أو بالاتصال التشريحي بينهما.",
+    "exampleEn": "An aortopulmonary window is a congenital communication between the great arteries.",
+    "exampleAr": "النافذة الأبهرية الرئوية اتصال خلقي بين الشريانين الكبيرين."
+  },
+  {
+    "id": "term-aortoduodenal",
+    "term": "Aortoduodenal",
+    "translation": "أبهري اثناعشري",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˌduː.əˈdiː.nəl/",
+    "definitionEn": "Relating to the aorta and duodenum, as in an aortoduodenal fistula.",
+    "definitionAr": "متعلق بالأبهر والاثني عشر، كما في الناسور الأبهري الاثناعشري.",
+    "exampleEn": "An aortoduodenal fistula can cause catastrophic gastrointestinal bleeding.",
+    "exampleAr": "قد يسبب الناسور الأبهري الاثناعشري نزفًا هضميًا كارثيًا."
+  },
+  {
+    "id": "term-aortoesophageal",
+    "term": "Aortoesophageal",
+    "translation": "أبهري مريئي",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊ.ɪˌsɑː.fəˈdʒiː.əl/",
+    "definitionEn": "Relating to the aorta and esophagus, as in an aortoesophageal fistula.",
+    "definitionAr": "متعلق بالأبهر والمريء، كما في الناسور الأبهري المريئي.",
+    "exampleEn": "Aortoesophageal fistula is a rare but life-threatening cause of bleeding.",
+    "exampleAr": "الناسور الأبهري المريئي سبب نادر لكنه مهدد للحياة للنزف."
+  },
+  {
+    "id": "term-aortovenous",
+    "term": "Aortovenous",
+    "translation": "أبهري وريدي",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈviː.nəs/",
+    "definitionEn": "Relating to the aorta and a vein or describing a communication between them.",
+    "definitionAr": "متعلق بالأبهر والوريد أو يصف اتصالًا بينهما.",
+    "exampleEn": "An aortovenous fistula can produce high-output cardiac failure.",
+    "exampleAr": "قد يسبب الناسور الأبهري الوريدي فشلًا قلبيًا عالي النتاج."
+  },
+  {
+    "id": "term-aortocaval",
+    "term": "Aortocaval",
+    "translation": "أبهري أجوف",
+    "pronunciation": "/ˌeɪ.ɔːr.toʊˈkeɪ.vəl/",
+    "definitionEn": "Relating to the aorta and vena cava, especially an abnormal fistulous connection.",
+    "definitionAr": "متعلق بالأبهر والوريد الأجوف، خاصة الاتصال الناسوري غير الطبيعي.",
+    "exampleEn": "An aortocaval fistula may cause venous hypertension and high-output failure.",
+    "exampleAr": "قد يسبب الناسور الأبهري الأجوف فرط ضغط وريديًا وفشلًا عالي النتاج."
   }
 ]
