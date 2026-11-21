@@ -14227,5 +14227,2670 @@
     "pronunciation": "/ˈpɝː.pjʊr.ə/",
     "exampleEn": "Palpable purpura suggested small-vessel vasculitis.",
     "exampleAr": "أشارت الفرفرية المجسوسة إلى التهاب الأوعية الصغيرة."
+  },
+  {
+    "id": "term-atrium",
+    "term": "Atrium",
+    "translation": "أذين",
+    "definitionEn": "One of the two upper chambers of the heart that receives blood returning to the heart.",
+    "definitionAr": "إحدى الحجرتين العلويتين للقلب، وتستقبل الدم العائد إليه.",
+    "pronunciation": "/ˈeɪ.tri.əm/",
+    "exampleEn": "The right atrium receives systemic venous blood.",
+    "exampleAr": "يستقبل الأذين الأيمن الدم الوريدي القادم من أنحاء الجسم."
+  },
+  {
+    "id": "term-ventricle",
+    "term": "Ventricle",
+    "translation": "بطين",
+    "definitionEn": "One of the two lower heart chambers that pumps blood into the pulmonary or systemic circulation.",
+    "definitionAr": "إحدى الحجرتين السفليتين للقلب، وتضخ الدم إلى الدورة الرئوية أو الجهازية.",
+    "pronunciation": "/ˈven.trɪ.kəl/",
+    "exampleEn": "The left ventricle pumps blood into the aorta.",
+    "exampleAr": "يضخ البطين الأيسر الدم إلى الشريان الأبهر."
+  },
+  {
+    "id": "term-septum",
+    "term": "Septum",
+    "translation": "حاجز",
+    "definitionEn": "A wall of tissue that separates the right and left sides or chambers of the heart.",
+    "definitionAr": "جدار من النسيج يفصل بين جانبي القلب أو حجراته اليمنى واليسرى.",
+    "pronunciation": "/ˈsep.təm/",
+    "exampleEn": "The interventricular septum separates the ventricles.",
+    "exampleAr": "يفصل الحاجز بين البطينين بين البطين الأيمن والأيسر."
+  },
+  {
+    "id": "term-chordae",
+    "term": "Chordae",
+    "translation": "أوتار",
+    "definitionEn": "Tendinous cords that connect atrioventricular valve leaflets to papillary muscles.",
+    "definitionAr": "حبال وترية تصل شرفات الصمامات الأذينية البطينية بالعضلات الحليمية.",
+    "pronunciation": "/ˈkɔːr.diː/",
+    "exampleEn": "The chordae prevent valve leaflets from prolapsing.",
+    "exampleAr": "تمنع الأوتار القلبية شرفات الصمام من التدلي."
+  },
+  {
+    "id": "term-papillary",
+    "term": "Papillary",
+    "translation": "حليمي",
+    "definitionEn": "Relating to small nipple-shaped projections, especially the papillary muscles of the ventricles.",
+    "definitionAr": "متعلق ببروزات صغيرة تشبه الحلمة، وخاصة العضلات الحليمية في البطينين.",
+    "pronunciation": "/ˈpæp.ɪˌler.i/",
+    "exampleEn": "Papillary muscles contract during ventricular systole.",
+    "exampleAr": "تنقبض العضلات الحليمية أثناء الانقباض البطيني."
+  },
+  {
+    "id": "term-trabeculae",
+    "term": "Trabeculae",
+    "translation": "ترابيق",
+    "definitionEn": "Irregular muscular ridges or bands projecting from the inner walls of the ventricles.",
+    "definitionAr": "حزم أو نتوءات عضلية غير منتظمة تبرز من الجدران الداخلية للبطينين.",
+    "pronunciation": "/trəˈbek.jə.liː/",
+    "exampleEn": "Trabeculae carneae are visible inside the ventricles.",
+    "exampleAr": "تُرى الترابيق اللحمية داخل البطينين."
+  },
+  {
+    "id": "term-auricle",
+    "term": "Auricle",
+    "translation": "زائدة أذينية",
+    "definitionEn": "An ear-shaped muscular pouch projecting from an atrium and increasing its capacity.",
+    "definitionAr": "جيب عضلي يشبه الأذن يبرز من الأذين ويزيد سعته.",
+    "pronunciation": "/ˈɔːr.ɪ.kəl/",
+    "exampleEn": "The left auricle is an extension of the left atrium.",
+    "exampleAr": "الزائدة الأذينية اليسرى امتداد للأذين الأيسر."
+  },
+  {
+    "id": "term-aorta",
+    "term": "Aorta",
+    "translation": "الأبهر",
+    "definitionEn": "The largest systemic artery, carrying oxygenated blood from the left ventricle to the body.",
+    "definitionAr": "أكبر شريان في الدورة الجهازية، ينقل الدم المؤكسج من البطين الأيسر إلى الجسم.",
+    "pronunciation": "/eɪˈɔːr.tə/",
+    "exampleEn": "The aorta distributes blood to the systemic circulation.",
+    "exampleAr": "يوزع الأبهر الدم إلى الدورة الدموية الجهازية."
+  },
+  {
+    "id": "term-pulmonary",
+    "term": "Pulmonary",
+    "translation": "رئوي",
+    "definitionEn": "Relating to the lungs or the pulmonary circulation between the heart and lungs.",
+    "definitionAr": "متعلق بالرئتين أو بالدورة الدموية الرئوية بين القلب والرئتين.",
+    "pronunciation": "/ˈpʊl.məˌner.i/",
+    "exampleEn": "The pulmonary artery carries deoxygenated blood.",
+    "exampleAr": "ينقل الشريان الرئوي دمًا غير مؤكسج."
+  },
+  {
+    "id": "term-tricuspid",
+    "term": "Tricuspid",
+    "translation": "ثلاثي الشرفات",
+    "definitionEn": "Having three cusps; commonly describing the right atrioventricular valve.",
+    "definitionAr": "ذو ثلاث شرفات؛ ويصف غالبًا الصمام الأذيني البطيني الأيمن.",
+    "pronunciation": "/traɪˈkʌs.pɪd/",
+    "exampleEn": "The tricuspid valve closes during ventricular systole.",
+    "exampleAr": "ينغلق الصمام ثلاثي الشرفات أثناء الانقباض البطيني."
+  },
+  {
+    "id": "term-bicuspid",
+    "term": "Bicuspid",
+    "translation": "ثنائي الشرفات",
+    "definitionEn": "Having two cusps; commonly describing the mitral valve.",
+    "definitionAr": "ذو شرفتين؛ ويصف غالبًا الصمام التاجي.",
+    "pronunciation": "/baɪˈkʌs.pɪd/",
+    "exampleEn": "The bicuspid valve separates the left atrium from the ventricle.",
+    "exampleAr": "يفصل الصمام ثنائي الشرفات الأذين الأيسر عن البطين."
+  },
+  {
+    "id": "term-semilunar",
+    "term": "Semilunar",
+    "translation": "هلالي",
+    "definitionEn": "Shaped like a half-moon; describing the aortic and pulmonary valves.",
+    "definitionAr": "ذو شكل هلالي؛ ويصف الصمامين الأبهري والرئوي.",
+    "pronunciation": "/ˌsem.iˈluː.nər/",
+    "exampleEn": "Semilunar valves prevent blood from returning to the ventricles.",
+    "exampleAr": "تمنع الصمامات الهلالية عودة الدم إلى البطينين."
+  },
+  {
+    "id": "term-mitral",
+    "term": "Mitral",
+    "translation": "تاجي",
+    "definitionEn": "Relating to the left atrioventricular valve, which has two leaflets.",
+    "definitionAr": "متعلق بالصمام الأذيني البطيني الأيسر، الذي يتكون من وريقتين.",
+    "pronunciation": "/ˈmaɪ.trəl/",
+    "exampleEn": "Mitral stenosis impairs left ventricular filling.",
+    "exampleAr": "يعيق تضيق الصمام التاجي امتلاء البطين الأيسر."
+  },
+  {
+    "id": "term-pulmonic",
+    "term": "Pulmonic",
+    "translation": "رئوي صمامي",
+    "definitionEn": "Relating specifically to the pulmonary valve or its function.",
+    "definitionAr": "متعلق تحديدًا بالصمام الرئوي أو بوظيفته.",
+    "pronunciation": "/pʊlˈmɑː.nɪk/",
+    "exampleEn": "Pulmonic regurgitation allows blood to flow backward.",
+    "exampleAr": "يسمح القلس الرئوي بعودة الدم إلى الخلف."
+  },
+  {
+    "id": "term-circumflex",
+    "term": "Circumflex",
+    "translation": "منعطف",
+    "definitionEn": "Curving around a structure; commonly describing a branch of the left coronary artery.",
+    "definitionAr": "ملتَف حول بنية؛ ويصف غالبًا فرعًا من الشريان التاجي الأيسر.",
+    "pronunciation": "/ˈsɝː.kəm.fleks/",
+    "exampleEn": "The circumflex artery supplies part of the left ventricle.",
+    "exampleAr": "يغذي الشريان المنعطف جزءًا من البطين الأيسر."
+  },
+  {
+    "id": "term-interventricular",
+    "term": "Interventricular",
+    "translation": "بين البطينين",
+    "definitionEn": "Located between the right and left ventricles.",
+    "definitionAr": "واقع بين البطين الأيمن والبطين الأيسر.",
+    "pronunciation": "/ˌɪn.tər.venˈtrɪk.jə.lər/",
+    "exampleEn": "The interventricular groove marks the separation of the ventricles.",
+    "exampleAr": "يمثل الثلم بين البطينين موضع الفصل بين البطينين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "inter",
+          "role": "prefix",
+          "meaningAr": "بين",
+          "meaningEn": "between"
+        },
+        {
+          "affix": "ventricul",
+          "role": "root",
+          "meaningAr": "بطين",
+          "meaningEn": "ventricle"
+        },
+        {
+          "affix": "ar",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بالمنطقة الواقعة بين البطينين."
+        }
+      ],
+      "literalSynthesisAr": "inter = بين + ventricul = بطين + ar = متعلق بـ + المتعلق بالمنطقة الواقعة بين البطينين. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-his",
+    "term": "His",
+    "translation": "حزمة هِس",
+    "definitionEn": "Relating to the atrioventricular bundle that conducts impulses toward the ventricles.",
+    "definitionAr": "متعلق بالحزمة الأذينية البطينية التي تنقل النبضات باتجاه البطينين.",
+    "pronunciation": "/hɪs/",
+    "exampleEn": "The His bundle conducts impulses into the bundle branches.",
+    "exampleAr": "تنقل حزمة هِس النبضات إلى فرعي الحزمة."
+  },
+  {
+    "id": "term-purkinje",
+    "term": "Purkinje",
+    "translation": "بوركنجي",
+    "definitionEn": "Relating to specialized cardiac conducting fibers that rapidly distribute impulses through the ventricles.",
+    "definitionAr": "متعلق بألياف التوصيل القلبية المتخصصة التي توزع النبضات بسرعة عبر البطينين.",
+    "pronunciation": "/pɜːrˈkɪn.dʒi/",
+    "exampleEn": "Purkinje fibers coordinate ventricular activation.",
+    "exampleAr": "تنسق ألياف بوركنجي تنشيط البطينين."
+  },
+  {
+    "id": "term-arteriole",
+    "term": "Arteriole",
+    "translation": "شرين",
+    "definitionEn": "A small artery that regulates resistance and controls blood flow into capillary beds.",
+    "definitionAr": "شريان صغير ينظم المقاومة ويتحكم في تدفق الدم إلى أسرّة الشعيرات الدموية.",
+    "pronunciation": "/ɑːrˈtɪr.i.oʊl/",
+    "exampleEn": "Arterioles constrict in response to sympathetic stimulation.",
+    "exampleAr": "تتضيق الشُرينات استجابةً للتنبيه الودي."
+  },
+  {
+    "id": "term-venule",
+    "term": "Venule",
+    "translation": "وريدة",
+    "definitionEn": "A small vessel that collects blood from capillaries and drains it into larger veins.",
+    "definitionAr": "وعاء دموي صغير يجمع الدم من الشعيرات ويصرفه إلى أوردة أكبر.",
+    "pronunciation": "/ˈven.juːl/",
+    "exampleEn": "Venules are important sites of leukocyte migration.",
+    "exampleAr": "تُعد الوريدات مواقع مهمة لهجرة الكريات البيضاء."
+  },
+  {
+    "id": "term-capillary",
+    "term": "Capillary",
+    "translation": "شعيرة دموية",
+    "definitionEn": "A microscopic vessel with a thin wall that permits exchange between blood and tissues.",
+    "definitionAr": "وعاء مجهري ذو جدار رقيق يسمح بالتبادل بين الدم والأنسجة.",
+    "pronunciation": "/ˈkæp.əˌler.i/",
+    "exampleEn": "Oxygen diffuses across the capillary wall.",
+    "exampleAr": "ينتشر الأكسجين عبر جدار الشعيرة الدموية."
+  },
+  {
+    "id": "term-sinusoid",
+    "term": "Sinusoid",
+    "translation": "جيباني",
+    "definitionEn": "A wide, discontinuous capillary channel that permits exchange of large molecules or cells.",
+    "definitionAr": "قناة شعرية واسعة وغير مستمرة تسمح بمرور الجزيئات الكبيرة أو الخلايا.",
+    "pronunciation": "/ˈsaɪ.nə.sɔɪd/",
+    "exampleEn": "Hepatic sinusoids allow plasma proteins to enter the blood.",
+    "exampleAr": "تسمح الجيوب الكبدية بانتقال بروتينات البلازما إلى الدم."
+  },
+  {
+    "id": "term-tunica",
+    "term": "Tunica",
+    "translation": "غلالة",
+    "definitionEn": "A layer or coat of tissue forming part of the wall of a vessel.",
+    "definitionAr": "طبقة أو غلاف نسيجي يشكل جزءًا من جدار الوعاء الدموي.",
+    "pronunciation": "/ˈtuː.nɪ.kə/",
+    "exampleEn": "The tunica media contains smooth muscle.",
+    "exampleAr": "تحتوي الغلالة الوسطى على عضلات ملساء."
+  },
+  {
+    "id": "term-adventitia",
+    "term": "Adventitia",
+    "translation": "غلالة خارجية",
+    "definitionEn": "The outer connective-tissue layer of a blood vessel.",
+    "definitionAr": "الطبقة الخارجية من النسيج الضام في جدار الوعاء الدموي.",
+    "pronunciation": "/ˌæd.venˈtɪʃ.ə/",
+    "exampleEn": "The adventitia anchors the vessel to surrounding tissue.",
+    "exampleAr": "تثبت الغلالة الخارجية الوعاء بالأنسجة المحيطة."
+  },
+  {
+    "id": "term-intima",
+    "term": "Intima",
+    "translation": "غلالة باطنة",
+    "definitionEn": "The innermost layer of a blood vessel wall, including the endothelial lining.",
+    "definitionAr": "أعمق طبقات جدار الوعاء الدموي، وتشمل البطانة الوعائية.",
+    "pronunciation": "/ˈɪn.tɪ.mə/",
+    "exampleEn": "Lipid accumulation can begin in the tunica intima.",
+    "exampleAr": "قد يبدأ تراكم الدهون في الغلالة الباطنة."
+  },
+  {
+    "id": "term-media",
+    "term": "Media",
+    "translation": "غلالة وسطى",
+    "definitionEn": "The middle layer of a blood vessel wall, containing smooth muscle and elastic tissue.",
+    "definitionAr": "الطبقة الوسطى من جدار الوعاء الدموي، وتحتوي على عضلات ملساء ونسيج مرن.",
+    "pronunciation": "/ˈmiː.di.ə/",
+    "exampleEn": "The media contributes to arterial vasoconstriction.",
+    "exampleAr": "تسهم الغلالة الوسطى في تضيق الشرايين."
+  },
+  {
+    "id": "term-vasa",
+    "term": "Vasa",
+    "translation": "أوعية",
+    "definitionEn": "A Latin plural form meaning vessels, used in anatomical terms such as vasa vasorum.",
+    "definitionAr": "صيغة جمع لاتينية تعني الأوعية، وتستخدم في مصطلحات تشريحية مثل الأوعية المغذية للأوعية.",
+    "pronunciation": "/ˈveɪ.zə/",
+    "exampleEn": "Vasa vasorum nourish the walls of large arteries.",
+    "exampleAr": "تغذي الأوعية المغذية للأوعية جدران الشرايين الكبيرة."
+  },
+  {
+    "id": "term-vasorum",
+    "term": "Vasorum",
+    "translation": "للأوعية",
+    "definitionEn": "A Latin genitive plural meaning of the vessels, used in anatomical nomenclature.",
+    "definitionAr": "صيغة مضاف إليه لاتينية تعني للأوعية، وتستخدم في التسمية التشريحية.",
+    "pronunciation": "/vəˈsɔːr.əm/",
+    "exampleEn": "The term vasa vasorum literally refers to vessels of the vessels.",
+    "exampleAr": "يشير مصطلح الأوعية المغذية للأوعية حرفيًا إلى أوعية الأوعية."
+  },
+  {
+    "id": "term-anastomosis",
+    "term": "Anastomosis",
+    "translation": "مفاغرة",
+    "definitionEn": "A natural or surgically created connection between two vessels or tubular structures.",
+    "definitionAr": "اتصال طبيعي أو جراحي بين وعائين أو بنيتين أنبوبيتين.",
+    "pronunciation": "/əˌnæs.təˈmoʊ.sɪs/",
+    "exampleEn": "Collateral anastomoses may preserve tissue perfusion.",
+    "exampleAr": "قد تحافظ المفاغرات الجانبية على إرواء الأنسجة."
+  },
+  {
+    "id": "term-collateral",
+    "term": "Collateral",
+    "translation": "جانبي",
+    "definitionEn": "An alternative vessel or pathway that provides blood flow when the main route is narrowed or blocked.",
+    "definitionAr": "وعاء أو مسار بديل يوفر تدفق الدم عند تضيق المسار الرئيسي أو انسداده.",
+    "pronunciation": "/kəˈlæt.ər.əl/",
+    "exampleEn": "Collateral circulation can limit ischemic injury.",
+    "exampleAr": "قد تحد الدورة الجانبية من الأذية الإقفارية."
+  },
+  {
+    "id": "term-preload",
+    "term": "Preload",
+    "translation": "الحمل المسبق",
+    "definitionEn": "The myocardial wall stress or fiber stretch at the end of diastole before contraction.",
+    "definitionAr": "إجهاد جدار عضلة القلب أو تمدد أليافها في نهاية الانبساط وقبل الانقباض.",
+    "pronunciation": "/ˈpriː.loʊd/",
+    "exampleEn": "Increased venous return can raise ventricular preload.",
+    "exampleAr": "قد تؤدي زيادة العود الوريدي إلى ارتفاع الحمل المسبق للبطين."
+  },
+  {
+    "id": "term-afterload",
+    "term": "Afterload",
+    "translation": "الحمل اللاحق",
+    "definitionEn": "The load or wall stress that the ventricle must overcome to eject blood.",
+    "definitionAr": "الحمل أو إجهاد الجدار الذي يجب على البطين التغلب عليه لقذف الدم.",
+    "pronunciation": "/ˈæf.tərˌloʊd/",
+    "exampleEn": "Systemic hypertension increases left ventricular afterload.",
+    "exampleAr": "يرفع ارتفاع ضغط الدم الجهازي الحمل اللاحق على البطين الأيسر."
+  },
+  {
+    "id": "term-contractility",
+    "term": "Contractility",
+    "translation": "قابلية الانقباض",
+    "definitionEn": "The intrinsic ability of cardiac muscle to generate force at a given preload and afterload.",
+    "definitionAr": "القدرة الذاتية لعضلة القلب على توليد القوة عند حمل مسبق ولاحق محددين.",
+    "pronunciation": "/ˌkɑːn.trækˈtɪl.ə.ti/",
+    "exampleEn": "Sympathetic stimulation increases myocardial contractility.",
+    "exampleAr": "يزيد التنبيه الودي قابلية عضلة القلب للانقباض."
+  },
+  {
+    "id": "term-compliance",
+    "term": "Compliance",
+    "translation": "مطاوعة",
+    "definitionEn": "The change in volume of a chamber or vessel for a given change in pressure.",
+    "definitionAr": "التغير في حجم حجرة أو وعاء مقابل تغير معين في الضغط.",
+    "pronunciation": "/kəmˈplaɪ.əns/",
+    "exampleEn": "Reduced ventricular compliance impairs diastolic filling.",
+    "exampleAr": "تؤدي قلة مطاوعة البطين إلى إعاقة الامتلاء الانبساطي."
+  },
+  {
+    "id": "term-elastance",
+    "term": "Elastance",
+    "translation": "مرونة",
+    "definitionEn": "The change in pressure per unit change in volume, representing the inverse of compliance.",
+    "definitionAr": "التغير في الضغط لكل تغير وحدي في الحجم، وتمثل عكس المطاوعة.",
+    "pronunciation": "/ɪˈlæs.təns/",
+    "exampleEn": "Ventricular elastance rises during systole.",
+    "exampleAr": "ترتفع مرونة البطين المقاسة بالعلاقة ضغط-حجم أثناء الانقباض."
+  },
+  {
+    "id": "term-stroke",
+    "term": "Stroke",
+    "translation": "ضربة",
+    "definitionEn": "A single cardiac ejection event; used in the term stroke volume.",
+    "definitionAr": "حدث قذف قلبي واحد؛ ويستخدم في مصطلح حجم الضربة.",
+    "pronunciation": "/stroʊk/",
+    "exampleEn": "Stroke volume is the amount ejected by one ventricle per beat.",
+    "exampleAr": "حجم الضربة هو كمية الدم التي يقذفها البطين في كل نبضة."
+  },
+  {
+    "id": "term-systole",
+    "term": "Systole",
+    "translation": "انقباض",
+    "definitionEn": "The phase of the cardiac cycle during which the ventricles contract and eject blood.",
+    "definitionAr": "مرحلة الدورة القلبية التي تنقبض فيها البطينان ويُقذف الدم.",
+    "pronunciation": "/ˈsɪs.tə.li/",
+    "exampleEn": "Aortic pressure rises during ventricular systole.",
+    "exampleAr": "يرتفع الضغط الأبهري أثناء الانقباض البطيني."
+  },
+  {
+    "id": "term-diastole",
+    "term": "Diastole",
+    "translation": "انبساط",
+    "definitionEn": "The phase of the cardiac cycle during which the heart muscle relaxes and the chambers fill.",
+    "definitionAr": "مرحلة الدورة القلبية التي ترتخي فيها عضلة القلب وتمتلئ الحجرات بالدم.",
+    "pronunciation": "/daɪˈæs.tə.li/",
+    "exampleEn": "Most left coronary blood flow occurs during diastole.",
+    "exampleAr": "يحدث معظم تدفق الدم في الشريان التاجي الأيسر أثناء الانبساط."
+  },
+  {
+    "id": "term-chronotropy",
+    "term": "Chronotropy",
+    "translation": "تأثير معدل النبض",
+    "definitionEn": "The effect of a factor on heart rate.",
+    "definitionAr": "تأثير عامل ما في معدل ضربات القلب.",
+    "pronunciation": "/kroʊˈnɑː.trə.pi/",
+    "exampleEn": "Positive chronotropy increases the heart rate.",
+    "exampleAr": "يزيد التأثير الزمني الإيجابي معدل ضربات القلب."
+  },
+  {
+    "id": "term-inotropy",
+    "term": "Inotropy",
+    "translation": "تأثير قوة الانقباض",
+    "definitionEn": "The effect of a factor on the force of myocardial contraction.",
+    "definitionAr": "تأثير عامل ما في قوة انقباض عضلة القلب.",
+    "pronunciation": "/ɪˈnɑː.trə.pi/",
+    "exampleEn": "Dobutamine produces positive inotropy.",
+    "exampleAr": "يُحدث الدوبوتامين تأثيرًا إيجابيًا في قوة الانقباض."
+  },
+  {
+    "id": "term-dromotropy",
+    "term": "Dromotropy",
+    "translation": "تأثير سرعة التوصيل",
+    "definitionEn": "The effect of a factor on the speed of electrical conduction through cardiac tissue.",
+    "definitionAr": "تأثير عامل ما في سرعة انتقال الإشارة الكهربائية عبر النسيج القلبي.",
+    "pronunciation": "/droʊˈmɑː.trə.pi/",
+    "exampleEn": "A drug with negative dromotropy slows AV nodal conduction.",
+    "exampleAr": "يبطئ الدواء ذو التأثير التوصيلي السلبي انتقال الإشارة عبر العقدة الأذينية البطينية."
+  },
+  {
+    "id": "term-lusitropy",
+    "term": "Lusitropy",
+    "translation": "تأثير الارتخاء",
+    "definitionEn": "The effect of a factor on the rate and quality of myocardial relaxation.",
+    "definitionAr": "تأثير عامل ما في سرعة وجودة ارتخاء عضلة القلب.",
+    "pronunciation": "/luːˈsɪt.rə.pi/",
+    "exampleEn": "Improved lusitropy supports ventricular filling.",
+    "exampleAr": "يساعد تحسن الارتخاء العضلي القلبي على امتلاء البطين."
+  },
+  {
+    "id": "term-baroreceptor",
+    "term": "Baroreceptor",
+    "translation": "مستقبل ضغطي",
+    "definitionEn": "A sensory receptor that detects stretch in vessel walls and helps regulate arterial pressure.",
+    "definitionAr": "مستقبل حسي يكتشف تمدد جدران الأوعية ويساعد على تنظيم الضغط الشرياني.",
+    "pronunciation": "/ˌbær.oʊ.rɪˈsep.tər/",
+    "exampleEn": "Baroreceptors in the carotid sinus respond to pressure changes.",
+    "exampleAr": "تستجيب المستقبلات الضغطية في الجيب السباتي لتغيرات الضغط.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "baro",
+          "role": "combining-form",
+          "meaningAr": "ضغط",
+          "meaningEn": "pressure"
+        },
+        {
+          "affix": "receptor",
+          "role": "root",
+          "meaningAr": "مستقبل",
+          "meaningEn": "receptor"
+        },
+        {
+          "affix": "baro + receptor",
+          "role": "الجزء الحساس للضغط الذي يستقبل تغيرات تمدد جدار الوعاء."
+        }
+      ],
+      "literalSynthesisAr": "baro = ضغط + receptor = مستقبل + baro + receptor = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-chemoreceptor",
+    "term": "Chemoreceptor",
+    "translation": "مستقبل كيميائي",
+    "definitionEn": "A sensory receptor that detects changes in chemical variables such as oxygen, carbon dioxide, or pH.",
+    "definitionAr": "مستقبل حسي يكتشف التغيرات الكيميائية مثل الأكسجين وثاني أكسيد الكربون والرقم الهيدروجيني.",
+    "pronunciation": "/ˌkiː.moʊ.rɪˈsep.tər/",
+    "exampleEn": "Peripheral chemoreceptors respond to low arterial oxygen.",
+    "exampleAr": "تستجيب المستقبلات الكيميائية المحيطية لانخفاض الأكسجين الشرياني.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "chemo",
+          "role": "combining-form",
+          "meaningAr": "كيمياء",
+          "meaningEn": "chemical"
+        },
+        {
+          "affix": "receptor",
+          "role": "root",
+          "meaningAr": "مستقبل",
+          "meaningEn": "receptor"
+        },
+        {
+          "affix": "المستقبل الذي يستشعر التغيرات الكيميائية."
+        }
+      ],
+      "literalSynthesisAr": "chemo = كيمياء + receptor = مستقبل + المستقبل الذي يستشعر التغيرات الكيميائية. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-baroreflex",
+    "term": "Baroreflex",
+    "translation": "منعكس مستقبلات الضغط",
+    "definitionEn": "A reflex response that adjusts autonomic output to stabilize arterial blood pressure.",
+    "definitionAr": "استجابة انعكاسية تعدل النشاط العصبي الذاتي لتثبيت ضغط الدم الشرياني.",
+    "pronunciation": "/ˈbær.oʊˌriː.fleks/",
+    "exampleEn": "The baroreflex buffers sudden rises in blood pressure.",
+    "exampleAr": "يخفف منعكس مستقبلات الضغط الارتفاعات المفاجئة في ضغط الدم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "baro",
+          "role": "combining-form",
+          "meaningAr": "ضغط",
+          "meaningEn": "pressure"
+        },
+        {
+          "affix": "reflex",
+          "role": "root",
+          "meaningAr": "منعكس",
+          "meaningEn": "reflex"
+        },
+        {
+          "affix": "المنعكس العصبي الذي يستجيب لتغيرات الضغط."
+        }
+      ],
+      "literalSynthesisAr": "baro = ضغط + reflex = منعكس + المنعكس العصبي الذي يستجيب لتغيرات الضغط. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-natriuresis",
+    "term": "Natriuresis",
+    "translation": "إطراح الصوديوم",
+    "definitionEn": "The excretion of sodium in the urine.",
+    "definitionAr": "إطراح الصوديوم في البول.",
+    "pronunciation": "/ˌneɪ.tri.jʊˈriː.sɪs/",
+    "exampleEn": "Atrial natriuretic peptide promotes natriuresis.",
+    "exampleAr": "يعزز الببتيد الأذيني المدر للصوديوم إطراح الصوديوم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "natri",
+          "role": "combining-form",
+          "meaningAr": "صوديوم",
+          "meaningEn": "sodium"
+        },
+        {
+          "affix": "uresis",
+          "role": "suffix",
+          "meaningAr": "إدرار أو طرح بولي",
+          "meaningEn": "urinary excretion"
+        },
+        {
+          "affix": "عملية طرح الصوديوم في البول."
+        }
+      ],
+      "literalSynthesisAr": "natri = صوديوم + uresis = إدرار أو طرح بولي + عملية طرح الصوديوم في البول. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-natriuretic",
+    "term": "Natriuretic",
+    "translation": "مدرّ للصوديوم",
+    "definitionEn": "Promoting the renal excretion of sodium.",
+    "definitionAr": "يعزز إخراج الصوديوم عن طريق الكلى.",
+    "pronunciation": "/ˌneɪ.tri.jʊˈret.ɪk/",
+    "exampleEn": "Natriuretic peptides reduce circulating volume.",
+    "exampleAr": "تقلل الببتيدات المدرّة للصوديوم حجم الدم الدوراني."
+  },
+  {
+    "id": "term-aldosterone",
+    "term": "Aldosterone",
+    "translation": "ألدوستيرون",
+    "definitionEn": "A mineralocorticoid hormone that increases renal sodium reabsorption and potassium secretion.",
+    "definitionAr": "هرمون قشري معدني يزيد إعادة امتصاص الصوديوم وإفراز البوتاسيوم في الكلى.",
+    "pronunciation": "/ælˈdɑː.stəˌroʊn/",
+    "exampleEn": "Aldosterone contributes to blood volume regulation.",
+    "exampleAr": "يسهم الألدوستيرون في تنظيم حجم الدم."
+  },
+  {
+    "id": "term-renin",
+    "term": "Renin",
+    "translation": "رينين",
+    "definitionEn": "An enzyme released by the kidneys that initiates the renin-angiotensin-aldosterone system.",
+    "definitionAr": "إنزيم تفرزه الكلى ويبدأ منظومة الرينين والأنجيوتنسين والألدوستيرون.",
+    "pronunciation": "/ˈriː.nɪn/",
+    "exampleEn": "Reduced renal perfusion stimulates renin release.",
+    "exampleAr": "يحفز انخفاض الإرواء الكلوي إفراز الرينين."
+  },
+  {
+    "id": "term-angiotensin",
+    "term": "Angiotensin",
+    "translation": "أنجيوتنسين",
+    "definitionEn": "A peptide hormone in the renin-angiotensin system that regulates vascular tone and aldosterone release.",
+    "definitionAr": "هرمون ببتيدي ضمن منظومة الرينين والأنجيوتنسين ينظم توتر الأوعية وإفراز الألدوستيرون.",
+    "pronunciation": "/ˌæn.dʒi.oʊˈten.sɪn/",
+    "exampleEn": "Angiotensin II increases systemic vascular resistance.",
+    "exampleAr": "يزيد الأنجيوتنسين الثاني المقاومة الوعائية الجهازية."
+  },
+  {
+    "id": "term-bradykinin",
+    "term": "Bradykinin",
+    "translation": "براديكينين",
+    "definitionEn": "A vasoactive peptide that promotes vasodilation and increases vascular permeability.",
+    "definitionAr": "ببتيد فعال وعائيًا يعزز توسع الأوعية ويزيد نفاذيتها.",
+    "pronunciation": "/ˌbræd.ɪˈkaɪ.nɪn/",
+    "exampleEn": "ACE inhibition can increase bradykinin levels.",
+    "exampleAr": "قد يؤدي تثبيط الإنزيم المحول للأنجيوتنسين إلى زيادة مستويات البراديكينين."
+  },
+  {
+    "id": "term-endothelin",
+    "term": "Endothelin",
+    "translation": "إندوثيلين",
+    "definitionEn": "A peptide produced by endothelial cells that causes potent vasoconstriction.",
+    "definitionAr": "ببتيد تنتجه الخلايا البطانية ويسبب تضيقًا قويًا للأوعية.",
+    "pronunciation": "/ˌen.doʊˈθel.ɪn/",
+    "exampleEn": "Endothelin contributes to pulmonary vascular tone.",
+    "exampleAr": "يسهم الإندوثيلين في تنظيم توتر الأوعية الرئوية."
+  },
+  {
+    "id": "term-nitric",
+    "term": "Nitric",
+    "translation": "نيتريكي",
+    "definitionEn": "Relating to nitrogen; used in the term nitric oxide, an endothelial vasodilator.",
+    "definitionAr": "متعلق بالنيتروجين؛ ويستخدم في مصطلح أكسيد النيتريك الموسع للأوعية.",
+    "pronunciation": "/ˈnaɪ.trɪk/",
+    "exampleEn": "Nitric oxide relaxes vascular smooth muscle.",
+    "exampleAr": "يرخي أكسيد النيتريك العضلات الملساء الوعائية."
+  },
+  {
+    "id": "term-adenosine",
+    "term": "Adenosine",
+    "translation": "أدينوزين",
+    "definitionEn": "A purine nucleoside that affects cardiac conduction and causes coronary vasodilation.",
+    "definitionAr": "نوكليوزيد بيوريني يؤثر في التوصيل القلبي ويسبب توسع الشرايين التاجية.",
+    "pronunciation": "/əˈden.əˌsiːn/",
+    "exampleEn": "Adenosine can terminate some forms of supraventricular tachycardia.",
+    "exampleAr": "قد ينهي الأدينوزين بعض أشكال تسرع القلب فوق البطيني."
+  },
+  {
+    "id": "term-myoglobin",
+    "term": "Myoglobin",
+    "translation": "ميوغلوبين",
+    "definitionEn": "An oxygen-binding protein in cardiac and skeletal muscle cells.",
+    "definitionAr": "بروتين يرتبط بالأكسجين داخل خلايا العضلات القلبية والهيكلية.",
+    "pronunciation": "/ˌmaɪ.oʊˈɡloʊ.bɪn/",
+    "exampleEn": "Myoglobin may rise early after myocardial injury.",
+    "exampleAr": "قد يرتفع الميوغلوبين مبكرًا بعد أذية عضلة القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "myo",
+          "role": "combining-form",
+          "meaningAr": "عضلة",
+          "meaningEn": "muscle"
+        },
+        {
+          "affix": "globin",
+          "role": "root",
+          "meaningAr": "بروتين كروي",
+          "meaningEn": "globular protein"
+        },
+        {
+          "affix": "البروتين العضلي الكروي المرتبط بالأكسجين."
+        }
+      ],
+      "literalSynthesisAr": "myo = عضلة + globin = بروتين كروي + البروتين العضلي الكروي المرتبط بالأكسجين. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-troponin",
+    "term": "Troponin",
+    "translation": "تروبونين",
+    "definitionEn": "A regulatory protein complex in muscle; cardiac-specific isoforms are biomarkers of myocardial injury.",
+    "definitionAr": "معقد بروتيني تنظيمي في العضلات؛ وتُستخدم أنواعه القلبية مؤشرًا على أذية عضلة القلب.",
+    "pronunciation": "/ˈtroʊ.pə.nɪn/",
+    "exampleEn": "Cardiac troponin is measured when myocardial infarction is suspected.",
+    "exampleAr": "يُقاس التروبونين القلبي عند الاشتباه باحتشاء عضلة القلب."
+  },
+  {
+    "id": "term-creatine",
+    "term": "Creatine",
+    "translation": "كرياتين",
+    "definitionEn": "A nitrogen-containing compound involved in rapid energy storage in muscle.",
+    "definitionAr": "مركب يحتوي على النيتروجين ويسهم في تخزين الطاقة السريعة في العضلات.",
+    "pronunciation": "/ˈkriː.ə.tiːn/",
+    "exampleEn": "Creatine kinase catalyzes phosphate transfer reactions.",
+    "exampleAr": "يحفز إنزيم كرياتين كيناز تفاعلات نقل الفوسفات."
+  },
+  {
+    "id": "term-kinase",
+    "term": "Kinase",
+    "translation": "كيناز",
+    "definitionEn": "An enzyme that transfers phosphate groups, usually from ATP, to a substrate.",
+    "definitionAr": "إنزيم ينقل مجموعات الفوسفات، غالبًا من ATP، إلى مادة متقبلة.",
+    "pronunciation": "/ˈkaɪ.neɪs/",
+    "exampleEn": "Creatine kinase is present in cardiac and skeletal muscle.",
+    "exampleAr": "يوجد إنزيم كرياتين كيناز في العضلات القلبية والهيكلية."
+  },
+  {
+    "id": "term-isoenzyme",
+    "term": "Isoenzyme",
+    "translation": "إنزيم متماثل",
+    "definitionEn": "One of multiple molecular forms of an enzyme that catalyze the same reaction.",
+    "definitionAr": "أحد الأشكال الجزيئية المتعددة لإنزيم يحفز التفاعل نفسه.",
+    "pronunciation": "/ˌaɪ.soʊˈen.zaɪm/",
+    "exampleEn": "CK-MB is an isoenzyme historically used in cardiac assessment.",
+    "exampleAr": "يُعد CK-MB إنزيمًا متماثلًا استُخدم تاريخيًا في تقييم القلب."
+  },
+  {
+    "id": "term-electrocardiogram",
+    "term": "Electrocardiogram",
+    "translation": "تخطيط كهربائية القلب",
+    "definitionEn": "A recording of the heart's electrical activity obtained from electrodes placed on the body.",
+    "definitionAr": "تسجيل للنشاط الكهربائي للقلب باستخدام أقطاب توضع على الجسم.",
+    "pronunciation": "/ɪˌlek.troʊˈkɑːr.di.əˌɡræm/",
+    "exampleEn": "The electrocardiogram showed ST-segment elevation.",
+    "exampleAr": "أظهر تخطيط كهربائية القلب ارتفاع مقطع ST.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "electro",
+          "role": "combining-form",
+          "meaningAr": "كهرباء",
+          "meaningEn": "electricity"
+        },
+        {
+          "affix": "cardio",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "gram",
+          "role": "suffix",
+          "meaningAr": "تسجيل",
+          "meaningEn": "record"
+        },
+        {
+          "affix": "تسجيل النشاط الكهربائي للقلب."
+        }
+      ],
+      "literalSynthesisAr": "electro = كهرباء + cardio = قلب + gram = تسجيل + تسجيل النشاط الكهربائي للقلب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-phonocardiogram",
+    "term": "Phonocardiogram",
+    "translation": "تخطيط أصوات القلب",
+    "definitionEn": "A graphic recording of heart sounds and murmurs.",
+    "definitionAr": "تسجيل بياني لأصوات القلب واللغط القلبي.",
+    "pronunciation": "/ˌfoʊ.noʊˈkɑːr.di.əˌɡræm/",
+    "exampleEn": "A phonocardiogram can document the timing of a murmur.",
+    "exampleAr": "يمكن لتخطيط أصوات القلب توثيق توقيت اللغط.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phono",
+          "role": "combining-form",
+          "meaningAr": "صوت",
+          "meaningEn": "sound"
+        },
+        {
+          "affix": "cardio",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "gram",
+          "role": "suffix",
+          "meaningAr": "تسجيل",
+          "meaningEn": "record"
+        },
+        {
+          "affix": "تسجيل أصوات القلب بصورة بيانية."
+        }
+      ],
+      "literalSynthesisAr": "phono = صوت + cardio = قلب + gram = تسجيل + تسجيل أصوات القلب بصورة بيانية. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-plethysmography",
+    "term": "Plethysmography",
+    "translation": "تخطيط حجم الأطراف",
+    "definitionEn": "A method of measuring changes in volume within an organ or body part, often to assess blood flow.",
+    "definitionAr": "طريقة لقياس تغيرات الحجم داخل عضو أو جزء من الجسم، وتستخدم أحيانًا لتقييم تدفق الدم.",
+    "pronunciation": "/ˌpleθ.ɪzˈmɑː.ɡrə.fi/",
+    "exampleEn": "Plethysmography was used to assess limb blood flow.",
+    "exampleAr": "استُخدم تخطيط حجم الأطراف لتقييم تدفق الدم فيها.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "plethysmo",
+          "role": "combining-form",
+          "meaningAr": "زيادة أو امتلاء",
+          "meaningEn": "increase or fullness"
+        },
+        {
+          "affix": "graphy",
+          "role": "suffix",
+          "meaningAr": "قياس أو تسجيل",
+          "meaningEn": "measurement or recording"
+        },
+        {
+          "affix": "تسجيل تغيرات الامتلاء أو الحجم."
+        }
+      ],
+      "literalSynthesisAr": "plethysmo = زيادة أو امتلاء + graphy = قياس أو تسجيل + تسجيل تغيرات الامتلاء أو الحجم. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-sphygmomanometer",
+    "term": "Sphygmomanometer",
+    "translation": "مقياس ضغط الدم",
+    "definitionEn": "An instrument used to measure arterial blood pressure, usually with an inflatable cuff.",
+    "definitionAr": "جهاز يستخدم لقياس ضغط الدم الشرياني، عادةً بواسطة كفة قابلة للنفخ.",
+    "pronunciation": "/ˌsfɪɡ.moʊ.məˈnɑː.mɪ.tər/",
+    "exampleEn": "The nurse calibrated the sphygmomanometer before measurement.",
+    "exampleAr": "عايرت الممرضة جهاز قياس ضغط الدم قبل القياس.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "sphygmo",
+          "role": "combining-form",
+          "meaningAr": "نبض",
+          "meaningEn": "pulse"
+        },
+        {
+          "affix": "mano",
+          "role": "combining-form",
+          "meaningAr": "ضغط",
+          "meaningEn": "pressure"
+        },
+        {
+          "affix": "meter",
+          "role": "suffix",
+          "meaningAr": "أداة قياس",
+          "meaningEn": "measuring instrument"
+        },
+        {
+          "affix": "أداة قياس ضغط النبض أو ضغط الدم."
+        }
+      ],
+      "literalSynthesisAr": "sphygmo = نبض + mano = ضغط + meter = أداة قياس + أداة قياس ضغط النبض أو ضغط الدم. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-oximetry",
+    "term": "Oximetry",
+    "translation": "قياس التأكسج",
+    "definitionEn": "Measurement of oxygen saturation, commonly using a pulse oximeter.",
+    "definitionAr": "قياس تشبع الأكسجين، وغالبًا باستخدام مقياس التأكسج النبضي.",
+    "pronunciation": "/ɑːkˈsɪm.ə.tri/",
+    "exampleEn": "Pulse oximetry showed an oxygen saturation of 97 percent.",
+    "exampleAr": "أظهر قياس التأكسج النبضي تشبعًا بالأكسجين قدره 97 بالمئة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "oxi",
+          "role": "combining-form",
+          "meaningAr": "أكسجين",
+          "meaningEn": "oxygen"
+        },
+        {
+          "affix": "metry",
+          "role": "suffix",
+          "meaningAr": "قياس",
+          "meaningEn": "measurement"
+        },
+        {
+          "affix": "قياس الأكسجين أو تشبعه."
+        }
+      ],
+      "literalSynthesisAr": "oxi = أكسجين + metry = قياس + قياس الأكسجين أو تشبعه. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-catheterization",
+    "term": "Catheterization",
+    "translation": "قثطرة",
+    "definitionEn": "Insertion of a catheter into a body cavity, vessel, or organ for diagnostic or therapeutic purposes.",
+    "definitionAr": "إدخال قثطار إلى جوف أو وعاء أو عضو لأغراض تشخيصية أو علاجية.",
+    "pronunciation": "/ˌkæθ.ə.tər.əˈzeɪ.ʃən/",
+    "exampleEn": "Cardiac catheterization measured intracardiac pressures.",
+    "exampleAr": "قاسَت القثطرة القلبية الضغوط داخل القلب."
+  },
+  {
+    "id": "term-electrophysiology",
+    "term": "Electrophysiology",
+    "translation": "الفيزيولوجيا الكهربائية",
+    "definitionEn": "The study of electrical properties and conduction in biological tissues, especially the heart.",
+    "definitionAr": "دراسة الخصائص الكهربائية والتوصيل في الأنسجة الحية، وخاصة القلب.",
+    "pronunciation": "/ɪˌlek.troʊˌfɪz.iˈɑː.lə.dʒi/",
+    "exampleEn": "Electrophysiology testing localized the accessory pathway.",
+    "exampleAr": "حدد فحص الفيزيولوجيا الكهربائية مسار التوصيل الإضافي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "electro",
+          "role": "combining-form",
+          "meaningAr": "كهرباء",
+          "meaningEn": "electricity"
+        },
+        {
+          "affix": "physiology",
+          "role": "root",
+          "meaningAr": "وظائف الأعضاء",
+          "meaningEn": "function of living systems"
+        },
+        {
+          "affix": "دراسة الوظائف الكهربائية للأنسجة الحية."
+        }
+      ],
+      "literalSynthesisAr": "electro = كهرباء + physiology = وظائف الأعضاء + دراسة الوظائف الكهربائية للأنسجة الحية. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-defibrillation",
+    "term": "Defibrillation",
+    "translation": "إزالة الرجفان",
+    "definitionEn": "Delivery of an unsynchronized electrical shock to terminate ventricular fibrillation or pulseless ventricular tachycardia.",
+    "definitionAr": "إعطاء صدمة كهربائية غير متزامنة لإنهاء الرجفان البطيني أو تسرع البطين عديم النبض.",
+    "pronunciation": "/ˌdiː.fɪb.rɪˈleɪ.ʃən/",
+    "exampleEn": "Immediate defibrillation is essential in ventricular fibrillation.",
+    "exampleAr": "إزالة الرجفان الفورية ضرورية في الرجفان البطيني.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "de",
+          "role": "prefix",
+          "meaningAr": "إزالة أو عكس",
+          "meaningEn": "removal or reversal"
+        },
+        {
+          "affix": "fibrill",
+          "role": "root",
+          "meaningAr": "رجفان",
+          "meaningEn": "fibrillation"
+        },
+        {
+          "affix": "ation",
+          "role": "suffix",
+          "meaningAr": "عملية",
+          "meaningEn": "process"
+        },
+        {
+          "affix": "عملية إزالة الرجفان."
+        }
+      ],
+      "literalSynthesisAr": "de = إزالة أو عكس + fibrill = رجفان + ation = عملية + عملية إزالة الرجفان. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-pacemaker",
+    "term": "Pacemaker",
+    "translation": "منظم ضربات القلب",
+    "definitionEn": "A natural or implanted device that initiates or regulates cardiac electrical impulses.",
+    "definitionAr": "منظم طبيعي أو جهاز مزروع يبدأ النبضات الكهربائية القلبية أو ينظمها.",
+    "pronunciation": "/ˈpeɪsˌmeɪ.kər/",
+    "exampleEn": "A pacemaker was implanted for symptomatic bradycardia.",
+    "exampleAr": "زُرع منظم ضربات القلب لعلاج بطء القلب المصحوب بأعراض."
+  },
+  {
+    "id": "term-stent",
+    "term": "Stent",
+    "translation": "دعامة",
+    "definitionEn": "A small expandable tube placed inside a vessel or other hollow structure to maintain patency.",
+    "definitionAr": "أنبوب صغير قابل للتوسيع يوضع داخل وعاء أو بنية مجوفة للمحافظة على انفتاحها.",
+    "pronunciation": "/stent/",
+    "exampleEn": "A coronary stent restored blood flow through the narrowed artery.",
+    "exampleAr": "أعادت الدعامة التاجية تدفق الدم عبر الشريان المتضيق."
+  },
+  {
+    "id": "term-graft",
+    "term": "Graft",
+    "translation": "طُعم",
+    "definitionEn": "A tissue or synthetic material transferred or implanted to replace or bypass a damaged structure.",
+    "definitionAr": "نسيج أو مادة صناعية تُنقل أو تُزرع لاستبدال بنية متضررة أو تجاوزها.",
+    "pronunciation": "/ɡræft/",
+    "exampleEn": "A vascular graft bypassed the occluded segment.",
+    "exampleAr": "تجاوز الطُعم الوعائي الجزء المسدود."
+  },
+  {
+    "id": "term-bypass",
+    "term": "Bypass",
+    "translation": "مجازة",
+    "definitionEn": "A route or surgical procedure that diverts blood around an obstructed vessel.",
+    "definitionAr": "مسار أو إجراء جراحي يحول الدم حول وعاء مسدود.",
+    "pronunciation": "/ˈbaɪˌpæs/",
+    "exampleEn": "Coronary bypass improved perfusion beyond the stenosis.",
+    "exampleAr": "حسنت المجازة التاجية الإرواء بعد منطقة التضيق."
+  },
+  {
+    "id": "term-thrombectomy",
+    "term": "Thrombectomy",
+    "translation": "استئصال الخثرة",
+    "definitionEn": "A procedure to remove a thrombus from a blood vessel or cardiac chamber.",
+    "definitionAr": "إجراء لإزالة خثرة من وعاء دموي أو حجرة قلبية.",
+    "pronunciation": "/θrɑːmˈbek.tə.mi/",
+    "exampleEn": "Mechanical thrombectomy restored flow in the occluded artery.",
+    "exampleAr": "أعاد استئصال الخثرة الميكانيكي تدفق الدم في الشريان المسدود.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb",
+          "role": "root",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "ectomy",
+          "role": "suffix",
+          "meaningAr": "استئصال جراحي",
+          "meaningEn": "surgical removal"
+        },
+        {
+          "affix": "الاستئصال الجراحي للخثرة."
+        }
+      ],
+      "literalSynthesisAr": "thromb = خثرة + ectomy = استئصال جراحي + الاستئصال الجراحي للخثرة. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-embolectomy",
+    "term": "Embolectomy",
+    "translation": "استئصال الصمة",
+    "definitionEn": "A procedure to remove an embolus from a blood vessel.",
+    "definitionAr": "إجراء لإزالة صمة من وعاء دموي.",
+    "pronunciation": "/ˌem.boʊˈlek.tə.mi/",
+    "exampleEn": "Embolectomy was performed to treat acute limb ischemia.",
+    "exampleAr": "أُجري استئصال الصمة لعلاج نقص التروية الحاد في الطرف.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "embol",
+          "role": "root",
+          "meaningAr": "صمة",
+          "meaningEn": "embolus"
+        },
+        {
+          "affix": "ectomy",
+          "role": "suffix",
+          "meaningAr": "استئصال جراحي",
+          "meaningEn": "surgical removal"
+        },
+        {
+          "affix": "الاستئصال الجراحي للصمة."
+        }
+      ],
+      "literalSynthesisAr": "embol = صمة + ectomy = استئصال جراحي + الاستئصال الجراحي للصمة. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-valvotomy",
+    "term": "Valvotomy",
+    "translation": "بضع الصمام",
+    "definitionEn": "A procedure involving incision or splitting of fused valve commissures to relieve stenosis.",
+    "definitionAr": "إجراء يتضمن شق أو فصل ملتقيات شرفات الصمام الملتحمة لتخفيف التضيق.",
+    "pronunciation": "/ˌvælˈvɑː.tə.mi/",
+    "exampleEn": "Valvotomy was considered for severe mitral stenosis.",
+    "exampleAr": "نُظر في إجراء بضع الصمام لعلاج التضيق التاجي الشديد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "valvo",
+          "role": "combining-form",
+          "meaningAr": "صمام",
+          "meaningEn": "valve"
+        },
+        {
+          "affix": "tomy",
+          "role": "suffix",
+          "meaningAr": "شق",
+          "meaningEn": "incision"
+        },
+        {
+          "affix": "شق الصمام أو فصل أجزائه الملتحمة."
+        }
+      ],
+      "literalSynthesisAr": "valvo = صمام + tomy = شق + شق الصمام أو فصل أجزائه الملتحمة. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-thoracotomy",
+    "term": "Thoracotomy",
+    "translation": "بضع الصدر",
+    "definitionEn": "A surgical incision into the chest wall to access the thoracic cavity.",
+    "definitionAr": "شق جراحي في جدار الصدر للوصول إلى جوف الصدر.",
+    "pronunciation": "/ˌθɔːr.əˈkɑː.tə.mi/",
+    "exampleEn": "Thoracotomy provided access for emergency cardiac repair.",
+    "exampleAr": "أتاح بضع الصدر الوصول لإصلاح القلب الإسعافي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thoraco",
+          "role": "combining-form",
+          "meaningAr": "صدر",
+          "meaningEn": "chest"
+        },
+        {
+          "affix": "tomy",
+          "role": "suffix",
+          "meaningAr": "شق",
+          "meaningEn": "incision"
+        },
+        {
+          "affix": "شق جراحي في الصدر."
+        }
+      ],
+      "literalSynthesisAr": "thoraco = صدر + tomy = شق + شق جراحي في الصدر. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-phlebectomy",
+    "term": "Phlebectomy",
+    "translation": "استئصال الوريد",
+    "definitionEn": "Surgical removal of a vein or segments of superficial veins.",
+    "definitionAr": "استئصال وريد أو أجزاء من الأوردة السطحية جراحيًا.",
+    "pronunciation": "/flɪˈbek.tə.mi/",
+    "exampleEn": "Phlebectomy was used to remove symptomatic varicose veins.",
+    "exampleAr": "استُخدم استئصال الوريد لإزالة الدوالي المصحوبة بأعراض.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb",
+          "role": "root",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "ectomy",
+          "role": "suffix",
+          "meaningAr": "استئصال جراحي",
+          "meaningEn": "surgical removal"
+        },
+        {
+          "affix": "الاستئصال الجراحي للوريد."
+        }
+      ],
+      "literalSynthesisAr": "phleb = وريد + ectomy = استئصال جراحي + الاستئصال الجراحي للوريد. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-sclerotherapy",
+    "term": "Sclerotherapy",
+    "translation": "المعالجة بالتصليب",
+    "definitionEn": "Injection of a sclerosant into a vessel or lesion to cause fibrosis and closure.",
+    "definitionAr": "حقن مادة مصلبة داخل وعاء أو آفة لإحداث التليف والإغلاق.",
+    "pronunciation": "/ˌskler.oʊˈθer.ə.pi/",
+    "exampleEn": "Sclerotherapy is commonly used for selected varicose veins.",
+    "exampleAr": "تُستخدم المعالجة بالتصليب عادةً لبعض حالات الدوالي المختارة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "sclero",
+          "role": "combining-form",
+          "meaningAr": "تصلب",
+          "meaningEn": "hardening"
+        },
+        {
+          "affix": "therapy",
+          "role": "root",
+          "meaningAr": "علاج",
+          "meaningEn": "treatment"
+        },
+        {
+          "affix": "العلاج بإحداث التصلب أو التليف."
+        }
+      ],
+      "literalSynthesisAr": "sclero = تصلب + therapy = علاج + العلاج بإحداث التصلب أو التليف. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-hematocrit",
+    "term": "Hematocrit",
+    "translation": "هيماتوكريت",
+    "definitionEn": "The proportion of blood volume occupied by red blood cells.",
+    "definitionAr": "النسبة المئوية من حجم الدم التي تشغلها كريات الدم الحمراء.",
+    "pronunciation": "/hɪˈmæt.ə.krɪt/",
+    "exampleEn": "The hematocrit was reduced in the patient with anemia.",
+    "exampleAr": "انخفض الهيماتوكريت لدى المريض المصاب بفقر الدم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hemato",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "crit",
+          "role": "root",
+          "meaningAr": "فصل أو نسبة",
+          "meaningEn": "separation or proportion"
+        },
+        {
+          "affix": "مقياس نسبة حجم كريات الدم في الدم."
+        }
+      ],
+      "literalSynthesisAr": "hemato = دم + crit = فصل أو نسبة + مقياس نسبة حجم كريات الدم في الدم. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-erythrocyte",
+    "term": "Erythrocyte",
+    "translation": "كرية حمراء",
+    "definitionEn": "A red blood cell that transports oxygen and carbon dioxide.",
+    "definitionAr": "خلية دم حمراء تنقل الأكسجين وثاني أكسيد الكربون.",
+    "pronunciation": "/ɪˈrɪθ.rə.saɪt/",
+    "exampleEn": "Each erythrocyte contains hemoglobin.",
+    "exampleAr": "تحتوي كل كرية حمراء على الهيموغلوبين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "erythro",
+          "role": "combining-form",
+          "meaningAr": "أحمر",
+          "meaningEn": "red"
+        },
+        {
+          "affix": "cyte",
+          "role": "suffix",
+          "meaningAr": "خلية",
+          "meaningEn": "cell"
+        },
+        {
+          "affix": "الخلية الحمراء."
+        }
+      ],
+      "literalSynthesisAr": "erythro = أحمر + cyte = خلية + الخلية الحمراء. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-leukocyte",
+    "term": "Leukocyte",
+    "translation": "كرية بيضاء",
+    "definitionEn": "A white blood cell involved in immune defense and inflammation.",
+    "definitionAr": "خلية دم بيضاء تشارك في الدفاع المناعي والالتهاب.",
+    "pronunciation": "/ˈluː.kə.saɪt/",
+    "exampleEn": "Leukocytes migrate through postcapillary venules during inflammation.",
+    "exampleAr": "تهاجر الكريات البيضاء عبر الوريدات بعد الشعرية أثناء الالتهاب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "leuko",
+          "role": "combining-form",
+          "meaningAr": "أبيض",
+          "meaningEn": "white"
+        },
+        {
+          "affix": "cyte",
+          "role": "suffix",
+          "meaningAr": "خلية",
+          "meaningEn": "cell"
+        },
+        {
+          "affix": "الخلية البيضاء."
+        }
+      ],
+      "literalSynthesisAr": "leuko = أبيض + cyte = خلية + الخلية البيضاء. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-thrombocyte",
+    "term": "Thrombocyte",
+    "translation": "صفيحة دموية",
+    "definitionEn": "A platelet, a cell fragment essential for primary hemostasis.",
+    "definitionAr": "صفيحة دموية، وهي جزء خلوي أساسي للإرقاء الأولي.",
+    "pronunciation": "/ˈθrɑːm.boʊ.saɪt/",
+    "exampleEn": "Thrombocytes adhere to exposed subendothelial collagen.",
+    "exampleAr": "تلتصق الصفائح الدموية بالكولاجين المكشوف تحت البطانة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thrombo",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "cyte",
+          "role": "suffix",
+          "meaningAr": "خلية",
+          "meaningEn": "cell"
+        },
+        {
+          "affix": "الخلية المرتبطة بتكوين الخثرة."
+        }
+      ],
+      "literalSynthesisAr": "thrombo = خثرة + cyte = خلية + الخلية المرتبطة بتكوين الخثرة. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-hemoglobin",
+    "term": "Hemoglobin",
+    "translation": "هيموغلوبين",
+    "definitionEn": "The oxygen-carrying protein in red blood cells that also transports some carbon dioxide and buffers hydrogen ions.",
+    "definitionAr": "البروتين الناقل للأكسجين في كريات الدم الحمراء، وينقل جزءًا من ثاني أكسيد الكربون ويسهم في معادلة أيونات الهيدروجين.",
+    "pronunciation": "/ˌhiː.məˈɡloʊ.bɪn/",
+    "exampleEn": "Hemoglobin concentration influences arterial oxygen content.",
+    "exampleAr": "يؤثر تركيز الهيموغلوبين في محتوى الأكسجين الشرياني.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hemo",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "globin",
+          "role": "root",
+          "meaningAr": "بروتين كروي",
+          "meaningEn": "globular protein"
+        },
+        {
+          "affix": "البروتين الكروي الموجود في الدم."
+        }
+      ],
+      "literalSynthesisAr": "hemo = دم + globin = بروتين كروي + البروتين الكروي الموجود في الدم. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-plasma",
+    "term": "Plasma",
+    "translation": "بلازما",
+    "definitionEn": "The liquid component of blood in which cells, proteins, and solutes are suspended.",
+    "definitionAr": "المكون السائل من الدم الذي تسبح فيه الخلايا والبروتينات والمواد المذابة.",
+    "pronunciation": "/ˈplæz.mə/",
+    "exampleEn": "Plasma carries albumin, clotting factors, and electrolytes.",
+    "exampleAr": "تنقل البلازما الألبومين وعوامل التخثر والشوارد."
+  },
+  {
+    "id": "term-albumin",
+    "term": "Albumin",
+    "translation": "ألبومين",
+    "definitionEn": "The major plasma protein that maintains oncotic pressure and transports many substances.",
+    "definitionAr": "البروتين الرئيسي في البلازما، ويحافظ على الضغط الأونكوتي وينقل مواد عديدة.",
+    "pronunciation": "/ælˈbjuː.mɪn/",
+    "exampleEn": "Low albumin can contribute to peripheral edema.",
+    "exampleAr": "قد يسهم انخفاض الألبومين في حدوث وذمة طرفية."
+  },
+  {
+    "id": "term-globulin",
+    "term": "Globulin",
+    "translation": "غلوبولين",
+    "definitionEn": "A group of plasma proteins that includes immunoglobulins and transport proteins.",
+    "definitionAr": "مجموعة من بروتينات البلازما تشمل الغلوبولينات المناعية وبروتينات النقل.",
+    "pronunciation": "/ˈɡlɑː.bjə.lɪn/",
+    "exampleEn": "Globulin levels are interpreted with albumin and total protein.",
+    "exampleAr": "تُفسر مستويات الغلوبولين مع الألبومين والبروتين الكلي."
+  },
+  {
+    "id": "term-cholesterol",
+    "term": "Cholesterol",
+    "translation": "كوليسترول",
+    "definitionEn": "A sterol lipid required for cell membranes and steroid synthesis; excess circulating levels promote atherosclerosis.",
+    "definitionAr": "دهن ستيرولي ضروري لأغشية الخلايا وتصنيع الستيرويدات؛ وقد يعزز ارتفاع مستواه الدوراني التصلب العصيدي.",
+    "pronunciation": "/kəˈles.tə.rɔːl/",
+    "exampleEn": "High LDL cholesterol increases atherosclerotic risk.",
+    "exampleAr": "يزيد ارتفاع كوليسترول LDL خطر التصلب العصيدي."
+  },
+  {
+    "id": "term-triglyceride",
+    "term": "Triglyceride",
+    "translation": "ثلاثي الغليسريد",
+    "definitionEn": "A lipid consisting of glycerol esterified with three fatty acids, transported in blood within lipoproteins.",
+    "definitionAr": "دهن يتكون من غليسيرول مرتبط بثلاثة أحماض دهنية، وينتقل في الدم ضمن البروتينات الدهنية.",
+    "pronunciation": "/traɪˈɡlɪs.ə.raɪd/",
+    "exampleEn": "Fasting triglyceride levels were markedly elevated.",
+    "exampleAr": "كانت مستويات الدهون الثلاثية أثناء الصيام مرتفعة بوضوح."
+  },
+  {
+    "id": "term-hyperemia",
+    "term": "Hyperemia",
+    "translation": "فرط التروية",
+    "definitionEn": "An increase in blood flow to a tissue, producing increased redness and warmth.",
+    "definitionAr": "زيادة تدفق الدم إلى نسيج ما، مما يؤدي إلى زيادة الاحمرار والدفء.",
+    "pronunciation": "/ˌhaɪ.pəˈriː.mi.ə/",
+    "exampleEn": "Active hyperemia occurs in exercising skeletal muscle.",
+    "exampleAr": "يحدث فرط التروية الفعال في العضلات الهيكلية أثناء التمرين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive"
+        },
+        {
+          "affix": "emia",
+          "role": "suffix",
+          "meaningAr": "حالة دموية",
+          "meaningEn": "blood condition"
+        },
+        {
+          "affix": "زيادة الدم المتدفق إلى نسيج."
+        }
+      ],
+      "literalSynthesisAr": "hyper = زيادة أو فرط + emia = حالة دموية + زيادة الدم المتدفق إلى نسيج. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-autoregulation",
+    "term": "Autoregulation",
+    "translation": "تنظيم ذاتي",
+    "definitionEn": "The intrinsic ability of an organ or tissue to maintain relatively stable blood flow despite changes in perfusion pressure.",
+    "definitionAr": "القدرة الذاتية لعضو أو نسيج على الحفاظ على تدفق دم مستقر نسبيًا رغم تغير ضغط الإرواء.",
+    "pronunciation": "/ˌɔː.toʊˌreɡ.jəˈleɪ.ʃən/",
+    "exampleEn": "Cerebral autoregulation helps stabilize brain blood flow.",
+    "exampleAr": "يساعد التنظيم الذاتي الدماغي على تثبيت تدفق الدم إلى الدماغ.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "auto",
+          "role": "prefix",
+          "meaningAr": "ذاتي",
+          "meaningEn": "self"
+        },
+        {
+          "affix": "regulation",
+          "role": "root",
+          "meaningAr": "تنظيم",
+          "meaningEn": "control"
+        },
+        {
+          "affix": "عملية التنظيم الذاتي."
+        }
+      ],
+      "literalSynthesisAr": "auto = ذاتي + regulation = تنظيم + عملية التنظيم الذاتي. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-turbulence",
+    "term": "Turbulence",
+    "translation": "اضطراب الجريان",
+    "definitionEn": "Irregular, chaotic fluid motion that can occur when blood flow is disturbed.",
+    "definitionAr": "حركة غير منتظمة وفوضوية للسائل، وقد تحدث عند اضطراب تدفق الدم.",
+    "pronunciation": "/ˈtɝː.bjə.ləns/",
+    "exampleEn": "Turbulence may develop distal to a severe arterial stenosis.",
+    "exampleAr": "قد ينشأ اضطراب الجريان بعد تضيق شرياني شديد."
+  },
+  {
+    "id": "term-laminar",
+    "term": "Laminar",
+    "translation": "صفائحي",
+    "definitionEn": "Describing fluid flow in parallel layers with minimal mixing between adjacent layers.",
+    "definitionAr": "يصف تدفق السائل في طبقات متوازية مع اختلاط ضئيل بين الطبقات المتجاورة.",
+    "pronunciation": "/ˈlæm.ə.nər/",
+    "exampleEn": "Laminar flow is typical in healthy straight arteries.",
+    "exampleAr": "يكون الجريان الصفائحي نموذجيًا في الشرايين السليمة المستقيمة."
+  },
+  {
+    "id": "term-viscosity",
+    "term": "Viscosity",
+    "translation": "لزوجة",
+    "definitionEn": "The resistance of a fluid to flow, influenced in blood by hematocrit and plasma proteins.",
+    "definitionAr": "مقاومة السائل للجريان، وتتأثر في الدم بالهيماتوكريت وبروتينات البلازما.",
+    "pronunciation": "/vɪˈskɑː.sə.ti/",
+    "exampleEn": "Increased blood viscosity raises vascular resistance.",
+    "exampleAr": "تزيد لزوجة الدم المرتفعة المقاومة الوعائية."
+  },
+  {
+    "id": "term-turbulent",
+    "term": "Turbulent",
+    "translation": "مضطرب الجريان",
+    "definitionEn": "Characterized by irregular and chaotic fluid movement rather than smooth layered flow.",
+    "definitionAr": "يتصف بحركة سائل غير منتظمة وفوضوية بدلًا من الجريان الطبقي السلس.",
+    "pronunciation": "/ˈtɝː.bjə.lənt/",
+    "exampleEn": "Turbulent flow can produce an audible vascular bruit.",
+    "exampleAr": "قد ينتج عن الجريان المضطرب لغط وعائي مسموع."
+  },
+  {
+    "id": "term-hydrostatic",
+    "term": "Hydrostatic",
+    "translation": "هيدروستاتيكي",
+    "definitionEn": "Relating to pressure exerted by a fluid at rest or by a fluid column.",
+    "definitionAr": "متعلق بالضغط الذي يسببه سائل ساكن أو عمود من السائل.",
+    "pronunciation": "/ˌhaɪ.droʊˈstæt.ɪk/",
+    "exampleEn": "Raised capillary hydrostatic pressure favors edema formation.",
+    "exampleAr": "يعزز ارتفاع الضغط الهيدروستاتيكي الشعيري تشكل الوذمة."
+  },
+  {
+    "id": "term-oncotic",
+    "term": "Oncotic",
+    "translation": "أونكوتي",
+    "definitionEn": "Relating to the osmotic pressure generated by proteins, especially plasma albumin.",
+    "definitionAr": "متعلق بالضغط الأسموزي الناتج عن البروتينات، وخاصة ألبومين البلازما.",
+    "pronunciation": "/ɑːŋˈkɑː.tɪk/",
+    "exampleEn": "Low plasma oncotic pressure promotes fluid movement into tissues.",
+    "exampleAr": "يعزز انخفاض الضغط الأونكوتي للبلازما انتقال السوائل إلى الأنسجة."
+  },
+  {
+    "id": "term-subepicardial",
+    "term": "Subepicardial",
+    "translation": "تحت النِّخاب",
+    "definitionEn": "Located immediately beneath the epicardial surface of the heart.",
+    "definitionAr": "يقع مباشرة تحت السطح النِّخابي للقلب.",
+    "pronunciation": "/ˌsʌbˌep.ɪˈkɑːr.di.əl/",
+    "exampleEn": "Subepicardial fat is visible on cardiac imaging.",
+    "exampleAr": "تظهر الدهون تحت النِّخابية في تصوير القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "sub",
+          "role": "prefix",
+          "meaningAr": "تحت",
+          "meaningEn": "below"
+        },
+        {
+          "affix": "epicard",
+          "role": "root",
+          "meaningAr": "نخاب القلب",
+          "meaningEn": "epicardium"
+        },
+        {
+          "affix": "ial",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بالمنطقة الواقعة تحت النخاب."
+        }
+      ],
+      "literalSynthesisAr": "sub = تحت + epicard = نخاب القلب + ial = متعلق بـ + المتعلق بالمنطقة الواقعة تحت النخاب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-intracardiac",
+    "term": "Intracardiac",
+    "translation": "داخل القلب",
+    "definitionEn": "Located or occurring within the heart chambers or structures.",
+    "definitionAr": "يقع أو يحدث داخل حجرات القلب أو تراكيبه.",
+    "pronunciation": "/ˌɪn.trəˈkɑːr.di.æk/",
+    "exampleEn": "An intracardiac thrombus was detected by echocardiography.",
+    "exampleAr": "كُشفت خثرة داخل القلب بتخطيط صدى القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "intra",
+          "role": "prefix",
+          "meaningAr": "داخل",
+          "meaningEn": "within"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ac",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بما يوجد داخل القلب."
+        }
+      ],
+      "literalSynthesisAr": "intra = داخل + cardi = قلب + ac = متعلق بـ + المتعلق بما يوجد داخل القلب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-extracardiac",
+    "term": "Extracardiac",
+    "translation": "خارج القلب",
+    "definitionEn": "Located or occurring outside the heart.",
+    "definitionAr": "يقع أو يحدث خارج القلب.",
+    "pronunciation": "/ˌek.strəˈkɑːr.di.æk/",
+    "exampleEn": "Extracardiac causes of chest pain were considered.",
+    "exampleAr": "أُخذت الأسباب خارج القلبية لألم الصدر في الحسبان.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "extra",
+          "role": "prefix",
+          "meaningAr": "خارج",
+          "meaningEn": "outside"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ac",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بما يقع خارج القلب."
+        }
+      ],
+      "literalSynthesisAr": "extra = خارج + cardi = قلب + ac = متعلق بـ + المتعلق بما يقع خارج القلب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-intravascular",
+    "term": "Intravascular",
+    "translation": "داخل وعائي",
+    "definitionEn": "Located or occurring within the lumen or interior of a blood vessel.",
+    "definitionAr": "يقع أو يحدث داخل لمعة الوعاء الدموي أو داخله.",
+    "pronunciation": "/ˌɪn.trəˈvæs.kjə.lər/",
+    "exampleEn": "Intravascular volume was restored with intravenous fluids.",
+    "exampleAr": "استُعيد الحجم داخل الوعائي باستخدام السوائل الوريدية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "intra",
+          "role": "prefix",
+          "meaningAr": "داخل",
+          "meaningEn": "within"
+        },
+        {
+          "affix": "vascular",
+          "role": "root",
+          "meaningAr": "وعائي",
+          "meaningEn": "vascular"
+        },
+        {
+          "affix": "الموجود داخل الأوعية الدموية."
+        }
+      ],
+      "literalSynthesisAr": "intra = داخل + vascular = وعائي + الموجود داخل الأوعية الدموية. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-extravascular",
+    "term": "Extravascular",
+    "translation": "خارج وعائي",
+    "definitionEn": "Located or occurring outside blood vessels.",
+    "definitionAr": "يقع أو يحدث خارج الأوعية الدموية.",
+    "pronunciation": "/ˌek.strəˈvæs.kjə.lər/",
+    "exampleEn": "Extravascular fluid accumulation caused tissue edema.",
+    "exampleAr": "سبب تراكم السوائل خارج الأوعية وذمة الأنسجة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "extra",
+          "role": "prefix",
+          "meaningAr": "خارج",
+          "meaningEn": "outside"
+        },
+        {
+          "affix": "vascular",
+          "role": "root",
+          "meaningAr": "وعائي",
+          "meaningEn": "vascular"
+        },
+        {
+          "affix": "الموجود خارج الأوعية الدموية."
+        }
+      ],
+      "literalSynthesisAr": "extra = خارج + vascular = وعائي + الموجود خارج الأوعية الدموية. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-intravenous",
+    "term": "Intravenous",
+    "translation": "وريدي",
+    "definitionEn": "Administered or occurring within a vein.",
+    "definitionAr": "يُعطى أو يحدث داخل الوريد.",
+    "pronunciation": "/ˌɪn.trəˈviː.nəs/",
+    "exampleEn": "Intravenous medication was administered through a peripheral line.",
+    "exampleAr": "أُعطي الدواء وريديًا عبر خط وريدي طرفي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "intra",
+          "role": "prefix",
+          "meaningAr": "داخل",
+          "meaningEn": "within"
+        },
+        {
+          "affix": "ven",
+          "role": "root",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "ous",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بما يوجد داخل الوريد."
+        }
+      ],
+      "literalSynthesisAr": "intra = داخل + ven = وريد + ous = متعلق بـ + المتعلق بما يوجد داخل الوريد. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-intraarterial",
+    "term": "Intraarterial",
+    "translation": "داخل شرياني",
+    "definitionEn": "Administered or occurring within an artery.",
+    "definitionAr": "يُعطى أو يحدث داخل الشريان.",
+    "pronunciation": "/ˌɪn.trəˈɑːrˈtɪr.i.əl/",
+    "exampleEn": "Intraarterial contrast was injected during angiography.",
+    "exampleAr": "حُقنت المادة الظليلة داخل الشريان أثناء تصوير الأوعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "intra",
+          "role": "prefix",
+          "meaningAr": "داخل",
+          "meaningEn": "within"
+        },
+        {
+          "affix": "arteri",
+          "role": "root",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بما يوجد داخل الشريان."
+        }
+      ],
+      "literalSynthesisAr": "intra = داخل + arteri = شريان + al = متعلق بـ + المتعلق بما يوجد داخل الشريان. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-transcatheter",
+    "term": "Transcatheter",
+    "translation": "عبر القثطار",
+    "definitionEn": "Performed or delivered through a catheter.",
+    "definitionAr": "يُجرى أو يُوصل عبر قثطار.",
+    "pronunciation": "/trænzˈkæθ.ə.tər/",
+    "exampleEn": "Transcatheter valve replacement avoids open-heart surgery in selected patients.",
+    "exampleAr": "يتجنب استبدال الصمام عبر القثطار جراحة القلب المفتوح لدى مرضى مختارين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "trans",
+          "role": "prefix",
+          "meaningAr": "عبر",
+          "meaningEn": "through"
+        },
+        {
+          "affix": "catheter",
+          "role": "root",
+          "meaningAr": "قثطار",
+          "meaningEn": "catheter"
+        },
+        {
+          "affix": "عبر القثطار."
+        }
+      ],
+      "literalSynthesisAr": "trans = عبر + catheter = قثطار + عبر القثطار. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-transluminal",
+    "term": "Transluminal",
+    "translation": "عبر اللمعة",
+    "definitionEn": "Passing through or extending across the lumen of a tubular structure.",
+    "definitionAr": "يمر عبر لمعة بنية أنبوبية أو يمتد خلالها.",
+    "pronunciation": "/trænzˈluː.mɪ.nəl/",
+    "exampleEn": "Transluminal balloon dilation expanded the stenotic segment.",
+    "exampleAr": "وسع التوسيع البالوني عبر اللمعة الجزء المتضيق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "trans",
+          "role": "prefix",
+          "meaningAr": "عبر",
+          "meaningEn": "through"
+        },
+        {
+          "affix": "lumin",
+          "role": "root",
+          "meaningAr": "لمعة",
+          "meaningEn": "lumen"
+        },
+        {
+          "affix": "al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        },
+        {
+          "affix": "المتعلق بالمرور عبر لمعة الوعاء."
+        }
+      ],
+      "literalSynthesisAr": "trans = عبر + lumin = لمعة + al = متعلق بـ + المتعلق بالمرور عبر لمعة الوعاء. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-normotensive",
+    "term": "Normotensive",
+    "translation": "طبيعي الضغط",
+    "definitionEn": "Having arterial blood pressure within the normal range.",
+    "definitionAr": "ذو ضغط دم شرياني ضمن المجال الطبيعي.",
+    "pronunciation": "/ˌnɔːr.moʊˈten.sɪv/",
+    "exampleEn": "The patient remained normotensive after treatment.",
+    "exampleAr": "ظل ضغط المريض ضمن المجال الطبيعي بعد العلاج."
+  },
+  {
+    "id": "term-nodal",
+    "term": "Nodal",
+    "translation": "عقدي",
+    "definitionEn": "Relating to a node, especially the sinoatrial or atrioventricular node.",
+    "definitionAr": "متعلق بعقدة، وخاصة العقدة الجيبية الأذينية أو الأذينية البطينية.",
+    "pronunciation": "/ˈnoʊ.dəl/",
+    "exampleEn": "Nodal conduction slowed after administration of the drug.",
+    "exampleAr": "تباطأ التوصيل العقدي بعد إعطاء الدواء."
+  },
+  {
+    "id": "term-ectopic",
+    "term": "Ectopic",
+    "translation": "هاجر",
+    "definitionEn": "Originating from an abnormal site rather than the usual anatomical or electrical location.",
+    "definitionAr": "ناشئ من موقع غير طبيعي بدلًا من الموقع التشريحي أو الكهربائي المعتاد.",
+    "pronunciation": "/ekˈtɑː.pɪk/",
+    "exampleEn": "Ectopic beats were recorded on the electrocardiogram.",
+    "exampleAr": "سُجلت ضربات هاجرة في تخطيط كهربائية القلب."
+  },
+  {
+    "id": "term-reentrant",
+    "term": "Reentrant",
+    "translation": "إعادة الدخول",
+    "definitionEn": "Describing an electrical circuit in which an impulse repeatedly re-enters tissue and sustains an arrhythmia.",
+    "definitionAr": "يصف دائرة كهربائية تعود فيها النبضة للدخول في النسيج مرارًا وتحافظ على اضطراب النظم.",
+    "pronunciation": "/ˌriːˈen.trənt/",
+    "exampleEn": "A reentrant circuit can sustain supraventricular tachycardia.",
+    "exampleAr": "يمكن لدائرة إعادة الدخول أن تحافظ على تسرع القلب فوق البطيني."
+  },
+  {
+    "id": "term-fascicular",
+    "term": "Fascicular",
+    "translation": "حُزَيمي",
+    "definitionEn": "Relating to a bundle or fascicle, especially the fascicles of the left bundle branch.",
+    "definitionAr": "متعلق بحزمة أو حُزيمة، وخاصة حُزيمات فرع الحزمة اليسرى.",
+    "pronunciation": "/fəˈsɪk.jə.lər/",
+    "exampleEn": "A fascicular block altered the frontal ECG axis.",
+    "exampleAr": "غيّر الحصار الحزيمي محور تخطيط القلب الأمامي."
+  },
+  {
+    "id": "term-bundle",
+    "term": "Bundle",
+    "translation": "حزمة",
+    "definitionEn": "A group of nerve fibers or conducting fibers traveling together; in the heart, part of the conduction system.",
+    "definitionAr": "مجموعة من الألياف العصبية أو الناقلة تسير معًا؛ وتمثل في القلب جزءًا من جهاز التوصيل.",
+    "pronunciation": "/ˈbʌn.dəl/",
+    "exampleEn": "The right bundle conducts impulses to the right ventricle.",
+    "exampleAr": "تنقل الحزمة اليمنى النبضات إلى البطين الأيمن."
+  },
+  {
+    "id": "term-fascicle",
+    "term": "Fascicle",
+    "translation": "حُزيمة",
+    "definitionEn": "A small bundle of fibers, such as a division of the left bundle branch.",
+    "definitionAr": "حزمة صغيرة من الألياف، مثل أحد تقسيمات فرع الحزمة اليسرى.",
+    "pronunciation": "/ˈfæs.ɪ.kəl/",
+    "exampleEn": "The anterior fascicle contributes to left ventricular activation.",
+    "exampleAr": "تسهم الحزيمة الأمامية في تنشيط البطين الأيسر."
+  },
+  {
+    "id": "term-repolarization",
+    "term": "Repolarization",
+    "translation": "إعادة الاستقطاب",
+    "definitionEn": "The return of a cell's membrane potential toward its resting state after depolarization.",
+    "definitionAr": "عودة جهد غشاء الخلية نحو حالة الراحة بعد إزالة الاستقطاب.",
+    "pronunciation": "/ˌriː.poʊ.lər.əˈzeɪ.ʃən/",
+    "exampleEn": "Ventricular repolarization is represented mainly by the T wave.",
+    "exampleAr": "يمثل موجة T بصورة رئيسية إعادة استقطاب البطينين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "re",
+          "role": "prefix",
+          "meaningAr": "إعادة",
+          "meaningEn": "again"
+        },
+        {
+          "affix": "polar",
+          "role": "root",
+          "meaningAr": "استقطاب",
+          "meaningEn": "polarization"
+        },
+        {
+          "affix": "ization",
+          "role": "suffix",
+          "meaningAr": "عملية",
+          "meaningEn": "process"
+        },
+        {
+          "affix": "عملية استعادة الاستقطاب."
+        }
+      ],
+      "literalSynthesisAr": "re = إعادة + polar = استقطاب + ization = عملية + عملية استعادة الاستقطاب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-depolarization",
+    "term": "Depolarization",
+    "translation": "إزالة الاستقطاب",
+    "definitionEn": "A change in membrane potential that makes the inside of a cell less negative and initiates electrical activation.",
+    "definitionAr": "تغير في جهد الغشاء يجعل داخل الخلية أقل سلبية ويبدأ التنشيط الكهربائي.",
+    "pronunciation": "/diːˌpoʊ.lər.əˈzeɪ.ʃən/",
+    "exampleEn": "Atrial depolarization is represented by the P wave.",
+    "exampleAr": "تمثل موجة P إزالة استقطاب الأذينين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "de",
+          "role": "prefix",
+          "meaningAr": "إزالة أو عكس",
+          "meaningEn": "removal or reversal"
+        },
+        {
+          "affix": "polar",
+          "role": "root",
+          "meaningAr": "استقطاب",
+          "meaningEn": "polarization"
+        },
+        {
+          "affix": "ization",
+          "role": "suffix",
+          "meaningAr": "عملية",
+          "meaningEn": "process"
+        },
+        {
+          "affix": "عملية إزالة الاستقطاب."
+        }
+      ],
+      "literalSynthesisAr": "de = إزالة أو عكس + polar = استقطاب + ization = عملية + عملية إزالة الاستقطاب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-automaticity",
+    "term": "Automaticity",
+    "translation": "تلقائية",
+    "definitionEn": "The ability of cardiac cells to generate electrical impulses spontaneously.",
+    "definitionAr": "قدرة الخلايا القلبية على توليد نبضات كهربائية تلقائيًا.",
+    "pronunciation": "/ˌɔː.tə.məˈtɪs.ə.ti/",
+    "exampleEn": "The sinoatrial node has the highest normal automaticity.",
+    "exampleAr": "تملك العقدة الجيبية الأذينية أعلى تلقائية طبيعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "auto",
+          "role": "prefix",
+          "meaningAr": "ذاتي",
+          "meaningEn": "self"
+        },
+        {
+          "affix": "matic",
+          "role": "root",
+          "meaningAr": "تلقائي",
+          "meaningEn": "automatic"
+        },
+        {
+          "affix": "ity",
+          "role": "suffix",
+          "meaningAr": "خاصية",
+          "meaningEn": "property"
+        },
+        {
+          "affix": "خاصية التوليد الذاتي للنبضات."
+        }
+      ],
+      "literalSynthesisAr": "auto = ذاتي + matic = تلقائي + ity = خاصية + خاصية التوليد الذاتي للنبضات. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-excitability",
+    "term": "Excitability",
+    "translation": "قابلية الاستثارة",
+    "definitionEn": "The ability of cardiac tissue to respond to an electrical or chemical stimulus.",
+    "definitionAr": "قدرة النسيج القلبي على الاستجابة لمنبه كهربائي أو كيميائي.",
+    "pronunciation": "/ɪkˌsaɪ.təˈbɪl.ə.ti/",
+    "exampleEn": "Myocardial excitability changes during ischemia.",
+    "exampleAr": "تتغير قابلية عضلة القلب للاستثارة أثناء نقص التروية."
+  },
+  {
+    "id": "term-refractoriness",
+    "term": "Refractoriness",
+    "translation": "فترة الجموح",
+    "definitionEn": "The temporary inability of excitable tissue to respond to another stimulus after activation.",
+    "definitionAr": "عدم قدرة النسيج القابل للاستثارة مؤقتًا على الاستجابة لمنبه آخر بعد تنشيطه.",
+    "pronunciation": "/rɪˈfræk.tər.i.nəs/",
+    "exampleEn": "The effective refractory period limits rapid re-excitation.",
+    "exampleAr": "تحد فترة الجموح الفعالة من إعادة الاستثارة السريعة."
+  },
+  {
+    "id": "term-refractory",
+    "term": "Refractory",
+    "translation": "مقاوم للاستثارة",
+    "definitionEn": "Unable or less able to respond to a new stimulus during a recovery period.",
+    "definitionAr": "غير قادر أو أقل قدرة على الاستجابة لمنبه جديد خلال فترة التعافي.",
+    "pronunciation": "/rɪˈfræk.tər.i/",
+    "exampleEn": "The tissue remained refractory after the preceding impulse.",
+    "exampleAr": "ظل النسيج في فترة جموح بعد النبضة السابقة."
+  },
+  {
+    "id": "term-extrasystole",
+    "term": "Extrasystole",
+    "translation": "انقباض مبكر",
+    "definitionEn": "A premature cardiac contraction arising outside the normal rhythm sequence.",
+    "definitionAr": "انقباض قلبي مبكر ينشأ خارج تسلسل النظم الطبيعي.",
+    "pronunciation": "/ˌek.strəˈsɪs.tə.li/",
+    "exampleEn": "An extrasystole was followed by a compensatory pause.",
+    "exampleAr": "تبع الانقباض المبكر توقف تعويضي."
+  },
+  {
+    "id": "term-bigeminy",
+    "term": "Bigeminy",
+    "translation": "ثنائية التوارد",
+    "definitionEn": "A rhythm in which every normal beat is followed by a premature beat.",
+    "definitionAr": "نظم تتبع فيه كل ضربة طبيعية ضربة مبكرة.",
+    "pronunciation": "/baɪˈdʒem.ɪ.ni/",
+    "exampleEn": "Ventricular bigeminy was noted during monitoring.",
+    "exampleAr": "لوحظ توارد بطيني ثنائي أثناء المراقبة."
+  },
+  {
+    "id": "term-trigeminy",
+    "term": "Trigeminy",
+    "translation": "ثلاثية التوارد",
+    "definitionEn": "A rhythm in which every third beat is premature, or a premature beat occurs after every two normal beats.",
+    "definitionAr": "نظم تكون فيه كل ضربة ثالثة مبكرة، أو تحدث ضربة مبكرة بعد كل ضربتين طبيعيتين.",
+    "pronunciation": "/traɪˈdʒem.ɪ.ni/",
+    "exampleEn": "Trigeminy appeared intermittently on the rhythm strip.",
+    "exampleAr": "ظهرت ثلاثية التوارد بصورة متقطعة في شريط النظم."
+  },
+  {
+    "id": "term-torsades",
+    "term": "Torsades",
+    "translation": "تورساد",
+    "definitionEn": "A form of polymorphic ventricular tachycardia associated with prolonged QT interval.",
+    "definitionAr": "شكل من تسرع القلب البطيني متعدد الأشكال يرتبط بإطالة فترة QT.",
+    "pronunciation": "/tɔːrˈsɑːd/",
+    "exampleEn": "Torsades de pointes may degenerate into ventricular fibrillation.",
+    "exampleAr": "قد يتطور تورساد دي بوانت إلى رجفان بطيني."
+  },
+  {
+    "id": "term-syncope",
+    "term": "Syncope",
+    "translation": "إغماء",
+    "definitionEn": "A transient loss of consciousness due to temporary global cerebral hypoperfusion, with spontaneous recovery.",
+    "definitionAr": "فقدان عابر للوعي بسبب انخفاض مؤقت وشامل في إرواء الدماغ، مع عودة تلقائية للوعي.",
+    "pronunciation": "/ˈsɪŋ.kə.pi/",
+    "exampleEn": "Arrhythmic syncope requires urgent cardiac evaluation.",
+    "exampleAr": "يتطلب الإغماء الناجم عن اضطراب النظم تقييمًا قلبيًا عاجلًا."
+  },
+  {
+    "id": "term-presyncope",
+    "term": "Presyncope",
+    "translation": "ما قبل الإغماء",
+    "definitionEn": "A sensation of impending loss of consciousness without complete loss of consciousness.",
+    "definitionAr": "إحساس بقرب فقدان الوعي دون حدوث فقدان كامل له.",
+    "pronunciation": "/priːˈsɪŋ.kə.pi/",
+    "exampleEn": "Presyncope occurred after prolonged standing.",
+    "exampleAr": "حدث ما قبل الإغماء بعد الوقوف المطول."
+  },
+  {
+    "id": "term-palpitation",
+    "term": "Palpitation",
+    "translation": "خفقان",
+    "definitionEn": "An uncomfortable awareness of the heartbeat, described as pounding, racing, or irregular.",
+    "definitionAr": "إحساس مزعج بضربات القلب، يوصف بأنها قوية أو سريعة أو غير منتظمة.",
+    "pronunciation": "/ˌpæl.pɪˈteɪ.ʃən/",
+    "exampleEn": "The patient reported intermittent palpitation.",
+    "exampleAr": "أبلغ المريض عن خفقان متقطع."
+  },
+  {
+    "id": "term-dyspnea",
+    "term": "Dyspnea",
+    "translation": "ضيق النفس",
+    "definitionEn": "A subjective sensation of difficult or uncomfortable breathing.",
+    "definitionAr": "إحساس ذاتي بصعوبة التنفس أو عدم الارتياح أثناءه.",
+    "pronunciation": "/dɪspˈniː.ə/",
+    "exampleEn": "Exertional dyspnea may be an early sign of heart failure.",
+    "exampleAr": "قد يكون ضيق النفس الجهدي علامة مبكرة لفشل القلب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dys",
+          "role": "prefix",
+          "meaningAr": "صعوبة أو اضطراب",
+          "meaningEn": "difficult or abnormal"
+        },
+        {
+          "affix": "pnea",
+          "role": "suffix",
+          "meaningAr": "تنفس",
+          "meaningEn": "breathing"
+        },
+        {
+          "affix": "صعوبة التنفس."
+        }
+      ],
+      "literalSynthesisAr": "dys = صعوبة أو اضطراب + pnea = تنفس + صعوبة التنفس. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-tachypnea",
+    "term": "Tachypnea",
+    "translation": "تسرع التنفس",
+    "definitionEn": "An abnormally increased respiratory rate.",
+    "definitionAr": "زيادة غير طبيعية في معدل التنفس.",
+    "pronunciation": "/ˌtæk.ɪpˈniː.ə/",
+    "exampleEn": "Tachypnea developed during acute pulmonary edema.",
+    "exampleAr": "حدث تسرع التنفس أثناء الوذمة الرئوية الحادة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "tachy",
+          "role": "prefix",
+          "meaningAr": "سريع",
+          "meaningEn": "fast"
+        },
+        {
+          "affix": "pnea",
+          "role": "suffix",
+          "meaningAr": "تنفس",
+          "meaningEn": "breathing"
+        },
+        {
+          "affix": "زيادة سرعة التنفس."
+        }
+      ],
+      "literalSynthesisAr": "tachy = سريع + pnea = تنفس + زيادة سرعة التنفس. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-clubbing",
+    "term": "Clubbing",
+    "translation": "تعجر",
+    "definitionEn": "Bulbous enlargement of the distal fingers with increased nail curvature, sometimes associated with chronic hypoxemia.",
+    "definitionAr": "تضخم بصلي في نهايات الأصابع مع زيادة تقوس الأظافر، وقد يرتبط بنقص أكسجة مزمن.",
+    "pronunciation": "/ˈklʌb.ɪŋ/",
+    "exampleEn": "Digital clubbing may occur in cyanotic congenital heart disease.",
+    "exampleAr": "قد يحدث تعجر الأصابع في أمراض القلب الخلقية المزرقة."
+  },
+  {
+    "id": "term-edema",
+    "term": "Edema",
+    "translation": "وذمة",
+    "definitionEn": "Abnormal accumulation of fluid in the interstitial space or body cavities.",
+    "definitionAr": "تراكم غير طبيعي للسوائل في الحيز الخلالي أو تجاويف الجسم.",
+    "pronunciation": "/ɪˈdiː.mə/",
+    "exampleEn": "Peripheral edema may reflect right-sided heart failure.",
+    "exampleAr": "قد تعكس الوذمة الطرفية فشل القلب الأيمن."
+  },
+  {
+    "id": "term-anasarca",
+    "term": "Anasarca",
+    "translation": "وذمة معممة",
+    "definitionEn": "Severe, generalized edema involving the subcutaneous tissues throughout the body.",
+    "definitionAr": "وذمة شديدة ومعممة تشمل الأنسجة تحت الجلد في أنحاء الجسم.",
+    "pronunciation": "/ˌæn.əˈsɑːr.kə/",
+    "exampleEn": "Anasarca developed in advanced congestive heart failure.",
+    "exampleAr": "حدثت وذمة معممة في فشل القلب الاحتقاني المتقدم."
+  },
+  {
+    "id": "term-ascites",
+    "term": "Ascites",
+    "translation": "استسقاء",
+    "definitionEn": "Abnormal accumulation of fluid in the peritoneal cavity.",
+    "definitionAr": "تراكم غير طبيعي للسوائل في التجويف البريتوني.",
+    "pronunciation": "/əˈsaɪ.tiːz/",
+    "exampleEn": "Right-sided heart failure can cause cardiac ascites.",
+    "exampleAr": "قد يسبب فشل القلب الأيمن استسقاءً قلبي المنشأ."
+  },
+  {
+    "id": "term-rales",
+    "term": "Rales",
+    "translation": "خراخر",
+    "definitionEn": "Abnormal crackling breath sounds caused by fluid or sudden opening of small airways.",
+    "definitionAr": "أصوات تنفسية فرقعية غير طبيعية تنتج عن السوائل أو الانفتاح المفاجئ للمجاري الهوائية الصغيرة.",
+    "pronunciation": "/rɑːlz/",
+    "exampleEn": "Bibasal rales suggested pulmonary congestion.",
+    "exampleAr": "أشارت الخراخر القاعدية الثنائية إلى احتقان رئوي."
+  },
+  {
+    "id": "term-murmur",
+    "term": "Murmur",
+    "translation": "لغط",
+    "definitionEn": "An extra or unusual heart sound caused by turbulent blood flow.",
+    "definitionAr": "صوت قلبي إضافي أو غير طبيعي ينشأ عن جريان الدم المضطرب.",
+    "pronunciation": "/ˈmɝː.mər/",
+    "exampleEn": "A systolic murmur was heard at the cardiac apex.",
+    "exampleAr": "سُمع لغط انقباضي عند قمة القلب."
+  },
+  {
+    "id": "term-bruit",
+    "term": "Bruit",
+    "translation": "لغط وعائي",
+    "definitionEn": "An abnormal sound heard over an artery due to turbulent blood flow.",
+    "definitionAr": "صوت غير طبيعي يُسمع فوق شريان بسبب اضطراب تدفق الدم.",
+    "pronunciation": "/bruːˈiː/",
+    "exampleEn": "A carotid bruit prompted vascular imaging.",
+    "exampleAr": "استدعى سماع لغط سباتي إجراء تصوير وعائي."
+  },
+  {
+    "id": "term-thrill",
+    "term": "Thrill",
+    "translation": "اهتزاز محسوس",
+    "definitionEn": "A palpable vibration over the chest or a vessel caused by turbulent blood flow.",
+    "definitionAr": "اهتزاز محسوس فوق الصدر أو وعاء دموي بسبب اضطراب تدفق الدم.",
+    "pronunciation": "/θrɪl/",
+    "exampleEn": "A palpable thrill was present over the arteriovenous fistula.",
+    "exampleAr": "وُجد اهتزاز محسوس فوق الناسور الشرياني الوريدي."
+  },
+  {
+    "id": "term-heave",
+    "term": "Heave",
+    "translation": "دفعة قلبية",
+    "definitionEn": "A sustained lifting movement of the chest wall caused by cardiac activity, often associated with ventricular enlargement.",
+    "definitionAr": "حركة رفع مستمرة لجدار الصدر بسبب نشاط القلب، وترتبط غالبًا بتضخم البطين.",
+    "pronunciation": "/hiːv/",
+    "exampleEn": "A parasternal heave suggested right ventricular hypertrophy.",
+    "exampleAr": "أشارت الدفعة جانب القصية إلى تضخم البطين الأيمن."
+  },
+  {
+    "id": "term-apex",
+    "term": "Apex",
+    "translation": "قمة",
+    "definitionEn": "The pointed lower end of the heart, where the apical impulse is usually palpated.",
+    "definitionAr": "الطرف السفلي المدبب للقلب، حيث يُجس عادةً النبض القِمّي.",
+    "pronunciation": "/ˈeɪ.peks/",
+    "exampleEn": "The apex beat was displaced laterally.",
+    "exampleAr": "انزاح النبض القِمّي إلى الجانب."
+  },
+  {
+    "id": "term-base",
+    "term": "Base",
+    "translation": "قاعدة",
+    "definitionEn": "The broad superior aspect of the heart, opposite the apex.",
+    "definitionAr": "الجزء العلوي العريض من القلب، المقابل للقمة.",
+    "pronunciation": "/beɪs/",
+    "exampleEn": "The base of the heart is formed mainly by the atria.",
+    "exampleAr": "تتكون قاعدة القلب بصورة رئيسية من الأذينين."
+  },
+  {
+    "id": "term-mediastinum",
+    "term": "Mediastinum",
+    "translation": "منصف",
+    "definitionEn": "The central compartment of the thoracic cavity between the lungs, containing the heart and major vessels.",
+    "definitionAr": "الحجرة المركزية من جوف الصدر بين الرئتين، وتحتوي على القلب والأوعية الكبيرة.",
+    "pronunciation": "/ˌmiː.di.əˈstaɪ.nəm/",
+    "exampleEn": "The heart lies within the middle mediastinum.",
+    "exampleAr": "يقع القلب داخل المنصف الأوسط."
+  },
+  {
+    "id": "term-pericardium",
+    "term": "Pericardium",
+    "translation": "تامور",
+    "definitionEn": "The fibroserous sac that surrounds the heart and the roots of the great vessels.",
+    "definitionAr": "الكيس الليفي المصلي الذي يحيط بالقلب وجذور الأوعية الكبيرة.",
+    "pronunciation": "/ˌper.ɪˈkɑːr.di.əm/",
+    "exampleEn": "The pericardium limits acute cardiac overexpansion.",
+    "exampleAr": "يحد التامور من التمدد القلبي الحاد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "peri",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "um",
+          "role": "suffix",
+          "meaningAr": "نسيج أو بنية",
+          "meaningEn": "tissue or structure"
+        },
+        {
+          "affix": "الغشاء المحيط بالقلب."
+        }
+      ],
+      "literalSynthesisAr": "peri = حول + cardi = قلب + um = نسيج أو بنية + الغشاء المحيط بالقلب. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-fibrous",
+    "term": "Fibrous",
+    "translation": "ليفي",
+    "definitionEn": "Composed of or containing collagen-rich connective tissue.",
+    "definitionAr": "مكوّن من نسيج ضام غني بالكولاجين أو يحتوي عليه.",
+    "pronunciation": "/ˈfaɪ.brəs/",
+    "exampleEn": "The fibrous pericardium protects and anchors the heart.",
+    "exampleAr": "يحمي التامور الليفي القلب ويثبته."
+  },
+  {
+    "id": "term-serous",
+    "term": "Serous",
+    "translation": "مصلي",
+    "definitionEn": "Relating to a thin membrane that secretes a watery lubricating fluid.",
+    "definitionAr": "متعلق بغشاء رقيق يفرز سائلًا مائيًا مزلقًا.",
+    "pronunciation": "/ˈsɪr.əs/",
+    "exampleEn": "The serous pericardium has parietal and visceral layers.",
+    "exampleAr": "يتكون التامور المصلي من طبقتين جدارية وحشوية."
+  },
+  {
+    "id": "term-effusion",
+    "term": "Effusion",
+    "translation": "انصباب",
+    "definitionEn": "Abnormal accumulation of fluid within a body cavity, such as the pericardial or pleural space.",
+    "definitionAr": "تراكم غير طبيعي للسوائل داخل جوف من تجاويف الجسم، مثل الحيز التاموري أو الجنبي.",
+    "pronunciation": "/ɪˈfjuː.ʒən/",
+    "exampleEn": "A moderate pericardial effusion was seen on echocardiography.",
+    "exampleAr": "شوهد انصباب تاموري متوسط في تخطيط صدى القلب."
+  },
+  {
+    "id": "term-constriction",
+    "term": "Constriction",
+    "translation": "تضيّق",
+    "definitionEn": "Abnormal narrowing or tightening; in constrictive pericarditis, restricted cardiac filling due to a rigid pericardium.",
+    "definitionAr": "تضيق أو شد غير طبيعي؛ وفي التهاب التامور التضيقي يقيد التامور الصلب امتلاء القلب.",
+    "pronunciation": "/kənˈstrɪk.ʃən/",
+    "exampleEn": "Pericardial constriction impaired diastolic filling.",
+    "exampleAr": "أعاق تضيق التامور الامتلاء الانبساطي."
+  },
+  {
+    "id": "term-myxomatous",
+    "term": "Myxomatous",
+    "translation": "مخاطاني",
+    "definitionEn": "Relating to tissue degeneration with accumulation of myxoid material, often affecting valve leaflets.",
+    "definitionAr": "متعلق بتنكس نسيجي مع تراكم مادة مخاطانية، ويصيب غالبًا شرفات الصمامات.",
+    "pronunciation": "/ˌmɪkˈsɑː.mə.təs/",
+    "exampleEn": "Myxomatous degeneration can cause mitral valve prolapse.",
+    "exampleAr": "قد يسبب التنكس المخاطاني تدلي الصمام التاجي."
+  },
+  {
+    "id": "term-rheumatic",
+    "term": "Rheumatic",
+    "translation": "روماتيزمي",
+    "definitionEn": "Relating to rheumatic fever or its inflammatory effects on connective tissue, including heart valves.",
+    "definitionAr": "متعلق بالحمى الروماتيزمية أو بتأثيراتها الالتهابية في النسيج الضام، بما في ذلك صمامات القلب.",
+    "pronunciation": "/ruːˈmæt.ɪk/",
+    "exampleEn": "Rheumatic mitral stenosis may develop years after acute rheumatic fever.",
+    "exampleAr": "قد يتطور تضيق الصمام التاجي الروماتيزمي بعد سنوات من الحمى الروماتيزمية الحادة."
+  },
+  {
+    "id": "term-congenital",
+    "term": "Congenital",
+    "translation": "خلقي",
+    "definitionEn": "Present at birth, usually due to abnormal development before birth.",
+    "definitionAr": "موجود منذ الولادة، وغالبًا بسبب اضطراب التطور قبل الولادة.",
+    "pronunciation": "/kənˈdʒen.ɪ.təl/",
+    "exampleEn": "A congenital septal defect was detected in infancy.",
+    "exampleAr": "كُشف عيب خلقي في الحاجز خلال مرحلة الرضاعة."
+  },
+  {
+    "id": "term-acquired",
+    "term": "Acquired",
+    "translation": "مكتسب",
+    "definitionEn": "Developing after birth rather than being present congenitally.",
+    "definitionAr": "يتطور بعد الولادة بدلًا من أن يكون موجودًا منذ الولادة.",
+    "pronunciation": "/əˈkwaɪərd/",
+    "exampleEn": "Acquired valve disease may follow infection or degeneration.",
+    "exampleAr": "قد ينجم مرض الصمامات المكتسب عن العدوى أو التنكس."
+  },
+  {
+    "id": "term-acyanotic",
+    "term": "Acyanotic",
+    "translation": "غير مزرق",
+    "definitionEn": "Not associated with clinically apparent cyanosis.",
+    "definitionAr": "غير مصحوب بزرقة سريرية واضحة.",
+    "pronunciation": "/ˌeɪ.saɪ.əˈnɑː.tɪk/",
+    "exampleEn": "An acyanotic shunt may initially cause no cyanosis.",
+    "exampleAr": "قد لا تسبب التحويلة غير المزرقة زرقة في البداية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "a",
+          "role": "prefix",
+          "meaningAr": "دون أو غير",
+          "meaningEn": "without or not"
+        },
+        {
+          "affix": "cyanotic",
+          "role": "root",
+          "meaningAr": "مزرِق",
+          "meaningEn": "cyanotic"
+        },
+        {
+          "affix": "غير متصف بالزرقة."
+        }
+      ],
+      "literalSynthesisAr": "a = دون أو غير + cyanotic = مزرِق + غير متصف بالزرقة. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-patent",
+    "term": "Patent",
+    "translation": "مفتوح",
+    "definitionEn": "Open or unobstructed; used to describe a vessel or fetal channel that remains open.",
+    "definitionAr": "مفتوح أو غير مسدود؛ ويستخدم لوصف وعاء أو قناة جنينية تستمر مفتوحة.",
+    "pronunciation": "/ˈpeɪ.tənt/",
+    "exampleEn": "The ductus arteriosus remained patent after birth.",
+    "exampleAr": "بقيت القناة الشريانية مفتوحة بعد الولادة."
+  },
+  {
+    "id": "term-ductus",
+    "term": "Ductus",
+    "translation": "قناة",
+    "definitionEn": "A duct or channel connecting anatomical structures, such as the fetal ductus arteriosus.",
+    "definitionAr": "قناة تصل بين تراكيب تشريحية، مثل القناة الشريانية الجنينية.",
+    "pronunciation": "/ˈdʌk.təs/",
+    "exampleEn": "The ductus arteriosus normally closes after birth.",
+    "exampleAr": "تنغلق القناة الشريانية عادةً بعد الولادة."
+  },
+  {
+    "id": "term-arteriosus",
+    "term": "Arteriosus",
+    "translation": "شرياني",
+    "definitionEn": "Relating to an artery; used in the anatomical name ductus arteriosus.",
+    "definitionAr": "متعلق بالشريان؛ ويستخدم في الاسم التشريحي للقناة الشريانية.",
+    "pronunciation": "/ˌɑːr.tɪr.iˈoʊ.səs/",
+    "exampleEn": "The ductus arteriosus connects the pulmonary artery to the aorta in fetal life.",
+    "exampleAr": "تصل القناة الشريانية بين الشريان الرئوي والأبهر في الحياة الجنينية."
+  },
+  {
+    "id": "term-tetralogy",
+    "term": "Tetralogy",
+    "translation": "رباعية",
+    "definitionEn": "A group of four associated anatomical or pathological abnormalities.",
+    "definitionAr": "مجموعة من أربعة اضطرابات تشريحية أو مرضية مترابطة.",
+    "pronunciation": "/teˈtræl.ə.dʒi/",
+    "exampleEn": "Tetralogy of Fallot is a cyanotic congenital heart disease.",
+    "exampleAr": "رباعية فالو مرض قلبي خلقي مزرق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "tetra",
+          "role": "prefix",
+          "meaningAr": "أربعة",
+          "meaningEn": "four"
+        },
+        {
+          "affix": "logy",
+          "role": "suffix",
+          "meaningAr": "مجموعة أو دراسة",
+          "meaningEn": "study or collection"
+        },
+        {
+          "affix": "مجموعة من أربعة مكونات."
+        }
+      ],
+      "literalSynthesisAr": "tetra = أربعة + logy = مجموعة أو دراسة + مجموعة من أربعة مكونات. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-fallot",
+    "term": "Fallot",
+    "translation": "فالو",
+    "definitionEn": "The eponym used in the name of a congenital heart defect consisting of four characteristic abnormalities.",
+    "definitionAr": "اسم علمي في تسمية عيب قلبي خلقي يتكون من أربعة اضطرابات مميزة.",
+    "pronunciation": "/fəˈloʊ/",
+    "exampleEn": "Fallot physiology includes right ventricular outflow obstruction.",
+    "exampleAr": "تتضمن فيزيولوجيا فالو انسداد مخرج البطين الأيمن."
+  },
+  {
+    "id": "term-transposition",
+    "term": "Transposition",
+    "translation": "تبدل موضع",
+    "definitionEn": "An abnormal arrangement in which two anatomical structures are switched in position.",
+    "definitionAr": "ترتيب غير طبيعي تتبادل فيه بنيتان تشريحيتان موضعيهما.",
+    "pronunciation": "/ˌtræn.spəˈzɪʃ.ən/",
+    "exampleEn": "Transposition of the great arteries causes parallel circulations.",
+    "exampleAr": "يسبب تبدل موضع الشرايين الكبيرة دورتين دمويتين متوازيتين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "trans",
+          "role": "prefix",
+          "meaningAr": "عبر أو تبديل",
+          "meaningEn": "across or change"
+        },
+        {
+          "affix": "position",
+          "role": "root",
+          "meaningAr": "موضع",
+          "meaningEn": "position"
+        },
+        {
+          "affix": "ion",
+          "role": "suffix",
+          "meaningAr": "عملية أو حالة",
+          "meaningEn": "process or state"
+        },
+        {
+          "affix": "تغيير الموضع أو تبادله."
+        }
+      ],
+      "literalSynthesisAr": "trans = عبر أو تبديل + position = موضع + ion = عملية أو حالة + تغيير الموضع أو تبادله. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-dextrocardia",
+    "term": "Dextrocardia",
+    "translation": "قلب أيمن",
+    "definitionEn": "A congenital condition in which the heart is positioned predominantly on the right side of the chest.",
+    "definitionAr": "حالة خلقية يقع فيها القلب بصورة رئيسية في الجانب الأيمن من الصدر.",
+    "pronunciation": "/ˌdek.stroʊˈkɑːr.di.ə/",
+    "exampleEn": "Dextrocardia was identified on the chest radiograph.",
+    "exampleAr": "كُشف القلب الأيمن في صورة الصدر الشعاعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dextro",
+          "role": "prefix",
+          "meaningAr": "يمين",
+          "meaningEn": "right"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ia",
+          "role": "suffix",
+          "meaningAr": "حالة",
+          "meaningEn": "condition"
+        },
+        {
+          "affix": "حالة وجود القلب في الجانب الأيمن."
+        }
+      ],
+      "literalSynthesisAr": "dextro = يمين + cardi = قلب + ia = حالة + حالة وجود القلب في الجانب الأيمن. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-mesocardia",
+    "term": "Mesocardia",
+    "translation": "قلب متوسط",
+    "definitionEn": "A congenital position in which the heart lies near the midline of the thorax.",
+    "definitionAr": "موضع خلقي يقع فيه القلب قرب الخط الناصف للصدر.",
+    "pronunciation": "/ˌmez.oʊˈkɑːr.di.ə/",
+    "exampleEn": "Mesocardia was noted during congenital anomaly assessment.",
+    "exampleAr": "لوحظ القلب المتوسط أثناء تقييم التشوه الخلقي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "meso",
+          "role": "prefix",
+          "meaningAr": "وسط",
+          "meaningEn": "middle"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ia",
+          "role": "suffix",
+          "meaningAr": "حالة",
+          "meaningEn": "condition"
+        },
+        {
+          "affix": "حالة وجود القلب في موضع وسطي."
+        }
+      ],
+      "literalSynthesisAr": "meso = وسط + cardi = قلب + ia = حالة + حالة وجود القلب في موضع وسطي. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-levocardia",
+    "term": "Levocardia",
+    "translation": "قلب أيسر",
+    "definitionEn": "A cardiac position in which the heart lies predominantly on the left side of the thorax.",
+    "definitionAr": "موضع قلبي يقع فيه القلب بصورة رئيسية في الجانب الأيسر من الصدر.",
+    "pronunciation": "/ˌliː.voʊˈkɑːr.di.ə/",
+    "exampleEn": "Levocardia was present with normal abdominal situs.",
+    "exampleAr": "كان القلب أيسر الموضع مع ترتيب أحشائي بطني طبيعي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "levo",
+          "role": "prefix",
+          "meaningAr": "يسار",
+          "meaningEn": "left"
+        },
+        {
+          "affix": "cardi",
+          "role": "combining-form",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ia",
+          "role": "suffix",
+          "meaningAr": "حالة",
+          "meaningEn": "condition"
+        },
+        {
+          "affix": "حالة وجود القلب في الجانب الأيسر."
+        }
+      ],
+      "literalSynthesisAr": "levo = يسار + cardi = قلب + ia = حالة + حالة وجود القلب في الجانب الأيسر. = undefined؛ شرح بنية المصطلح بحسب أجزائه."
+    }
+  },
+  {
+    "id": "term-dextroposition",
+    "term": "Dextroposition",
+    "translation": "تموضع أيمن",
+    "definitionEn": "Displacement of the heart toward the right side of the thorax without intrinsic mirror-image cardiac anatomy.",
+    "definitionAr": "انزياح القلب نحو الجانب الأيمن من الصدر دون أن تكون بنيته القلبية انعكاسًا مرآتيًا.",
+    "pronunciation": "/ˌdek.stroʊ.pəˈzɪʃ.ən/",
+    "exampleEn": "Dextroposition occurred secondary to lung volume loss.",
+    "exampleAr": "حدث التموضع الأيمن نتيجة فقدان حجم الرئة."
+  },
+  {
+    "id": "term-situs",
+    "term": "Situs",
+    "translation": "موضع الأحشاء",
+    "definitionEn": "The arrangement or position of the internal organs in the body.",
+    "definitionAr": "ترتيب الأعضاء الداخلية أو مواضعها في الجسم.",
+    "pronunciation": "/ˈsaɪ.təs/",
+    "exampleEn": "Situs inversus may be associated with dextrocardia.",
+    "exampleAr": "قد يرتبط انقلاب موضع الأحشاء بالقلب الأيمن."
+  },
+  {
+    "id": "term-inversus",
+    "term": "Inversus",
+    "translation": "منقلب",
+    "definitionEn": "Reversed or mirror-image arrangement, as in situs inversus.",
+    "definitionAr": "معكوس أو مرتّب بصورة مرآتية، كما في انقلاب موضع الأحشاء.",
+    "pronunciation": "/ɪnˈvɝː.səs/",
+    "exampleEn": "Situs inversus was confirmed by imaging.",
+    "exampleAr": "تأكد انقلاب موضع الأحشاء بالتصوير."
+  },
+  {
+    "id": "term-eisenmenger",
+    "term": "Eisenmenger",
+    "translation": "آيزنمنغر",
+    "definitionEn": "An eponym describing advanced pulmonary vascular disease with reversal or bidirectional flow through a longstanding systemic-to-pulmonary shunt.",
+    "definitionAr": "اسم علمي لمرض وعائي رئوي متقدم مع انعكاس أو ثنائية اتجاه الجريان عبر تحويلة جهازية رئوية مزمنة.",
+    "pronunciation": "/ˈaɪ.zənˌmeŋ.ər/",
+    "exampleEn": "Eisenmenger syndrome may develop after an unrepaired large shunt.",
+    "exampleAr": "قد تتطور متلازمة آيزنمنغر بعد ترك تحويلة كبيرة دون إصلاح."
   }
 ]
