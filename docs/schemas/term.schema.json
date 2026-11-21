@@ -70,19 +70,22 @@
     "morphology": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "root",
-        "literalSynthesisAr"
-      ],
       "properties": {
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/morphologyPart"
+          }
+        },
         "prefix": {
-          "$ref": "#/$defs/morphologyPart"
+          "$ref": "#/$defs/morphologyPartLegacy"
         },
         "root": {
-          "$ref": "#/$defs/morphologyPart"
+          "$ref": "#/$defs/morphologyPartLegacy"
         },
         "suffix": {
-          "$ref": "#/$defs/morphologyPart"
+          "$ref": "#/$defs/morphologyPartLegacy"
         },
         "literalSynthesisAr": {
           "type": "string",
@@ -90,11 +93,61 @@
           "maxLength": 300
         }
       },
-      "description": "Structured word morphology rendered within the term meaning explanation."
+      "required": [
+        "literalSynthesisAr"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "parts"
+          ]
+        },
+        {
+          "required": [
+            "root"
+          ]
+        }
+      ],
+      "description": "Structured word morphology rendered inside the meaning explanation; parts supports multiple combining forms."
     }
   },
   "$defs": {
     "morphologyPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "affix",
+        "role",
+        "meaningAr",
+        "meaningEn"
+      ],
+      "properties": {
+        "affix": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "role": {
+          "enum": [
+            "prefix",
+            "root",
+            "suffix",
+            "combining-form"
+          ]
+        },
+        "meaningAr": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "meaningEn": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        }
+      }
+    },
+    "morphologyPartLegacy": {
       "type": "object",
       "additionalProperties": false,
       "required": [
