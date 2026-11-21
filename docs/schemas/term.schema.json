@@ -66,6 +66,59 @@
     "updatedAt": {
       "type": "string",
       "format": "date-time"
+    },
+    "morphology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root",
+        "literalSynthesisAr"
+      ],
+      "properties": {
+        "prefix": {
+          "$ref": "#/$defs/morphologyPart"
+        },
+        "root": {
+          "$ref": "#/$defs/morphologyPart"
+        },
+        "suffix": {
+          "$ref": "#/$defs/morphologyPart"
+        },
+        "literalSynthesisAr": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 300
+        }
+      },
+      "description": "Structured word morphology rendered within the term meaning explanation."
+    }
+  },
+  "$defs": {
+    "morphologyPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "affix",
+        "meaningAr",
+        "meaningEn"
+      ],
+      "properties": {
+        "affix": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "meaningAr": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "meaningEn": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        }
+      }
     }
   }
 }
