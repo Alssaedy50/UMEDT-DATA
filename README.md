@@ -1,61 +1,43 @@
-# مستودع بيانات UMEDT الطبي والأكاديمي (Alssaedy50/UMEDT-DATA)
+# UMEDT-DATA — Terms Library
 
-هذا المستودع هو المصدر الرسمي المستقل لبيانات برنامج **UMEDT** لنشر وتحديث جميع أنواع المحتوى الأكاديمي:
-- **البلوكات والمواد والمواضيع** (`blocks.json`, `subjects.json`, `topics.json`)
-- **المصطلحات والجمل والسوابق والاختصارات** (`terms.json`, `sentences.json`, `custom-affixes.json`, `custom-abbreviations.json`)
-- **الكتب وملفات PDF والملازم** (`books.json`)
-- **بنك الأسئلة والاختبارات التقييمية** (`questions.json`, `exams.json`)
-- **الصور والرسومات التوضيحية والملحقات** (`media-index.json`, `data/media/`)
-- **الفهرس الذاتي التعريف ومخططات القراءة الموحدة** (`data/catalog.json`, `docs/schemas/`, `docs/UMEDT-DATA-API-CONTRACT.md`)
-- **حزم التحديث الموقعة** (`data/releases/stable/`, `data/releases/beta/`)
+هذا المستودع هو المصدر السحابي الوحيد لقاموس UMEDT. يحتوي على **المصطلحات فقط**، ولا يخزن البلوكات أو المواد أو المواضيع أو الكتب أو الأسئلة أو الوسائط التعليمية.
 
-لا يحتوي هذا المستودع على كود تطبيق **UMEDT** أو بيانات المستخدم الشخصية (المفضلة، سجل المراجعة SRS، الملاحظات الخاصة).
+## عقد المصطلح
 
-## البنية المعتمدة
-```text
-data/
-  catalog.json
-  master/
-    blocks.json
-    subjects.json
-    topics.json
-    terms.json
-    sentences.json
-    custom-affixes.json
-    custom-abbreviations.json
-    books.json
-    questions.json
-    exams.json
-    media-index.json
-  media/
-    <sha256_prefix>-<filename>
-  releases/
-    stable/
-      manifest.json
-      umed2-data-<version>.zip
-      CHANGELOG.md
-      history.json
-    beta/
-      manifest.json
-      umed2-data-<version>.zip
-      CHANGELOG.md
-      history.json
-docs/
-  UMEDT-DATA-API-CONTRACT.md
-  schemas/
-    catalog.schema.json
-    manifest.schema.json
-    content-entities.schema.json
-```
+كل سجل يمثل مصطلحاً إنجليزياً واحداً أو مصطلحاً من كلمتين كحد أقصى. يمنع وضع جملة أو عبارة تفسيرية في الحقل `term`.
 
-## روابط القراءة المباشرة والموحدة
-- **نقطة الاكتشاف الموحدة (Catalog v2):**
-  `https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json`
-- **Manifest التحديث السحابي (OTA):**
-  `https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/releases/stable/manifest.json`
-- **عقد القراءة الموحّد ومخططات JSON Schema:**
-  `https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/UMEDT-DATA-API-CONTRACT.md`
+الحقول:
+- `id`: معرف ثابت وفريد.
+- `term`: اللفظ الإنجليزي (كلمة واحدة أو كلمتان فقط).
+- `definitionEn` و`definitionAr`: شرح موجز باللغتين، ويظهر قبل الترجمة.
+- `translation`: المقابل العربي الصحيح لغوياً وطبياً حسب المعنى.
+- `pronunciation`: النطق باستخدام IPA.
+- `exampleEn` و`exampleAr`: مثال واحد باللغتين.
+- `createdAt` و`updatedAt`: حقلا تدقيق اختياريان.
 
-## مبدأ الأمان وعدم الإضرار بالمشروع الأصلي
-1. جميع التحديثات تُقرأ وتُدمج عبر المعرفات الفريدة (`id`) بدون استبدال كود التطبيق أو تفضيلات المستخدم المحلية (`favorite`, `srsData`, `studyStats`).
-2. المرفقات تُخزن بأسماء تتضمن بصمة `SHA-256` لمنع التكرار وتقليل حجم التنزيل.
+لا توجد تصنيفات أو تخصصات أو مجموعات موضوعية داخل سجل المصطلح. يمكن أن يطلب المستخدم إنشاء دفعة حول موضوع معين، لكن الموضوع لا يتحول إلى تصنيف داخل القاموس.
+
+## الملفات الأساسية
+
+- `data/master/terms.json`: جميع سجلات المصطلحات.
+- `data/catalog.json`: نقطة الاكتشاف التي يقرأها تطبيق Android، وتتضمن عدد السجلات وبصمة SHA-256.
+- `docs/schemas/term.schema.json`: مخطط التحقق.
+- `scripts/validate-terms.mjs`: التحقق من البنية والتكرار وحد الكلمات.
+
+## منع التكرار وجودة الترجمة
+
+1. يُطبّع المصطلح الإنجليزي قبل المقارنة: Unicode NFKC، lowercase، إزالة علامات الترقيم الزائدة، وتوحيد المسافات.
+2. لا يسمح بتكرار المفتاح المطبّع حتى لو اختلفت حالة الأحرف أو المسافات.
+3. يمنع المصطلح الذي يحتوي أكثر من كلمتين أو يبدو جملة.
+4. يجب وجود ترجمة عربية وشرح ثنائي اللغة ونطق ومثال ثنائي اللغة.
+5. تُرفض الترجمات والتعريفات العامة النمطية مثل «مصطلح طبي» أو «Clinical medical term»؛ لا تُقبل كبديل عن المعنى الحقيقي.
+6. الفحص البرمجي لا يستطيع إثبات صحة الترجمة الطبية؛ يجب تدقيق المقابل العربي والتعريف والسياق قبل اعتماد الدفعة.
+7. لا تُنشر دفعة مولدة آلياً قبل مراجعتها.
+
+## التحديث
+
+تُحدّث ملفات المصطلحات على فرع `main`. يتحقق GitHub Actions من السجلات ويحدّث `catalog.json` وبصمة الملف. يقرأ التطبيق الكتالوج ثم ينزّل مجموعة `terms` فقط. لا يؤدي تحديث القاموس إلى حذف المواد والمواضيع المحلية أو بيانات المستخدم.
+
+## نقطة القراءة
+
+`https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json`
