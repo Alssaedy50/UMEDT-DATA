@@ -14114,5 +14114,38 @@
     "definitionAr": "مادة بروتينية سيئة الطي تكوّن لُييفات غير ذائبة وتتراكم خارج الخلايا في الداء النشواني.",
     "exampleEn": "Amyloid deposits were identified in the myocardial interstitium.",
     "exampleAr": "كُشفت ترسبات الأميلويد في النسيج الخلالي لعضلة القلب."
+  },
+  {
+    "id": "term-intramural",
+    "term": "Intramural",
+    "translation": "داخل جداري",
+    "pronunciation": "/ˌɪn.trəˈmjʊr.əl/",
+    "definitionEn": "Located within the wall of an organ or structure; in cardiology, often referring to the myocardial wall.",
+    "definitionAr": "موجود داخل جدار عضو أو بنية؛ ويُستخدم في أمراض القلب غالبًا لوصف ما يقع ضمن جدار عضلة القلب.",
+    "exampleEn": "An intramural hematoma can occur in aortic dissection.",
+    "exampleAr": "قد يحدث ورم دموي داخل جداري في تسلخ الأبهر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "intra",
+          "role": "prefix",
+          "meaningAr": "داخل",
+          "meaningEn": "within"
+        },
+        {
+          "affix": "mur",
+          "role": "root",
+          "meaningAr": "جدار",
+          "meaningEn": "wall"
+        },
+        {
+          "affix": "al",
+          "role": "suffix",
+          "meaningAr": "متعلق بـ",
+          "meaningEn": "pertaining to"
+        }
+      ],
+      "literalSynthesisAr": "صفة تعني موجودًا داخل الجدار."
+    }
   }
 ]
