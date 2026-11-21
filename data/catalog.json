@@ -1,11 +1,11 @@
 {
   "catalogSchemaVersion": 1,
-  "catalogVersion": "20261121T184557Z",
+  "catalogVersion": "20261121T192209Z",
   "schemaVersion": 1,
   "minAppVersion": "2.4.7",
   "repository": "Alssaedy50/UMEDT-DATA",
   "branch": "main",
-  "generatedAt": "2026-11-21T18:45:57.569Z",
+  "generatedAt": "2026-11-21T19:22:09.976Z",
   "endpoints": {
     "catalogUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/catalog.json",
     "masterBaseUrl": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/data/master/",
@@ -40,9 +40,9 @@
       "apiPath": "/data/master/terms.json",
       "schemaUrl": "docs/schemas/term.schema.json",
       "primaryKey": "id",
-      "recordCount": 109,
-      "sha256": "06e60653c00b8a568acaf72176f78c09b9196f671069c5fdc5e14b22a48a0e8f",
-      "sizeBytes": 128765,
+      "recordCount": 180,
+      "sha256": "1f08a3ddcede5f821fc2ba229727be8e791d7df24e449b318b5e0c6e16434360",
+      "sizeBytes": 204269,
       "mergeStrategy": "merge_preserve_user_state",
       "userProtectedFields": [
         "favorite",
@@ -60,7 +60,7 @@
         "definitionAr"
       ],
       "filterableFields": [],
-      "updatedAt": "2026-11-21T18:45:57.569Z"
+      "updatedAt": "2026-11-21T19:22:09.975Z"
     }
   ]
 }
