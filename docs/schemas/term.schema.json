@@ -7,10 +7,10 @@
   "required": [
     "id",
     "term",
-    "translation",
-    "pronunciation",
     "definitionEn",
     "definitionAr",
+    "translation",
+    "pronunciation",
     "exampleEn",
     "exampleAr"
   ],
@@ -27,6 +27,16 @@
       "pattern": "^[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*(?: [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*)?$",
       "description": "One English word or exactly two English words; never a sentence."
     },
+    "definitionEn": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 1000
+    },
+    "definitionAr": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 1000
+    },
     "translation": {
       "type": "string",
       "minLength": 1,
@@ -38,16 +48,6 @@
       "minLength": 1,
       "maxLength": 100,
       "description": "IPA transcription."
-    },
-    "definitionEn": {
-      "type": "string",
-      "minLength": 5,
-      "maxLength": 1000
-    },
-    "definitionAr": {
-      "type": "string",
-      "minLength": 5,
-      "maxLength": 1000
     },
     "exampleEn": {
       "type": "string",
