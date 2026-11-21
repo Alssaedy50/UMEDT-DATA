@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Alssaedy50/UMEDT-DATA/main/docs/schemas/term.schema.json",
+  "title": "UMEDT Dictionary Term",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "term",
+    "translation",
+    "pronunciation",
+    "definitionEn",
+    "definitionAr",
+    "exampleEn",
+    "exampleAr"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "pattern": "^term-[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*(?: [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*)?$",
+      "description": "One English word or exactly two English words; never a sentence."
+    },
+    "translation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Accurate Arabic equivalent in the relevant linguistic or medical context."
+    },
+    "pronunciation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "IPA transcription."
+    },
+    "definitionEn": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 1000
+    },
+    "definitionAr": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 1000
+    },
+    "exampleEn": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 500
+    },
+    "exampleAr": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 500
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
