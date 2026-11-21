@@ -60,7 +60,27 @@ for (let i = 0; i < terms.length; i++) {
   if (t.term && t.translation && normalize(t.term) === normalize(t.translation)) {
     errors.push(`${label}: English term and Arabic translation must not be identical`);
   }
-  const allowed = new Set([...required, 'createdAt', 'updatedAt']);
+  if (t.morphology !== undefined) {
+    const m = t.morphology;
+    if (!m || typeof m !== 'object' || Array.isArray(m)) {
+      errors.push(`${label}: morphology must be an object`);
+    } else {
+      const validPart = (part) => part && typeof part === 'object' &&
+        typeof part.affix === 'string' && part.affix.trim() &&
+        typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
+        typeof part.meaningEn === 'string' && part.meaningEn.trim();
+      if (!validPart(m.root)) errors.push(`${label}: morphology.root requires affix, meaningAr and meaningEn`);
+      for (const key of ['prefix', 'suffix']) {
+        if (m[key] !== undefined && !validPart(m[key])) errors.push(`${label}: morphology.${key} requires affix, meaningAr and meaningEn`);
+      }
+      if (typeof m.literalSynthesisAr !== 'string' || !m.literalSynthesisAr.trim()) {
+        errors.push(`${label}: morphology.literalSynthesisAr is required`);
+      }
+      const allowedMorph = new Set(['prefix', 'root', 'suffix', 'literalSynthesisAr']);
+      for (const key of Object.keys(m)) if (!allowedMorph.has(key)) errors.push(`${label}: unsupported morphology field ${key}`);
+    }
+  }
+  const allowed = new Set([...required, 'createdAt', 'updatedAt', 'morphology']);
   for (const key of Object.keys(t)) if (!allowed.has(key)) errors.push(`${label}: unsupported field ${key}`);
 }
 if (errors.length) {
