@@ -1433,5 +1433,1070 @@
       ],
       "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب يصيب الشعيرات الدموية» في السياق الطبي."
     }
+  },
+  {
+    "id": "term-angiopathy",
+    "term": "Angiopathy",
+    "translation": "اعتلال الأوعية الدموية",
+    "pronunciation": "/ˌæn.dʒiˈɑː.pə.θi/",
+    "definitionEn": "A disease or disorder affecting blood vessels, including structural, inflammatory, or functional abnormalities.",
+    "definitionAr": "مرض أو اضطراب يصيب الأوعية الدموية، وقد يشمل تغيرات بنيوية أو التهابية أو وظيفية.",
+    "exampleEn": "Diabetic angiopathy can damage small blood vessels in several organs.",
+    "exampleAr": "قد يؤدي اعتلال الأوعية السكري إلى إتلاف الأوعية الدموية الصغيرة في عدة أعضاء.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angiitis",
+    "term": "Angiitis",
+    "translation": "التهاب الأوعية الدموية",
+    "pronunciation": "/ˌæn.dʒiˈaɪ.tɪs/",
+    "definitionEn": "Inflammation of blood vessels; the term is often used synonymously with vasculitis.",
+    "definitionAr": "التهاب يصيب الأوعية الدموية، ويُستخدم المصطلح غالبًا بمعنى Vasculitis.",
+    "exampleEn": "The biopsy showed angiitis involving small dermal vessels.",
+    "exampleAr": "أظهرت الخزعة التهابًا في الأوعية الدموية الصغيرة بالجلد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angioedema",
+    "term": "Angioedema",
+    "translation": "الوذمة الوعائية",
+    "pronunciation": "/ˌæn.dʒi.oʊ.ɪˈdiː.mə/",
+    "definitionEn": "A transient, localized swelling of deep dermal, subcutaneous, or submucosal tissues caused by increased vascular permeability.",
+    "definitionAr": "تورم موضعي عابر يصيب الأدمة العميقة أو النسيج تحت الجلد أو الأغشية المخاطية نتيجة زيادة نفاذية الأوعية.",
+    "exampleEn": "Bradykinin-mediated angioedema may cause dangerous upper-airway swelling.",
+    "exampleAr": "قد تسبب الوذمة الوعائية المتواسطة بالبراديكينين تورمًا خطيرًا في مجرى الهواء العلوي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "edema",
+          "role": "root",
+          "meaningAr": "وذمة أو تجمع السوائل في الأنسجة",
+          "meaningEn": "swelling from excess interstitial fluid"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الوذمة الوعائية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angioectasia",
+    "term": "Angioectasia",
+    "translation": "توسع وعائي",
+    "pronunciation": "/ˌæn.dʒi.oʊ.ekˈteɪ.ʒə/",
+    "definitionEn": "An abnormal dilation of a blood vessel, commonly involving thin-walled mucosal vessels and sometimes causing gastrointestinal bleeding.",
+    "definitionAr": "توسع غير طبيعي في وعاء دموي، ويصيب غالبًا أوعية الأغشية المخاطية رقيقة الجدار وقد يسبب نزفًا هضميًا.",
+    "exampleEn": "Colonic angioectasia was identified as the source of occult bleeding.",
+    "exampleAr": "حُدد التوسع الوعائي في القولون مصدرًا للنزف الخفي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-ectasia",
+          "role": "suffix",
+          "meaningAr": "توسع أو تمدد",
+          "meaningEn": "dilation or expansion"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «توسع وعائي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-angiosclerosis",
+    "term": "Angiosclerosis",
+    "translation": "تصلب الأوعية الدموية",
+    "pronunciation": "/ˌæn.dʒi.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "Abnormal hardening and loss of elasticity of blood vessel walls.",
+    "definitionAr": "تصلب غير طبيعي في جدران الأوعية الدموية مع فقدان جزء من مرونتها.",
+    "exampleEn": "Angiosclerosis may contribute to impaired tissue perfusion.",
+    "exampleAr": "قد يسهم تصلب الأوعية الدموية في ضعف تروية الأنسجة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "scler/o",
+          "role": "combining-form",
+          "meaningAr": "صلب أو متصلب",
+          "meaningEn": "hard"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصلب الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-arteriolitis",
+    "term": "Arteriolitis",
+    "translation": "التهاب الشُرينات",
+    "pronunciation": "/ɑːrˌtɪr.i.oʊˈlaɪ.tɪs/",
+    "definitionEn": "Inflammation of arterioles, the small arteries that regulate resistance and tissue blood flow.",
+    "definitionAr": "التهاب يصيب الشُرينات، وهي الشرايين الصغيرة التي تنظم المقاومة الوعائية وجريان الدم إلى الأنسجة.",
+    "exampleEn": "Arteriolitis can narrow the vessel lumen and reduce downstream perfusion.",
+    "exampleAr": "قد يؤدي التهاب الشُرينات إلى تضيق اللمعة وانخفاض التروية في الأنسجة الواقعة بعدها.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "arteriol/o",
+          "role": "combining-form",
+          "meaningAr": "شرين",
+          "meaningEn": "small artery"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب الشُرينات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-endarteritis",
+    "term": "Endarteritis",
+    "translation": "التهاب باطنة الشريان",
+    "pronunciation": "/ˌen.dɑːr.təˈraɪ.tɪs/",
+    "definitionEn": "Inflammation involving the intima, the innermost layer of an artery; it may cause intimal thickening and luminal narrowing.",
+    "definitionAr": "التهاب يصيب الغلالة الباطنة للشريان، وقد يؤدي إلى تثخنها وتضيق لمعة الشريان.",
+    "exampleEn": "The arterial specimen showed proliferative endarteritis.",
+    "exampleAr": "أظهرت عينة الشريان التهابًا تكاثريًا في البطانة الشريانية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "endo-",
+          "role": "prefix",
+          "meaningAr": "داخل أو باطن",
+          "meaningEn": "within or inner"
+        },
+        {
+          "affix": "arteri",
+          "role": "root",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب باطنة الشريان» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-polyarteritis",
+    "term": "Polyarteritis",
+    "translation": "التهاب الشرايين المتعدد",
+    "pronunciation": "/ˌpɑː.li.ɑːr.təˈraɪ.tɪs/",
+    "definitionEn": "Inflammation affecting multiple arteries; the term is commonly encountered in the name polyarteritis nodosa, a systemic necrotizing vasculitis.",
+    "definitionAr": "التهاب يصيب عدة شرايين، ويُشاهد المصطلح خصوصًا في اسم التهاب الشرايين العقدي، وهو التهاب أوعية نخري جهازي.",
+    "exampleEn": "Polyarteritis nodosa may cause renal, gastrointestinal, and peripheral nerve ischemia.",
+    "exampleAr": "قد يسبب التهاب الشرايين العقدي نقص تروية الكلى والجهاز الهضمي والأعصاب الطرفية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "poly-",
+          "role": "prefix",
+          "meaningAr": "متعدد أو كثير",
+          "meaningEn": "many"
+        },
+        {
+          "affix": "arteri",
+          "role": "root",
+          "meaningAr": "شريان",
+          "meaningEn": "artery"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب الشرايين المتعدد» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-polyangiitis",
+    "term": "Polyangiitis",
+    "translation": "التهاب الأوعية المتعدد",
+    "pronunciation": "/ˌpɑː.li.æn.dʒiˈaɪ.tɪs/",
+    "definitionEn": "Inflammation involving multiple blood vessels; it appears in the names of systemic small-vessel vasculitides.",
+    "definitionAr": "التهاب يصيب أوعية دموية متعددة، ويَرِد في أسماء أنواع من التهابات الأوعية الجهازية الصغيرة.",
+    "exampleEn": "Microscopic polyangiitis can cause pulmonary capillaritis and glomerulonephritis.",
+    "exampleAr": "قد يسبب التهاب الأوعية المجهري التهاب الشعيرات الرئوية والتهاب كبيبات الكلى.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "poly-",
+          "role": "prefix",
+          "meaningAr": "متعدد أو كثير",
+          "meaningEn": "many"
+        },
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب الأوعية المتعدد» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebosclerosis",
+    "term": "Phlebosclerosis",
+    "translation": "تصلب الأوردة",
+    "pronunciation": "/ˌfleb.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "Thickening and hardening of venous walls, often associated with chronic vascular injury or calcification.",
+    "definitionAr": "تثخن وتصلب جدران الأوردة، وقد يرتبط ذلك بأذية وعائية مزمنة أو تكلس.",
+    "exampleEn": "Imaging demonstrated phlebosclerosis in the affected superficial vein.",
+    "exampleAr": "أظهر التصوير تصلبًا في الوريد السطحي المصاب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "scler/o",
+          "role": "combining-form",
+          "meaningAr": "صلب أو متصلب",
+          "meaningEn": "hard"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصلب الأوردة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebothrombosis",
+    "term": "Phlebothrombosis",
+    "translation": "الخثار الوريدي",
+    "pronunciation": "/ˌfleb.oʊ.θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "Formation of a thrombus within a vein; the term historically emphasizes venous thrombosis that may occur without prominent inflammation.",
+    "definitionAr": "تكوّن خثرة داخل أحد الأوردة؛ ويُستخدم المصطلح تاريخيًا لوصف الخثار الوريدي الذي قد يحدث دون التهاب بارز.",
+    "exampleEn": "Deep phlebothrombosis can lead to pulmonary thromboembolism.",
+    "exampleAr": "قد يؤدي الخثار الوريدي العميق إلى انصمام خثاري رئوي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة أو عملية مرضية",
+          "meaningEn": "abnormal condition or process"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الخثار الوريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebectasia",
+    "term": "Phlebectasia",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˌfleb.ekˈteɪ.ʒə/",
+    "definitionEn": "Abnormal dilation of a vein, which may be localized or associated with venous hypertension.",
+    "definitionAr": "توسع غير طبيعي في أحد الأوردة، وقد يكون موضعيًا أو مرتبطًا بفرط ضغط الدم الوريدي.",
+    "exampleEn": "Jugular phlebectasia appeared as a soft neck swelling during straining.",
+    "exampleAr": "ظهر التوسع الوريدي الوداجي على هيئة تورم لين في الرقبة أثناء الحزق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "phleb/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-ectasia",
+          "role": "suffix",
+          "meaningAr": "توسع أو تمدد",
+          "meaningEn": "dilation or expansion"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «توسع وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thromboembolism",
+    "term": "Thromboembolism",
+    "translation": "الانصمام الخثاري",
+    "pronunciation": "/ˌθrɑːm.boʊˈem.bə.lɪ.zəm/",
+    "definitionEn": "Vascular obstruction by a thrombus or a fragment of it that detaches, travels through the circulation, and lodges in another vessel.",
+    "definitionAr": "انسداد وعائي بخثرة أو جزء منفصل منها ينتقل عبر الدورة الدموية ويستقر في وعاء آخر.",
+    "exampleEn": "Venous thromboembolism includes deep-vein thrombosis and pulmonary embolism.",
+    "exampleAr": "يشمل الانصمام الخثاري الوريدي الخثار الوريدي العميق والصمة الرئوية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة دموية",
+          "meaningEn": "blood clot"
+        },
+        {
+          "affix": "embol/o",
+          "role": "combining-form",
+          "meaningAr": "صمّة أو مادة تنتقل لتسد وعاءً",
+          "meaningEn": "embolus or transported obstructing material"
+        },
+        {
+          "affix": "-ism",
+          "role": "suffix",
+          "meaningAr": "حالة أو عملية",
+          "meaningEn": "condition or process"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الانصمام الخثاري» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombophilia",
+    "term": "Thrombophilia",
+    "translation": "فرط القابلية للتخثر",
+    "pronunciation": "/ˌθrɑːm.boʊˈfɪl.i.ə/",
+    "definitionEn": "An inherited or acquired predisposition to develop venous or arterial thrombosis because of abnormalities in coagulation or its regulation.",
+    "definitionAr": "استعداد وراثي أو مكتسب لحدوث الخثار الوريدي أو الشرياني بسبب اضطرابات في التخثر أو تنظيمه.",
+    "exampleEn": "The patient underwent thrombophilia testing after recurrent unprovoked venous thrombosis.",
+    "exampleAr": "خضع المريض لفحوص فرط القابلية للتخثر بعد تكرر الخثار الوريدي دون سبب واضح.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-philia",
+          "role": "suffix",
+          "meaningAr": "ميل أو قابلية زائدة",
+          "meaningEn": "tendency or affinity"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط القابلية للتخثر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombogenic",
+    "term": "Thrombogenic",
+    "translation": "مُحفِّز لتكوّن الخثرات",
+    "pronunciation": "/ˌθrɑːm.boʊˈdʒen.ɪk/",
+    "definitionEn": "Promoting or capable of promoting thrombus formation, as may occur with endothelial injury or certain foreign surfaces.",
+    "definitionAr": "يحفز تكوّن الخثرات أو يمتلك قابلية لإحداثها، كما يحدث مع أذية البطانة الوعائية أو بعض الأسطح الغريبة.",
+    "exampleEn": "An exposed collagen surface is thrombogenic because it promotes platelet adhesion.",
+    "exampleAr": "يُعد سطح الكولاجين المكشوف محفزًا للتخثر لأنه يعزز التصاق الصفيحات.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-genic",
+          "role": "suffix",
+          "meaningAr": "مُحدِث أو مُنتِج",
+          "meaningEn": "producing or causing"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «مُحفِّز لتكوّن الخثرات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombocytosis",
+    "term": "Thrombocytosis",
+    "translation": "كثرة الصفيحات",
+    "pronunciation": "/ˌθrɑːm.boʊ.saɪˈtoʊ.sɪs/",
+    "definitionEn": "An increased platelet count in the blood; it may be reactive or due to a clonal myeloproliferative disorder.",
+    "definitionAr": "زيادة عدد الصفيحات الدموية، وقد تكون تفاعلية أو ناجمة عن اضطراب تكاثري نقوي نسلي.",
+    "exampleEn": "Marked thrombocytosis was detected on the complete blood count.",
+    "exampleAr": "كُشفت كثرة صفيحات واضحة في تعداد الدم الكامل.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة أو صفيحة دموية في أصل التسمية",
+          "meaningEn": "clot or platelet in the term's formation"
+        },
+        {
+          "affix": "cyt/o",
+          "role": "combining-form",
+          "meaningAr": "خلية",
+          "meaningEn": "cell"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة أو زيادة مرضية",
+          "meaningEn": "condition or abnormal state"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «كثرة الصفيحات» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-thrombolysis",
+    "term": "Thrombolysis",
+    "translation": "تحلل الخثرة",
+    "pronunciation": "/θrɑːmˈbɑː.lə.sɪs/",
+    "definitionEn": "Dissolution of a thrombus through enzymatic fibrin degradation, occurring naturally or induced therapeutically with fibrinolytic drugs.",
+    "definitionAr": "تفكك الخثرة نتيجة التحلل الإنزيمي للفيبرين، وقد يحدث طبيعيًا أو يُستحث علاجيًا بالأدوية الحالّة للخثرة.",
+    "exampleEn": "Early thrombolysis can restore coronary blood flow in selected patients with acute myocardial infarction.",
+    "exampleAr": "قد يعيد التحلل المبكر للخثرة جريان الدم التاجي لدى مرضى مختارين مصابين باحتشاء عضلة القلب الحاد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "thromb/o",
+          "role": "combining-form",
+          "meaningAr": "خثرة",
+          "meaningEn": "clot"
+        },
+        {
+          "affix": "-lysis",
+          "role": "suffix",
+          "meaningAr": "تحلل أو تفكيك",
+          "meaningEn": "breakdown or dissolution"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تحلل الخثرة» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-fibrinolysis",
+    "term": "Fibrinolysis",
+    "translation": "انحلال الفيبرين",
+    "pronunciation": "/ˌfaɪ.brɪˈnɑː.lə.sɪs/",
+    "definitionEn": "The enzymatic breakdown of fibrin by plasmin, an essential process for removing clots and restoring vessel patency.",
+    "definitionAr": "التحلل الإنزيمي للفيبرين بواسطة البلازمين، وهي عملية أساسية لإزالة الخثرات واستعادة انفتاح الأوعية.",
+    "exampleEn": "Impaired fibrinolysis may contribute to persistent intravascular thrombosis.",
+    "exampleAr": "قد يسهم ضعف انحلال الفيبرين في استمرار الخثار داخل الأوعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "fibrin/o",
+          "role": "combining-form",
+          "meaningAr": "فيبرين، وهو البروتين الليفي المكوّن للشبكة الخثرية",
+          "meaningEn": "fibrin, the fibrous protein forming the clot mesh"
+        },
+        {
+          "affix": "-lysis",
+          "role": "suffix",
+          "meaningAr": "تحلل أو تفكيك",
+          "meaningEn": "breakdown or dissolution"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «انحلال الفيبرين» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypercoagulability",
+    "term": "Hypercoagulability",
+    "translation": "فرط قابلية الدم للتخثر",
+    "pronunciation": "/ˌhaɪ.pɚ.koʊˌæɡ.jə.ləˈbɪl.ə.ti/",
+    "definitionEn": "A state in which blood has an increased tendency to coagulate, raising the risk of thrombosis.",
+    "definitionAr": "حالة تزداد فيها قابلية الدم للتخثر، مما يرفع خطر حدوث الخثار.",
+    "exampleEn": "Cancer-associated hypercoagulability increases the risk of venous thromboembolism.",
+    "exampleAr": "يزيد فرط التخثر المرتبط بالسرطان خطر الانصمام الخثاري الوريدي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "coagul/o",
+          "role": "combining-form",
+          "meaningAr": "تخثر أو تجلط",
+          "meaningEn": "coagulation or clotting"
+        },
+        {
+          "affix": "-ability",
+          "role": "suffix",
+          "meaningAr": "قابلية أو قدرة",
+          "meaningEn": "capacity or tendency"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط قابلية الدم للتخثر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-coagulopathy",
+    "term": "Coagulopathy",
+    "translation": "اعتلال التخثر",
+    "pronunciation": "/koʊˌæɡ.jəˈlɑː.pə.θi/",
+    "definitionEn": "A disorder of hemostasis caused by abnormalities in coagulation factors, platelets, or regulatory pathways, resulting in bleeding or thrombosis.",
+    "definitionAr": "اضطراب في الإرقاء ينجم عن خلل في عوامل التخثر أو الصفيحات أو مسارات التنظيم، وقد يؤدي إلى النزف أو الخثار.",
+    "exampleEn": "Severe liver disease can cause coagulopathy through reduced synthesis of clotting factors.",
+    "exampleAr": "قد يسبب مرض الكبد الشديد اعتلال التخثر بسبب انخفاض تصنيع عوامل التخثر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "coagul/o",
+          "role": "combining-form",
+          "meaningAr": "تخثر أو تجلط",
+          "meaningEn": "coagulation or clotting"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال التخثر» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypercholesterolemia",
+    "term": "Hypercholesterolemia",
+    "translation": "فرط كوليسترول الدم",
+    "pronunciation": "/ˌhaɪ.pɚ.kəˌles.tə.roʊˈliː.mi.ə/",
+    "definitionEn": "An elevated concentration of cholesterol in the blood, particularly LDL cholesterol when discussing atherosclerotic cardiovascular risk.",
+    "definitionAr": "ارتفاع تركيز الكوليسترول في الدم، ولا سيما كوليسترول LDL عند تقييم خطر التصلب العصيدي القلبي الوعائي.",
+    "exampleEn": "Familial hypercholesterolemia can cause premature coronary artery disease.",
+    "exampleAr": "قد يؤدي فرط كوليسترول الدم العائلي إلى مرض مبكر في الشرايين التاجية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "cholesterol",
+          "role": "root",
+          "meaningAr": "كوليسترول",
+          "meaningEn": "cholesterol"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط كوليسترول الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hypertriglyceridemia",
+    "term": "Hypertriglyceridemia",
+    "translation": "فرط ثلاثي الغليسريد في الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌtraɪ.ɡlɪˌsə.rɪˈdiː.mi.ə/",
+    "definitionEn": "An elevated concentration of triglycerides in the blood, associated with metabolic and cardiovascular risk and, at very high levels, pancreatitis.",
+    "definitionAr": "ارتفاع تركيز ثلاثي الغليسريد في الدم، ويرتبط بمخاطر استقلابية وقلبية وعائية، وقد يسبب التهاب البنكرياس عند الارتفاع الشديد.",
+    "exampleEn": "Severe hypertriglyceridemia was associated with acute pancreatitis.",
+    "exampleAr": "ارتبط فرط ثلاثي الغليسريد الشديد بالتهاب البنكرياس الحاد.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "triglyceride",
+          "role": "root",
+          "meaningAr": "ثلاثي الغليسريد",
+          "meaningEn": "triglyceride"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط ثلاثي الغليسريد في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyperhomocysteinemia",
+    "term": "Hyperhomocysteinemia",
+    "translation": "فرط الهوموسيستئين في الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌhoʊ.moʊˌsɪs.tiˈiː.niː.mi.ə/",
+    "definitionEn": "An elevated plasma homocysteine concentration; it may be associated with nutritional deficiencies, genetic disorders, and vascular risk.",
+    "definitionAr": "ارتفاع تركيز الهوموسيستئين في البلازما، وقد يرتبط بنقص بعض العناصر الغذائية أو اضطرابات وراثية أو مخاطر وعائية.",
+    "exampleEn": "Vitamin B12 deficiency can contribute to hyperhomocysteinemia.",
+    "exampleAr": "قد يسهم نقص فيتامين B12 في فرط الهوموسيستئين في الدم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyper-",
+          "role": "prefix",
+          "meaningAr": "زيادة أو فرط",
+          "meaningEn": "excessive or above normal"
+        },
+        {
+          "affix": "homocysteine",
+          "role": "root",
+          "meaningAr": "هوموسيستئين",
+          "meaningEn": "homocysteine"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «فرط الهوموسيستئين في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-dyslipoproteinemia",
+    "term": "Dyslipoproteinemia",
+    "translation": "اضطراب البروتينات الدهنية في الدم",
+    "pronunciation": "/ˌdɪsˌlɪp.oʊˌproʊ.tiˈniː.mi.ə/",
+    "definitionEn": "An abnormal concentration or composition of plasma lipoproteins, affecting the transport of cholesterol and triglycerides.",
+    "definitionAr": "خلل في تركيز البروتينات الدهنية في البلازما أو تركيبها، مما يؤثر في نقل الكوليسترول وثلاثي الغليسريد.",
+    "exampleEn": "Dyslipoproteinemia can accelerate atherosclerotic plaque development.",
+    "exampleAr": "قد يسرّع اضطراب البروتينات الدهنية تطور اللويحات العصيدية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "dys-",
+          "role": "prefix",
+          "meaningAr": "خلل أو اضطراب",
+          "meaningEn": "abnormal or impaired"
+        },
+        {
+          "affix": "lipo-",
+          "role": "combining-form",
+          "meaningAr": "دهن أو شحم",
+          "meaningEn": "fat"
+        },
+        {
+          "affix": "protein/o",
+          "role": "combining-form",
+          "meaningAr": "بروتين",
+          "meaningEn": "protein"
+        },
+        {
+          "affix": "-emia",
+          "role": "suffix",
+          "meaningAr": "حالة متعلقة بالدم",
+          "meaningEn": "blood condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اضطراب البروتينات الدهنية في الدم» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasculopathy",
+    "term": "Vasculopathy",
+    "translation": "اعتلال الأوعية الدموية",
+    "pronunciation": "/ˌvæs.kjəˈlɑː.pə.θi/",
+    "definitionEn": "A general term for disease of blood vessels, encompassing structural and functional vascular abnormalities.",
+    "definitionAr": "مصطلح عام لمرض الأوعية الدموية، ويشمل الاضطرابات البنيوية والوظيفية فيها.",
+    "exampleEn": "Diabetic vasculopathy contributes to retinopathy and nephropathy.",
+    "exampleAr": "يسهم اعتلال الأوعية السكري في حدوث اعتلال الشبكية واعتلال الكلى.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vascul/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasculogenesis",
+    "term": "Vasculogenesis",
+    "translation": "تكوّن الأوعية الدموية",
+    "pronunciation": "/ˌvæs.kjə.loʊˈdʒen.ə.sɪs/",
+    "definitionEn": "The formation of new blood vessels from endothelial precursor cells, particularly during embryonic development.",
+    "definitionAr": "تشكّل أوعية دموية جديدة من الخلايا السلفية البطانية، ولا سيما أثناء التطور الجنيني.",
+    "exampleEn": "Vasculogenesis establishes the primitive vascular network in the embryo.",
+    "exampleAr": "يؤسس تكوّن الأوعية الشبكة الوعائية البدائية في الجنين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vascul/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-genesis",
+          "role": "suffix",
+          "meaningAr": "تكوّن أو نشوء",
+          "meaningEn": "formation or origin"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تكوّن الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-vasculonecrosis",
+    "term": "Vasculonecrosis",
+    "translation": "نخر الأوعية الدموية",
+    "pronunciation": "/ˌvæs.kjə.loʊ.nəˈkroʊ.sɪs/",
+    "definitionEn": "Necrotic destruction of vascular tissue or vessel walls, potentially leading to hemorrhage, thrombosis, or ischemia.",
+    "definitionAr": "تخرب نخري يصيب النسيج الوعائي أو جدران الأوعية، وقد يؤدي إلى النزف أو الخثار أو نقص التروية.",
+    "exampleEn": "Severe inflammatory injury may produce vasculonecrosis.",
+    "exampleAr": "قد تسبب الأذية الالتهابية الشديدة نخرًا في الأوعية الدموية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "vascul/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "necr/o",
+          "role": "combining-form",
+          "meaningAr": "موت أو نخر",
+          "meaningEn": "death or necrosis"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «نخر الأوعية الدموية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiopathy",
+    "term": "Cardiopathy",
+    "translation": "اعتلال القلب",
+    "pronunciation": "/ˌkɑːr.diˈɑː.pə.θi/",
+    "definitionEn": "A general term for any disease or pathological condition affecting the heart.",
+    "definitionAr": "مصطلح عام يشير إلى أي مرض أو حالة مرضية تصيب القلب.",
+    "exampleEn": "The report described an underlying cardiopathy associated with chronic heart failure.",
+    "exampleAr": "وصف التقرير اعتلالًا قلبيًا كامنًا مرتبطًا بفشل القلب المزمن.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-pathy",
+          "role": "suffix",
+          "meaningAr": "مرض أو اعتلال",
+          "meaningEn": "disease or disorder"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «اعتلال القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-carditis",
+    "term": "Carditis",
+    "translation": "التهاب القلب",
+    "pronunciation": "/kɑːrˈdaɪ.tɪs/",
+    "definitionEn": "Inflammation of the heart; depending on the context, it may involve the myocardium, endocardium, pericardium, or multiple layers.",
+    "definitionAr": "التهاب يصيب القلب، وقد يشمل عضلة القلب أو الشغاف أو التامور أو عدة طبقات بحسب السياق.",
+    "exampleEn": "Rheumatic carditis may involve the endocardium, myocardium, and pericardium.",
+    "exampleAr": "قد يشمل التهاب القلب الروماتيزمي الشغاف وعضلة القلب والتامور.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi",
+          "role": "root",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "-itis",
+          "role": "suffix",
+          "meaningAr": "التهاب",
+          "meaningEn": "inflammation"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «التهاب القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiotoxicity",
+    "term": "Cardiotoxicity",
+    "translation": "السمية القلبية",
+    "pronunciation": "/ˌkɑːr.di.oʊ.tɑːkˈsɪs.ə.ti/",
+    "definitionEn": "Toxic injury or functional damage to the heart caused by a drug, chemical, radiation, or other harmful exposure.",
+    "definitionAr": "أذية سامة أو ضرر وظيفي يصيب القلب بسبب دواء أو مادة كيميائية أو إشعاع أو تعرض ضار آخر.",
+    "exampleEn": "Anthracycline-associated cardiotoxicity may lead to reduced left ventricular function.",
+    "exampleAr": "قد تؤدي السمية القلبية المرتبطة بالأنثراسيكلينات إلى انخفاض وظيفة البطين الأيسر.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "toxic",
+          "role": "root",
+          "meaningAr": "سام أو مسبب للأذية",
+          "meaningEn": "poisonous or harmful"
+        },
+        {
+          "affix": "-ity",
+          "role": "suffix",
+          "meaningAr": "حالة أو صفة",
+          "meaningEn": "state or quality"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «السمية القلبية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-cardiosclerosis",
+    "term": "Cardiosclerosis",
+    "translation": "تصلب نسيج القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "Fibrotic thickening or hardening of cardiac tissue, often reflecting chronic myocardial injury and replacement fibrosis.",
+    "definitionAr": "تثخن أو تصلب ليفي في نسيج القلب، وغالبًا ما يعكس أذية مزمنة لعضلة القلب وتليفًا تعويضيًا.",
+    "exampleEn": "Histology revealed areas of cardiosclerosis after chronic ischemic injury.",
+    "exampleAr": "كشف الفحص النسيجي مناطق من التصلب الليفي القلبي بعد أذية إقفارية مزمنة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "cardi/o",
+          "role": "combining-form",
+          "meaningAr": "القلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "scler/o",
+          "role": "combining-form",
+          "meaningAr": "صلب أو متصلب",
+          "meaningEn": "hard"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تصلب نسيج القلب» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-fibrillation",
+    "term": "Fibrillation",
+    "translation": "الرجفان",
+    "pronunciation": "/ˌfɪb.rɪˈleɪ.ʃən/",
+    "definitionEn": "Rapid, disorganized activation of muscle fibers; in the heart it describes chaotic atrial or ventricular electrical activity.",
+    "definitionAr": "تنشيط سريع وغير منظم للألياف العضلية؛ وفي القلب يصف نشاطًا كهربائيًا فوضويًا أذينيًا أو بطينيًا.",
+    "exampleEn": "Ventricular fibrillation causes ineffective cardiac output and requires immediate defibrillation.",
+    "exampleAr": "يسبب الرجفان البطيني انعدام النتاج القلبي الفعال ويتطلب إزالة الرجفان فورًا.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "fibrill",
+          "role": "root",
+          "meaningAr": "ألياف دقيقة أو حزم ليفية",
+          "meaningEn": "small fibers"
+        },
+        {
+          "affix": "-ation",
+          "role": "suffix",
+          "meaningAr": "عملية أو حالة",
+          "meaningEn": "process or state"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «الرجفان» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-myxoma",
+    "term": "Myxoma",
+    "translation": "ورم مخاطي",
+    "pronunciation": "/maɪkˈsoʊ.mə/",
+    "definitionEn": "A benign mesenchymal tumor composed of myxoid stroma; the cardiac myxoma most commonly arises in the left atrium.",
+    "definitionAr": "ورم ميزنشيمي حميد يتكون من سدى مخاطية؛ وينشأ الورم المخاطي القلبي غالبًا في الأذين الأيسر.",
+    "exampleEn": "A left atrial myxoma may obstruct mitral inflow and cause positional symptoms.",
+    "exampleAr": "قد يعيق الورم المخاطي في الأذين الأيسر تدفق الدم عبر الصمام التاجي ويسبب أعراضًا وضعية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "myx/o",
+          "role": "combining-form",
+          "meaningAr": "مخاط أو مادة مخاطية",
+          "meaningEn": "mucus or mucoid substance"
+        },
+        {
+          "affix": "-oma",
+          "role": "suffix",
+          "meaningAr": "ورم أو كتلة",
+          "meaningEn": "tumor or mass"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ورم مخاطي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemangioma",
+    "term": "Hemangioma",
+    "translation": "ورم وعائي دموي",
+    "pronunciation": "/ˌhiː.mæn.dʒiˈoʊ.mə/",
+    "definitionEn": "A usually benign vascular tumor or vascular malformation characterized by proliferation or abnormal arrangement of blood vessels.",
+    "definitionAr": "ورم وعائي غالبًا حميد أو تشوه وعائي يتميز بتكاثر الأوعية الدموية أو ترتيبها بصورة غير طبيعية.",
+    "exampleEn": "The cutaneous hemangioma was observed for changes in size and appearance.",
+    "exampleAr": "تمت مراقبة الورم الوعائي الدموي الجلدي لرصد تغير حجمه ومظهره.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hem/o",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "-oma",
+          "role": "suffix",
+          "meaningAr": "ورم أو كتلة",
+          "meaningEn": "tumor or mass"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ورم وعائي دموي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hemangiosarcoma",
+    "term": "Hemangiosarcoma",
+    "translation": "ساركوما وعائية دموية",
+    "pronunciation": "/ˌhiː.mæn.dʒi.oʊ.sɑːrˈkoʊ.mə/",
+    "definitionEn": "A malignant endothelial tumor showing vascular differentiation; it is rare but highly aggressive.",
+    "definitionAr": "ورم خبيث من الخلايا البطانية يُظهر تمايزًا وعائيًا، وهو نادر لكنه شديد العدوانية.",
+    "exampleEn": "The pathology specimen confirmed hemangiosarcoma with malignant endothelial cells.",
+    "exampleAr": "أكدت عينة علم الأمراض وجود ساركوما وعائية دموية بخلايا بطانية خبيثة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hem/o",
+          "role": "combining-form",
+          "meaningAr": "دم",
+          "meaningEn": "blood"
+        },
+        {
+          "affix": "angi/o",
+          "role": "combining-form",
+          "meaningAr": "وعاء دموي",
+          "meaningEn": "blood vessel"
+        },
+        {
+          "affix": "sarc/o",
+          "role": "combining-form",
+          "meaningAr": "نسيج ضام أو لحمي",
+          "meaningEn": "fleshy connective tissue"
+        },
+        {
+          "affix": "-oma",
+          "role": "suffix",
+          "meaningAr": "ورم أو كتلة",
+          "meaningEn": "tumor or mass"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ساركوما وعائية دموية» في السياق الطبي."
+    }
   }
 ]
