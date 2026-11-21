@@ -9,9 +9,9 @@
 الحقول:
 - `id`: معرف ثابت وفريد.
 - `term`: اللفظ الإنجليزي (كلمة واحدة أو كلمتان فقط).
+- `definitionEn` و`definitionAr`: شرح موجز باللغتين، ويظهر قبل الترجمة.
 - `translation`: المقابل العربي الصحيح لغوياً وطبياً حسب المعنى.
 - `pronunciation`: النطق باستخدام IPA.
-- `definitionEn` و`definitionAr`: شرح موجز باللغتين.
 - `exampleEn` و`exampleAr`: مثال واحد باللغتين.
 - `createdAt` و`updatedAt`: حقلا تدقيق اختياريان.
 
