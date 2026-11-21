@@ -69,14 +69,27 @@ for (let i = 0; i < terms.length; i++) {
         typeof part.affix === 'string' && part.affix.trim() &&
         typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
         typeof part.meaningEn === 'string' && part.meaningEn.trim();
-      if (!validPart(m.root)) errors.push(`${label}: morphology.root requires affix, meaningAr and meaningEn`);
-      for (const key of ['prefix', 'suffix']) {
+      const validPart = (part) => part && typeof part === 'object' &&
+        typeof part.affix === 'string' && part.affix.trim() &&
+        typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
+        typeof part.meaningEn === 'string' && part.meaningEn.trim();
+      if (m.parts !== undefined) {
+        if (!Array.isArray(m.parts) || m.parts.length === 0) errors.push(`${label}: morphology.parts must be a non-empty array`);
+        else m.parts.forEach((part, partIndex) => {
+          if (!validPart(part) || !['prefix','root','suffix','combining-form'].includes(part.role)) {
+            errors.push(`${label}: invalid morphology.parts[${partIndex}]`);
+          }
+        });
+      } else if (!validPart(m.root)) {
+        errors.push(`${label}: morphology requires a valid parts array or legacy root`);
+      }
+      for (const key of ['prefix', 'root', 'suffix']) {
         if (m[key] !== undefined && !validPart(m[key])) errors.push(`${label}: morphology.${key} requires affix, meaningAr and meaningEn`);
       }
       if (typeof m.literalSynthesisAr !== 'string' || !m.literalSynthesisAr.trim()) {
         errors.push(`${label}: morphology.literalSynthesisAr is required`);
       }
-      const allowedMorph = new Set(['prefix', 'root', 'suffix', 'literalSynthesisAr']);
+      const allowedMorph = new Set(['parts','prefix', 'root', 'suffix', 'literalSynthesisAr']);
       for (const key of Object.keys(m)) if (!allowedMorph.has(key)) errors.push(`${label}: unsupported morphology field ${key}`);
     }
   }
