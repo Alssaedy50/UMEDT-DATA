@@ -13974,5 +13974,145 @@
       ],
       "literalSynthesisAr": "حالة زيادة سرعة ضربات القلب."
     }
+  },
+  {
+    "id": "term-subendocardial",
+    "term": "Subendocardial",
+    "translation": "تحت شغافي",
+    "pronunciation": "/ˌsʌb.en.doʊˈkɑːr.di.əl/",
+    "definitionEn": "Located beneath the endocardium; the subendocardial myocardium is particularly vulnerable to ischemia.",
+    "definitionAr": "يقع أسفل شغاف القلب؛ وتكون المنطقة العضلية تحت الشغافية معرضة بشكل خاص لنقص التروية.",
+    "exampleEn": "Subendocardial ischemia produced ST-segment depression.",
+    "exampleAr": "أدى نقص التروية تحت الشغافية إلى انخفاض مقطع ST."
+  },
+  {
+    "id": "term-transmural",
+    "term": "Transmural",
+    "translation": "عابر لكامل الجدار",
+    "pronunciation": "/trænzˈmjʊr.əl/",
+    "definitionEn": "Extending through the full thickness of a tissue or organ wall; a transmural myocardial infarction involves the full thickness of the affected myocardial region.",
+    "definitionAr": "يمتد عبر كامل سماكة النسيج أو جدار العضو؛ ويشمل الاحتشاء العضلي القلبي العابر للجدار كامل سماكة المنطقة المصابة.",
+    "exampleEn": "The infarction showed a transmural pattern.",
+    "exampleAr": "أظهر الاحتشاء نمطاً عابراً لكامل سماكة الجدار."
+  },
+  {
+    "id": "term-nocturnal",
+    "term": "Nocturnal",
+    "translation": "ليلي",
+    "pronunciation": "/nɑːkˈtɝː.nəl/",
+    "definitionEn": "Occurring or becoming more prominent during the night; in cardiovascular medicine, nocturnal symptoms may reflect sleep-related physiological changes.",
+    "definitionAr": "يحدث أو يصبح أكثر وضوحاً أثناء الليل؛ وفي طب القلب قد تعكس الأعراض الليلية تغيرات فسيولوجية مرتبطة بالنوم.",
+    "exampleEn": "Nocturnal angina prompted further cardiac evaluation.",
+    "exampleAr": "استدعت الذبحة الصدرية الليلية تقييماً قلبياً إضافياً."
+  },
+  {
+    "id": "term-orthopnea",
+    "term": "Orthopnea",
+    "translation": "ضيق النفس الاضطجاعي",
+    "pronunciation": "ضيق نفس يحدث عند الاستلقاء بشكل مسطح ويتحسن بالجلوس أو الوقوف، ويرتبط غالباً بفشل القلب الأيسر.\n\nمكونات الكلمة: orth/o = upright or straight; -pnea = breathing. والمعنى السريري المركب: breathlessness relieved by sitting upright.",
+    "definitionEn": "Dyspnea that occurs when lying flat and improves on sitting or standing, often associated with left-sided heart failure.",
+    "definitionAr": "ضيق نفس يحدث عند الاستلقاء بشكل مسطح ويتحسن بالجلوس أو الوقوف، ويرتبط غالباً بفشل القلب الأيسر.\n\nWord components: orth/o = upright or straight; -pnea = breathing. Combined clinical meaning: breathlessness relieved by sitting upright.",
+    "exampleEn": "/ɔːrˈθɑːp.ni.ə/",
+    "exampleAr": "The patient used three pillows because of orthopnea."
+  },
+  {
+    "id": "term-flutter",
+    "term": "Flutter",
+    "translation": "رفرفة",
+    "pronunciation": "/ˈflʌt.ər/",
+    "definitionEn": "A rapid but relatively organized cardiac rhythm, classically seen in atrial flutter, with repetitive electrical re-entry activity.",
+    "definitionAr": "نظم قلبي سريع لكنه منظم نسبياً، ويُشاهد تقليدياً في الرفرفة الأذينية نتيجة نشاط كهربائي دائري متكرر.",
+    "exampleEn": "Atrial flutter was identified on the electrocardiogram.",
+    "exampleAr": "كُشفت الرفرفة الأذينية في تخطيط كهربائية القلب."
+  },
+  {
+    "id": "term-vegetation",
+    "term": "Vegetation",
+    "translation": "نابتة",
+    "pronunciation": "/ˌvedʒ.əˈteɪ.ʃən/",
+    "definitionEn": "An infected or sterile mass of platelets, fibrin, inflammatory cells, and microorganisms that may form on a cardiac valve in endocarditis.",
+    "definitionAr": "كتلة إنتانية أو عقيمة تتكون من الصفائح والفيبرين والخلايا الالتهابية والكائنات الدقيقة، وقد تتشكل على صمام القلب في التهاب الشغاف.",
+    "exampleEn": "Echocardiography demonstrated a mobile mitral vegetation.",
+    "exampleAr": "أظهر تخطيط صدى القلب نابتة متحركة على الصمام التاجي."
+  },
+  {
+    "id": "term-rhabdomyoma",
+    "term": "Rhabdomyoma",
+    "translation": "ورم عضلي مخطط",
+    "pronunciation": "/ˌræb.doʊ.maɪˈoʊ.mə/",
+    "definitionEn": "A benign tumor of striated muscle differentiation; cardiac rhabdomyoma is the most common primary cardiac tumor in infants and is associated with tuberous sclerosis.",
+    "definitionAr": "ورم حميد يُظهر تمايزاً عضلياً مخططاً؛ ويُعد الورم العضلي المخطط القلبي أكثر الأورام القلبية الأولية شيوعاً لدى الرضع ويرتبط بالتصلب الحدبي.",
+    "exampleEn": "Multiple cardiac rhabdomyomas were detected in the infant.",
+    "exampleAr": "كُشفت أورام عضلية مخططة قلبية متعددة لدى الرضيع."
+  },
+  {
+    "id": "term-fibroma",
+    "term": "Fibroma",
+    "translation": "ورم ليفي",
+    "pronunciation": "/faɪˈbroʊ.mə/",
+    "definitionEn": "A benign neoplasm composed predominantly of fibroblasts and collagen; cardiac fibromas usually arise within the ventricular myocardium.",
+    "definitionAr": "ورم حميد يتكون أساساً من الخلايا الليفية والكولاجين؛ وتنشأ الأورام الليفية القلبية عادة داخل عضلة البطين.",
+    "exampleEn": "The ventricular mass was consistent with a cardiac fibroma.",
+    "exampleAr": "كانت الكتلة البطينية متوافقة مع ورم ليفي قلبي."
+  },
+  {
+    "id": "term-lipoma",
+    "term": "Lipoma",
+    "translation": "ورم شحمي",
+    "pronunciation": "/lɪˈpoʊ.mə/",
+    "definitionEn": "A benign tumor composed of mature adipocytes, which may rarely arise within or around the heart.",
+    "definitionAr": "ورم حميد يتكون من خلايا شحمية ناضجة، وقد ينشأ نادراً داخل القلب أو حوله.",
+    "exampleEn": "Imaging suggested an intramyocardial lipoma.",
+    "exampleAr": "أشار التصوير إلى ورم شحمي داخل عضلة القلب."
+  },
+  {
+    "id": "term-hydropericardium",
+    "term": "Hydropericardium",
+    "translation": "موه التامور",
+    "pronunciation": "تجمع غير طبيعي لسائل مصلي صافٍ في جوف التامور.\n\nمكونات الكلمة: hydro- = water or fluid; peri- = around; cardi = heart. والمعنى المركب: fluid accumulation in the sac surrounding the heart.",
+    "definitionEn": "Abnormal accumulation of clear serous fluid in the pericardial cavity.",
+    "definitionAr": "تجمع غير طبيعي لسائل مصلي صافٍ في جوف التامور.\n\nWord components: hydro- = water or fluid; peri- = around; cardi = heart. Combined meaning: fluid accumulation in the sac surrounding the heart.",
+    "exampleEn": "/ˌhaɪ.droʊˈper.ɪˌkɑːr.di.əm/",
+    "exampleAr": "Hydropericardium was detected on echocardiography."
+  },
+  {
+    "id": "term-tamponade",
+    "term": "Tamponade",
+    "translation": "اندحاس",
+    "pronunciation": "/ˌtæm.pəˈneɪd/",
+    "definitionEn": "Compression of the heart by fluid, blood, or gas under pressure in the pericardial cavity, impairing diastolic filling and reducing cardiac output.",
+    "definitionAr": "انضغاط القلب بسبب سائل أو دم أو غاز تحت ضغط داخل جوف التامور، مما يعيق الامتلاء الانبساطي ويقلل النتاج القلبي.",
+    "exampleEn": "Urgent drainage was required for cardiac tamponade.",
+    "exampleAr": "كان التصريف العاجل ضرورياً لعلاج اندحاس القلب."
+  },
+  {
+    "id": "term-hemochromatosis",
+    "term": "Hemochromatosis",
+    "translation": "داء ترسّب الأصبغة الدموية",
+    "pronunciation": "اضطراب يتميز بتراكم مفرط للحديد في الأنسجة؛ وقد يسبب ترسب الحديد في عضلة القلب اعتلالاً عضلياً توسعياً أو تقييدياً واضطرابات في التوصيل.\n\nمكونات الكلمة: hemo- = blood; chrom/o = color; -osis = condition. الاسم التاريخي يشير إلى تصبغ الأنسجة، بينما يُعرّف المرض بفرط الحديد.",
+    "definitionEn": "A disorder of excessive iron accumulation in tissues; myocardial iron deposition can cause dilated or restrictive cardiomyopathy and conduction abnormalities.",
+    "definitionAr": "اضطراب يتميز بتراكم مفرط للحديد في الأنسجة؛ وقد يسبب ترسب الحديد في عضلة القلب اعتلالاً عضلياً توسعياً أو تقييدياً واضطرابات في التوصيل.\n\nWord components: hemo- = blood; chrom/o = color; -osis = condition. The historical name refers to tissue pigmentation, while the disease is defined by iron overload.",
+    "exampleEn": "/ˌhiː.moʊˌkroʊ.məˈtoʊ.sɪs/",
+    "exampleAr": "Myocardial iron overload was suspected in hemochromatosis."
+  },
+  {
+    "id": "term-sarcoidosis",
+    "term": "Sarcoidosis",
+    "translation": "الساركويد",
+    "pronunciation": "/ˌsɑːr.kɔɪˈdoʊ.sɪs/",
+    "definitionEn": "A multisystem granulomatous disease of unknown cause that can involve the myocardium and produce conduction block, arrhythmias, or ventricular dysfunction.",
+    "definitionAr": "مرض حبيبومي متعدد الأجهزة مجهول السبب، وقد يصيب عضلة القلب ويسبب حصار التوصيل أو اضطرابات النظم أو خلل وظيفة البطين.",
+    "exampleEn": "Cardiac sarcoidosis was suspected because of atrioventricular block.",
+    "exampleAr": "اشتُبه بالساركويد القلبي بسبب وجود حصار أذيني بطيني."
+  },
+  {
+    "id": "term-amyloid",
+    "term": "Amyloid",
+    "translation": "أميلويد",
+    "pronunciation": "/ˈæm.ɪ.lɔɪd/",
+    "definitionEn": "A misfolded protein material that forms insoluble fibrils and accumulates extracellularly in amyloidosis.",
+    "definitionAr": "مادة بروتينية سيئة الطي تكوّن لُييفات غير ذائبة وتتراكم خارج الخلايا في الداء النشواني.",
+    "exampleEn": "Amyloid deposits were identified in the myocardial interstitium.",
+    "exampleAr": "كُشفت ترسبات الأميلويد في النسيج الخلالي لعضلة القلب."
   }
 ]
