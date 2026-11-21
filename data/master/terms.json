@@ -11560,5 +11560,995 @@
     "definitionAr": "أذية سامة تصيب الخلايا البطانية وتضعف وظيفة الحاجز الوعائي ووظائف التنظيم.",
     "exampleEn": "Endotheliotoxicity was evaluated in cultured endothelial cells.",
     "exampleAr": "قُيّمت سمية البطانة الوعائية في خلايا بطانية مزروعة."
+  },
+  {
+    "id": "term-atherosclerotic",
+    "term": "Atherosclerotic",
+    "translation": "عصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.skləˈrɑː.tɪk/",
+    "definitionEn": "Relating to atherosclerosis or characterized by atheromatous plaque formation in arterial walls.",
+    "definitionAr": "متعلق بالتصلب العصيدي أو متصف بتكوّن اللويحات العصيدية في جدران الشرايين.",
+    "exampleEn": "Atherosclerotic disease affected multiple vascular territories.",
+    "exampleAr": "أصاب المرض العصيدي عدة مناطق وعائية."
+  },
+  {
+    "id": "term-atherothrombotic",
+    "term": "Atherothrombotic",
+    "translation": "خثاري عصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.θrɑːmˈbɑː.tɪk/",
+    "definitionEn": "Relating to thrombosis developing on an atherosclerotic plaque.",
+    "definitionAr": "متعلق بتكوّن خثرة فوق لويحة عصيدية.",
+    "exampleEn": "Atherothrombotic stroke followed carotid plaque rupture.",
+    "exampleAr": "حدثت سكتة خثرية عصيدية بعد تمزق اللويحة السباتية."
+  },
+  {
+    "id": "term-atheroprotection",
+    "term": "Atheroprotection",
+    "translation": "وقاية من التصلب العصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.prəˈtek.ʃən/",
+    "definitionEn": "Protection against atherosclerotic plaque development or progression; mainly used in research contexts.",
+    "definitionAr": "الحماية من نشوء اللويحات العصيدية أو تقدمها؛ ويستخدم المصطلح أساسًا في الأبحاث.",
+    "exampleEn": "The intervention showed atheroprotection in the experimental model.",
+    "exampleAr": "أظهر التدخل وقاية من التصلب العصيدي في النموذج التجريبي."
+  },
+  {
+    "id": "term-atheroprotective",
+    "term": "Atheroprotective",
+    "translation": "واقٍ من العصيدة",
+    "pronunciation": "/ˌæθ.ə.roʊ.prəˈtek.tɪv/",
+    "definitionEn": "Reducing atherosclerotic lesion formation or progression.",
+    "definitionAr": "يقلل تكوّن الآفات العصيدية أو تقدمها.",
+    "exampleEn": "HDL has several potentially atheroprotective functions.",
+    "exampleAr": "لـ HDL عدة وظائف محتملة واقية من العصيدة."
+  },
+  {
+    "id": "term-atheroembolic",
+    "term": "Atheroembolic",
+    "translation": "انصمامي عصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.emˈbɑː.lɪk/",
+    "definitionEn": "Caused by embolization of cholesterol crystals or plaque debris from an atherosclerotic lesion.",
+    "definitionAr": "ناجم عن انصمام بلورات الكوليسترول أو حطام اللويحة من آفة عصيدية.",
+    "exampleEn": "Atheroembolic renal disease followed aortic instrumentation.",
+    "exampleAr": "حدث مرض كلوي انصمامي عصيدي بعد إجراء على الأبهر."
+  },
+  {
+    "id": "term-arteriosclerotic",
+    "term": "Arteriosclerotic",
+    "translation": "متصلب شريانيًا",
+    "pronunciation": "/ɑːrˌtɪr.i.oʊ.skləˈrɑː.tɪk/",
+    "definitionEn": "Characterized by thickening and loss of elasticity of arterial walls.",
+    "definitionAr": "متصف بتثخن جدران الشرايين وفقدان مرونتها.",
+    "exampleEn": "Arteriosclerotic changes increased pulse-wave velocity.",
+    "exampleAr": "زادت التغيرات التصلبية الشريانية سرعة موجة النبض."
+  },
+  {
+    "id": "term-hyalinosis",
+    "term": "Hyalinosis",
+    "translation": "تنكس زجاجي",
+    "pronunciation": "/ˌhaɪ.ə.lɪˈnoʊ.sɪs/",
+    "definitionEn": "Accumulation of homogeneous, glassy-appearing proteinaceous material in tissues or vessel walls.",
+    "definitionAr": "تراكم مادة بروتينية متجانسة ذات مظهر زجاجي في الأنسجة أو جدران الأوعية.",
+    "exampleEn": "Hyalinosis affected the walls of small renal arterioles.",
+    "exampleAr": "أصاب التنكس الزجاجي جدران الشُرينات الكلوية الصغيرة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "hyalin/o",
+          "role": "combining-form",
+          "meaningAr": "زجاجي المظهر",
+          "meaningEn": "glass-like"
+        },
+        {
+          "affix": "-osis",
+          "role": "suffix",
+          "meaningAr": "حالة مرضية",
+          "meaningEn": "abnormal condition"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تنكس زجاجي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-hyaline",
+    "term": "Hyaline",
+    "translation": "زجاجي",
+    "pronunciation": "/ˈhaɪ.ə.lɪn/",
+    "definitionEn": "Having a smooth, homogeneous, glass-like appearance, often used to describe vascular deposits.",
+    "definitionAr": "ذو مظهر أملس متجانس شبيه بالزجاج، ويستخدم لوصف الترسبات الوعائية.",
+    "exampleEn": "Hyaline material thickened the arteriolar wall.",
+    "exampleAr": "ثخنت المادة الزجاجية جدار الشُرين."
+  },
+  {
+    "id": "term-hyperplastic",
+    "term": "Hyperplastic",
+    "translation": "تكاثري",
+    "pronunciation": "/ˌhaɪ.pɚˈplæs.tɪk/",
+    "definitionEn": "Characterized by increased cell number and tissue proliferation.",
+    "definitionAr": "متصف بزيادة عدد الخلايا وتكاثر النسيج.",
+    "exampleEn": "Hyperplastic arteriolosclerosis was associated with severe hypertension.",
+    "exampleAr": "ارتبط تصلب الشُرينات التكاثري بارتفاع ضغط شديد."
+  },
+  {
+    "id": "term-hyperplasia",
+    "term": "Hyperplasia",
+    "translation": "فرط التنسج",
+    "pronunciation": "/ˌhaɪ.pɚˈpleɪ.ʒə/",
+    "definitionEn": "An increase in the number of cells in a tissue, leading to enlargement.",
+    "definitionAr": "زيادة عدد الخلايا في نسيج ما، مما يؤدي إلى تضخمه.",
+    "exampleEn": "Intimal hyperplasia contributed to restenosis.",
+    "exampleAr": "أسهم فرط تنسج البطانة في عودة التضيق."
+  },
+  {
+    "id": "term-intimomedial",
+    "term": "Intimomedial",
+    "translation": "باطني وسطي",
+    "pronunciation": "/ˌɪn.tɪ.moʊˈmiː.di.əl/",
+    "definitionEn": "Relating to both the intima and media layers of a blood vessel.",
+    "definitionAr": "متعلق بكل من الغلالة الباطنة والوسطى للوعاء الدموي.",
+    "exampleEn": "Intimomedial thickening was found in the arterial specimen.",
+    "exampleAr": "وُجد تثخن باطني وسطي في عينة الشريان."
+  },
+  {
+    "id": "term-periarterial",
+    "term": "Periarterial",
+    "translation": "حول شرياني",
+    "pronunciation": "/ˌper.i.ɑːrˈtɪr.i.əl/",
+    "definitionEn": "Situated around an artery.",
+    "definitionAr": "واقع حول الشريان.",
+    "exampleEn": "Periarterial inflammation was noted.",
+    "exampleAr": "لوحظ التهاب حول الشريان."
+  },
+  {
+    "id": "term-perivenous",
+    "term": "Perivenous",
+    "translation": "حول وريدي",
+    "pronunciation": "/ˌper.iˈviː.nəs/",
+    "definitionEn": "Situated around a vein.",
+    "definitionAr": "واقع حول الوريد.",
+    "exampleEn": "Perivenous inflammation was present in the tissue.",
+    "exampleAr": "كان الالتهاب حول الوريد موجودًا في النسيج."
+  },
+  {
+    "id": "term-pericapillary",
+    "term": "Pericapillary",
+    "translation": "حول شعيري",
+    "pronunciation": "/ˌper.iˈkæp.ɪˌler.i/",
+    "definitionEn": "Situated around a capillary.",
+    "definitionAr": "واقع حول الشعيرة الدموية.",
+    "exampleEn": "Pericapillary edema impaired oxygen diffusion.",
+    "exampleAr": "أعاقت الوذمة حول الشعيرات انتشار الأكسجين."
+  },
+  {
+    "id": "term-pericyte",
+    "term": "Pericyte",
+    "translation": "خلية حول وعائية",
+    "pronunciation": "/ˈper.ɪ.saɪt/",
+    "definitionEn": "A contractile mural cell surrounding capillaries and postcapillary venules, contributing to vascular stability.",
+    "definitionAr": "خلية جدارية قابلة للانقباض تحيط بالشعيرات والوريدات بعد الشعرية، وتسهم في ثبات الأوعية.",
+    "exampleEn": "Pericyte loss contributes to microvascular instability.",
+    "exampleAr": "يسهم فقد الخلايا حول الوعائية في عدم استقرار الأوعية الدقيقة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "peri-",
+          "role": "prefix",
+          "meaningAr": "حول",
+          "meaningEn": "around"
+        },
+        {
+          "affix": "-cyte",
+          "role": "suffix",
+          "meaningAr": "خلية",
+          "meaningEn": "cell"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «خلية حول وعائية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-pericytic",
+    "term": "Pericytic",
+    "translation": "متعلق بالخلايا حول الوعائية",
+    "pronunciation": "/ˌper.ɪˈsɪt.ɪk/",
+    "definitionEn": "Relating to pericytes or their function around microvessels.",
+    "definitionAr": "متعلق بالخلايا حول الوعائية أو بوظيفتها حول الأوعية الدقيقة.",
+    "exampleEn": "Pericytic coverage supports capillary integrity.",
+    "exampleAr": "يدعم غطاء الخلايا حول الوعائية سلامة الشعيرات."
+  },
+  {
+    "id": "term-pericytoma",
+    "term": "Pericytoma",
+    "translation": "ورم الخلايا حول الوعائية",
+    "pronunciation": "/ˌper.ɪ.saɪˈtoʊ.mə/",
+    "definitionEn": "A historical term for a tumor thought to arise from pericytes; many such tumors are now classified more specifically.",
+    "definitionAr": "مصطلح تاريخي لورم اعتُقد أنه ينشأ من الخلايا حول الوعائية؛ وصُنفت أورام كثيرة من هذا النوع الآن بصورة أكثر تحديدًا.",
+    "exampleEn": "The historical diagnosis of pericytoma was revised.",
+    "exampleAr": "رُوجع التشخيص التاريخي لورم الخلايا حول الوعائية."
+  },
+  {
+    "id": "term-pericytosis",
+    "term": "Pericytosis",
+    "translation": "زيادة الخلايا حول الوعائية",
+    "pronunciation": "/ˌper.ɪ.saɪˈtoʊ.sɪs/",
+    "definitionEn": "An uncommon descriptive term for increased pericytes or pericyte proliferation.",
+    "definitionAr": "مصطلح وصفي غير شائع لزيادة الخلايا حول الوعائية أو تكاثرها.",
+    "exampleEn": "Pericyte proliferation was described in the experimental model.",
+    "exampleAr": "وُصف تكاثر الخلايا حول الوعائية في النموذج التجريبي."
+  },
+  {
+    "id": "term-vasculitides",
+    "term": "Vasculitides",
+    "translation": "التهابات الأوعية",
+    "pronunciation": "/ˌvæs.kjəˈlaɪ.tɪ.diːz/",
+    "definitionEn": "Plural of vasculitis, referring to a group of inflammatory diseases of blood vessels.",
+    "definitionAr": "جمع Vasculitis، ويشير إلى مجموعة من الأمراض الالتهابية التي تصيب الأوعية الدموية.",
+    "exampleEn": "The vasculitides are classified by vessel size and clinical features.",
+    "exampleAr": "تُصنف التهابات الأوعية بحسب حجم الوعاء والسمات السريرية."
+  },
+  {
+    "id": "term-vasculopathic",
+    "term": "Vasculopathic",
+    "translation": "اعتلالي وعائي",
+    "pronunciation": "/ˌvæs.kjə.loʊˈpæθ.ɪk/",
+    "definitionEn": "Relating to a vascular disorder or its tissue effects.",
+    "definitionAr": "متعلق باضطراب وعائي أو بتأثيراته النسيجية.",
+    "exampleEn": "Vasculopathic changes were found in the skin biopsy.",
+    "exampleAr": "وُجدت تغيرات اعتلالية وعائية في خزعة الجلد."
+  },
+  {
+    "id": "term-lymphorrhea",
+    "term": "Lymphorrhea",
+    "translation": "سيلان لمفي",
+    "pronunciation": "/ˌlɪm.fəˈriː.ə/",
+    "definitionEn": "Leakage or discharge of lymph from damaged lymphatic vessels.",
+    "definitionAr": "تسرب أو خروج اللمف من الأوعية اللمفاوية المتضررة.",
+    "exampleEn": "Lymphorrhea occurred from the postoperative wound.",
+    "exampleAr": "حدث سيلان لمفي من الجرح بعد العملية.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "lymph/o",
+          "role": "combining-form",
+          "meaningAr": "لمف",
+          "meaningEn": "lymph"
+        },
+        {
+          "affix": "-rrhea",
+          "role": "suffix",
+          "meaningAr": "سيلان أو تدفق",
+          "meaningEn": "flow or discharge"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «سيلان لمفي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-phlebothrombotic",
+    "term": "Phlebothrombotic",
+    "translation": "خثاري وريدي",
+    "pronunciation": "/ˌfleb.oʊ.θrɑːmˈbɑː.tɪk/",
+    "definitionEn": "Relating to venous thrombosis.",
+    "definitionAr": "متعلق بالخثار الوريدي.",
+    "exampleEn": "Phlebothrombotic disease was treated with anticoagulation.",
+    "exampleAr": "عولج المرض الخثاري الوريدي بمضادات التخثر."
+  },
+  {
+    "id": "term-phlebitic",
+    "term": "Phlebitic",
+    "translation": "التهابي وريدي",
+    "pronunciation": "/flɪˈbɪt.ɪk/",
+    "definitionEn": "Relating to inflammation of a vein.",
+    "definitionAr": "متعلق بالتهاب الوريد.",
+    "exampleEn": "Phlebitic changes were seen around the catheter site.",
+    "exampleAr": "شوهدت تغيرات التهابية وريدية حول موضع القسطرة."
+  },
+  {
+    "id": "term-phlebopathic",
+    "term": "Phlebopathic",
+    "translation": "اعتلالي وريدي",
+    "pronunciation": "/ˌfleb.oʊˈpæθ.ɪk/",
+    "definitionEn": "Relating to a disorder of the veins.",
+    "definitionAr": "متعلق باضطراب يصيب الأوردة.",
+    "exampleEn": "Phlebopathic changes were present in the lower limb.",
+    "exampleAr": "كانت التغيرات الاعتلالية الوريدية موجودة في الطرف السفلي."
+  },
+  {
+    "id": "term-venopathic",
+    "term": "Venopathic",
+    "translation": "اعتلالي وريدي",
+    "pronunciation": "/ˌviː.noʊˈpæθ.ɪk/",
+    "definitionEn": "Relating to venous disease.",
+    "definitionAr": "متعلق بمرض وريدي.",
+    "exampleEn": "Venopathic edema improved with compression.",
+    "exampleAr": "تحسنت الوذمة ذات المنشأ الوريدي بالضغط."
+  },
+  {
+    "id": "term-venousness",
+    "term": "Venousness",
+    "translation": "الصفة الوريدية",
+    "pronunciation": "/ˈviː.nəs.nəs/",
+    "definitionEn": "A rare nonstandard noun derived from venous; not used as a clinical diagnosis.",
+    "definitionAr": "اسم نادر غير قياسي مشتق من Venous، ولا يستخدم تشخيصًا سريريًا.",
+    "exampleEn": "The term venousness is not used in standard medical terminology.",
+    "exampleAr": "لا يُستخدم مصطلح Venousness في المصطلحات الطبية القياسية."
+  },
+  {
+    "id": "term-venulopathic",
+    "term": "Venulopathic",
+    "translation": "اعتلالي وريدي صغير",
+    "pronunciation": "/ˌven.jə.loʊˈpæθ.ɪk/",
+    "definitionEn": "Relating to disease of venules.",
+    "definitionAr": "متعلق بمرض الوريدات.",
+    "exampleEn": "Venulopathic changes were identified microscopically.",
+    "exampleAr": "حُددت تغيرات اعتلالية في الوريدات مجهريًا."
+  },
+  {
+    "id": "term-varicose",
+    "term": "Varicose",
+    "translation": "دوالي أو متوسع ومتعرج",
+    "pronunciation": "/ˈver.ɪˌkoʊs/",
+    "definitionEn": "Abnormally dilated and tortuous, especially describing superficial veins.",
+    "definitionAr": "متوسع ومتعرج بصورة غير طبيعية، ويصف خصوصًا الأوردة السطحية.",
+    "exampleEn": "Varicose veins were visible over the calf.",
+    "exampleAr": "كانت الأوردة الدوالية ظاهرة فوق ربلة الساق."
+  },
+  {
+    "id": "term-varicophlebitis",
+    "term": "Varicophlebitis",
+    "translation": "التهاب الدوالي الوريدية",
+    "pronunciation": "/ˌver.ɪ.koʊ.flɪˈbaɪ.tɪs/",
+    "definitionEn": "Inflammation involving a varicose vein, sometimes with associated thrombosis.",
+    "definitionAr": "التهاب يصيب وريدًا دواليًا، وقد يترافق مع الخثار.",
+    "exampleEn": "Varicophlebitis caused localized tenderness.",
+    "exampleAr": "سبب التهاب الدوالي الوريدية إيلامًا موضعيًا."
+  },
+  {
+    "id": "term-varicothrombosis",
+    "term": "Varicothrombosis",
+    "translation": "خثار الدوالي",
+    "pronunciation": "/ˌver.ɪ.koʊ.θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "Thrombosis developing within a varicose vein.",
+    "definitionAr": "تكوّن خثرة داخل وريد دوالي.",
+    "exampleEn": "Varicothrombosis was confirmed by ultrasound.",
+    "exampleAr": "تأكد خثار الدوالي بالموجات فوق الصوتية."
+  },
+  {
+    "id": "term-venectatic",
+    "term": "Venectatic",
+    "translation": "متوسع وريديًا",
+    "pronunciation": "/ˌviː.nɪkˈtæt.ɪk/",
+    "definitionEn": "Characterized by venous dilation.",
+    "definitionAr": "متصف بتوسع وريدي.",
+    "exampleEn": "Venectatic changes were seen in the superficial venous network.",
+    "exampleAr": "شوهدت تغيرات توسعية في الشبكة الوريدية السطحية."
+  },
+  {
+    "id": "term-venectasis",
+    "term": "Venectasis",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˌviː.nɪkˈteɪ.sɪs/",
+    "definitionEn": "Dilation of a vein; an uncommon variant term.",
+    "definitionAr": "توسع في الوريد؛ وهو مصطلح بديل غير شائع.",
+    "exampleEn": "Venous ectasia was used instead of venectasis in the report.",
+    "exampleAr": "استخدم التقرير مصطلح توسع وريدي بدلًا من Venectasis."
+  },
+  {
+    "id": "term-venorrhaphy",
+    "term": "Venorrhaphy",
+    "translation": "خياطة وريدية",
+    "pronunciation": "/viːˈnɔːr.ə.fi/",
+    "definitionEn": "Surgical suturing of a vein.",
+    "definitionAr": "خياطة وريدية جراحية.",
+    "exampleEn": "Venorrhaphy repaired the injured vein.",
+    "exampleAr": "أصلحت الخياطة الوريدية الوريد المصاب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-rrhaphy",
+          "role": "suffix",
+          "meaningAr": "خياطة جراحية",
+          "meaningEn": "surgical suturing"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «خياطة وريدية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venoplasty",
+    "term": "Venoplasty",
+    "translation": "رأب وريدي",
+    "pronunciation": "/ˈviː.noʊˌplæs.ti/",
+    "definitionEn": "Surgical or catheter-based repair or dilation of a vein.",
+    "definitionAr": "إصلاح الوريد أو توسيعه جراحيًا أو بالقسطرة.",
+    "exampleEn": "Venoplasty relieved central venous stenosis.",
+    "exampleAr": "خفف رأب الوريد التضيق الوريدي المركزي.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-plasty",
+          "role": "suffix",
+          "meaningAr": "إصلاح أو ترميم جراحي",
+          "meaningEn": "surgical repair or reconstruction"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «رأب وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venotomy",
+    "term": "Venotomy",
+    "translation": "شق وريدي",
+    "pronunciation": "/viːˈnɑː.tə.mi/",
+    "definitionEn": "Surgical incision into a vein.",
+    "definitionAr": "شق جراحي في الوريد.",
+    "exampleEn": "Venotomy was performed to remove the thrombus.",
+    "exampleAr": "أُجري شق وريدي لإزالة الخثرة.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-tomy",
+          "role": "suffix",
+          "meaningAr": "شق جراحي",
+          "meaningEn": "surgical incision"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «شق وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venectomy",
+    "term": "Venectomy",
+    "translation": "استئصال وريدي",
+    "pronunciation": "/viːˈnek.tə.mi/",
+    "definitionEn": "Surgical removal of a vein or a segment of a vein.",
+    "definitionAr": "استئصال وريد أو جزء منه جراحيًا.",
+    "exampleEn": "Venectomy was performed for the diseased superficial vein.",
+    "exampleAr": "أُجري استئصال وريدي للوريد السطحي المصاب.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-ectomy",
+          "role": "suffix",
+          "meaningAr": "استئصال جراحي",
+          "meaningEn": "surgical removal"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «استئصال وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venolysis",
+    "term": "Venolysis",
+    "translation": "تحرير الوريد",
+    "pronunciation": "/viːˈnɑː.lə.sɪs/",
+    "definitionEn": "Surgical freeing of a vein from surrounding scar tissue or adhesions.",
+    "definitionAr": "تحرير الوريد جراحيًا من النسيج الندبي أو الالتصاقات المحيطة.",
+    "exampleEn": "Venolysis restored mobility of the entrapped vein.",
+    "exampleAr": "أعاد تحرير الوريد حركته بعد انحباسه.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-lysis",
+          "role": "suffix",
+          "meaningAr": "تحرير أو تفكيك",
+          "meaningEn": "loosening or breakdown"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تحرير الوريد» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venorrhexis",
+    "term": "Venorrhexis",
+    "translation": "تمزق وريدي",
+    "pronunciation": "/ˌviː.noʊˈrek.sɪs/",
+    "definitionEn": "Rupture of a vein.",
+    "definitionAr": "تمزق في الوريد.",
+    "exampleEn": "Venorrhexis caused significant blood loss.",
+    "exampleAr": "سبب التمزق الوريدي فقدانًا مهمًا للدم.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-rrhexis",
+          "role": "suffix",
+          "meaningAr": "تمزق أو انفجار",
+          "meaningEn": "rupture or bursting"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «تمزق وريدي» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venostasis",
+    "term": "Venostasis",
+    "translation": "ركودة وريدية",
+    "pronunciation": "/ˌviː.noʊˈsteɪ.sɪs/",
+    "definitionEn": "Slowing or stagnation of venous blood flow.",
+    "definitionAr": "تباطؤ أو ركودة جريان الدم الوريدي.",
+    "exampleEn": "Venostasis increased the risk of deep-vein thrombosis.",
+    "exampleAr": "زادت الركودة الوريدية خطر الخثار الوريدي العميق.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "ven/o",
+          "role": "combining-form",
+          "meaningAr": "وريد",
+          "meaningEn": "vein"
+        },
+        {
+          "affix": "-stasis",
+          "role": "suffix",
+          "meaningAr": "ركودة أو توقف",
+          "meaningEn": "stagnation or stopping"
+        }
+      ],
+      "literalSynthesisAr": "تجتمع هذه المكونات لتكوين معنى «ركودة وريدية» في السياق الطبي."
+    }
+  },
+  {
+    "id": "term-venostatic",
+    "term": "Venostatic",
+    "translation": "مسبب للركودة الوريدية",
+    "pronunciation": "/ˌviː.noʊˈstæt.ɪk/",
+    "definitionEn": "Relating to or causing stagnation of venous blood.",
+    "definitionAr": "متعلق بركودة الدم الوريدي أو مسبب لها.",
+    "exampleEn": "Venostatic conditions favor thrombosis.",
+    "exampleAr": "تعزز الحالات المسببة للركودة الوريدية حدوث الخثار."
+  },
+  {
+    "id": "term-venousstasis",
+    "term": "Venousstasis",
+    "translation": "ركودة وريدية",
+    "pronunciation": "/ˈviː.nəs ˈsteɪ.sɪs/",
+    "definitionEn": "Impaired venous return with pooling of blood in veins.",
+    "definitionAr": "ضعف العودة الوريدية وتجمع الدم داخل الأوردة.",
+    "exampleEn": "Venous stasis was present in the immobilized limb.",
+    "exampleAr": "كانت الركودة الوريدية موجودة في الطرف غير المتحرك."
+  },
+  {
+    "id": "term-venouscongestion",
+    "term": "Venouscongestion",
+    "translation": "احتقان وريدي",
+    "pronunciation": "/ˈviː.nəs kənˈdʒes.tʃən/",
+    "definitionEn": "Accumulation of blood in veins due to impaired drainage or elevated venous pressure.",
+    "definitionAr": "تراكم الدم في الأوردة بسبب ضعف التصريف أو ارتفاع الضغط الوريدي.",
+    "exampleEn": "Venous congestion caused peripheral edema.",
+    "exampleAr": "سبب الاحتقان الوريدي وذمة محيطية."
+  },
+  {
+    "id": "term-venoushypertension",
+    "term": "Venoushypertension",
+    "translation": "فرط ضغط وريدي",
+    "pronunciation": "/ˈviː.nəs ˌhaɪ.pɚˈten.ʃən/",
+    "definitionEn": "Elevated pressure within the venous system, often due to obstruction or valve incompetence.",
+    "definitionAr": "ارتفاع الضغط داخل الجهاز الوريدي، وغالبًا بسبب الانسداد أو قصور الصمامات.",
+    "exampleEn": "Venous hypertension caused chronic skin changes.",
+    "exampleAr": "سبب فرط الضغط الوريدي تغيرات جلدية مزمنة."
+  },
+  {
+    "id": "term-venousinsufficiency",
+    "term": "Venousinsufficiency",
+    "translation": "قصور وريدي",
+    "pronunciation": "/ˈviː.nəs ˌɪn.səˈfɪʃ.ən.si/",
+    "definitionEn": "Failure of venous valves or pumps to return blood effectively to the heart.",
+    "definitionAr": "فشل الصمامات الوريدية أو المضخات العضلية في إعادة الدم بفعالية إلى القلب.",
+    "exampleEn": "Chronic venous insufficiency caused ankle edema and skin pigmentation.",
+    "exampleAr": "سبب القصور الوريدي المزمن وذمة الكاحل وتصبغ الجلد."
+  },
+  {
+    "id": "term-venousulcer",
+    "term": "Venousulcer",
+    "translation": "قرحة وريدية",
+    "pronunciation": "/ˈviː.nəs ˈʌl.sɚ/",
+    "definitionEn": "A chronic lower-limb ulcer caused by venous hypertension and tissue changes.",
+    "definitionAr": "قرحة مزمنة في الطرف السفلي ناجمة عن فرط الضغط الوريدي والتغيرات النسيجية.",
+    "exampleEn": "The venous ulcer was located near the medial malleolus.",
+    "exampleAr": "كانت القرحة الوريدية قرب الكعب الإنسي."
+  },
+  {
+    "id": "term-venousclaudication",
+    "term": "Venousclaudication",
+    "translation": "عرج وريدي",
+    "pronunciation": "/ˈviː.nəs ˌklɔː.dɪˈkeɪ.ʃən/",
+    "definitionEn": "Pain or tightness during exercise caused by impaired venous outflow, often relieved by rest and elevation.",
+    "definitionAr": "ألم أو إحساس بالشد أثناء الجهد بسبب ضعف التصريف الوريدي، وغالبًا يخف بالراحة ورفع الطرف.",
+    "exampleEn": "Venous claudication occurred after walking a short distance.",
+    "exampleAr": "حدث العرج الوريدي بعد المشي لمسافة قصيرة."
+  },
+  {
+    "id": "term-venousgangrene",
+    "term": "Venousgangrene",
+    "translation": "غرغرينا وريدية",
+    "pronunciation": "/ˈviː.nəs ˈɡæŋ.ɡriːn/",
+    "definitionEn": "Tissue necrosis associated with severe venous obstruction and congestion; uncommon compared with arterial gangrene.",
+    "definitionAr": "نخر نسيجي يرتبط بانسداد وريدي واحتقان شديدين؛ وهو أقل شيوعًا من الغرغرينا الشريانية.",
+    "exampleEn": "Massive venous thrombosis can rarely cause venous gangrene.",
+    "exampleAr": "قد يسبب الخثار الوريدي الواسع نادرًا غرغرينا وريدية."
+  },
+  {
+    "id": "term-venousinfarction",
+    "term": "Venousinfarction",
+    "translation": "احتشاء وريدي",
+    "pronunciation": "/ˈviː.nəs ɪnˈfɑːrk.ʃən/",
+    "definitionEn": "Tissue infarction caused by venous outflow obstruction and congestion.",
+    "definitionAr": "احتشاء نسيجي ناجم عن انسداد التصريف الوريدي والاحتقان.",
+    "exampleEn": "Cerebral venous thrombosis caused hemorrhagic venous infarction.",
+    "exampleAr": "سبب الخثار الوريدي الدماغي احتشاءً وريديًا نزفيًا."
+  },
+  {
+    "id": "term-venoushemorrhage",
+    "term": "Venoushemorrhage",
+    "translation": "نزف وريدي",
+    "pronunciation": "/ˈviː.nəs ˈhem.ɚ.ɪdʒ/",
+    "definitionEn": "Bleeding originating from a vein.",
+    "definitionAr": "نزف مصدره وريد.",
+    "exampleEn": "Venous hemorrhage was controlled with direct pressure.",
+    "exampleAr": "تمت السيطرة على النزف الوريدي بالضغط المباشر."
+  },
+  {
+    "id": "term-venousocclusion",
+    "term": "Venousocclusion",
+    "translation": "انسداد وريدي",
+    "pronunciation": "/ˈviː.nəs əˈkluː.ʒən/",
+    "definitionEn": "Partial or complete blockage of a vein.",
+    "definitionAr": "انسداد جزئي أو كامل في الوريد.",
+    "exampleEn": "Retinal venous occlusion caused sudden visual loss.",
+    "exampleAr": "سبب انسداد الوريد الشبكي فقدانًا مفاجئًا للبصر."
+  },
+  {
+    "id": "term-venousobstruction",
+    "term": "Venousobstruction",
+    "translation": "انسداد التصريف الوريدي",
+    "pronunciation": "/ˈviː.nəs əbˈstrʌk.ʃən/",
+    "definitionEn": "Impediment to venous blood flow due to compression, thrombosis, or stenosis.",
+    "definitionAr": "إعاقة جريان الدم الوريدي بسبب الضغط أو الخثار أو التضيق.",
+    "exampleEn": "Venous obstruction caused unilateral limb swelling.",
+    "exampleAr": "سبب انسداد التصريف الوريدي تورمًا أحادي الجانب في الطرف."
+  },
+  {
+    "id": "term-venousreflux",
+    "term": "Venousreflux",
+    "translation": "ارتجاع وريدي",
+    "pronunciation": "/ˈviː.nəs ˈriː.flʌks/",
+    "definitionEn": "Backward flow of blood in veins due to incompetent venous valves.",
+    "definitionAr": "رجوع الدم إلى الخلف في الأوردة بسبب قصور الصمامات الوريدية.",
+    "exampleEn": "Venous reflux was demonstrated by duplex ultrasound.",
+    "exampleAr": "أظهر التصوير المزدوج ارتجاعًا وريديًا."
+  },
+  {
+    "id": "term-venouspooling",
+    "term": "Venouspooling",
+    "translation": "تجمع وريدي",
+    "pronunciation": "/ˈviː.nəs ˈpuː.lɪŋ/",
+    "definitionEn": "Accumulation of blood in dependent veins due to gravity or impaired venous return.",
+    "definitionAr": "تجمع الدم في الأوردة المعتمدة بسبب الجاذبية أو ضعف العودة الوريدية.",
+    "exampleEn": "Venous pooling contributed to orthostatic hypotension.",
+    "exampleAr": "أسهم تجمع الدم الوريدي في انخفاض الضغط الانتصابي."
+  },
+  {
+    "id": "term-venousdilation",
+    "term": "Venousdilation",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˈviː.nəs daɪˈleɪ.ʃən/",
+    "definitionEn": "Increase in venous diameter due to elevated pressure or smooth-muscle relaxation.",
+    "definitionAr": "زيادة قطر الوريد بسبب ارتفاع الضغط أو ارتخاء العضلات الملساء.",
+    "exampleEn": "Venous dilation increased capacitance.",
+    "exampleAr": "زاد التوسع الوريدي السعة الوعائية."
+  },
+  {
+    "id": "term-venouscompliance",
+    "term": "Venouscompliance",
+    "translation": "مطاوعة وريدية",
+    "pronunciation": "/ˈviː.nəs kəmˈplaɪ.əns/",
+    "definitionEn": "The change in venous volume produced by a change in transmural pressure.",
+    "definitionAr": "التغير في حجم الوريد الناتج عن تغير الضغط عبر جداره.",
+    "exampleEn": "Venous compliance influences preload.",
+    "exampleAr": "تؤثر المطاوعة الوريدية في الحمل القبلي."
+  },
+  {
+    "id": "term-venouscapacitance",
+    "term": "Venouscapacitance",
+    "translation": "السعة الوريدية",
+    "pronunciation": "/ˈviː.nəs kəˈpæs.ɪ.təns/",
+    "definitionEn": "The capacity of the venous system to store blood at a given pressure.",
+    "definitionAr": "قدرة الجهاز الوريدي على تخزين الدم عند ضغط معين.",
+    "exampleEn": "Venous capacitance changes with sympathetic tone.",
+    "exampleAr": "تتغير السعة الوريدية مع التوتر الودي."
+  },
+  {
+    "id": "term-venousreturn",
+    "term": "Venousreturn",
+    "translation": "العودة الوريدية",
+    "pronunciation": "/ˈviː.nəs rɪˈtɝːn/",
+    "definitionEn": "The volume of blood returning to the heart per unit time.",
+    "definitionAr": "حجم الدم العائد إلى القلب في وحدة الزمن.",
+    "exampleEn": "Venous return increased with leg elevation.",
+    "exampleAr": "ازدادت العودة الوريدية برفع الساقين."
+  },
+  {
+    "id": "term-venouspressure",
+    "term": "Venouspressure",
+    "translation": "الضغط الوريدي",
+    "pronunciation": "/ˈviː.nəs ˈpreʃ.ɚ/",
+    "definitionEn": "Pressure within the venous system, reflecting blood volume, venous tone, and cardiac function.",
+    "definitionAr": "الضغط داخل الجهاز الوريدي، ويعكس حجم الدم والتوتر الوريدي ووظيفة القلب.",
+    "exampleEn": "Central venous pressure was elevated.",
+    "exampleAr": "كان الضغط الوريدي المركزي مرتفعًا."
+  },
+  {
+    "id": "term-venousengorgement",
+    "term": "Venousengorgement",
+    "translation": "احتقان وريدي شديد",
+    "pronunciation": "/ˈviː.nəs ɪnˈɡɔːrdʒ.mənt/",
+    "definitionEn": "Abnormal distension of veins due to increased venous pressure or impaired outflow.",
+    "definitionAr": "تمدد غير طبيعي للأوردة بسبب ارتفاع الضغط الوريدي أو ضعف التصريف.",
+    "exampleEn": "Jugular venous engorgement suggested elevated right atrial pressure.",
+    "exampleAr": "أشار احتقان الأوردة الوداجية إلى ارتفاع ضغط الأذين الأيمن."
+  },
+  {
+    "id": "term-venousulceration",
+    "term": "Venousulceration",
+    "translation": "تقرح وريدي",
+    "pronunciation": "/ˈviː.nəs ˌʌl.səˈreɪ.ʃən/",
+    "definitionEn": "Development of chronic ulcers due to venous hypertension and tissue damage.",
+    "definitionAr": "تطور قرحات مزمنة بسبب فرط الضغط الوريدي وتلف الأنسجة.",
+    "exampleEn": "Venous ulceration was managed with compression therapy.",
+    "exampleAr": "عولج التقرح الوريدي بالعلاج الضاغط."
+  },
+  {
+    "id": "term-venousocclusive",
+    "term": "Venousocclusive",
+    "translation": "انسدادي وريدي",
+    "pronunciation": "/ˈviː.nəs əˈkluː.sɪv/",
+    "definitionEn": "Characterized by venous obstruction.",
+    "definitionAr": "متصف بانسداد وريدي.",
+    "exampleEn": "Venous occlusive disease affected the hepatic outflow.",
+    "exampleAr": "أصاب المرض الانسدادي الوريدي التصريف الكبدي."
+  },
+  {
+    "id": "term-venousobstructive",
+    "term": "Venousobstructive",
+    "translation": "معيق للتصريف الوريدي",
+    "pronunciation": "/ˈviː.nəs əbˈstrʌk.tɪv/",
+    "definitionEn": "Causing or relating to obstruction of venous drainage.",
+    "definitionAr": "مسبب لانسداد التصريف الوريدي أو متعلق به.",
+    "exampleEn": "Venous obstructive lesions were treated endovascularly.",
+    "exampleAr": "عولجت الآفات المعيقة للتصريف الوريدي داخل الأوعية."
+  },
+  {
+    "id": "term-venousstenotic",
+    "term": "Venousstenotic",
+    "translation": "متضيق وريديًا",
+    "pronunciation": "/ˈviː.nəs stəˈnɑː.tɪk/",
+    "definitionEn": "Characterized by venous stenosis.",
+    "definitionAr": "متصف بتضيق وريدي.",
+    "exampleEn": "Venous stenotic lesions were dilated by balloon angioplasty.",
+    "exampleAr": "وُسعت الآفات الوريدية المتضيقة برأب الوعاء بالبالون."
+  },
+  {
+    "id": "term-venousaneurysm",
+    "term": "Venousaneurysm",
+    "translation": "أم دم وريدية",
+    "pronunciation": "/ˈviː.nəs ˈæn.jəˌrɪz.əm/",
+    "definitionEn": "A focal dilation of a vein involving all layers of the venous wall.",
+    "definitionAr": "توسع موضعي في الوريد يشمل جميع طبقات جداره.",
+    "exampleEn": "A popliteal venous aneurysm was identified by ultrasound.",
+    "exampleAr": "كُشفت أم دم وريدية مأبضية بالموجات فوق الصوتية."
+  },
+  {
+    "id": "term-venousmalformation",
+    "term": "Venousmalformation",
+    "translation": "تشوه وريدي",
+    "pronunciation": "/ˈviː.nəs ˌmæl.fɔːrˈmeɪ.ʃən/",
+    "definitionEn": "A congenital low-flow vascular malformation composed of abnormal venous channels.",
+    "definitionAr": "تشوه وعائي خلقي منخفض الجريان يتكون من قنوات وريدية غير طبيعية.",
+    "exampleEn": "The venous malformation involved the calf muscles.",
+    "exampleAr": "أصاب التشوه الوريدي عضلات ربلة الساق."
+  },
+  {
+    "id": "term-venousangioma",
+    "term": "Venousangioma",
+    "translation": "ورم وعائي وريدي",
+    "pronunciation": "/ˈviː.nəs ˌæn.dʒiˈoʊ.mə/",
+    "definitionEn": "A vascular lesion composed predominantly of venous channels; often termed a venous malformation.",
+    "definitionAr": "آفة وعائية تتكون أساسًا من قنوات وريدية؛ وغالبًا تسمى تشوهًا وريديًا.",
+    "exampleEn": "The lesion was classified as a venous malformation.",
+    "exampleAr": "صُنفت الآفة على أنها تشوه وريدي."
+  },
+  {
+    "id": "term-venoushemangioma",
+    "term": "Venoushemangioma",
+    "translation": "ورم وعائي وريدي",
+    "pronunciation": "/ˈviː.nəs ˌhiː.mæn.dʒiˈoʊ.mə/",
+    "definitionEn": "A vascular lesion with venous channels, often better classified as a venous malformation.",
+    "definitionAr": "آفة وعائية ذات قنوات وريدية، ويُفضل غالبًا تصنيفها تشوهًا وريديًا.",
+    "exampleEn": "Imaging suggested a low-flow venous hemangioma.",
+    "exampleAr": "أشار التصوير إلى ورم وعائي وريدي منخفض الجريان."
+  },
+  {
+    "id": "term-venousmalformative",
+    "term": "Venousmalformative",
+    "translation": "متعلق بتشوه وريدي",
+    "pronunciation": "/ˈviː.nəs ˌmæl.fɔːrˈmeɪ.tɪv/",
+    "definitionEn": "Relating to a congenital venous malformation; uncommon as an adjective.",
+    "definitionAr": "متعلق بتشوه وريدي خلقي؛ وهو وصف غير شائع.",
+    "exampleEn": "The venous malformative lesion enlarged with dependency.",
+    "exampleAr": "ازداد حجم الآفة التشوهية الوريدية عند تدلي الطرف."
+  },
+  {
+    "id": "term-venousectasia",
+    "term": "Venousectasia",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˈviː.nəs ekˈteɪ.ʒə/",
+    "definitionEn": "Abnormal dilation of venous channels.",
+    "definitionAr": "توسع غير طبيعي في القنوات الوريدية.",
+    "exampleEn": "Venous ectasia was present in the neck.",
+    "exampleAr": "كان توسع وريدي موجودًا في الرقبة."
+  },
+  {
+    "id": "term-venousphlebitis",
+    "term": "Venousphlebitis",
+    "translation": "التهاب وريدي",
+    "pronunciation": "/ˈviː.nəs flɪˈbaɪ.tɪs/",
+    "definitionEn": "Inflammation of a vein; phlebitis is the preferred concise term.",
+    "definitionAr": "التهاب يصيب الوريد؛ ويُعد Phlebitis المصطلح المختصر المفضل.",
+    "exampleEn": "Venous phlebitis was associated with the catheter.",
+    "exampleAr": "ارتبط التهاب الوريد بالقسطرة."
+  },
+  {
+    "id": "term-venousthrombosis",
+    "term": "Venousthrombosis",
+    "translation": "خثار وريدي",
+    "pronunciation": "/ˈviː.nəs θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "Formation of a thrombus in a vein, including deep-vein thrombosis.",
+    "definitionAr": "تكوّن خثرة في وريد، بما في ذلك الخثار الوريدي العميق.",
+    "exampleEn": "Venous thrombosis was confirmed by compression ultrasound.",
+    "exampleAr": "تأكد الخثار الوريدي بالموجات فوق الصوتية الضاغطة."
+  },
+  {
+    "id": "term-venousthrombotic",
+    "term": "Venousthrombotic",
+    "translation": "خثاري وريدي",
+    "pronunciation": "/ˈviː.nəs θrɑːmˈbɑː.tɪk/",
+    "definitionEn": "Relating to venous thrombosis.",
+    "definitionAr": "متعلق بالخثار الوريدي.",
+    "exampleEn": "Venous thrombotic risk increased during immobilization.",
+    "exampleAr": "زاد خطر الخثار الوريدي أثناء عدم الحركة."
+  },
+  {
+    "id": "term-venousphlebectasia",
+    "term": "Venousphlebectasia",
+    "translation": "توسع وريدي",
+    "pronunciation": "/ˈviː.nəs ˌfleb.ekˈteɪ.ʒə/",
+    "definitionEn": "Abnormal dilation of a vein; a redundant compound expression.",
+    "definitionAr": "توسع غير طبيعي في الوريد؛ وهو تركيب زائد عن الحاجة.",
+    "exampleEn": "The report used venous ectasia instead of venous phlebectasia.",
+    "exampleAr": "استخدم التقرير توسع وريدي بدلًا من Venousphlebectasia."
+  },
+  {
+    "id": "term-venousphlebosclerosis",
+    "term": "Venousphlebosclerosis",
+    "translation": "تصلب وريدي",
+    "pronunciation": "/ˈviː.nəs ˌfleb.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "Sclerosis of venous walls; a redundant compound expression.",
+    "definitionAr": "تصلب جدران الأوردة؛ وهو تركيب زائد عن الحاجة.",
+    "exampleEn": "The pathologist described venous wall sclerosis.",
+    "exampleAr": "وصف اختصاصي الأمراض تصلب جدار الوريد."
+  },
+  {
+    "id": "term-venousphlebopathy",
+    "term": "Venousphlebopathy",
+    "translation": "اعتلال وريدي",
+    "pronunciation": "/ˈviː.nəs ˌfleb.oʊˈpæθ.ɪ/",
+    "definitionEn": "A redundant compound term for venous disease; venopathy or phlebopathy is preferred.",
+    "definitionAr": "تركيب زائد عن الحاجة لمرض وريدي؛ ويفضل Venopathy أو Phlebopathy.",
+    "exampleEn": "The diagnosis was chronic venous disease.",
+    "exampleAr": "كان التشخيص مرضًا وريديًا مزمنًا."
+  },
+  {
+    "id": "term-venousphlebitic",
+    "term": "Venousphlebitic",
+    "translation": "التهابي وريدي",
+    "pronunciation": "/ˈviː.nəs flɪˈbɪt.ɪk/",
+    "definitionEn": "Relating to phlebitis; redundant compound adjective.",
+    "definitionAr": "متعلق بالتهاب الوريد؛ وهو وصف مركب زائد عن الحاجة.",
+    "exampleEn": "The clinician documented phlebitic inflammation.",
+    "exampleAr": "وثق الطبيب التهابًا وريديًا."
+  },
+  {
+    "id": "term-venousvaricosity",
+    "term": "Venousvaricosity",
+    "translation": "دوالي وريدية",
+    "pronunciation": "/ˈviː.nəs ˌver.ɪˈkɑː.sə.ti/",
+    "definitionEn": "A varicose venous dilation; a redundant compound term.",
+    "definitionAr": "توسع وريدي دوالي؛ وهو تركيب زائد عن الحاجة.",
+    "exampleEn": "The examination showed superficial varicosities.",
+    "exampleAr": "أظهر الفحص دوالي سطحية."
+  },
+  {
+    "id": "term-venousvaricosis",
+    "term": "Venousvaricosis",
+    "translation": "داء الدوالي الوريدية",
+    "pronunciation": "/ˈviː.nəs ˌver.ɪˈkoʊ.sɪs/",
+    "definitionEn": "A redundant term for varicose veins or varicosis.",
+    "definitionAr": "مصطلح زائد عن الحاجة للأوردة الدوالية أو داء الدوالي.",
+    "exampleEn": "The report used varicosis rather than venousvaricosis.",
+    "exampleAr": "استخدم التقرير Varicosis بدلًا من Venousvaricosis."
+  },
+  {
+    "id": "term-venousvaricose",
+    "term": "Venousvaricose",
+    "translation": "دوالي وريدية",
+    "pronunciation": "/ˈviː.nəs ˈver.ɪˌkoʊs/",
+    "definitionEn": "A redundant adjective meaning varicose.",
+    "definitionAr": "صفة زائدة عن الحاجة تعني دوالي.",
+    "exampleEn": "The preferred term is varicose vein.",
+    "exampleAr": "المصطلح المفضل هو وريد دوالي."
+  },
+  {
+    "id": "term-venousvaricopathy",
+    "term": "Venousvaricopathy",
+    "translation": "اعتلال الدوالي الوريدية",
+    "pronunciation": "/ˈviː.nəs ˌver.ɪˈkɑː.pə.θi/",
+    "definitionEn": "A nonstandard redundant compound for disease of varicose veins.",
+    "definitionAr": "تركيب غير قياسي زائد عن الحاجة لمرض الأوردة الدوالية.",
+    "exampleEn": "The clinician used chronic venous insufficiency.",
+    "exampleAr": "استخدم الطبيب مصطلح القصور الوريدي المزمن."
+  },
+  {
+    "id": "term-venousvaricophlebitis",
+    "term": "Venousvaricophlebitis",
+    "translation": "التهاب الدوالي",
+    "pronunciation": "/ˈviː.nəs ˌver.ɪ.koʊ.flɪˈbaɪ.tɪs/",
+    "definitionEn": "A redundant compound referring to inflammation of varicose veins.",
+    "definitionAr": "تركيب زائد عن الحاجة يشير إلى التهاب الأوردة الدوالية.",
+    "exampleEn": "The diagnosis was superficial thrombophlebitis.",
+    "exampleAr": "كان التشخيص التهاب الوريد الخثاري السطحي."
+  },
+  {
+    "id": "term-venousvaricothrombosis",
+    "term": "Venousvaricothrombosis",
+    "translation": "خثار الدوالي",
+    "pronunciation": "/ˈviː.nəs ˌver.ɪ.koʊ.θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "A nonstandard compound for thrombosis within a varicose vein.",
+    "definitionAr": "تركيب غير قياسي لخثار داخل وريد دوالي.",
+    "exampleEn": "The report specified superficial venous thrombosis.",
+    "exampleAr": "حدد التقرير خثارًا وريديًا سطحيًا."
   }
 ]
