@@ -69,10 +69,6 @@ for (let i = 0; i < terms.length; i++) {
         typeof part.affix === 'string' && part.affix.trim() &&
         typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
         typeof part.meaningEn === 'string' && part.meaningEn.trim();
-      const validPart = (part) => part && typeof part === 'object' &&
-        typeof part.affix === 'string' && part.affix.trim() &&
-        typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
-        typeof part.meaningEn === 'string' && part.meaningEn.trim();
       if (m.parts !== undefined) {
         if (!Array.isArray(m.parts) || m.parts.length === 0) errors.push(`${label}: morphology.parts must be a non-empty array`);
         else m.parts.forEach((part, partIndex) => {
