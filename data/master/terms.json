@@ -13908,5 +13908,71 @@
     "definitionAr": "ترسب غير طبيعي لأملاح الكالسيوم في الأنسجة الرخوة؛ وقد يصيب التكلس الوعائي الغلالة الباطنة أو الوسطى بآليات مختلفة.\n\nمكونات الكلمة: calcin/o = calcium or lime; -osis = condition. والمعنى المركب: a condition involving calcium-salt deposition.",
     "exampleEn": "Vascular calcinosis was detected on the radiograph.",
     "exampleAr": "كُشف التكلس الوعائي في الصورة الشعاعية."
+  },
+  {
+    "id": "term-bradycardia",
+    "term": "Bradycardia",
+    "translation": "بطء القلب",
+    "pronunciation": "/ˌbræd.iˈkɑːr.di.ə/",
+    "definitionEn": "A slower-than-normal heart rate, conventionally below 60 beats per minute in adults, interpreted in clinical context.",
+    "definitionAr": "انخفاض معدل ضربات القلب عن الطبيعي؛ ويُعرّف تقليديًا بأقل من 60 ضربة في الدقيقة لدى البالغين مع مراعاة السياق السريري.",
+    "exampleEn": "Sinus bradycardia may be normal in trained athletes.",
+    "exampleAr": "قد يكون بطء القلب الجيبي طبيعيًا لدى الرياضيين المدربين.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "brady",
+          "role": "prefix",
+          "meaningAr": "بطيء",
+          "meaningEn": "slow"
+        },
+        {
+          "affix": "card",
+          "role": "root",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ia",
+          "role": "suffix",
+          "meaningAr": "حالة",
+          "meaningEn": "condition"
+        }
+      ],
+      "literalSynthesisAr": "حالة بطء معدل ضربات القلب."
+    }
+  },
+  {
+    "id": "term-tachycardia",
+    "term": "Tachycardia",
+    "translation": "تسرّع القلب",
+    "pronunciation": "/ˌtæk.ɪˈkɑːr.di.ə/",
+    "definitionEn": "A faster-than-normal heart rate; in adults, a resting rate above 100 beats per minute is commonly used as a threshold.",
+    "definitionAr": "زيادة معدل ضربات القلب عن الطبيعي؛ ويُستخدم غالبًا معدل يتجاوز 100 ضربة في الدقيقة أثناء الراحة حدًا لدى البالغين.",
+    "exampleEn": "Sinus tachycardia may occur during fever or dehydration.",
+    "exampleAr": "قد يحدث تسرّع القلب الجيبي أثناء الحمى أو التجفاف.",
+    "morphology": {
+      "parts": [
+        {
+          "affix": "tachy",
+          "role": "prefix",
+          "meaningAr": "سريع",
+          "meaningEn": "fast"
+        },
+        {
+          "affix": "card",
+          "role": "root",
+          "meaningAr": "قلب",
+          "meaningEn": "heart"
+        },
+        {
+          "affix": "ia",
+          "role": "suffix",
+          "meaningAr": "حالة",
+          "meaningEn": "condition"
+        }
+      ],
+      "literalSynthesisAr": "حالة زيادة سرعة ضربات القلب."
+    }
   }
 ]
