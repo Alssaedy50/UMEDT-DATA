@@ -1,1 +1,562 @@
-[]
+[
+  {
+    "id": "term-aneurysm",
+    "term": "Aneurysm",
+    "translation": "تمدد الأوعية الدموية",
+    "pronunciation": "/ˈæn.jəˌrɪz.əm/",
+    "definitionEn": "A localized, persistent dilation of an artery or cardiac wall caused by structural weakness; rupture may cause life-threatening hemorrhage.\n\nWord breakdown: aneurysm: historically derived; not reliably divisible into standard productive medical morphemes.",
+    "definitionAr": "توسع موضعي ومستمر في الشريان أو جدار القلب نتيجة ضعف بنيته، وقد يؤدي تمزقه إلى نزف مهدد للحياة.\n\nتفكيك المصطلح: aneurysm: historically derived; not reliably divisible into standard productive medical morphemes.",
+    "exampleEn": "The abdominal aortic aneurysm was monitored for expansion.",
+    "exampleAr": "تمت متابعة تمدد الأبهر البطني لرصد ازدياد حجمه."
+  },
+  {
+    "id": "term-angina",
+    "term": "Angina",
+    "translation": "الذبحة الصدرية",
+    "pronunciation": "/ænˈdʒaɪ.nə/",
+    "definitionEn": "Chest discomfort caused by myocardial ischemia, usually from an imbalance between myocardial oxygen supply and demand.\n\nWord breakdown: angina: Latin origin; no reliable modern prefix-root-suffix segmentation.",
+    "definitionAr": "انزعاج أو ألم صدري ناتج عن نقص تروية عضلة القلب، غالبًا بسبب عدم التوازن بين إمدادها بالأكسجين واحتياجها إليه.\n\nتفكيك المصطلح: angina: Latin origin; no reliable modern prefix-root-suffix segmentation.",
+    "exampleEn": "Exertional angina improved after antianginal treatment.",
+    "exampleAr": "تحسنت الذبحة الصدرية الجهدية بعد العلاج المضاد للذبحة."
+  },
+  {
+    "id": "term-arrhythmia",
+    "term": "Arrhythmia",
+    "translation": "اضطراب النظم القلبي",
+    "pronunciation": "/əˈrɪð.mi.ə/",
+    "definitionEn": "An abnormality in the rate, regularity, site of origin, or conduction of cardiac electrical activity.\n\nWord breakdown: a- = without/absence (historical form); rhythm = regular sequence; -ia = condition.",
+    "definitionAr": "خلل في معدل النشاط الكهربائي القلبي أو انتظامه أو منشئه أو توصيله.\n\nتفكيك المصطلح: a- = without/absence (historical form); rhythm = regular sequence; -ia = condition.",
+    "exampleEn": "The electrocardiogram revealed a sustained arrhythmia.",
+    "exampleAr": "كشف تخطيط القلب اضطرابًا مستمرًا في النظم."
+  },
+  {
+    "id": "term-atherosclerosis",
+    "term": "Atherosclerosis",
+    "translation": "تصلب الشرايين العصيدي",
+    "pronunciation": "/ˌæθ.ə.roʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "A chronic inflammatory disease of medium and large arteries characterized by intimal atheromatous plaques that may narrow the lumen or rupture.\n\nWord breakdown: ather/o = fatty plaque; scler/o = hard; -osis = abnormal condition.",
+    "definitionAr": "مرض التهابي مزمن يصيب الشرايين المتوسطة والكبيرة، ويتصف بلويحات عصيدية في البطانة قد تضيق اللمعة أو تتمزق.\n\nتفكيك المصطلح: ather/o = fatty plaque; scler/o = hard; -osis = abnormal condition.",
+    "exampleEn": "Atherosclerosis was identified in the coronary arteries.",
+    "exampleAr": "تم اكتشاف التصلب العصيدي في الشرايين التاجية."
+  },
+  {
+    "id": "term-arteriosclerosis",
+    "term": "Arteriosclerosis",
+    "translation": "تصلب الشرايين",
+    "pronunciation": "/ɑːrˌtɪr.i.oʊ.skləˈroʊ.sɪs/",
+    "definitionEn": "A general term for arterial wall thickening and loss of elasticity; atherosclerosis is one subtype.\n\nWord breakdown: arteri/o = artery; scler/o = hard; -osis = abnormal condition.",
+    "definitionAr": "مصطلح عام يشير إلى زيادة سماكة جدار الشريان وفقدان مرونته، ويعد التصلب العصيدي أحد أنواعه.\n\nتفكيك المصطلح: arteri/o = artery; scler/o = hard; -osis = abnormal condition.",
+    "exampleEn": "Arteriosclerosis can increase systolic blood pressure.",
+    "exampleAr": "قد يؤدي تصلب الشرايين إلى ارتفاع ضغط الدم الانقباضي."
+  },
+  {
+    "id": "term-cardiomyopathy",
+    "term": "Cardiomyopathy",
+    "translation": "اعتلال عضلة القلب",
+    "pronunciation": "/ˌkɑːr.di.oʊ.maɪˈɑː.pə.θi/",
+    "definitionEn": "A disease of the myocardium associated with structural or functional abnormalities that can impair cardiac performance.\n\nWord breakdown: cardi/o = heart; my/o = muscle; -pathy = disease.",
+    "definitionAr": "مرض يصيب عضلة القلب ويترافق مع تغيرات بنيوية أو وظيفية قد تضعف أداء القلب.\n\nتفكيك المصطلح: cardi/o = heart; my/o = muscle; -pathy = disease.",
+    "exampleEn": "Dilated cardiomyopathy caused reduced ejection fraction.",
+    "exampleAr": "سبب اعتلال عضلة القلب التوسعي انخفاض الكسر القذفي."
+  },
+  {
+    "id": "term-myocarditis",
+    "term": "Myocarditis",
+    "translation": "التهاب عضلة القلب",
+    "pronunciation": "/ˌmaɪ.oʊ.kɑːrˈdaɪ.tɪs/",
+    "definitionEn": "Inflammation of the myocardium, commonly associated with infection or immune-mediated injury.\n\nWord breakdown: my/o = muscle; cardi = heart; -itis = inflammation.",
+    "definitionAr": "التهاب يصيب عضلة القلب، ويرتبط غالبًا بعدوى أو أذية مناعية.\n\nتفكيك المصطلح: my/o = muscle; cardi = heart; -itis = inflammation.",
+    "exampleEn": "Viral myocarditis may present with chest pain and troponin elevation.",
+    "exampleAr": "قد يظهر التهاب عضلة القلب الفيروسي بألم صدري وارتفاع التروبونين."
+  },
+  {
+    "id": "term-endocarditis",
+    "term": "Endocarditis",
+    "translation": "التهاب شغاف القلب",
+    "pronunciation": "/ˌen.doʊ.kɑːrˈdaɪ.tɪs/",
+    "definitionEn": "Inflammation of the endocardial surface, often involving cardiac valves and frequently caused by microbial infection.\n\nWord breakdown: endo- = within; cardi = heart; -itis = inflammation.",
+    "definitionAr": "التهاب يصيب السطح الشغافي للقلب، وغالبًا ما يشمل الصمامات وينجم عن عدوى ميكروبية.\n\nتفكيك المصطلح: endo- = within; cardi = heart; -itis = inflammation.",
+    "exampleEn": "Blood cultures were obtained because infective endocarditis was suspected.",
+    "exampleAr": "أُخذت مزارع الدم للاشتباه بالتهاب شغاف القلب العدوائي."
+  },
+  {
+    "id": "term-pericarditis",
+    "term": "Pericarditis",
+    "translation": "التهاب التامور",
+    "pronunciation": "/ˌper.ɪ.kɑːrˈdaɪ.tɪs/",
+    "definitionEn": "Inflammation of the pericardial sac surrounding the heart.\n\nWord breakdown: peri- = around; cardi = heart; -itis = inflammation.",
+    "definitionAr": "التهاب يصيب كيس التامور المحيط بالقلب.\n\nتفكيك المصطلح: peri- = around; cardi = heart; -itis = inflammation.",
+    "exampleEn": "The patient developed sharp pleuritic pain due to acute pericarditis.",
+    "exampleAr": "أُصيب المريض بألم حاد يزداد مع التنفس بسبب التهاب التامور الحاد."
+  },
+  {
+    "id": "term-endocardium",
+    "term": "Endocardium",
+    "translation": "الشغاف",
+    "pronunciation": "/ˌen.doʊˈkɑːr.di.əm/",
+    "definitionEn": "The endothelial lining of the heart chambers and valves, continuous with the vascular endothelium.\n\nWord breakdown: endo- = within; cardi = heart; -ium = tissue or structure.",
+    "definitionAr": "البطانة المبطنة لحجرات القلب وصماماته، والمتصلة ببطانة الأوعية الدموية.\n\nتفكيك المصطلح: endo- = within; cardi = heart; -ium = tissue or structure.",
+    "exampleEn": "The lesion extended from the valve into the endocardium.",
+    "exampleAr": "امتدت الآفة من الصمام إلى الشغاف."
+  },
+  {
+    "id": "term-myocardium",
+    "term": "Myocardium",
+    "translation": "عضلة القلب",
+    "pronunciation": "/ˌmaɪ.oʊˈkɑːr.di.əm/",
+    "definitionEn": "The muscular middle layer of the heart wall responsible for generating contractile force.\n\nWord breakdown: my/o = muscle; cardi = heart; -ium = tissue or structure.",
+    "definitionAr": "الطبقة العضلية الوسطى من جدار القلب والمسؤولة عن توليد قوة الانقباض.\n\nتفكيك المصطلح: my/o = muscle; cardi = heart; -ium = tissue or structure.",
+    "exampleEn": "Ischemia can cause injury to the myocardium.",
+    "exampleAr": "قد يسبب نقص التروية أذية في عضلة القلب."
+  },
+  {
+    "id": "term-epicardium",
+    "term": "Epicardium",
+    "translation": "النِّخاب",
+    "pronunciation": "/ˌep.ɪˈkɑːr.di.əm/",
+    "definitionEn": "The outer layer of the heart wall, corresponding to the visceral layer of the serous pericardium.\n\nWord breakdown: epi- = upon/on; cardi = heart; -ium = tissue or structure.",
+    "definitionAr": "الطبقة الخارجية من جدار القلب، وتمثل الطبقة الحشوية من التامور المصلي.\n\nتفكيك المصطلح: epi- = upon/on; cardi = heart; -ium = tissue or structure.",
+    "exampleEn": "The epicardium was examined for inflammatory changes.",
+    "exampleAr": "فُحص النخاب بحثًا عن تغيرات التهابية."
+  },
+  {
+    "id": "term-ischemia",
+    "term": "Ischemia",
+    "translation": "نقص التروية",
+    "pronunciation": "/ɪˈskiː.mi.ə/",
+    "definitionEn": "Inadequate blood supply to a tissue, resulting in insufficient oxygen and nutrient delivery for its metabolic needs.\n\nWord breakdown: isch/o = to hold back/restrict; -emia = blood condition (historical construction); -ia = condition.",
+    "definitionAr": "نقص وصول الدم إلى نسيج ما، مما يؤدي إلى عدم كفاية الأكسجين والمواد الغذائية لاحتياجاته الاستقلابية.\n\nتفكيك المصطلح: isch/o = to hold back/restrict; -emia = blood condition (historical construction); -ia = condition.",
+    "exampleEn": "Transient myocardial ischemia produced reversible ST-segment changes.",
+    "exampleAr": "أحدث نقص تروية عضلة القلب العابر تغيرات قابلة للعكس في مقطع ST."
+  },
+  {
+    "id": "term-infarction",
+    "term": "Infarction",
+    "translation": "احتشاء",
+    "pronunciation": "/ɪnˈfɑːrk.ʃən/",
+    "definitionEn": "Tissue necrosis caused by prolonged ischemia, most commonly following interruption of arterial blood flow or venous drainage.\n\nWord breakdown: infarct = area of ischemic necrosis; -ion = process or state.",
+    "definitionAr": "نخر نسيجي ينجم عن نقص تروية مطول، وغالبًا بعد انقطاع الجريان الشرياني أو التصريف الوريدي.\n\nتفكيك المصطلح: infarct = area of ischemic necrosis; -ion = process or state.",
+    "exampleEn": "Coronary occlusion resulted in myocardial infarction.",
+    "exampleAr": "أدى انسداد الشريان التاجي إلى احتشاء عضلة القلب."
+  },
+  {
+    "id": "term-necrosis",
+    "term": "Necrosis",
+    "translation": "النخر",
+    "pronunciation": "/nəˈkroʊ.sɪs/",
+    "definitionEn": "Uncontrolled cell death in living tissue, typically accompanied by membrane breakdown and inflammation.\n\nWord breakdown: necr/o = death; -osis = condition/process.",
+    "definitionAr": "موت خلوي غير منظم في نسيج حي، يترافق عادة مع تمزق الأغشية وحدوث الالتهاب.\n\nتفكيك المصطلح: necr/o = death; -osis = condition/process.",
+    "exampleEn": "Histology demonstrated coagulative necrosis in the myocardium.",
+    "exampleAr": "أظهر الفحص النسيجي نخرًا تخثريًا في عضلة القلب."
+  },
+  {
+    "id": "term-thrombosis",
+    "term": "Thrombosis",
+    "translation": "الخثار",
+    "pronunciation": "/θrɑːmˈboʊ.sɪs/",
+    "definitionEn": "Formation of a thrombus within a blood vessel or cardiac chamber during life, potentially obstructing blood flow.\n\nWord breakdown: thromb/o = clot; -osis = condition/process.",
+    "definitionAr": "تكوّن خثرة داخل وعاء دموي أو حجرة قلبية أثناء الحياة، وقد تعيق جريان الدم.\n\nتفكيك المصطلح: thromb/o = clot; -osis = condition/process.",
+    "exampleEn": "Coronary thrombosis precipitated an acute myocardial infarction.",
+    "exampleAr": "حفّز الخثار التاجي حدوث احتشاء حاد في عضلة القلب."
+  },
+  {
+    "id": "term-embolism",
+    "term": "Embolism",
+    "translation": "الصمّة",
+    "pronunciation": "/ˈem.bə.lɪ.zəm/",
+    "definitionEn": "Vascular obstruction by material transported through the bloodstream from a site distant from the point of impaction.\n\nWord breakdown: embol/o = something inserted or thrown in; -ism = process or condition.",
+    "definitionAr": "انسداد وعائي بمادة انتقلت عبر مجرى الدم من موضع آخر إلى مكان الانحشار.\n\nتفكيك المصطلح: embol/o = something inserted or thrown in; -ism = process or condition.",
+    "exampleEn": "Pulmonary embolism was confirmed by computed tomography.",
+    "exampleAr": "تأكد وجود صمة رئوية بالتصوير المقطعي المحوسب."
+  },
+  {
+    "id": "term-vasculitis",
+    "term": "Vasculitis",
+    "translation": "التهاب الأوعية الدموية",
+    "pronunciation": "/ˌvæs.kjəˈlaɪ.tɪs/",
+    "definitionEn": "Inflammation of blood vessel walls that may cause stenosis, occlusion, aneurysm, or tissue ischemia.\n\nWord breakdown: vascul/o = small vessel; -itis = inflammation.",
+    "definitionAr": "التهاب جدران الأوعية الدموية، وقد يسبب تضيقًا أو انسدادًا أو تمددًا وعائيًا أو نقص تروية الأنسجة.\n\nتفكيك المصطلح: vascul/o = small vessel; -itis = inflammation.",
+    "exampleEn": "The biopsy supported a diagnosis of small-vessel vasculitis.",
+    "exampleAr": "دعمت الخزعة تشخيص التهاب الأوعية الدموية الصغيرة."
+  },
+  {
+    "id": "term-aortitis",
+    "term": "Aortitis",
+    "translation": "التهاب الأبهر",
+    "pronunciation": "/ˌeɪ.ɔːrˈtaɪ.tɪs/",
+    "definitionEn": "Inflammation of the aortic wall, which may occur in infectious or immune-mediated disorders.\n\nWord breakdown: aort/o = aorta; -itis = inflammation.",
+    "definitionAr": "التهاب يصيب جدار الأبهر، وقد يحدث في اضطرابات إنتانية أو مناعية.\n\nتفكيك المصطلح: aort/o = aorta; -itis = inflammation.",
+    "exampleEn": "Imaging showed circumferential aortic wall thickening consistent with aortitis.",
+    "exampleAr": "أظهر التصوير تثخنًا محيطيًا في جدار الأبهر بما يتوافق مع التهاب الأبهر."
+  },
+  {
+    "id": "term-stenosis",
+    "term": "Stenosis",
+    "translation": "تضيّق",
+    "pronunciation": "/stəˈnoʊ.sɪs/",
+    "definitionEn": "Abnormal narrowing of a tubular structure, such as a heart valve or blood vessel, that may restrict flow.\n\nWord breakdown: sten/o = narrow; -osis = abnormal condition.",
+    "definitionAr": "تضيق غير طبيعي في بنية أنبوبية مثل صمام القلب أو الوعاء الدموي، وقد يحد من الجريان.\n\nتفكيك المصطلح: sten/o = narrow; -osis = abnormal condition.",
+    "exampleEn": "Severe aortic stenosis increased left ventricular afterload.",
+    "exampleAr": "زاد تضيق الصمام الأبهري الشديد الحمل البَعدي على البطين الأيسر."
+  },
+  {
+    "id": "term-regurgitation",
+    "term": "Regurgitation",
+    "translation": "قلس",
+    "pronunciation": "/rɪˌɡɝː.dʒɪˈteɪ.ʃən/",
+    "definitionEn": "Backward flow of blood through a cardiac valve that fails to close adequately.\n\nWord breakdown: re- = back; gurgit = flow/gush; -ation = process.",
+    "definitionAr": "عودة الدم إلى الخلف عبر صمام قلبي لا ينغلق بإحكام كافٍ.\n\nتفكيك المصطلح: re- = back; gurgit = flow/gush; -ation = process.",
+    "exampleEn": "Echocardiography demonstrated moderate mitral regurgitation.",
+    "exampleAr": "أظهر تخطيط صدى القلب قلسًا تاجيًا متوسط الشدة."
+  },
+  {
+    "id": "term-hypertension",
+    "term": "Hypertension",
+    "translation": "فرط ضغط الدم",
+    "pronunciation": "/ˌhaɪ.pɚˈten.ʃən/",
+    "definitionEn": "Persistently elevated arterial blood pressure, associated with increased cardiovascular risk and target-organ damage.\n\nWord breakdown: hyper- = excessive/high; tens = pressure/stretch; -ion = state.",
+    "definitionAr": "ارتفاع مستمر في ضغط الدم الشرياني، ويرتبط بزيادة خطر الأمراض القلبية الوعائية وأذية الأعضاء المستهدفة.\n\nتفكيك المصطلح: hyper- = excessive/high; tens = pressure/stretch; -ion = state.",
+    "exampleEn": "Long-standing hypertension contributed to left ventricular hypertrophy.",
+    "exampleAr": "أسهم فرط ضغط الدم طويل الأمد في تضخم البطين الأيسر."
+  },
+  {
+    "id": "term-hypotension",
+    "term": "Hypotension",
+    "translation": "انخفاض ضغط الدم",
+    "pronunciation": "/ˌhaɪ.poʊˈten.ʃən/",
+    "definitionEn": "Arterial blood pressure below the level required to maintain adequate tissue perfusion in the clinical context.\n\nWord breakdown: hypo- = low/below; tens = pressure/stretch; -ion = state.",
+    "definitionAr": "انخفاض ضغط الدم الشرياني إلى مستوى قد لا يكفي للحفاظ على تروية الأنسجة بحسب الحالة السريرية.\n\nتفكيك المصطلح: hypo- = low/below; tens = pressure/stretch; -ion = state.",
+    "exampleEn": "Severe hypotension developed during cardiogenic shock.",
+    "exampleAr": "حدث انخفاض شديد في ضغط الدم أثناء الصدمة القلبية."
+  },
+  {
+    "id": "term-hypertrophy",
+    "term": "Hypertrophy",
+    "translation": "التضخم",
+    "pronunciation": "/haɪˈpɝː.trə.fi/",
+    "definitionEn": "Increase in the size of individual cells, producing enlargement of an organ or tissue without necessarily increasing cell number.\n\nWord breakdown: hyper- = excessive; -trophy = nourishment/development.",
+    "definitionAr": "زيادة حجم الخلايا المفردة، مما يؤدي إلى تضخم العضو أو النسيج دون ضرورة زيادة عدد الخلايا.\n\nتفكيك المصطلح: hyper- = excessive; -trophy = nourishment/development.",
+    "exampleEn": "Chronic pressure overload caused concentric ventricular hypertrophy.",
+    "exampleAr": "أدى الحمل الضغطي المزمن إلى تضخم متحد المركز في البطين."
+  },
+  {
+    "id": "term-dilatation",
+    "term": "Dilatation",
+    "translation": "التوسع",
+    "pronunciation": "/ˌdaɪ.leɪˈteɪ.ʃən/",
+    "definitionEn": "Abnormal or increased widening of a hollow organ, chamber, or vessel.\n\nWord breakdown: dilat = widen; -ation = process.",
+    "definitionAr": "اتساع زائد أو غير طبيعي في عضو أجوف أو حجرة أو وعاء دموي.\n\nتفكيك المصطلح: dilat = widen; -ation = process.",
+    "exampleEn": "Ventricular dilatation was associated with reduced systolic function.",
+    "exampleAr": "ارتبط توسع البطين بانخفاض الوظيفة الانقباضية."
+  },
+  {
+    "id": "term-fibrosis",
+    "term": "Fibrosis",
+    "translation": "التليف",
+    "pronunciation": "/faɪˈbroʊ.sɪs/",
+    "definitionEn": "Excessive deposition of extracellular matrix, especially collagen, replacing or disrupting normal tissue architecture.\n\nWord breakdown: fibr/o = fiber; -osis = abnormal condition.",
+    "definitionAr": "ترسب مفرط للمصفوفة خارج الخلوية، وخصوصًا الكولاجين، بما يستبدل البنية النسيجية الطبيعية أو يشوهها.\n\nتفكيك المصطلح: fibr/o = fiber; -osis = abnormal condition.",
+    "exampleEn": "Myocardial fibrosis provided a substrate for ventricular arrhythmia.",
+    "exampleAr": "وفّر تليف عضلة القلب أرضية لحدوث اضطراب النظم البطيني."
+  },
+  {
+    "id": "term-calcification",
+    "term": "Calcification",
+    "translation": "التكلس",
+    "pronunciation": "/ˌkæl.sɪ.fɪˈkeɪ.ʃən/",
+    "definitionEn": "Deposition of calcium salts in tissue, either in damaged tissue or in otherwise normal tissue.\n\nWord breakdown: calc/i = calcium or lime; -fication = process of making/becoming.",
+    "definitionAr": "ترسب أملاح الكالسيوم في الأنسجة، سواء في النسيج المتضرر أو في نسيج طبيعي ظاهريًا.\n\nتفكيك المصطلح: calc/i = calcium or lime; -fication = process of making/becoming.",
+    "exampleEn": "Dystrophic calcification was present in the damaged valve.",
+    "exampleAr": "وُجد تكلس حثلي في الصمام المتضرر."
+  },
+  {
+    "id": "term-amyloidosis",
+    "term": "Amyloidosis",
+    "translation": "الداء النشواني",
+    "pronunciation": "/ˌæm.ɪ.loʊˈdoʊ.sɪs/",
+    "definitionEn": "A group of disorders characterized by extracellular deposition of misfolded proteins forming amyloid fibrils; cardiac involvement causes restrictive physiology.\n\nWord breakdown: amyloid = starch-like substance (historical); -osis = condition.",
+    "definitionAr": "مجموعة اضطرابات تتميز بترسب بروتينات مطوية بشكل غير طبيعي خارج الخلايا على هيئة ألياف نشوانية؛ وقد يؤدي إصابة القلب إلى نمط تقييدي.\n\nتفكيك المصطلح: amyloid = starch-like substance (historical); -osis = condition.",
+    "exampleEn": "Cardiac amyloidosis caused increased ventricular wall thickness and diastolic dysfunction.",
+    "exampleAr": "سبب الداء النشواني القلبي زيادة سماكة جدار البطين واختلال الوظيفة الانبساطية."
+  },
+  {
+    "id": "term-hemorrhage",
+    "term": "Hemorrhage",
+    "translation": "النزف",
+    "pronunciation": "/ˈhem.ə.rɪdʒ/",
+    "definitionEn": "Escape of blood from vessels into surrounding tissue, a body cavity, or outside the body.\n\nWord breakdown: hem/o = blood; -rrhage = bursting forth or excessive flow.",
+    "definitionAr": "خروج الدم من الأوعية إلى الأنسجة المحيطة أو أحد تجاويف الجسم أو إلى خارج الجسم.\n\nتفكيك المصطلح: hem/o = blood; -rrhage = bursting forth or excessive flow.",
+    "exampleEn": "Rupture of the aneurysm caused massive internal hemorrhage.",
+    "exampleAr": "أدى تمزق التمدد الوعائي إلى نزف داخلي غزير."
+  },
+  {
+    "id": "term-anemia",
+    "term": "Anemia",
+    "translation": "فقر الدم",
+    "pronunciation": "/əˈniː.mi.ə/",
+    "definitionEn": "A reduction in hemoglobin concentration or red-cell mass below the reference range, reducing oxygen-carrying capacity.\n\nWord breakdown: an- = without/deficiency; -emia = blood condition.",
+    "definitionAr": "انخفاض تركيز الهيموغلوبين أو كتلة كريات الدم الحمراء عن المجال المرجعي، مما يقلل قدرة الدم على حمل الأكسجين.\n\nتفكيك المصطلح: an- = without/deficiency; -emia = blood condition.",
+    "exampleEn": "Severe anemia increased myocardial oxygen demand relative to supply.",
+    "exampleAr": "زاد فقر الدم الشديد عدم التوازن بين حاجة عضلة القلب للأكسجين وإمدادها به."
+  },
+  {
+    "id": "term-thrombocytopenia",
+    "term": "Thrombocytopenia",
+    "translation": "قلة الصفيحات",
+    "pronunciation": "/ˌθrɑːm.boʊˌsaɪ.toʊˈpiː.ni.ə/",
+    "definitionEn": "A platelet count below the reference range, increasing bleeding risk depending on severity and cause.\n\nWord breakdown: thromb/o = clot; cyt/o = cell; -penia = deficiency/decrease.",
+    "definitionAr": "انخفاض عدد الصفائح الدموية عن المجال المرجعي، مما قد يزيد خطر النزف بحسب الشدة والسبب.\n\nتفكيك المصطلح: thromb/o = clot; cyt/o = cell; -penia = deficiency/decrease.",
+    "exampleEn": "Thrombocytopenia complicated the management of anticoagulation.",
+    "exampleAr": "عقّدت قلة الصفيحات تدبير العلاج المضاد للتخثر."
+  },
+  {
+    "id": "term-hyperlipidemia",
+    "term": "Hyperlipidemia",
+    "translation": "فرط شحميات الدم",
+    "pronunciation": "/ˌhaɪ.pɚˌlɪp.ɪˈdiː.mi.ə/",
+    "definitionEn": "An elevation of one or more circulating lipid fractions, including cholesterol or triglycerides.\n\nWord breakdown: hyper- = excessive; lip/o = fat; -emia = blood condition.",
+    "definitionAr": "ارتفاع واحد أو أكثر من مكونات الدهون المتداولة في الدم، بما فيها الكوليسترول أو الدهون الثلاثية.\n\nتفكيك المصطلح: hyper- = excessive; lip/o = fat; -emia = blood condition.",
+    "exampleEn": "Hyperlipidemia is an important modifiable risk factor for atherosclerotic disease.",
+    "exampleAr": "يُعد فرط شحميات الدم عامل خطر قابلًا للتعديل في المرض العصيدي."
+  },
+  {
+    "id": "term-dyslipidemia",
+    "term": "Dyslipidemia",
+    "translation": "اضطراب شحميات الدم",
+    "pronunciation": "/ˌdɪs.lɪp.ɪˈdiː.mi.ə/",
+    "definitionEn": "An abnormal lipid profile, including elevated or reduced concentrations of cholesterol or triglycerides.\n\nWord breakdown: dys- = abnormal; lip/o = fat; -emia = blood condition.",
+    "definitionAr": "اختلال في نمط دهون الدم، ويشمل ارتفاع أو انخفاض تراكيز الكوليسترول أو الدهون الثلاثية.\n\nتفكيك المصطلح: dys- = abnormal; lip/o = fat; -emia = blood condition.",
+    "exampleEn": "Dyslipidemia was treated to reduce long-term cardiovascular risk.",
+    "exampleAr": "عولج اضطراب شحميات الدم لتقليل خطر الأمراض القلبية الوعائية على المدى البعيد."
+  },
+  {
+    "id": "term-xanthoma",
+    "term": "Xanthoma",
+    "translation": "ورم أصفر",
+    "pronunciation": "/zænˈθoʊ.mə/",
+    "definitionEn": "A localized accumulation of lipid-laden macrophages in skin or tendons, sometimes associated with inherited or acquired dyslipidemia.\n\nWord breakdown: xanth/o = yellow; -oma = mass or tumor.",
+    "definitionAr": "تراكم موضعي للبلاعم المحملة بالدهون في الجلد أو الأوتار، وقد يرتبط باضطراب شحميات الدم الوراثي أو المكتسب.\n\nتفكيك المصطلح: xanth/o = yellow; -oma = mass or tumor.",
+    "exampleEn": "Tendon xanthomas suggested familial hypercholesterolemia.",
+    "exampleAr": "أشارت الأورام الصفراء الوترية إلى فرط كوليسترول الدم العائلي."
+  },
+  {
+    "id": "term-atheroma",
+    "term": "Atheroma",
+    "translation": "لويحة عصيدية",
+    "pronunciation": "/ˌæθ.əˈroʊ.mə/",
+    "definitionEn": "A lipid-rich intimal lesion containing cells, connective tissue, and necrotic debris, forming the core of an atherosclerotic plaque.\n\nWord breakdown: ather/o = fatty plaque; -oma = mass or lesion.",
+    "definitionAr": "آفة غنية بالدهون في الطبقة الباطنة، تحتوي خلايا ونسيجًا ضامًا وحطامًا نخريًا، وتشكل لب اللويحة العصيدية.\n\nتفكيك المصطلح: ather/o = fatty plaque; -oma = mass or lesion.",
+    "exampleEn": "The atheroma narrowed the coronary arterial lumen.",
+    "exampleAr": "ضيّقت اللويحة العصيدية لمعة الشريان التاجي."
+  },
+  {
+    "id": "term-plaque",
+    "term": "Plaque",
+    "translation": "لويحة",
+    "pronunciation": "/plæk/",
+    "definitionEn": "A localized raised lesion on the arterial intima; an atherosclerotic plaque contains lipid, inflammatory cells, and fibrous tissue.\n\nWord breakdown: plaque: a standalone English noun; no productive medical morpheme division.",
+    "definitionAr": "آفة موضعية مرتفعة على بطانة الشريان؛ وتحتوي اللويحة العصيدية دهونًا وخلايا التهابية ونسيجًا ليفيًا.\n\nتفكيك المصطلح: plaque: a standalone English noun; no productive medical morpheme division.",
+    "exampleEn": "Plaque rupture triggered platelet-rich thrombus formation.",
+    "exampleAr": "حفز تمزق اللويحة تشكل خثرة غنية بالصفائح."
+  },
+  {
+    "id": "term-rupture",
+    "term": "Rupture",
+    "translation": "تمزق",
+    "pronunciation": "/ˈrʌp.tʃɚ/",
+    "definitionEn": "A break in the continuity of a tissue or vessel wall, potentially causing bleeding or release of intraluminal contents.\n\nWord breakdown: rupt = break; -ure = result or state.",
+    "definitionAr": "انقطاع في استمرارية نسيج أو جدار وعائي، وقد يسبب نزفًا أو خروج محتويات اللمعة.\n\nتفكيك المصطلح: rupt = break; -ure = result or state.",
+    "exampleEn": "Plaque rupture exposed thrombogenic material to circulating blood.",
+    "exampleAr": "كشف تمزق اللويحة مواد محفزة للتخثر أمام الدم الجاري."
+  },
+  {
+    "id": "term-occlusion",
+    "term": "Occlusion",
+    "translation": "انسداد",
+    "pronunciation": "/əˈkluː.ʒən/",
+    "definitionEn": "Complete or near-complete blockage of a vessel or tubular passage.\n\nWord breakdown: occlud = close/shut; -ion = process or state.",
+    "definitionAr": "انسداد كامل أو شبه كامل لوعاء دموي أو ممر أنبوبي.\n\nتفكيك المصطلح: occlud = close/shut; -ion = process or state.",
+    "exampleEn": "Acute coronary occlusion caused transmural ischemia.",
+    "exampleAr": "سبب الانسداد التاجي الحاد نقص تروية عابرًا لكامل سماكة الجدار."
+  },
+  {
+    "id": "term-embolus",
+    "term": "Embolus",
+    "translation": "صِمّة",
+    "pronunciation": "/ˈem.bə.ləs/",
+    "definitionEn": "A detached intravascular mass, such as thrombus, fat, air, or tumor material, carried by blood to a distant site.\n\nWord breakdown: embol/o = plug or something inserted; -us = noun ending.",
+    "definitionAr": "كتلة منفصلة داخل الأوعية، مثل الخثرة أو الدهون أو الهواء أو أجزاء الورم، يحملها الدم إلى موضع بعيد.\n\nتفكيك المصطلح: embol/o = plug or something inserted; -us = noun ending.",
+    "exampleEn": "A thromboembolus lodged in a pulmonary artery.",
+    "exampleAr": "انحشرت صمة خثرية في أحد الشرايين الرئوية."
+  },
+  {
+    "id": "term-thrombus",
+    "term": "Thrombus",
+    "translation": "خثرة",
+    "pronunciation": "/ˈθrɑːm.bəs/",
+    "definitionEn": "A solid mass formed from blood constituents within the cardiovascular system during life.\n\nWord breakdown: thromb/o = clot; -us = noun ending.",
+    "definitionAr": "كتلة صلبة تتكون من مكونات الدم داخل الجهاز القلبي الوعائي أثناء الحياة.\n\nتفكيك المصطلح: thromb/o = clot; -us = noun ending.",
+    "exampleEn": "The thrombus adhered to the damaged endothelial surface.",
+    "exampleAr": "التصقت الخثرة بسطح البطانة الوعائية المتضرر."
+  },
+  {
+    "id": "term-endothelium",
+    "term": "Endothelium",
+    "translation": "البطانة الوعائية",
+    "pronunciation": "/ˌen.doʊˈθiː.li.əm/",
+    "definitionEn": "A specialized simple squamous epithelial layer lining blood and lymphatic vessels and the inner surface of the heart.\n\nWord breakdown: endo- = within; thelium = covering/layer; -um = structure.",
+    "definitionAr": "طبقة ظهارية حرشفية بسيطة متخصصة تبطن الأوعية الدموية واللمفاوية والسطح الداخلي للقلب.\n\nتفكيك المصطلح: endo- = within; thelium = covering/layer; -um = structure.",
+    "exampleEn": "Endothelial dysfunction promotes vasoconstriction and thrombosis.",
+    "exampleAr": "يعزز اختلال وظيفة البطانة الوعائية التضيق الوعائي والخثار."
+  },
+  {
+    "id": "term-atherogenesis",
+    "term": "Atherogenesis",
+    "translation": "تكوّن العصيدة",
+    "pronunciation": "/ˌæθ.ə.roʊˈdʒen.ə.sɪs/",
+    "definitionEn": "The biological process by which atherosclerotic lesions develop in the arterial intima.\n\nWord breakdown: ather/o = fatty plaque; -genesis = formation or origin.",
+    "definitionAr": "العملية البيولوجية التي تتطور من خلالها الآفات العصيدية في الطبقة الباطنة للشرايين.\n\nتفكيك المصطلح: ather/o = fatty plaque; -genesis = formation or origin.",
+    "exampleEn": "Endothelial injury and lipid retention contribute to atherogenesis.",
+    "exampleAr": "يسهم تلف البطانة واحتباس الدهون في تكوّن العصيدة."
+  },
+  {
+    "id": "term-angiogenesis",
+    "term": "Angiogenesis",
+    "translation": "تكوّن الأوعية",
+    "pronunciation": "/ˌæn.dʒi.oʊˈdʒen.ə.sɪs/",
+    "definitionEn": "Formation of new blood vessels from pre-existing vessels, occurring in development, repair, and pathological processes.\n\nWord breakdown: angi/o = vessel; -genesis = formation or origin.",
+    "definitionAr": "تكوّن أوعية دموية جديدة انطلاقًا من أوعية موجودة مسبقًا، ويحدث أثناء النمو والإصلاح والعمليات المرضية.\n\nتفكيك المصطلح: angi/o = vessel; -genesis = formation or origin.",
+    "exampleEn": "Angiogenesis can occur within advanced atherosclerotic plaques.",
+    "exampleAr": "قد يحدث تكوّن الأوعية داخل اللويحات العصيدية المتقدمة."
+  },
+  {
+    "id": "term-vasoconstriction",
+    "term": "Vasoconstriction",
+    "translation": "تقبض الأوعية",
+    "pronunciation": "/ˌveɪ.zoʊ.kənˈstrɪk.ʃən/",
+    "definitionEn": "Narrowing of a blood vessel due to contraction of vascular smooth muscle, increasing vascular resistance.\n\nWord breakdown: vas/o = vessel; con- = together; strict = draw tight; -ion = process.",
+    "definitionAr": "تضيق الوعاء الدموي نتيجة انقباض العضلات الملساء الوعائية، مما يزيد المقاومة الوعائية.\n\nتفكيك المصطلح: vas/o = vessel; con- = together; strict = draw tight; -ion = process.",
+    "exampleEn": "Coronary vasoconstriction reduced myocardial perfusion.",
+    "exampleAr": "قلل تقبض الشرايين التاجية تروية عضلة القلب."
+  },
+  {
+    "id": "term-vasodilation",
+    "term": "Vasodilation",
+    "translation": "توسع الأوعية",
+    "pronunciation": "/ˌveɪ.zoʊ.daɪˈleɪ.ʃən/",
+    "definitionEn": "Widening of a blood vessel due to relaxation of vascular smooth muscle, generally reducing vascular resistance.\n\nWord breakdown: vas/o = vessel; dilat = widen; -ion = process.",
+    "definitionAr": "اتساع الوعاء الدموي نتيجة ارتخاء العضلات الملساء الوعائية، ويؤدي غالبًا إلى خفض المقاومة الوعائية.\n\nتفكيك المصطلح: vas/o = vessel; dilat = widen; -ion = process.",
+    "exampleEn": "Nitric oxide promotes vasodilation in resistance vessels.",
+    "exampleAr": "يعزز أكسيد النيتريك توسع الأوعية المقاومة."
+  },
+  {
+    "id": "term-aneurysmal",
+    "term": "Aneurysmal",
+    "translation": "تمددّي",
+    "pronunciation": "/ˌæn.jəˈrɪz.məl/",
+    "definitionEn": "Relating to or characterized by an aneurysm or aneurysmal change in a vessel wall.\n\nWord breakdown: aneurysm = vessel dilation; -al = pertaining to.",
+    "definitionAr": "متعلق بتمدد الأوعية الدموية أو متصف بتغيرات تمددية في جدار الوعاء.\n\nتفكيك المصطلح: aneurysm = vessel dilation; -al = pertaining to.",
+    "exampleEn": "Aneurysmal dilation was detected in the ascending aorta.",
+    "exampleAr": "اكتُشف توسع تمددي في الأبهر الصاعد."
+  },
+  {
+    "id": "term-ischemic",
+    "term": "Ischemic",
+    "translation": "إقفاري",
+    "pronunciation": "/ɪˈskiː.mɪk/",
+    "definitionEn": "Relating to ischemia or caused by inadequate blood supply to a tissue.\n\nWord breakdown: isch/o = restrict/hold back; -emic/-ic = pertaining to a condition.",
+    "definitionAr": "متعلق بنقص التروية أو ناجم عن عدم كفاية وصول الدم إلى النسيج.\n\nتفكيك المصطلح: isch/o = restrict/hold back; -emic/-ic = pertaining to a condition.",
+    "exampleEn": "The patient had ischemic chest pain during exercise.",
+    "exampleAr": "عانى المريض ألمًا صدريًا إقفاريًا أثناء الجهد."
+  },
+  {
+    "id": "term-necrotic",
+    "term": "Necrotic",
+    "translation": "نخري",
+    "pronunciation": "/nəˈkrɑː.tɪk/",
+    "definitionEn": "Relating to or showing necrosis, the pathological death of cells or tissue.\n\nWord breakdown: necr/o = death; -otic/-ic = pertaining to or characterized by.",
+    "definitionAr": "متعلق بالنخر أو مظهر له، وهو الموت المرضي للخلايا أو الأنسجة.\n\nتفكيك المصطلح: necr/o = death; -otic/-ic = pertaining to or characterized by.",
+    "exampleEn": "Necrotic myocardium was surrounded by inflammatory cells.",
+    "exampleAr": "أُحيطت منطقة عضلة القلب النخرية بخلايا التهابية."
+  },
+  {
+    "id": "term-thrombotic",
+    "term": "Thrombotic",
+    "translation": "خثاري",
+    "pronunciation": "/θrɑːmˈbɑː.tɪk/",
+    "definitionEn": "Relating to thrombosis or caused by formation of an intravascular thrombus.\n\nWord breakdown: thromb/o = clot; -otic/-ic = pertaining to.",
+    "definitionAr": "متعلق بالخثار أو ناجم عن تشكل خثرة داخل الأوعية.\n\nتفكيك المصطلح: thromb/o = clot; -otic/-ic = pertaining to.",
+    "exampleEn": "Thrombotic occlusion interrupted coronary blood flow.",
+    "exampleAr": "قطع الانسداد الخثاري جريان الدم التاجي."
+  },
+  {
+    "id": "term-embolic",
+    "term": "Embolic",
+    "translation": "صِمّي",
+    "pronunciation": "/emˈbɑː.lɪk/",
+    "definitionEn": "Relating to an embolus or resulting from embolic obstruction.\n\nWord breakdown: embol/o = embolus/plug; -ic = pertaining to.",
+    "definitionAr": "متعلق بالصمة أو ناجم عن انسداد صمي.\n\nتفكيك المصطلح: embol/o = embolus/plug; -ic = pertaining to.",
+    "exampleEn": "An embolic event caused acute limb ischemia.",
+    "exampleAr": "سببت الحادثة الصمية نقص تروية حادًا في الطرف."
+  },
+  {
+    "id": "term-cardiac",
+    "term": "Cardiac",
+    "translation": "قلبي",
+    "pronunciation": "/ˈkɑːr.di.æk/",
+    "definitionEn": "Relating to the heart, its structure, function, or disease.\n\nWord breakdown: cardi/o = heart; -ac = pertaining to.",
+    "definitionAr": "متعلق بالقلب أو بنيته أو وظيفته أو أمراضه.\n\nتفكيك المصطلح: cardi/o = heart; -ac = pertaining to.",
+    "exampleEn": "Cardiac biomarkers were measured after the onset of chest pain.",
+    "exampleAr": "قِيست الواسمات القلبية بعد بدء الألم الصدري."
+  },
+  {
+    "id": "term-vascular",
+    "term": "Vascular",
+    "translation": "وعائي",
+    "pronunciation": "/ˈvæs.kjə.lɚ/",
+    "definitionEn": "Relating to blood vessels or the system of vessels that transports blood.\n\nWord breakdown: vascul/o = vessel; -ar = pertaining to.",
+    "definitionAr": "متعلق بالأوعية الدموية أو شبكة الأوعية التي تنقل الدم.\n\nتفكيك المصطلح: vascul/o = vessel; -ar = pertaining to.",
+    "exampleEn": "Vascular injury initiated platelet adhesion.",
+    "exampleAr": "بدأت الأذية الوعائية التصاق الصفائح الدموية."
+  },
+  {
+    "id": "term-coronary",
+    "term": "Coronary",
+    "translation": "تاجي",
+    "pronunciation": "/ˈkɔːr.əˌner.i/",
+    "definitionEn": "Relating to the coronary arteries or the circulation supplying the myocardium.\n\nWord breakdown: coron/o = heart/crown; -ary = pertaining to.",
+    "definitionAr": "متعلق بالشرايين التاجية أو بالدورة الدموية التي تغذي عضلة القلب.\n\nتفكيك المصطلح: coron/o = heart/crown; -ary = pertaining to.",
+    "exampleEn": "Coronary artery disease is a major cause of myocardial ischemia.",
+    "exampleAr": "يُعد مرض الشريان التاجي سببًا رئيسيًا لنقص تروية عضلة القلب."
+  },
+  {
+    "id": "term-aortic",
+    "term": "Aortic",
+    "translation": "أبهري",
+    "pronunciation": "/eɪˈɔːr.tɪk/",
+    "definitionEn": "Relating to the aorta or its branches and associated structures.\n\nWord breakdown: aort/o = aorta; -ic = pertaining to.",
+    "definitionAr": "متعلق بالأبهر أو بفروعه والبنى المرتبطة به.\n\nتفكيك المصطلح: aort/o = aorta; -ic = pertaining to.",
+    "exampleEn": "Aortic dissection requires urgent assessment.",
+    "exampleAr": "يتطلب تسلخ الأبهر تقييمًا عاجلًا."
+  },
+  {
+    "id": "term-ventricular",
+    "term": "Ventricular",
+    "translation": "بطيني",
+    "pronunciation": "/venˈtrɪk.jə.lɚ/",
+    "definitionEn": "Relating to a ventricle, particularly one of the heart's lower chambers.\n\nWord breakdown: ventricul/o = ventricle; -ar = pertaining to.",
+    "definitionAr": "متعلق بالبطين، ولا سيما إحدى الحجرتين السفليتين للقلب.\n\nتفكيك المصطلح: ventricul/o = ventricle; -ar = pertaining to.",
+    "exampleEn": "Ventricular dysfunction reduced cardiac output.",
+    "exampleAr": "أدى اختلال وظيفة البطين إلى انخفاض النتاج القلبي."
+  },
+  {
+    "id": "term-atrial",
+    "term": "Atrial",
+    "translation": "أُذيني",
+    "pronunciation": "/ˈeɪ.tri.əl/",
+    "definitionEn": "Relating to an atrium, one of the two upper chambers of the heart.\n\nWord breakdown: atri/o = atrium; -al = pertaining to.",
+    "definitionAr": "متعلق بالأذين، وهو إحدى الحجرتين العلويتين للقلب.\n\nتفكيك المصطلح: atri/o = atrium; -al = pertaining to.",
+    "exampleEn": "Atrial enlargement was visible on echocardiography.",
+    "exampleAr": "ظهر تضخم الأذين في تخطيط صدى القلب."
+  }
+]
