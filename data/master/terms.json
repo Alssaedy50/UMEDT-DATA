@@ -25976,5 +25976,905 @@
       ],
       "literalSynthesisAr": "cardio = قلب + surgeon = جراح + جراح متخصص في القلب. = undefined؛ يوضح تركيب المصطلح ومعناه."
     }
+  },
+  {
+    "id": "term-atherosclerosis-001",
+    "term": "Fibrous cap",
+    "translation": "الغطاء الليفي",
+    "definitionEn": "A collagen-rich layer covering the lipid core of an atherosclerotic plaque.",
+    "definitionAr": "طبقة غنية بالكولاجين تغطي اللب الدهني للويحة التصلبية.",
+    "exampleEn": "Atherosclerosis may involve fibrous cap during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الغطاء الليفي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-002",
+    "term": "Lipid core",
+    "translation": "اللب الدهني",
+    "definitionEn": "The central accumulation of cholesterol, lipid debris, and cell remnants within an atherosclerotic plaque.",
+    "definitionAr": "تجمع مركزي للكوليسترول والحطام الدهني وبقايا الخلايا داخل اللويحة التصلبية.",
+    "exampleEn": "Atherosclerosis may involve lipid core during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي اللب الدهني أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-003",
+    "term": "Foam cell",
+    "translation": "خلية رغوية",
+    "definitionEn": "A macrophage or smooth muscle cell filled with lipid droplets, typically found in fatty streaks and plaques.",
+    "definitionAr": "خلية بلعمية أو عضلية ملساء ممتلئة بقطيرات الدهون، وتوجد عادة في الخطوط الدهنية واللويحات.",
+    "exampleEn": "Atherosclerosis may involve foam cell during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي خلية رغوية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-004",
+    "term": "Fatty streak",
+    "translation": "خط دهني",
+    "definitionEn": "An early atherosclerotic lesion consisting mainly of lipid-laden foam cells in the intima.",
+    "definitionAr": "آفة مبكرة من التصلب العصيدي تتكون أساسًا من خلايا رغوية محملة بالدهون في الطبقة الباطنة.",
+    "exampleEn": "Atherosclerosis may involve fatty streak during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي خط دهني أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-005",
+    "term": "Thin-cap fibroatheroma",
+    "translation": "ورم عصيدي ليفي رقيق الغطاء",
+    "definitionEn": "A plaque with a large necrotic core and a thin fibrous cap, associated with increased rupture risk.",
+    "definitionAr": "لويحة ذات لب نخري كبير وغطاء ليفي رقيق، وترتبط بزيادة خطر التمزق.",
+    "exampleEn": "Atherosclerosis may involve thin-cap fibroatheroma during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي ورم عصيدي ليفي رقيق الغطاء أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-006",
+    "term": "Plaque rupture",
+    "translation": "تمزق اللويحة",
+    "definitionEn": "Disruption of the fibrous cap that exposes thrombogenic plaque contents to circulating blood.",
+    "definitionAr": "انقطاع الغطاء الليفي بما يكشف محتويات اللويحة المحفزة للتخثر أمام الدم الجاري.",
+    "exampleEn": "Atherosclerosis may involve plaque rupture during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تمزق اللويحة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-007",
+    "term": "Plaque erosion",
+    "translation": "تعرية اللويحة",
+    "definitionEn": "Endothelial loss over an atherosclerotic plaque without frank fibrous-cap rupture, which may trigger thrombosis.",
+    "definitionAr": "فقدان البطانة فوق اللويحة التصلبية دون تمزق واضح للغطاء الليفي، وقد يؤدي إلى الخثار.",
+    "exampleEn": "Atherosclerosis may involve plaque erosion during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تعرية اللويحة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-008",
+    "term": "Intraplaque hemorrhage",
+    "translation": "نزف داخل اللويحة",
+    "definitionEn": "Bleeding within an atherosclerotic plaque, often from fragile neovessels, that can accelerate plaque growth.",
+    "definitionAr": "نزف داخل اللويحة التصلبية، غالبًا من أوعية دموية حديثة هشة، وقد يسرّع نموها.",
+    "exampleEn": "Atherosclerosis may involve intraplaque hemorrhage during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي نزف داخل اللويحة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-009",
+    "term": "Plaque calcification",
+    "translation": "تكلس اللويحة",
+    "definitionEn": "Deposition of calcium salts within an atherosclerotic lesion.",
+    "definitionAr": "ترسب أملاح الكالسيوم داخل الآفة التصلبية.",
+    "exampleEn": "Atherosclerosis may involve plaque calcification during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تكلس اللويحة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-010",
+    "term": "Coronary artery calcification",
+    "translation": "تكلس الشرايين التاجية",
+    "definitionEn": "Calcium deposition in coronary atherosclerotic plaques, used as a marker of coronary atherosclerotic burden.",
+    "definitionAr": "ترسب الكالسيوم في لويحات الشرايين التاجية، ويستخدم مؤشرًا على عبء التصلب التاجي.",
+    "exampleEn": "Atherosclerosis may involve coronary artery calcification during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تكلس الشرايين التاجية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-011",
+    "term": "Necrotic core",
+    "translation": "اللب النخري",
+    "definitionEn": "A region of dead cells, cholesterol crystals, and cellular debris within an advanced plaque.",
+    "definitionAr": "منطقة تضم خلايا ميتة وبلورات كوليسترول وحطامًا خلويًا داخل اللويحة المتقدمة.",
+    "exampleEn": "Atherosclerosis may involve necrotic core during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي اللب النخري أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-012",
+    "term": "Cholesterol crystal",
+    "translation": "بلورة الكوليسترول",
+    "definitionEn": "A crystalline form of cholesterol that accumulates in plaques and can promote local inflammation.",
+    "definitionAr": "شكل بلوري من الكوليسترول يتراكم في اللويحات وقد يعزز الالتهاب الموضعي.",
+    "exampleEn": "Atherosclerosis may involve cholesterol crystal during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي بلورة الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-013",
+    "term": "Cholesterol cleft",
+    "translation": "شق الكوليسترول",
+    "definitionEn": "A needle-shaped empty space left in tissue sections after cholesterol crystals dissolve during processing.",
+    "definitionAr": "فراغ إبرى الشكل يظهر في المقاطع النسيجية بعد ذوبان بلورات الكوليسترول أثناء التحضير.",
+    "exampleEn": "Atherosclerosis may involve cholesterol cleft during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي شق الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-014",
+    "term": "Arterial remodeling",
+    "translation": "إعادة تشكيل الشريان",
+    "definitionEn": "Structural change in the vessel wall and lumen during plaque development, which may be outward or inward.",
+    "definitionAr": "تغير بنيوي في جدار الوعاء ولمعته أثناء تطور اللويحة، وقد يكون توسعًا للخارج أو تضيقًا للداخل.",
+    "exampleEn": "Atherosclerosis may involve arterial remodeling during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إعادة تشكيل الشريان أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-015",
+    "term": "Positive remodeling",
+    "translation": "إعادة التشكيل الإيجابي",
+    "definitionEn": "Outward expansion of the arterial wall that can preserve lumen size despite plaque growth.",
+    "definitionAr": "توسع جدار الشريان إلى الخارج بما قد يحافظ على حجم اللمعة رغم نمو اللويحة.",
+    "exampleEn": "Atherosclerosis may involve positive remodeling during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إعادة التشكيل الإيجابي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-016",
+    "term": "Negative remodeling",
+    "translation": "إعادة التشكيل السلبي",
+    "definitionEn": "Constrictive change in vessel dimensions that contributes to luminal narrowing.",
+    "definitionAr": "تغير انقباضي في أبعاد الوعاء يسهم في تضيق اللمعة.",
+    "exampleEn": "Atherosclerosis may involve negative remodeling during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إعادة التشكيل السلبي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-017",
+    "term": "Endothelial dysfunction",
+    "translation": "خلل وظيفة البطانة الوعائية",
+    "definitionEn": "Impaired endothelial regulation of vascular tone, permeability, inflammation, and thrombosis.",
+    "definitionAr": "اضطراب تنظيم الخلايا البطانية للتوتر الوعائي والنفاذية والالتهاب والتخثر.",
+    "exampleEn": "Atherosclerosis may involve endothelial dysfunction during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي خلل وظيفة البطانة الوعائية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-018",
+    "term": "Endothelial activation",
+    "translation": "تنشيط الخلايا البطانية",
+    "definitionEn": "A response in which endothelial cells express adhesion molecules and inflammatory mediators.",
+    "definitionAr": "استجابة تُظهر فيها الخلايا البطانية جزيئات الالتصاق والوسائط الالتهابية.",
+    "exampleEn": "Atherosclerosis may involve endothelial activation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تنشيط الخلايا البطانية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-019",
+    "term": "Endothelial permeability",
+    "translation": "نفاذية البطانة الوعائية",
+    "definitionEn": "The ability of the endothelial barrier to allow substances, including lipoproteins, to cross into the vessel wall.",
+    "definitionAr": "قدرة الحاجز البطاني على السماح بعبور مواد، ومنها البروتينات الدهنية، إلى جدار الوعاء.",
+    "exampleEn": "Atherosclerosis may involve endothelial permeability during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي نفاذية البطانة الوعائية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-020",
+    "term": "Leukocyte adhesion",
+    "translation": "التصاق الكريات البيضاء",
+    "definitionEn": "Attachment of circulating leukocytes to activated endothelial cells before migration into tissue.",
+    "definitionAr": "ارتباط الكريات البيضاء الدائرة بالخلايا البطانية المنشطة قبل هجرتها إلى النسيج.",
+    "exampleEn": "Atherosclerosis may involve leukocyte adhesion during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التصاق الكريات البيضاء أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-021",
+    "term": "Monocyte recruitment",
+    "translation": "استقدام الوحيدات",
+    "definitionEn": "Migration of circulating monocytes toward the arterial intima in response to chemotactic signals.",
+    "definitionAr": "هجرة الوحيدات الدائرة نحو الطبقة الباطنة للشريان استجابة لإشارات الانجذاب الكيميائي.",
+    "exampleEn": "Atherosclerosis may involve monocyte recruitment during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي استقدام الوحيدات أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-022",
+    "term": "Macrophage activation",
+    "translation": "تنشيط الخلايا البلعمية",
+    "definitionEn": "A functional response of macrophages that increases inflammatory signaling and tissue activity.",
+    "definitionAr": "استجابة وظيفية للخلايا البلعمية تزيد الإشارات الالتهابية والنشاط النسيجي.",
+    "exampleEn": "Atherosclerosis may involve macrophage activation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تنشيط الخلايا البلعمية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-023",
+    "term": "Scavenger receptor",
+    "translation": "مستقبل الالتقاط",
+    "definitionEn": "A cell-surface receptor that recognizes modified molecules such as oxidized LDL and facilitates their uptake.",
+    "definitionAr": "مستقبل على سطح الخلية يتعرف على جزيئات معدلة مثل LDL المؤكسد ويسهل دخولها إلى الخلية.",
+    "exampleEn": "Atherosclerosis may involve scavenger receptor during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مستقبل الالتقاط أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-024",
+    "term": "Oxidized LDL",
+    "translation": "البروتين الدهني منخفض الكثافة المؤكسد",
+    "definitionEn": "LDL modified by oxidative reactions; it promotes endothelial activation and foam-cell formation.",
+    "definitionAr": "بروتين LDL تعرض لتفاعلات الأكسدة، ويعزز تنشيط البطانة وتكوين الخلايا الرغوية.",
+    "exampleEn": "Atherosclerosis may involve oxidized ldl during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين الدهني منخفض الكثافة المؤكسد أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-025",
+    "term": "Modified LDL",
+    "translation": "البروتين الدهني منخفض الكثافة المعدل",
+    "definitionEn": "LDL altered chemically or enzymatically, making it more likely to be retained and taken up in the arterial wall.",
+    "definitionAr": "بروتين LDL تغير كيميائيًا أو إنزيميًا، ما يزيد احتجازه وابتلاعه داخل جدار الشريان.",
+    "exampleEn": "Atherosclerosis may involve modified ldl during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين الدهني منخفض الكثافة المعدل أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-026",
+    "term": "Lipoprotein retention",
+    "translation": "احتجاز البروتينات الدهنية",
+    "definitionEn": "Trapping of apoB-containing lipoproteins within the arterial intima, an initiating event in atherogenesis.",
+    "definitionAr": "احتجاز البروتينات الدهنية الحاوية على ApoB داخل الطبقة الباطنة، وهي خطوة مبكرة في نشوء التصلب العصيدي.",
+    "exampleEn": "Atherosclerosis may involve lipoprotein retention during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي احتجاز البروتينات الدهنية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-027",
+    "term": "ApoB-containing lipoprotein",
+    "translation": "بروتين دهني حامل لـ ApoB",
+    "definitionEn": "A lipoprotein particle containing apolipoprotein B, including LDL and remnants of triglyceride-rich particles.",
+    "definitionAr": "جسيم بروتيني دهني يحتوي على البروتين الشحمي B، ويشمل LDL وبقايا الجسيمات الغنية بالثلاثي الغليسريد.",
+    "exampleEn": "Atherosclerosis may involve apob-containing lipoprotein during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي بروتين دهني حامل لـ ApoB أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-028",
+    "term": "Small dense LDL",
+    "translation": "جسيمات LDL صغيرة كثيفة",
+    "definitionEn": "A smaller, denser LDL subfraction associated with increased atherosclerotic risk.",
+    "definitionAr": "جزء فرعي من LDL أصغر حجمًا وأكثر كثافة، ويرتبط بزيادة خطر التصلب العصيدي.",
+    "exampleEn": "Atherosclerosis may involve small dense ldl during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي جسيمات LDL صغيرة كثيفة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-029",
+    "term": "Remnant cholesterol",
+    "translation": "كوليسترول البقايا",
+    "definitionEn": "Cholesterol carried in remnant particles derived from triglyceride-rich lipoproteins.",
+    "definitionAr": "الكوليسترول المحمول في الجسيمات المتبقية الناتجة من البروتينات الدهنية الغنية بالثلاثي الغليسريد.",
+    "exampleEn": "Atherosclerosis may involve remnant cholesterol during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي كوليسترول البقايا أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-030",
+    "term": "Non-HDL cholesterol",
+    "translation": "كوليسترول غير HDL",
+    "definitionEn": "Total cholesterol minus HDL cholesterol, representing cholesterol in atherogenic lipoproteins.",
+    "definitionAr": "الكوليسترول الكلي مطروحًا منه كوليسترول HDL، ويمثل الكوليسترول الموجود في البروتينات الدهنية المسببة للتصلب.",
+    "exampleEn": "Atherosclerosis may involve non-hdl cholesterol during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي كوليسترول غير HDL أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-031",
+    "term": "Apolipoprotein B",
+    "translation": "البروتين الشحمي B",
+    "definitionEn": "The principal structural protein of atherogenic lipoproteins and a marker of their particle number.",
+    "definitionAr": "البروتين البنيوي الرئيسي للبروتينات الدهنية المسببة للتصلب، ويعد مؤشرًا على عدد جسيماتها.",
+    "exampleEn": "Atherosclerosis may involve apolipoprotein b during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين الشحمي B أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-032",
+    "term": "Apolipoprotein A-I",
+    "translation": "البروتين الشحمي A-I",
+    "definitionEn": "The major structural protein of HDL that supports cholesterol efflux and reverse cholesterol transport.",
+    "definitionAr": "البروتين البنيوي الرئيسي لـ HDL، ويساعد على إخراج الكوليسترول ونقله العكسي.",
+    "exampleEn": "Atherosclerosis may involve apolipoprotein a-i during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين الشحمي A-I أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-033",
+    "term": "Lipoprotein(a) [Lp(a)]",
+    "translation": "البروتين الدهني (أ)",
+    "definitionEn": "An LDL-like particle containing apolipoprotein(a), genetically determined and associated with atherosclerotic cardiovascular risk.",
+    "definitionAr": "جسيم شبيه بـ LDL يحتوي على البروتين الشحمي (أ)، ويتحدد وراثيًا ويرتبط بخطر أمراض القلب والأوعية التصلبية.",
+    "exampleEn": "Atherosclerosis may involve lipoprotein(a) [lp(a)] during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين الدهني (أ) أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-034",
+    "term": "Cholesterol efflux",
+    "translation": "إخراج الكوليسترول",
+    "definitionEn": "Movement of excess cholesterol from cells, especially macrophages, to extracellular acceptors such as HDL.",
+    "definitionAr": "انتقال الكوليسترول الزائد من الخلايا، خصوصًا البلاعم، إلى مستقبلات خارج خلوية مثل HDL.",
+    "exampleEn": "Atherosclerosis may involve cholesterol efflux during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إخراج الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-035",
+    "term": "Reverse cholesterol transport",
+    "translation": "النقل العكسي للكوليسترول",
+    "definitionEn": "The pathway by which cholesterol is transported from peripheral tissues to the liver for reuse or excretion.",
+    "definitionAr": "المسار الذي ينقل الكوليسترول من الأنسجة المحيطية إلى الكبد لإعادة استخدامه أو طرحه.",
+    "exampleEn": "Atherosclerosis may involve reverse cholesterol transport during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي النقل العكسي للكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-036",
+    "term": "ABCA1 transporter",
+    "translation": "ناقل ABCA1",
+    "definitionEn": "A membrane transporter that transfers cellular cholesterol and phospholipids to lipid-poor apolipoproteins.",
+    "definitionAr": "ناقل غشائي ينقل الكوليسترول والفوسفوليبيدات الخلوية إلى البروتينات الشحمية الفقيرة بالدهون.",
+    "exampleEn": "Atherosclerosis may involve abca1 transporter during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي ناقل ABCA1 أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-037",
+    "term": "ABCG1 transporter",
+    "translation": "ناقل ABCG1",
+    "definitionEn": "A transporter that promotes cholesterol efflux from cells to mature HDL particles.",
+    "definitionAr": "ناقل يعزز إخراج الكوليسترول من الخلايا إلى جسيمات HDL الناضجة.",
+    "exampleEn": "Atherosclerosis may involve abcg1 transporter during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي ناقل ABCG1 أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-038",
+    "term": "Cholesteryl ester",
+    "translation": "إستر الكوليسترول",
+    "definitionEn": "A storage form of cholesterol formed by esterification with a fatty acid.",
+    "definitionAr": "شكل تخزيني من الكوليسترول يتكون باتحاده مع حمض دهني.",
+    "exampleEn": "Atherosclerosis may involve cholesteryl ester during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إستر الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-039",
+    "term": "Cholesteryl ester hydrolase",
+    "translation": "إنزيم تحلل إستر الكوليسترول",
+    "definitionEn": "An enzyme that hydrolyzes cholesteryl esters to release free cholesterol and fatty acids.",
+    "definitionAr": "إنزيم يحلل إسترات الكوليسترول لإطلاق الكوليسترول الحر والأحماض الدهنية.",
+    "exampleEn": "Atherosclerosis may involve cholesteryl ester hydrolase during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنزيم تحلل إستر الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-040",
+    "term": "Lecithin-cholesterol acyltransferase",
+    "translation": "إنزيم نقل أسيل الليسيثين إلى الكوليسترول",
+    "definitionEn": "An enzyme that esterifies free cholesterol on HDL during reverse cholesterol transport.",
+    "definitionAr": "إنزيم يحول الكوليسترول الحر على HDL إلى إستر خلال النقل العكسي للكوليسترول.",
+    "exampleEn": "Atherosclerosis may involve lecithin-cholesterol acyltransferase during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنزيم نقل أسيل الليسيثين إلى الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-041",
+    "term": "Cholesterol esterification",
+    "translation": "أسترة الكوليسترول",
+    "definitionEn": "Conversion of free cholesterol into cholesteryl ester by attachment of a fatty acid.",
+    "definitionAr": "تحويل الكوليسترول الحر إلى إستر كوليسترول بإضافة حمض دهني.",
+    "exampleEn": "Atherosclerosis may involve cholesterol esterification during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي أسترة الكوليسترول أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-042",
+    "term": "Smooth muscle cell migration",
+    "translation": "هجرة الخلايا العضلية الملساء",
+    "definitionEn": "Movement of vascular smooth muscle cells from the media into the intima during plaque development.",
+    "definitionAr": "انتقال خلايا العضلات الملساء الوعائية من الطبقة الوسطى إلى الطبقة الباطنة أثناء تطور اللويحة.",
+    "exampleEn": "Atherosclerosis may involve smooth muscle cell migration during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي هجرة الخلايا العضلية الملساء أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-043",
+    "term": "Smooth muscle cell proliferation",
+    "translation": "تكاثر الخلايا العضلية الملساء",
+    "definitionEn": "Increase in vascular smooth muscle cell number that contributes to fibrous-cap formation and plaque growth.",
+    "definitionAr": "زيادة عدد خلايا العضلات الملساء الوعائية، مما يسهم في تكوين الغطاء الليفي ونمو اللويحة.",
+    "exampleEn": "Atherosclerosis may involve smooth muscle cell proliferation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تكاثر الخلايا العضلية الملساء أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-044",
+    "term": "Phenotypic switching",
+    "translation": "التحول النمطي",
+    "definitionEn": "A change in vascular smooth muscle cell behavior from a contractile phenotype toward a synthetic or inflammatory phenotype.",
+    "definitionAr": "تغير سلوك خلايا العضلات الملساء الوعائية من نمط انقباضي إلى نمط تركيبي أو التهابي.",
+    "exampleEn": "Atherosclerosis may involve phenotypic switching during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التحول النمطي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-045",
+    "term": "Extracellular matrix",
+    "translation": "المصفوفة خارج الخلوية",
+    "definitionEn": "The network of proteins and molecules surrounding cells, including collagen and proteoglycans in plaques.",
+    "definitionAr": "شبكة البروتينات والجزيئات المحيطة بالخلايا، وتشمل الكولاجين والبروتيوغليكانات في اللويحات.",
+    "exampleEn": "Atherosclerosis may involve extracellular matrix during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي المصفوفة خارج الخلوية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-046",
+    "term": "Proteoglycan",
+    "translation": "بروتيوغليكان",
+    "definitionEn": "A core protein bearing glycosaminoglycan chains that can bind and retain lipoproteins in the arterial intima.",
+    "definitionAr": "بروتين أساسي مرتبط بسلاسل الغليكوزأمينوغليكان، ويمكنه الارتباط بالبروتينات الدهنية واحتجازها في الطبقة الباطنة.",
+    "exampleEn": "Atherosclerosis may involve proteoglycan during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي بروتيوغليكان أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-047",
+    "term": "Collagen synthesis",
+    "translation": "تصنيع الكولاجين",
+    "definitionEn": "Production of collagen by vascular smooth muscle cells and other cells, contributing to fibrous-cap strength.",
+    "definitionAr": "إنتاج الكولاجين بواسطة خلايا العضلات الملساء الوعائية وخلايا أخرى، مما يسهم في قوة الغطاء الليفي.",
+    "exampleEn": "Atherosclerosis may involve collagen synthesis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تصنيع الكولاجين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-048",
+    "term": "Matrix metalloproteinase",
+    "translation": "إنزيم ميتالوبروتيناز المصفوفة",
+    "definitionEn": "A zinc-dependent enzyme that degrades extracellular matrix components and may weaken the fibrous cap.",
+    "definitionAr": "إنزيم يعتمد على الزنك ويحلل مكونات المصفوفة خارج الخلوية، وقد يضعف الغطاء الليفي.",
+    "exampleEn": "Atherosclerosis may involve matrix metalloproteinase during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنزيم ميتالوبروتيناز المصفوفة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-049",
+    "term": "Tissue inhibitor of metalloproteinases",
+    "translation": "مثبط ميتالوبروتيناز النسيجي",
+    "definitionEn": "A protein that inhibits matrix metalloproteinases and regulates extracellular matrix degradation.",
+    "definitionAr": "بروتين يثبط إنزيمات ميتالوبروتيناز وينظم تحلل المصفوفة خارج الخلوية.",
+    "exampleEn": "Atherosclerosis may involve tissue inhibitor of metalloproteinases during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مثبط ميتالوبروتيناز النسيجي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-050",
+    "term": "Vasa vasorum",
+    "translation": "الأوعية الوعائية المغذية",
+    "definitionEn": "Small vessels that supply the walls of large arteries and veins.",
+    "definitionAr": "أوعية صغيرة تغذي جدران الشرايين والأوردة الكبيرة.",
+    "exampleEn": "Atherosclerosis may involve vasa vasorum during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الأوعية الوعائية المغذية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-051",
+    "term": "Intraplaque angiogenesis",
+    "translation": "تكوّن الأوعية داخل اللويحة",
+    "definitionEn": "Growth of new vessels within an atherosclerotic plaque from nearby vascular networks.",
+    "definitionAr": "نمو أوعية دموية جديدة داخل اللويحة التصلبية انطلاقًا من الشبكات الوعائية المجاورة.",
+    "exampleEn": "Atherosclerosis may involve intraplaque angiogenesis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تكوّن الأوعية داخل اللويحة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-052",
+    "term": "Calcification nodule",
+    "translation": "عقيدة تكلسية",
+    "definitionEn": "A focal deposit of calcium within an atherosclerotic plaque that may protrude toward the lumen.",
+    "definitionAr": "ترسب بؤري للكالسيوم داخل اللويحة التصلبية وقد يبرز باتجاه اللمعة.",
+    "exampleEn": "Atherosclerosis may involve calcification nodule during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي عقيدة تكلسية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-053",
+    "term": "Microcalcification",
+    "translation": "تكلس مجهري",
+    "definitionEn": "Small calcium deposits within a plaque that can increase local mechanical stress.",
+    "definitionAr": "ترسبات صغيرة من الكالسيوم داخل اللويحة وقد تزيد الإجهاد الميكانيكي الموضعي.",
+    "exampleEn": "Atherosclerosis may involve microcalcification during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تكلس مجهري أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-054",
+    "term": "Inflammatory infiltrate",
+    "translation": "ارتشاح التهابي",
+    "definitionEn": "Accumulation of inflammatory cells within tissue, including macrophages and T lymphocytes in plaques.",
+    "definitionAr": "تجمع الخلايا الالتهابية داخل النسيج، ومنها البلاعم والخلايا اللمفاوية التائية في اللويحات.",
+    "exampleEn": "Atherosclerosis may involve inflammatory infiltrate during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي ارتشاح التهابي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-055",
+    "term": "T lymphocyte",
+    "translation": "خلية لمفاوية تائية",
+    "definitionEn": "An adaptive immune cell that participates in inflammatory signaling within atherosclerotic lesions.",
+    "definitionAr": "خلية مناعية تكيفية تشارك في الإشارات الالتهابية داخل الآفات التصلبية.",
+    "exampleEn": "Atherosclerosis may involve t lymphocyte during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي خلية لمفاوية تائية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-056",
+    "term": "Interferon-gamma",
+    "translation": "إنترفيرون غاما",
+    "definitionEn": "A cytokine produced by activated immune cells that can influence macrophages and vascular smooth muscle cells.",
+    "definitionAr": "سيتوكين تنتجه الخلايا المناعية المنشطة ويمكنه التأثير في البلاعم وخلايا العضلات الملساء الوعائية.",
+    "exampleEn": "Atherosclerosis may involve interferon-gamma during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنترفيرون غاما أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-057",
+    "term": "Tumor necrosis factor-alpha",
+    "translation": "عامل نخر الورم ألفا",
+    "definitionEn": "A pro-inflammatory cytokine that contributes to endothelial activation and vascular inflammation.",
+    "definitionAr": "سيتوكين محفز للالتهاب يسهم في تنشيط الخلايا البطانية والالتهاب الوعائي.",
+    "exampleEn": "Atherosclerosis may involve tumor necrosis factor-alpha during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي عامل نخر الورم ألفا أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-058",
+    "term": "Interleukin-1 beta",
+    "translation": "إنترلوكين 1 بيتا",
+    "definitionEn": "A pro-inflammatory cytokine involved in inflammasome signaling and vascular inflammation.",
+    "definitionAr": "سيتوكين محفز للالتهاب يشارك في إشارات معقد الالتهاب والالتهاب الوعائي.",
+    "exampleEn": "Atherosclerosis may involve interleukin-1 beta during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنترلوكين 1 بيتا أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-059",
+    "term": "NLRP3 inflammasome",
+    "translation": "معقد الالتهاب NLRP3",
+    "definitionEn": "An intracellular protein complex that activates inflammatory caspases and promotes interleukin-1 beta release.",
+    "definitionAr": "معقد بروتيني داخل الخلية ينشط كاسبازات الالتهاب ويعزز إطلاق إنترلوكين 1 بيتا.",
+    "exampleEn": "Atherosclerosis may involve nlrp3 inflammasome during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي معقد الالتهاب NLRP3 أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-060",
+    "term": "C-reactive protein",
+    "translation": "البروتين المتفاعل C",
+    "definitionEn": "An acute-phase protein used as a marker of systemic inflammation and associated cardiovascular risk.",
+    "definitionAr": "بروتين طور حاد يستخدم مؤشرًا للالتهاب الجهازي ويرتبط بخطر أمراض القلب والأوعية.",
+    "exampleEn": "Atherosclerosis may involve c-reactive protein during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين المتفاعل C أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-061",
+    "term": "High-sensitivity C-reactive protein",
+    "translation": "البروتين المتفاعل C عالي الحساسية",
+    "definitionEn": "A laboratory assay that detects low concentrations of C-reactive protein for cardiovascular risk assessment.",
+    "definitionAr": "فحص مخبري يكشف تراكيز منخفضة من البروتين المتفاعل C لتقييم الخطر القلبي الوعائي.",
+    "exampleEn": "Atherosclerosis may involve high-sensitivity c-reactive protein during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي البروتين المتفاعل C عالي الحساسية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-062",
+    "term": "Oxidative stress",
+    "translation": "الإجهاد التأكسدي",
+    "definitionEn": "An imbalance between reactive oxygen species and antioxidant defenses that can damage vascular cells and lipids.",
+    "definitionAr": "اختلال التوازن بين أنواع الأكسجين التفاعلية والدفاعات المضادة للأكسدة، وقد يضر الخلايا الوعائية والدهون.",
+    "exampleEn": "Atherosclerosis may involve oxidative stress during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الإجهاد التأكسدي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-063",
+    "term": "Reactive oxygen species",
+    "translation": "أنواع الأكسجين التفاعلية",
+    "definitionEn": "Chemically reactive oxygen-containing molecules that can modify LDL and affect endothelial function.",
+    "definitionAr": "جزيئات تحتوي على الأكسجين وتتفاعل كيميائيًا، ويمكنها تعديل LDL والتأثير في وظيفة البطانة.",
+    "exampleEn": "Atherosclerosis may involve reactive oxygen species during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي أنواع الأكسجين التفاعلية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-064",
+    "term": "Nitric oxide bioavailability",
+    "translation": "التوافر الحيوي لأكسيد النتريك",
+    "definitionEn": "The amount of biologically active nitric oxide available to mediate vasodilation and vascular protection.",
+    "definitionAr": "كمية أكسيد النتريك الفعال حيويًا والمتاحة لإحداث توسع الأوعية وحمايتها.",
+    "exampleEn": "Atherosclerosis may involve nitric oxide bioavailability during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التوافر الحيوي لأكسيد النتريك أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-065",
+    "term": "Nitric oxide synthase",
+    "translation": "إنزيم تصنيع أكسيد النتريك",
+    "definitionEn": "An enzyme family that produces nitric oxide from L-arginine.",
+    "definitionAr": "عائلة إنزيمية تنتج أكسيد النتريك من الحمض الأميني إل-أرجينين.",
+    "exampleEn": "Atherosclerosis may involve nitric oxide synthase during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إنزيم تصنيع أكسيد النتريك أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-066",
+    "term": "Endothelin-1",
+    "translation": "إندوثيلين 1",
+    "definitionEn": "A potent vasoconstrictor peptide produced mainly by endothelial cells.",
+    "definitionAr": "ببتيد قوي يسبب تضيق الأوعية وتنتجه الخلايا البطانية أساسًا.",
+    "exampleEn": "Atherosclerosis may involve endothelin-1 during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إندوثيلين 1 أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-067",
+    "term": "Vasomotor tone",
+    "translation": "التوتر الحركي الوعائي",
+    "definitionEn": "The degree of baseline contraction of vascular smooth muscle that determines vessel diameter.",
+    "definitionAr": "درجة الانقباض الأساسي للعضلات الملساء الوعائية التي تحدد قطر الوعاء.",
+    "exampleEn": "Atherosclerosis may involve vasomotor tone during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التوتر الحركي الوعائي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-068",
+    "term": "Arterial compliance",
+    "translation": "مطاوعة الشريان",
+    "definitionEn": "The ability of an artery to expand in response to an increase in pressure.",
+    "definitionAr": "قدرة الشريان على التمدد استجابة لارتفاع الضغط.",
+    "exampleEn": "Atherosclerosis may involve arterial compliance during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مطاوعة الشريان أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-069",
+    "term": "Pulse wave velocity",
+    "translation": "سرعة موجة النبض",
+    "definitionEn": "The speed at which the pressure wave travels along arteries; it increases with arterial stiffness.",
+    "definitionAr": "سرعة انتقال موجة الضغط على امتداد الشرايين، وتزداد مع تيبسها.",
+    "exampleEn": "Atherosclerosis may involve pulse wave velocity during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي سرعة موجة النبض أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-070",
+    "term": "Arterial stiffness",
+    "translation": "تيبس الشرايين",
+    "definitionEn": "Reduced ability of arterial walls to expand and recoil, often associated with vascular aging and disease.",
+    "definitionAr": "انخفاض قدرة جدران الشرايين على التمدد والارتداد، ويرتبط غالبًا بتقدم العمر والأمراض الوعائية.",
+    "exampleEn": "Atherosclerosis may involve arterial stiffness during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تيبس الشرايين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-071",
+    "term": "Flow-mediated dilation",
+    "translation": "التوسع بوساطة الجريان",
+    "definitionEn": "An ultrasound measure of endothelial-dependent dilation in response to increased blood flow.",
+    "definitionAr": "قياس بالموجات فوق الصوتية لتوسع الوعاء المعتمد على البطانة استجابة لزيادة تدفق الدم.",
+    "exampleEn": "Atherosclerosis may involve flow-mediated dilation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التوسع بوساطة الجريان أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-072",
+    "term": "Coronary flow reserve",
+    "translation": "احتياطي الجريان التاجي",
+    "definitionEn": "The ratio of maximal to resting coronary blood flow, reflecting the capacity to increase perfusion.",
+    "definitionAr": "نسبة أقصى تدفق دم تاجي إلى التدفق في الراحة، وتعكس القدرة على زيادة التروية.",
+    "exampleEn": "Atherosclerosis may involve coronary flow reserve during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي احتياطي الجريان التاجي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-073",
+    "term": "Myocardial oxygen supply",
+    "translation": "إمداد عضلة القلب بالأكسجين",
+    "definitionEn": "The amount of oxygen delivered to the myocardium through coronary circulation.",
+    "definitionAr": "كمية الأكسجين التي تصل إلى عضلة القلب عبر الدورة الدموية التاجية.",
+    "exampleEn": "Atherosclerosis may involve myocardial oxygen supply during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي إمداد عضلة القلب بالأكسجين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-074",
+    "term": "Myocardial oxygen demand",
+    "translation": "احتياج عضلة القلب للأكسجين",
+    "definitionEn": "The amount of oxygen required by the myocardium to sustain its metabolic activity.",
+    "definitionAr": "كمية الأكسجين التي تحتاجها عضلة القلب لاستمرار نشاطها الأيضي.",
+    "exampleEn": "Atherosclerosis may involve myocardial oxygen demand during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي احتياج عضلة القلب للأكسجين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-075",
+    "term": "Supply-demand mismatch",
+    "translation": "اختلال التوازن بين العرض والطلب",
+    "definitionEn": "A condition in which myocardial oxygen supply is insufficient for myocardial oxygen demand.",
+    "definitionAr": "حالة لا يكفي فيها إمداد عضلة القلب بالأكسجين لتلبية احتياجها.",
+    "exampleEn": "Atherosclerosis may involve supply-demand mismatch during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي اختلال التوازن بين العرض والطلب أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-076",
+    "term": "Stable angina",
+    "translation": "الذبحة الصدرية المستقرة",
+    "definitionEn": "Predictable chest discomfort caused by transient myocardial ischemia, commonly during exertion.",
+    "definitionAr": "انزعاج صدري متوقع ناتج عن نقص تروية عابر لعضلة القلب، ويحدث غالبًا مع الجهد.",
+    "exampleEn": "Atherosclerosis may involve stable angina during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الذبحة الصدرية المستقرة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-077",
+    "term": "Unstable angina",
+    "translation": "الذبحة الصدرية غير المستقرة",
+    "definitionEn": "Acute myocardial ischemia without detectable myocardial necrosis, typically presenting with new or worsening symptoms.",
+    "definitionAr": "نقص تروية حاد لعضلة القلب دون نخر عضلي قابل للكشف، ويظهر عادة بأعراض جديدة أو متفاقمة.",
+    "exampleEn": "Atherosclerosis may involve unstable angina during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الذبحة الصدرية غير المستقرة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-078",
+    "term": "Acute coronary syndrome",
+    "translation": "المتلازمة التاجية الحادة",
+    "definitionEn": "A spectrum of acute myocardial ischemic conditions that includes unstable angina and myocardial infarction.",
+    "definitionAr": "مجموعة من حالات نقص تروية عضلة القلب الحادة تشمل الذبحة غير المستقرة واحتشاء القلب.",
+    "exampleEn": "Atherosclerosis may involve acute coronary syndrome during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي المتلازمة التاجية الحادة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-079",
+    "term": "Coronary thrombosis",
+    "translation": "خثار الشريان التاجي",
+    "definitionEn": "Formation of a thrombus within a coronary artery, often following plaque disruption.",
+    "definitionAr": "تكوّن خثرة داخل الشريان التاجي، وغالبًا بعد تمزق أو تعرية اللويحة.",
+    "exampleEn": "Atherosclerosis may involve coronary thrombosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي خثار الشريان التاجي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-080",
+    "term": "Platelet activation",
+    "translation": "تنشيط الصفائح الدموية",
+    "definitionEn": "A process that makes platelets change shape, release granules, and aggregate at sites of vascular injury.",
+    "definitionAr": "عملية تجعل الصفائح تغير شكلها وتفرغ حبيباتها وتتجمع في مواقع الأذية الوعائية.",
+    "exampleEn": "Atherosclerosis may involve platelet activation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تنشيط الصفائح الدموية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-081",
+    "term": "Platelet aggregation",
+    "translation": "تجمع الصفائح الدموية",
+    "definitionEn": "Binding of activated platelets to one another during formation of a hemostatic plug or thrombus.",
+    "definitionAr": "ارتباط الصفائح المنشطة بعضها ببعض أثناء تكوين السدادة الإرقائية أو الخثرة.",
+    "exampleEn": "Atherosclerosis may involve platelet aggregation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تجمع الصفائح الدموية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-082",
+    "term": "Tissue factor",
+    "translation": "عامل النسيج",
+    "definitionEn": "A procoagulant membrane protein that initiates the extrinsic coagulation pathway when exposed to blood.",
+    "definitionAr": "بروتين غشائي محفز للتخثر يبدأ المسار الخارجي للتخثر عند تعرضه للدم.",
+    "exampleEn": "Atherosclerosis may involve tissue factor during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي عامل النسيج أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-083",
+    "term": "Thrombin generation",
+    "translation": "توليد الثرومبين",
+    "definitionEn": "The enzymatic process that produces thrombin, which converts fibrinogen to fibrin.",
+    "definitionAr": "العملية الإنزيمية التي تنتج الثرومبين، الذي يحول الفيبرينوجين إلى فيبرين.",
+    "exampleEn": "Atherosclerosis may involve thrombin generation during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي توليد الثرومبين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-084",
+    "term": "Fibrin deposition",
+    "translation": "ترسب الفيبرين",
+    "definitionEn": "Accumulation of fibrin strands that stabilize a developing thrombus.",
+    "definitionAr": "تراكم خيوط الفيبرين التي تثبت الخثرة المتكونة.",
+    "exampleEn": "Atherosclerosis may involve fibrin deposition during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي ترسب الفيبرين أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-085",
+    "term": "Arterial thrombosis",
+    "translation": "الخثار الشرياني",
+    "definitionEn": "Formation of a blood clot within an artery, potentially causing acute tissue ischemia.",
+    "definitionAr": "تكوّن جلطة دموية داخل شريان، وقد تسبب نقص تروية حادًا للأنسجة.",
+    "exampleEn": "Atherosclerosis may involve arterial thrombosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي الخثار الشرياني أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-086",
+    "term": "Ischemic heart disease",
+    "translation": "مرض القلب الإقفاري",
+    "definitionEn": "Heart disease caused by an inadequate supply of oxygenated blood to the myocardium.",
+    "definitionAr": "مرض قلبي ينجم عن عدم كفاية إمداد عضلة القلب بالدم المؤكسج.",
+    "exampleEn": "Atherosclerosis may involve ischemic heart disease during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مرض القلب الإقفاري أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-087",
+    "term": "Chronic coronary syndrome",
+    "translation": "المتلازمة التاجية المزمنة",
+    "definitionEn": "A clinical condition involving stable or recurring coronary artery disease over time.",
+    "definitionAr": "حالة سريرية تتضمن مرض الشرايين التاجية المستقر أو المتكرر بمرور الوقت.",
+    "exampleEn": "Atherosclerosis may involve chronic coronary syndrome during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي المتلازمة التاجية المزمنة أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-088",
+    "term": "Peripheral artery disease",
+    "translation": "مرض الشرايين المحيطية",
+    "definitionEn": "Atherosclerotic obstruction of arteries supplying the limbs, most often the lower extremities.",
+    "definitionAr": "انسداد تصلبي في الشرايين المغذية للأطراف، وغالبًا الأطراف السفلية.",
+    "exampleEn": "Atherosclerosis may involve peripheral artery disease during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مرض الشرايين المحيطية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-089",
+    "term": "Intermittent claudication",
+    "translation": "العرج المتقطع",
+    "definitionEn": "Exertional limb pain caused by inadequate arterial blood flow that improves with rest.",
+    "definitionAr": "ألم في الطرف يحدث مع الجهد بسبب عدم كفاية الجريان الشرياني ويتحسن بالراحة.",
+    "exampleEn": "Atherosclerosis may involve intermittent claudication during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي العرج المتقطع أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-090",
+    "term": "Critical limb-threatening ischemia",
+    "translation": "نقص تروية الطرف المهدد",
+    "definitionEn": "Advanced peripheral arterial disease associated with ischemic rest pain, ulceration, or gangrene.",
+    "definitionAr": "مرحلة متقدمة من مرض الشرايين المحيطية ترتبط بألم الراحة الإقفاري أو التقرح أو الغرغرينا.",
+    "exampleEn": "Atherosclerosis may involve critical limb-threatening ischemia during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي نقص تروية الطرف المهدد أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-091",
+    "term": "Carotid atherosclerosis",
+    "translation": "التصلب العصيدي السباتي",
+    "definitionEn": "Atherosclerotic plaque formation in the carotid arteries, which may cause cerebral ischemia or stroke.",
+    "definitionAr": "تكون لويحات تصلبية في الشرايين السباتية، وقد تسبب نقص تروية الدماغ أو السكتة الدماغية.",
+    "exampleEn": "Atherosclerosis may involve carotid atherosclerosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التصلب العصيدي السباتي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-092",
+    "term": "Cerebrovascular ischemia",
+    "translation": "نقص التروية الدماغية الوعائية",
+    "definitionEn": "Insufficient blood supply to brain tissue due to arterial narrowing or occlusion.",
+    "definitionAr": "عدم كفاية إمداد نسيج الدماغ بالدم بسبب تضيق الشرايين أو انسدادها.",
+    "exampleEn": "Atherosclerosis may involve cerebrovascular ischemia during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي نقص التروية الدماغية الوعائية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-093",
+    "term": "Aortic atherosclerosis",
+    "translation": "التصلب العصيدي للأبهر",
+    "definitionEn": "Atherosclerotic plaque formation in the aortic wall.",
+    "definitionAr": "تكوّن لويحات تصلبية في جدار الشريان الأبهر.",
+    "exampleEn": "Atherosclerosis may involve aortic atherosclerosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التصلب العصيدي للأبهر أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-094",
+    "term": "Renal artery stenosis",
+    "translation": "تضيق الشريان الكلوي",
+    "definitionEn": "Narrowing of a renal artery, commonly due to atherosclerosis, that may cause renovascular hypertension.",
+    "definitionAr": "تضيق الشريان الكلوي، وغالبًا بسبب التصلب العصيدي، وقد يسبب ارتفاع ضغط الدم الوعائي الكلوي.",
+    "exampleEn": "Atherosclerosis may involve renal artery stenosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تضيق الشريان الكلوي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-095",
+    "term": "Mesenteric ischemia",
+    "translation": "نقص التروية المساريقية",
+    "definitionEn": "Inadequate blood flow to the intestines due to stenosis or occlusion of mesenteric arteries.",
+    "definitionAr": "عدم كفاية تدفق الدم إلى الأمعاء بسبب تضيق أو انسداد الشرايين المساريقية.",
+    "exampleEn": "Atherosclerosis may involve mesenteric ischemia during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي نقص التروية المساريقية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-096",
+    "term": "Ankle-brachial index",
+    "translation": "مؤشر الكاحل إلى العضد",
+    "definitionEn": "The ratio of ankle systolic pressure to brachial systolic pressure used to assess peripheral arterial disease.",
+    "definitionAr": "نسبة الضغط الانقباضي عند الكاحل إلى الضغط الانقباضي العضدي، وتستخدم لتقييم مرض الشرايين المحيطية.",
+    "exampleEn": "Atherosclerosis may involve ankle-brachial index during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي مؤشر الكاحل إلى العضد أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-097",
+    "term": "Coronary artery stenosis",
+    "translation": "تضيق الشريان التاجي",
+    "definitionEn": "Narrowing of a coronary artery lumen, commonly caused by an atherosclerotic plaque.",
+    "definitionAr": "تضيق لمعة الشريان التاجي، وينجم غالبًا عن لويحة تصلبية.",
+    "exampleEn": "Atherosclerosis may involve coronary artery stenosis during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي تضيق الشريان التاجي أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-098",
+    "term": "Ischemic burden",
+    "translation": "عبء نقص التروية",
+    "definitionEn": "The extent and severity of myocardium exposed to inadequate perfusion.",
+    "definitionAr": "مدى وشدة تعرض عضلة القلب لنقص التروية.",
+    "exampleEn": "Atherosclerosis may involve ischemic burden during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي عبء نقص التروية أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-099",
+    "term": "Myocardial infarction",
+    "translation": "احتشاء عضلة القلب",
+    "definitionEn": "Irreversible myocardial cell death caused by prolonged ischemia.",
+    "definitionAr": "موت غير عكوس لخلايا عضلة القلب بسبب نقص التروية المطول.",
+    "exampleEn": "Atherosclerosis may involve myocardial infarction during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي احتشاء عضلة القلب أثناء تطور المرض أو تقييمه."
+  },
+  {
+    "id": "term-atherosclerosis-100",
+    "term": "High-sensitivity cardiac troponin",
+    "translation": "التروبونين القلبي عالي الحساسية",
+    "definitionEn": "An assay that detects low concentrations of cardiac troponin to help identify myocardial injury.",
+    "definitionAr": "فحص يكشف تراكيز منخفضة من التروبونين القلبي للمساعدة في كشف أذية عضلة القلب.",
+    "exampleEn": "Atherosclerosis may involve high-sensitivity cardiac troponin during disease development or assessment.",
+    "exampleAr": "قد يتضمن التصلب العصيدي التروبونين القلبي عالي الحساسية أثناء تطور المرض أو تقييمه."
   }
 ]
