@@ -10,7 +10,6 @@
     "definitionEn",
     "definitionAr",
     "translation",
-    "pronunciation",
     "exampleEn",
     "exampleAr"
   ],
@@ -24,8 +23,8 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 80,
-      "pattern": "^[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*(?: [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*)?$",
-      "description": "One English word or exactly two English words; never a sentence."
+      "pattern": "^[A-Za-z0-9\\u00C0-\\u024F\\u0370-\\u03FF()[\\]{}.,'’+\\-/]+(?: [A-Za-z0-9\\u00C0-\\u024F\\u0370-\\u03FF()[\\]{}.,'’+\\-/]+){0,5}$",
+      "description": "Canonical medical term or phrase of up to six words; not a sentence."
     },
     "definitionEn": {
       "type": "string",
@@ -69,46 +68,7 @@
     },
     "morphology": {
       "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "parts": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/$defs/morphologyPart"
-          }
-        },
-        "prefix": {
-          "$ref": "#/$defs/morphologyPartLegacy"
-        },
-        "root": {
-          "$ref": "#/$defs/morphologyPartLegacy"
-        },
-        "suffix": {
-          "$ref": "#/$defs/morphologyPartLegacy"
-        },
-        "literalSynthesisAr": {
-          "type": "string",
-          "minLength": 3,
-          "maxLength": 300
-        }
-      },
-      "required": [
-        "literalSynthesisAr"
-      ],
-      "anyOf": [
-        {
-          "required": [
-            "parts"
-          ]
-        },
-        {
-          "required": [
-            "root"
-          ]
-        }
-      ],
-      "description": "Structured word morphology rendered inside the meaning explanation; parts supports multiple combining forms."
+      "description": "Optional morphology metadata; imported terms remain valid even when a morphology annotation is incomplete."
     }
   },
   "$defs": {
@@ -117,7 +77,6 @@
       "additionalProperties": false,
       "required": [
         "affix",
-        "role",
         "meaningAr",
         "meaningEn"
       ],
@@ -128,12 +87,10 @@
           "maxLength": 40
         },
         "role": {
-          "enum": [
-            "prefix",
-            "root",
-            "suffix",
-            "combining-form"
-          ]
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 32,
+          "description": "Optional morphology role label."
         },
         "meaningAr": {
           "type": "string",
