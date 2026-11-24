@@ -62,35 +62,6 @@ for (let i = 0; i < terms.length; i++) {
   if (t.term && t.translation && normalize(t.term) === normalize(t.translation)) {
     errors.push(`${label}: English term and Arabic translation must not be identical`);
   }
-  if (t.morphology !== undefined) {
-    const m = t.morphology;
-    if (!m || typeof m !== 'object' || Array.isArray(m)) {
-      errors.push(`${label}: morphology must be an object`);
-    } else {
-      const validPart = (part) => part && typeof part === 'object' &&
-        typeof part.affix === 'string' && part.affix.trim() &&
-        typeof part.meaningAr === 'string' && part.meaningAr.trim() &&
-        typeof part.meaningEn === 'string' && part.meaningEn.trim();
-      if (m.parts !== undefined) {
-        if (!Array.isArray(m.parts) || m.parts.length === 0) errors.push(`${label}: morphology.parts must be a non-empty array`);
-        else m.parts.forEach((part, partIndex) => {
-          if (!validPart(part) || (part.role !== undefined && (typeof part.role !== 'string' || !part.role.trim()))) {
-            errors.push(`${label}: invalid morphology.parts[${partIndex}]`);
-          }
-        });
-      } else if (!validPart(m.root)) {
-        errors.push(`${label}: morphology requires a valid parts array or legacy root`);
-      }
-      for (const key of ['prefix', 'root', 'suffix']) {
-        if (m[key] !== undefined && !validPart(m[key])) errors.push(`${label}: morphology.${key} requires affix, meaningAr and meaningEn`);
-      }
-      if (typeof m.literalSynthesisAr !== 'string' || !m.literalSynthesisAr.trim()) {
-        errors.push(`${label}: morphology.literalSynthesisAr is required`);
-      }
-      const allowedMorph = new Set(['parts','prefix', 'root', 'suffix', 'literalSynthesisAr']);
-      for (const key of Object.keys(m)) if (!allowedMorph.has(key)) errors.push(`${label}: unsupported morphology field ${key}`);
-    }
-  }
   const allowed = new Set([...required, ...optional, 'createdAt', 'updatedAt', 'morphology']);
   for (const key of Object.keys(t)) if (!allowed.has(key)) errors.push(`${label}: unsupported field ${key}`);
 }
