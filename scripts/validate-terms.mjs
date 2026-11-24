@@ -18,8 +18,9 @@ const normalize = (value) => String(value || '')
   .replace(/\s+/g, ' ')
   .trim();
 
-const termPattern = /^[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*(?: [A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*)?$/;
-const required = ['id','term','translation','pronunciation','definitionEn','definitionAr','exampleEn','exampleAr'];
+const termTokenPattern = /^[A-Za-z0-9\u00C0-\u024F\u0370-\u03FF()[\]{}.,'’+\-/]+$/;
+const required = ['id','term','translation','definitionEn','definitionAr','exampleEn','exampleAr'];
+const optional = ['pronunciation'];
 const ids = new Set();
 const keys = new Map();
 const errors = [];
@@ -39,7 +40,8 @@ for (let i = 0; i < terms.length; i++) {
     ids.add(t.id);
   }
   if (typeof t.term === 'string') {
-    if (!termPattern.test(t.term.trim())) errors.push(`${label}: term must be one or two English words only: ${t.term}`);
+    const termWords = t.term.trim().split(/\\s+/);
+    if (termWords.length > 6 || termWords.some((word) => !termTokenPattern.test(word))) errors.push(`${label}: term must be a medical term of up to six words, not a sentence: ${t.term}`);
     const key = normalize(t.term);
     if (!key) errors.push(`${label}: empty normalized term`);
     if (keys.has(key)) errors.push(`${label}: duplicate term ${t.term} conflicts with record ${keys.get(key)}`);
@@ -72,7 +74,7 @@ for (let i = 0; i < terms.length; i++) {
       if (m.parts !== undefined) {
         if (!Array.isArray(m.parts) || m.parts.length === 0) errors.push(`${label}: morphology.parts must be a non-empty array`);
         else m.parts.forEach((part, partIndex) => {
-          if (!validPart(part) || !['prefix','root','suffix','combining-form'].includes(part.role)) {
+          if (!validPart(part) || (part.role !== undefined && (typeof part.role !== 'string' || !part.role.trim()))) {
             errors.push(`${label}: invalid morphology.parts[${partIndex}]`);
           }
         });
@@ -89,7 +91,7 @@ for (let i = 0; i < terms.length; i++) {
       for (const key of Object.keys(m)) if (!allowedMorph.has(key)) errors.push(`${label}: unsupported morphology field ${key}`);
     }
   }
-  const allowed = new Set([...required, 'createdAt', 'updatedAt', 'morphology']);
+  const allowed = new Set([...required, ...optional, 'createdAt', 'updatedAt', 'morphology']);
   for (const key of Object.keys(t)) if (!allowed.has(key)) errors.push(`${label}: unsupported field ${key}`);
 }
 if (errors.length) {
