@@ -40,7 +40,7 @@ for (let i = 0; i < terms.length; i++) {
     ids.add(t.id);
   }
   if (typeof t.term === 'string') {
-    const termWords = t.term.trim().split(/\\s+/);
+    const termWords = t.term.trim().split(/\s+/);
     if (termWords.length > 6 || termWords.some((word) => !termTokenPattern.test(word))) errors.push(`${label}: term must be a medical term of up to six words, not a sentence: ${t.term}`);
     const key = normalize(t.term);
     if (!key) errors.push(`${label}: empty normalized term`);
